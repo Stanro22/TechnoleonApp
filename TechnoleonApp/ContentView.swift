@@ -21,7 +21,7 @@ struct ContentView: View {
                     Image(systemName: "binoculars")
                     Text("Mijn overzicht")
                 }.tag(1)
-                TestCategoriesView().tabItem {
+                TeamSelectionView().tabItem {
                     Image(systemName: "globe")
                     Text("Testen")
                 }.tag(2)
