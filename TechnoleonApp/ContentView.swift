@@ -16,20 +16,51 @@ struct ContentView: View {
     }
     
     var body: some View {
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                OverviewView().tabItem {
-                    Image(systemName: "binoculars")
-                    Text("Mijn overzicht")
-                }.tag(1)
-                TeamSelectionView().tabItem {
-                    Image(systemName: "globe")
-                    Text("Testen")
-                }.tag(2)
-                ProfileView().tabItem {
-                    Image(systemName: "person.circle")
-                    Text("Profiel")
-                }.tag(3)
+        NavigationView{
+            VStack{
+                Text("Overzicht")
+                HStack(alignment: .bottom){
+                        NavigationLink(destination: PlayerSelectionView()) {
+                            VStack{
+                                Image(systemName: "binoculars.fill")
+                                    .foregroundColor(Color.white)
+                                Text("Overzicht")
+                                    .foregroundColor(Color.white)
+                            }
+                            .frame(width: 100, height: 20)
+                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                            .background(Color(red: 0.15, green: 0.21, blue: 1.40))
+                        }
+                        .padding(EdgeInsets(top: 550, leading: 0, bottom: 0, trailing: -10))
+                        NavigationLink(destination: PlayerSelectionView()) {
+                            VStack{
+                                Image(systemName: "globe")
+                                    .foregroundColor(Color.white)
+                                Text("Testen")
+                                    .foregroundColor(Color.white)
+                            }
+                            .frame(width: 100, height: 20)
+                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
+                        NavigationLink(destination: PlayerSelectionView()) {
+                            VStack{
+                                Image(systemName: "person.circle.fill")
+                                    .foregroundColor(Color.white)
+                                Text("Profiel")
+                                    .foregroundColor(Color.white)
+                            }
+                            .frame(width: 100, height: 20)
+                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
             }
+            .navigationTitle("Overzicht")
+            .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))            
+        }
     }
 }
 
