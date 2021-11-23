@@ -35,7 +35,7 @@ struct PlayerSelectionView: View {
                     }
                 }
                 .padding()
-                .background(Color(red: 0.90, green: 0.90, blue: 0.90))
+                .background(Color(red: 0.93, green: 0.93, blue: 0.93))
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 Button(action: ChooseCategorie) {
                     Text("Kies categorie")
