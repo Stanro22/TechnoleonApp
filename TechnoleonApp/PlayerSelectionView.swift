@@ -11,7 +11,6 @@ struct PlayerSelectionView: View {
     @State var expand = false
     
     var body: some View {
-        NavigationView{
             VStack{
                 Image(systemName: "person.fill")
                     .resizable()
@@ -93,7 +92,6 @@ struct PlayerSelectionView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     }
-}
 
 struct PlayerSelectionView_Previews: PreviewProvider {
     static var previews: some View {

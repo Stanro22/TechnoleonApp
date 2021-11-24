@@ -9,9 +9,8 @@ import SwiftUI
 
 struct PhysicalTestView: View {
     var body: some View {
-        NavigationView{
             VStack{
-                NavigationLink(destination: PhysicalTestView()){
+                NavigationLink(destination: KTK3View()){
                     TestListCell()
                 }
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
@@ -63,7 +62,6 @@ struct PhysicalTestView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     }
-}
 
 struct PhysicalTestView_Previews: PreviewProvider {
     static var previews: some View {

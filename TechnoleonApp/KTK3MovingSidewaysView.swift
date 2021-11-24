@@ -12,7 +12,6 @@ struct KTK3MovingSidewaysView: View {
     @State var attempt2: String = ""
     
     var body: some View {
-        NavigationView{
             VStack{
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(alignment: .top, spacing: 0){
@@ -153,12 +152,12 @@ struct KTK3MovingSidewaysView: View {
             .navigationTitle("KTK3+")
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
-    }
-    
     func injury() {
         
     }
 }
+    
+    
 
 struct KTK3MovingSidewaysView_Previews: PreviewProvider {
     static var previews: some View {

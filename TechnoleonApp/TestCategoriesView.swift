@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TestCategoriesView: View {
     var body: some View {
-        NavigationView{
             VStack{
                 Text("Kies een testcategorie")
                     .font(.custom("", size: 24))
@@ -67,7 +66,7 @@ struct TestCategoriesView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     }
-}
+
 
 struct TestCategoriesView_Previews: PreviewProvider {
     static var previews: some View {
