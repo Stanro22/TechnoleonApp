@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		734C9A0F274E404B0077BFEB /* PhysicalTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A0E274E404B0077BFEB /* PhysicalTestView.swift */; };
+		734C9A11274E48260077BFEB /* TestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A10274E48260077BFEB /* TestListCell.swift */; };
+		734C9A13274E51600077BFEB /* KTK3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A12274E51600077BFEB /* KTK3View.swift */; };
 		7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363E07A274CE84600FD5BBD /* TeamSelectionView.swift */; };
 		7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363E07E274CF9C700FD5BBD /* PlayerSelectionView.swift */; };
 		7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7391B8F6274BECB80003BDDC /* TestCategoriesView.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		734C9A0E274E404B0077BFEB /* PhysicalTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalTestView.swift; sourceTree = "<group>"; };
+		734C9A10274E48260077BFEB /* TestListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListCell.swift; sourceTree = "<group>"; };
+		734C9A12274E51600077BFEB /* KTK3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3View.swift; sourceTree = "<group>"; };
 		7363E07A274CE84600FD5BBD /* TeamSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionView.swift; sourceTree = "<group>"; };
 		7363E07E274CF9C700FD5BBD /* PlayerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionView.swift; sourceTree = "<group>"; };
 		7391B8F6274BECB80003BDDC /* TestCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoriesView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 				7391B8FA274BEFA20003BDDC /* ProfileView.swift */,
 				7363E07A274CE84600FD5BBD /* TeamSelectionView.swift */,
 				7363E07E274CF9C700FD5BBD /* PlayerSelectionView.swift */,
+				734C9A0E274E404B0077BFEB /* PhysicalTestView.swift */,
+				734C9A10274E48260077BFEB /* TestListCell.swift */,
+				734C9A12274E51600077BFEB /* KTK3View.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -279,7 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				73EB23392746944E008111AE /* ContentView.swift in Sources */,
+				734C9A13274E51600077BFEB /* KTK3View.swift in Sources */,
 				7391B8F9274BEEAE0003BDDC /* OverviewView.swift in Sources */,
+				734C9A11274E48260077BFEB /* TestListCell.swift in Sources */,
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
@@ -287,6 +298,7 @@
 				73975785274946A200A17B6E /* ViewExtension.swift in Sources */,
 				7391B8FB274BEFA20003BDDC /* ProfileView.swift in Sources */,
 				73975783274942D900A17B6E /* NavigationBar.swift in Sources */,
+				734C9A0F274E404B0077BFEB /* PhysicalTestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

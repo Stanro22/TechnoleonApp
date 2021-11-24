@@ -1,51 +1,21 @@
 //
-//  PlayerSelectionView.swift
+//  PhysicalTestView.swift
 //  TechnoleonApp
 //
-//  Created by user206981 on 11/23/21.
+//  Created by user206981 on 11/24/21.
 //
 
 import SwiftUI
 
-struct PlayerSelectionView: View {
-    @State var expand = false
-    
+struct PhysicalTestView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Image(systemName: "person.fill")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: 0))
-                Text("Selecteer een speler")
-                VStack() {
-                    HStack(spacing: 200) {
-                        Text("Speler")
-                            .foregroundColor(Color.gray)
-                        Image(systemName: expand ? "chevron.up" : "chevron.down")
-                            .resizable()
-                            .frame(width: 13, height: 6, alignment: .trailing)
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                    }
+                NavigationLink(destination: PhysicalTestView()){
+                    TestListCell()
                 }
-                .padding()
-                .background(Color(red: 0.93, green: 0.93, blue: 0.93))
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                .onTapGesture {
-                    self.expand.toggle()
-                }
-                if expand {
-                    //menu items here
-                }
-                NavigationLink(destination: TestCategoriesView()) {
-                    Text("Kies categorie")
-                        .foregroundColor(Color.white)
-                        .frame(width: 200, height: 20)
-                        .padding()
-                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
-                }.cornerRadius(10)
-                    .padding(EdgeInsets(top: 185, leading: 0, bottom: 50, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 15, bottom: 440, trailing: 15))
                 
                 HStack(alignment: .bottom){
                         NavigationLink(destination: PlayerSelectionView()) {
@@ -60,7 +30,7 @@ struct PlayerSelectionView: View {
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
+                        .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: -10))
                         NavigationLink(destination: PlayerSelectionView()) {
                             VStack{
                                 Image(systemName: "globe")
@@ -89,14 +59,14 @@ struct PlayerSelectionView: View {
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
             }
-            .navigationTitle("Speler selectie" )
+            .navigationTitle("Fysiek")
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     }
 }
 
-struct PlayerSelectionView_Previews: PreviewProvider {
+struct PhysicalTestView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerSelectionView()
+        PhysicalTestView()
     }
 }

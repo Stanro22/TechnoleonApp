@@ -54,6 +54,7 @@ struct TeamSelectionView: View {
                                     .foregroundColor(Color.white)
                                 Text("Overzicht")
                                     .foregroundColor(Color.white)
+                                    .font(.custom("", size: 14))
                             }
                             .frame(width: 100, height: 20)
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
@@ -66,10 +67,11 @@ struct TeamSelectionView: View {
                                     .foregroundColor(Color.white)
                                 Text("Testen")
                                     .foregroundColor(Color.white)
+                                    .font(.custom("", size: 14))
                             }
                             .frame(width: 100, height: 20)
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 1.40))
+                            .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
                         NavigationLink(destination: PlayerSelectionView()) {
@@ -78,6 +80,7 @@ struct TeamSelectionView: View {
                                     .foregroundColor(Color.white)
                                 Text("Profiel")
                                     .foregroundColor(Color.white)
+                                    .font(.custom("", size: 14))
                             }
                             .frame(width: 100, height: 20)
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
