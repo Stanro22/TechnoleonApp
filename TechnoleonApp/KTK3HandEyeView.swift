@@ -1,5 +1,5 @@
 //
-//  KTK3View.swift
+//  KTK3HandEyeView.swift
 //  TechnoleonApp
 //
 //  Created by user206981 on 11/24/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct KTK3View: View {
+struct KTK3HandEyeView: View {
     @State var attempt1: String = ""
     @State var attempt2: String = ""
     
@@ -30,7 +30,6 @@ struct KTK3View: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                             
                         NavigationLink(destination: KTK3MovingSidewaysView()) {
                             VStack{
@@ -94,6 +93,7 @@ struct KTK3View: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                 }
@@ -160,10 +160,8 @@ struct KTK3View: View {
     }
 }
 
-
-
-struct KTK3View_Previews: PreviewProvider {
+struct KTK3HandEyeView_Previews: PreviewProvider {
     static var previews: some View {
-        KTK3View()
+        KTK3HandEyeView()
     }
 }
