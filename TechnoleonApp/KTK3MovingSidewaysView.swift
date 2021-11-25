@@ -139,7 +139,7 @@ struct KTK3MovingSidewaysView: View {
                 Text("Alle oefeningen gedaan?")
                     .padding(EdgeInsets(top: 220, leading: 0, bottom: 0, trailing: 0))
                 
-                NavigationLink(destination: PlayerSelectionView()) {
+                NavigationLink(destination: EndOfTestView()) {
                     Text("Beëindig de test")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
