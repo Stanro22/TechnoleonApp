@@ -13,11 +13,32 @@ struct TestCategoriesView: View {
                 Text("Kies een testcategorie")
                     .font(.custom("", size: 24))
                     .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
+                //NavigationLink(destination: PhysicalTestView()){
+                    //Image("categorieen")
+                    //    .resizable()
+                      //  .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+                      //  .frame(width: 350, height: 400)
+                //}
+                
                 NavigationLink(destination: PhysicalTestView()){
-                    Image("categorieen")
-                        .resizable()
-                        .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
-                        .frame(width: 350, height: 400)
+                    Text("Fysiek")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                }
+                
+                NavigationLink(destination: PhysicalTestView()){
+                    Text("Cognitief")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                }
+                
+                NavigationLink(destination: PhysicalTestView()){
+                    Text("Technisch")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }
                 
                 HStack(alignment: .bottom){

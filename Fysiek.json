@@ -1,0 +1,100 @@
+{
+    "Tests": [
+        {
+            "Id": "ktk3Plus",
+            "Title": "Ktk3+",
+            "Skills": [
+                {
+                    "Name": "Coördinatie"
+                },
+                {
+                    "Name": "Balans"
+                }
+            ]
+        },
+        {
+            "Id": "phv",
+            "Title": "PHV",
+            "Skills": [
+                {
+                    "Name": "Biologische leeftijd"
+                }
+            ]
+        },
+        {
+            "Id": "sitAndReach",
+            "Title": "Sit and Reach",
+            "Skills": [
+                {
+                    "Name": "Mobiliteit"
+                }
+            ]
+        },
+        {
+            "Id": "vetpercentage",
+            "Title": "Vetpercentage",
+            "Skills": [
+                {
+                    "Name": "Biometrie"
+                }
+            ]
+        },
+        {
+            "Id": "tTest",
+            "Title": "T-Test",
+            "Skills": [
+                {
+                    "Name": "Wendbaarheid"
+                }
+            ]
+        },
+        {
+            "Id": "oneLegStance",
+            "Title": "One Leg Stance",
+            "Skills": [
+                {
+                    "Name": "Coördinatie"
+                },
+                {
+                    "Name": "Balans"
+                }
+            ]
+        },
+        {
+            "Id": "firstSprint",
+            "Title": "10, 20 en 35 meter sprint",
+            "Skills": [
+                {
+                    "Name": "Snelheid"
+                }
+            ]
+        },
+        {
+            "Id": "secondSprint",
+            "Title": "10x5 meter sprint",
+            "Skills": [
+                {
+                    "Name": "Explosiviteit"
+                }
+            ]
+        },
+        {
+            "Id": "intervalShuttleRun",
+            "Title": "Interval Shuttle Run",
+            "Skills": [
+                {
+                    "Name": "Uithoudingsvermogen"
+                }
+            ]
+        },
+        {
+            "Id": "yoYoStamina",
+            "Title": "Yo-Yo Uithoudingsvermogen",
+            "Skills": [
+                {
+                    "Name": "Uithoudingsvermogen"
+                }
+            ]
+        }
+    ]
+}

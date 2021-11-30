@@ -21,6 +21,9 @@
 		7391B8FB274BEFA20003BDDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7391B8FA274BEFA20003BDDC /* ProfileView.swift */; };
 		73975783274942D900A17B6E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73975782274942D900A17B6E /* NavigationBar.swift */; };
 		73975785274946A200A17B6E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73975784274946A200A17B6E /* ViewExtension.swift */; };
+		73CB304E27567EA900BF15AD /* Fysiek.json in Resources */ = {isa = PBXBuildFile; fileRef = 73CB304D27567EA900BF15AD /* Fysiek.json */; };
+		73CB305027567EDC00BF15AD /* Technisch.json in Resources */ = {isa = PBXBuildFile; fileRef = 73CB304F27567EDC00BF15AD /* Technisch.json */; };
+		73CB305227567F3000BF15AD /* Cognitief.json in Resources */ = {isa = PBXBuildFile; fileRef = 73CB305127567F3000BF15AD /* Cognitief.json */; };
 		73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5B607274F951600EBFE9E /* EndOfTestView.swift */; };
 		73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB23362746944E008111AE /* TechnoleonAppApp.swift */; };
 		73EB23392746944E008111AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB23382746944E008111AE /* ContentView.swift */; };
@@ -63,6 +66,9 @@
 		7391B8FA274BEFA20003BDDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		73975782274942D900A17B6E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		73975784274946A200A17B6E /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		73CB304D27567EA900BF15AD /* Fysiek.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Fysiek.json; sourceTree = "<group>"; };
+		73CB304F27567EDC00BF15AD /* Technisch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Technisch.json; sourceTree = "<group>"; };
+		73CB305127567F3000BF15AD /* Cognitief.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cognitief.json; sourceTree = "<group>"; };
 		73E5B607274F951600EBFE9E /* EndOfTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfTestView.swift; sourceTree = "<group>"; };
 		73EB23332746944E008111AE /* TechnoleonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechnoleonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EB23362746944E008111AE /* TechnoleonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppApp.swift; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 		73EB232A2746944E008111AE = {
 			isa = PBXGroup;
 			children = (
+				73CB304F27567EDC00BF15AD /* Technisch.json */,
+				73CB305127567F3000BF15AD /* Cognitief.json */,
+				73CB304D27567EA900BF15AD /* Fysiek.json */,
 				73EB23352746944E008111AE /* TechnoleonApp */,
 				73EB234627469450008111AE /* TechnoleonAppTests */,
 				73EB235027469450008111AE /* TechnoleonAppUITests */,
@@ -276,8 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CB305227567F3000BF15AD /* Cognitief.json in Resources */,
+				73CB304E27567EA900BF15AD /* Fysiek.json in Resources */,
 				73EB233E27469450008111AE /* Preview Assets.xcassets in Resources */,
 				73EB233B27469450008111AE /* Assets.xcassets in Resources */,
+				73CB305027567EDC00BF15AD /* Technisch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
