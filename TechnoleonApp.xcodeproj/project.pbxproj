@@ -24,6 +24,7 @@
 		73CB304E27567EA900BF15AD /* Fysiek.json in Resources */ = {isa = PBXBuildFile; fileRef = 73CB304D27567EA900BF15AD /* Fysiek.json */; };
 		73CB305027567EDC00BF15AD /* Technisch.json in Resources */ = {isa = PBXBuildFile; fileRef = 73CB304F27567EDC00BF15AD /* Technisch.json */; };
 		73CB305227567F3000BF15AD /* Cognitief.json in Resources */ = {isa = PBXBuildFile; fileRef = 73CB305127567F3000BF15AD /* Cognitief.json */; };
+		73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E59D642758FBDB005545F3 /* OverviewView.swift */; };
 		73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5B607274F951600EBFE9E /* EndOfTestView.swift */; };
 		73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB23362746944E008111AE /* TechnoleonAppApp.swift */; };
 		73EB23392746944E008111AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB23382746944E008111AE /* ContentView.swift */; };
@@ -69,6 +70,7 @@
 		73CB304D27567EA900BF15AD /* Fysiek.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Fysiek.json; sourceTree = "<group>"; };
 		73CB304F27567EDC00BF15AD /* Technisch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Technisch.json; sourceTree = "<group>"; };
 		73CB305127567F3000BF15AD /* Cognitief.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cognitief.json; sourceTree = "<group>"; };
+		73E59D642758FBDB005545F3 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		73E5B607274F951600EBFE9E /* EndOfTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfTestView.swift; sourceTree = "<group>"; };
 		73EB23332746944E008111AE /* TechnoleonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechnoleonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EB23362746944E008111AE /* TechnoleonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppApp.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				734C9A1A274E8E540077BFEB /* KTK3Balk3View.swift */,
 				734C9A1C274E8F4E0077BFEB /* KTK3HandEyeView.swift */,
 				73E5B607274F951600EBFE9E /* EndOfTestView.swift */,
+				73E59D642758FBDB005545F3 /* OverviewView.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
+				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,
 				73975785274946A200A17B6E /* ViewExtension.swift in Sources */,
 				7391B8FB274BEFA20003BDDC /* ProfileView.swift in Sources */,
 				73975783274942D900A17B6E /* NavigationBar.swift in Sources */,
