@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733B8B03275A9AE100E68F9E /* LatestResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B8B02275A9AE100E68F9E /* LatestResultsView.swift */; };
+		733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */; };
+		733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B8B06275A9F5500E68F9E /* ComparePlayerView.swift */; };
 		734C9A0F274E404B0077BFEB /* PhysicalTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A0E274E404B0077BFEB /* PhysicalTestView.swift */; };
 		734C9A11274E48260077BFEB /* TestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A10274E48260077BFEB /* TestListCell.swift */; };
 		734C9A13274E51600077BFEB /* KTK3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A12274E51600077BFEB /* KTK3View.swift */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		733B8B02275A9AE100E68F9E /* LatestResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultsView.swift; sourceTree = "<group>"; };
+		733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamOverviewView.swift; sourceTree = "<group>"; };
+		733B8B06275A9F5500E68F9E /* ComparePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePlayerView.swift; sourceTree = "<group>"; };
 		734C9A0E274E404B0077BFEB /* PhysicalTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalTestView.swift; sourceTree = "<group>"; };
 		734C9A10274E48260077BFEB /* TestListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListCell.swift; sourceTree = "<group>"; };
 		734C9A12274E51600077BFEB /* KTK3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3View.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 				734C9A1C274E8F4E0077BFEB /* KTK3HandEyeView.swift */,
 				73E5B607274F951600EBFE9E /* EndOfTestView.swift */,
 				73E59D642758FBDB005545F3 /* OverviewView.swift */,
+				733B8B02275A9AE100E68F9E /* LatestResultsView.swift */,
+				733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */,
+				733B8B06275A9F5500E68F9E /* ComparePlayerView.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -317,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				733B8B03275A9AE100E68F9E /* LatestResultsView.swift in Sources */,
 				73EB23392746944E008111AE /* ContentView.swift in Sources */,
 				734C9A15274E8C310077BFEB /* KTK3MovingSidewaysView.swift in Sources */,
 				734C9A13274E51600077BFEB /* KTK3View.swift in Sources */,
@@ -326,6 +336,8 @@
 				734C9A17274E8CA30077BFEB /* KTK3Balk1View.swift in Sources */,
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
+				733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */,
+				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
