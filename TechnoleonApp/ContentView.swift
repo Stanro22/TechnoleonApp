@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @State var email: String = ""
     @State var password: String = ""
+    
+    @State var isRequestErrorViewPresented: Bool = false
+    
+    @State var isRegisterRequestErrorViewPresented: Bool = false
+    
+    var isFormValid: Bool {
+        return email.count >= 3 && password.count >= 3
+    }
+    
     
     var body: some View {
         NavigationView{
@@ -56,7 +66,14 @@ struct ContentView: View {
     }
     
     func login(){
-        
+        technoleonAPI.login(email: email, password: password) { (result) in
+            switch result {
+            case .success(let response):
+                technoleonAPI.accesToken = response.accesToken
+            case .failure(_):
+                self.isRequestErrorViewPresented = true
+            }
+        }
     }
 }
 

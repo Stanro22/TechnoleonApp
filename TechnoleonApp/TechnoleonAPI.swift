@@ -38,14 +38,14 @@ final class TechnoleonAPI : ObservableObject{
         isAuthenticated = accesToken != nil
     }
     
-    func login(username: String, password: String, completion: @escaping (Result<LoginResponse, RequestError>) -> Void){
+    func login(email: String, password: String, completion: @escaping (Result<LoginResponse, RequestError>) -> Void){
         let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/api/Users/login")!
         var urlRequest = URLRequest(url: url)
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = "POST"
         
         let parameters = LoginRequest(
-            username: username,
+            email: email,
             password: password
         )
         
