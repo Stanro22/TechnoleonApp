@@ -18,6 +18,10 @@
 		734C9A19274E8DCA0077BFEB /* KTK3Balk2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A18274E8DCA0077BFEB /* KTK3Balk2View.swift */; };
 		734C9A1B274E8E540077BFEB /* KTK3Balk3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A1A274E8E540077BFEB /* KTK3Balk3View.swift */; };
 		734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734C9A1C274E8F4E0077BFEB /* KTK3HandEyeView.swift */; };
+		734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */; };
+		734CDD90275BA52000697CEE /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CDD8F275BA52000697CEE /* LoginRequest.swift */; };
+		734CDD93275BA5BB00697CEE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 734CDD92275BA5BB00697CEE /* KeychainAccess */; };
+		734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CDD94275BB61D00697CEE /* LoginResponse.swift */; };
 		7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363E07A274CE84600FD5BBD /* TeamSelectionView.swift */; };
 		7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363E07E274CF9C700FD5BBD /* PlayerSelectionView.swift */; };
 		7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7391B8F6274BECB80003BDDC /* TestCategoriesView.swift */; };
@@ -67,6 +71,9 @@
 		734C9A18274E8DCA0077BFEB /* KTK3Balk2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Balk2View.swift; sourceTree = "<group>"; };
 		734C9A1A274E8E540077BFEB /* KTK3Balk3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Balk3View.swift; sourceTree = "<group>"; };
 		734C9A1C274E8F4E0077BFEB /* KTK3HandEyeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3HandEyeView.swift; sourceTree = "<group>"; };
+		734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAPI.swift; sourceTree = "<group>"; };
+		734CDD8F275BA52000697CEE /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		734CDD94275BB61D00697CEE /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		7363E07A274CE84600FD5BBD /* TeamSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionView.swift; sourceTree = "<group>"; };
 		7363E07E274CF9C700FD5BBD /* PlayerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionView.swift; sourceTree = "<group>"; };
 		7391B8F6274BECB80003BDDC /* TestCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoriesView.swift; sourceTree = "<group>"; };
@@ -95,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734CDD93275BA5BB00697CEE /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +172,9 @@
 				733B8B02275A9AE100E68F9E /* LatestResultsView.swift */,
 				733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */,
 				733B8B06275A9F5500E68F9E /* ComparePlayerView.swift */,
+				734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */,
+				734CDD8F275BA52000697CEE /* LoginRequest.swift */,
+				734CDD94275BB61D00697CEE /* LoginResponse.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -209,6 +220,9 @@
 			dependencies = (
 			);
 			name = TechnoleonApp;
+			packageProductDependencies = (
+				734CDD92275BA5BB00697CEE /* KeychainAccess */,
+			);
 			productName = TechnoleonApp;
 			productReference = 73EB23332746944E008111AE /* TechnoleonApp.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 73EB232A2746944E008111AE;
+			packageReferences = (
+				734CDD91275BA5BB00697CEE /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 73EB23342746944E008111AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -335,10 +352,13 @@
 				734C9A11274E48260077BFEB /* TestListCell.swift in Sources */,
 				734C9A17274E8CA30077BFEB /* KTK3Balk1View.swift in Sources */,
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
+				734CDD90275BA52000697CEE /* LoginRequest.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
 				733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */,
 				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
+				734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */,
+				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
@@ -693,6 +713,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		734CDD91275BA5BB00697CEE /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		734CDD92275BA5BB00697CEE /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734CDD91275BA5BB00697CEE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73EB232B2746944E008111AE /* Project object */;
 }

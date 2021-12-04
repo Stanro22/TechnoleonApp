@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct LatestResultsView: View {
+struct LatestResultView: View {
+    @State var expand = false
+    
     var body: some View {
         VStack{
             HStack{
@@ -70,14 +72,14 @@ struct LatestResultsView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
         }
-        .navigationTitle("Laatste Resultaten")
+        .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
 }
 
 
-struct LatestResultsView_Previews: PreviewProvider {
+struct LatestResultView_Previews: PreviewProvider {
     static var previews: some View {
-        LatestResultsView()
+        LatestResultView()
     }
 }
