@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OverviewView: View {
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @State var expand = false
     
     var body: some View {
@@ -48,7 +49,7 @@ struct OverviewView: View {
             .cornerRadius(20)
             
             HStack{
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: LatestResultsView()) {
                     VStack{
                         Text("Laatste Resultaten")
                             .foregroundColor(Color.white)
@@ -61,7 +62,7 @@ struct OverviewView: View {
                 .cornerRadius(15)
                 .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
                     
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: TeamOverviewView()) {
                         VStack{
                             Text("Team Overzicht")
                                 .foregroundColor(Color.white)
@@ -86,8 +87,12 @@ struct OverviewView: View {
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
             
+            Button(action: logout){
+                Text("Logout")
+            }
+            
             HStack(alignment: .bottom){
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: OverviewView()) {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
@@ -130,6 +135,10 @@ struct OverviewView: View {
         }
         .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func logout(){
+        technoleonAPI.accesToken = nil
     }
 }
 
