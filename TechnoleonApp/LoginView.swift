@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import JWTDecode
 
 struct LoginView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
@@ -69,10 +70,18 @@ struct LoginView: View {
             switch result {
             case .success(let response):
                 technoleonAPI.accesToken = response.accesToken
+                getLoggedInUser(token: response.accesToken)
             case .failure(_):
                 self.isRequestErrorViewPresented = true
             }
         }
+    }
+    
+    func getLoggedInUser(token: String){
+        if technoleonAPI.accesToken != nil {
+            _ = try? decode(jwt: token)
+        }
+        
     }
 }
 

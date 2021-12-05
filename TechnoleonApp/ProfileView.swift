@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    
     var body: some View {
         VStack{
             Text("Profiel")
+                .padding()
+            
+            Button(action: logout){
+                Text("Logout")
+            }
+            .padding()
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: ContentView()) {
@@ -56,6 +64,10 @@ struct ProfileView: View {
         }
         .navigationTitle("Profiel")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func logout(){
+        technoleonAPI.accesToken = nil
     }
 }
 

@@ -86,10 +86,7 @@ struct OverviewView: View {
             .foregroundColor(Color.white)
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
-            
-            Button(action: logout){
-                Text("Logout")
-            }
+                        
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: OverviewView()) {
@@ -135,10 +132,6 @@ struct OverviewView: View {
         }
         .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
-    }
-    
-    func logout(){
-        technoleonAPI.accesToken = nil
     }
 }
 
