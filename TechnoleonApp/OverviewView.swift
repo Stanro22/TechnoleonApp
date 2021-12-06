@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OverviewView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
     @State var expand = false
     
     var body: some View {

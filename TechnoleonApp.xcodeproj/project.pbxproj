@@ -42,6 +42,7 @@
 		73EB234827469450008111AE /* TechnoleonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB234727469450008111AE /* TechnoleonAppTests.swift */; };
 		73EB235227469450008111AE /* TechnoleonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235127469450008111AE /* TechnoleonAppUITests.swift */; };
 		73EB235427469450008111AE /* TechnoleonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */; };
+		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		73EB234D27469450008111AE /* TechnoleonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechnoleonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EB235127469450008111AE /* TechnoleonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITests.swift; sourceTree = "<group>"; };
 		73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				734CDD8F275BA52000697CEE /* LoginRequest.swift */,
 				734CDD94275BB61D00697CEE /* LoginResponse.swift */,
 				7338BAAA275D009400F42D2F /* LoginView.swift */,
+				947F3F49275E862E000C10CB /* LoggedInUser.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				734C9A15274E8C310077BFEB /* KTK3MovingSidewaysView.swift in Sources */,
 				734C9A13274E51600077BFEB /* KTK3View.swift in Sources */,
 				734C9A1B274E8E540077BFEB /* KTK3Balk3View.swift in Sources */,
+				947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */,
 				734C9A19274E8DCA0077BFEB /* KTK3Balk2View.swift in Sources */,
 				734C9A11274E48260077BFEB /* TestListCell.swift in Sources */,
 				734C9A17274E8CA30077BFEB /* KTK3Balk1View.swift in Sources */,

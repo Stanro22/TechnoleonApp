@@ -10,6 +10,7 @@ import JWTDecode
 
 struct LoginView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
     @State var email: String = ""
     @State var password: String = ""
     
@@ -79,7 +80,13 @@ struct LoginView: View {
     
     func getLoggedInUser(token: String){
         if technoleonAPI.accesToken != nil {
-            _ = try? decode(jwt: token)
+            let jwt = try? decode(jwt: token)
+            let userId = jwt?.claim(name: "id")
+            let userRole = jwt?.claim(name: "roles")
+            let name = jwt?.claim(name: "given_name")
+            loggedInUser.userId = userId?.string
+            loggedInUser.userRole = userRole?.string
+            loggedInUser.name = name?.string
         }
         
     }
