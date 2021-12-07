@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlayerSelectionView: View {
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    var playerName = ""
+    @State var playerName = ""
     @State var expand = false
     
     var body: some View {
@@ -22,10 +22,10 @@ struct PlayerSelectionView: View {
                 Text("Selecteer een speler")
                 
                 VStack() {
-                    HStack(spacing: 50) {
-                        if loggedInUser.name != nil {
-                            Text((loggedInUser.name)!)
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
+                    HStack(spacing: 50) {                        
+                        if loggedInUser.playerName != nil {
+                            Text((loggedInUser.playerName)!)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 90))
                                 .foregroundColor(Color.black)
                         }
                         else{
@@ -39,7 +39,11 @@ struct PlayerSelectionView: View {
                             .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
                     }
                 }
+                .onAppear(){
+                    getPlayernames()
+                }
                 .padding()
+                .frame(width: 300, height: 50)
                 .background(Color(red: 0.93, green: 0.93, blue: 0.93))
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .onTapGesture {
@@ -48,6 +52,7 @@ struct PlayerSelectionView: View {
                 if expand {
                     //menu items here
                 }
+                
                 NavigationLink(destination: TestCategoriesView()) {
                     Text("Kies categorie")
                         .foregroundColor(Color.white)
@@ -58,7 +63,7 @@ struct PlayerSelectionView: View {
                     .padding(EdgeInsets(top: 185, leading: 0, bottom: 50, trailing: 0))
                 
                 HStack(alignment: .bottom){
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: OverviewView()) {
                             VStack{
                                 Image(systemName: "binoculars.fill")
                                     .foregroundColor(Color.white)
@@ -102,7 +107,14 @@ struct PlayerSelectionView: View {
             .navigationTitle("Speler selectie" )
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
+    
+    func getPlayernames(){
+        for i in (0 ..< loggedInUser.players!.count){
+            loggedInUser.playerId = loggedInUser.players![i].playerId
+            loggedInUser.playerName = loggedInUser.players![i].playerName
+        }
     }
+}
 
 struct PlayerSelectionView_Previews: PreviewProvider {
     static var previews: some View {

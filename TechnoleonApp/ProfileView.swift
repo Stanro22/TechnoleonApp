@@ -13,15 +13,15 @@ struct ProfileView: View {
     var body: some View {
         VStack{
             Text("Profiel")
-                .padding()
+                .padding(EdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 15))
             
             Button(action: logout){
                 Text("Logout")
             }
-            .padding()
+            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
             
             HStack(alignment: .bottom){
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: OverviewView()) {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
@@ -33,7 +33,7 @@ struct ProfileView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 550, leading: 0, bottom: 0, trailing: -10))
+                    .padding(EdgeInsets(top: 400, leading: 0, bottom: 0, trailing: -10))
                     NavigationLink(destination: TeamSelectionView()) {
                         VStack{
                             Image(systemName: "globe")

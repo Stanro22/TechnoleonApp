@@ -17,7 +17,7 @@ struct PhysicalTestView: View {
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 440, trailing: 15))
                 
                 HStack(alignment: .bottom){
-                        NavigationLink(destination: PlayerSelectionView()) {
+                        NavigationLink(destination: OverviewView()) {
                             VStack{
                                 Image(systemName: "binoculars.fill")
                                     .foregroundColor(Color.white)
@@ -30,7 +30,7 @@ struct PhysicalTestView: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: -10))
-                        NavigationLink(destination: PlayerSelectionView()) {
+                        NavigationLink(destination: TeamSelectionView()) {
                             VStack{
                                 Image(systemName: "globe")
                                     .foregroundColor(Color.white)
@@ -43,7 +43,7 @@ struct PhysicalTestView: View {
                             .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
-                        NavigationLink(destination: PlayerSelectionView()) {
+                        NavigationLink(destination: ProfileView()) {
                             VStack{
                                 Image(systemName: "person.circle.fill")
                                     .foregroundColor(Color.white)

@@ -77,7 +77,7 @@ struct TeamSelectionView: View {
                     .padding(EdgeInsets(top: 180, leading: 0, bottom: 50, trailing: 0))
                 
                 HStack(alignment: .bottom){
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: OverviewView()) {
                             VStack{
                                 Image(systemName: "binoculars.fill")
                                     .foregroundColor(Color.white)

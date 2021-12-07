@@ -22,4 +22,7 @@ final class LoggedInUser : ObservableObject {
     var players: [Player]?
     
     var club: String?
+    
+    var playerId: String?
+    var playerName: String?
 }

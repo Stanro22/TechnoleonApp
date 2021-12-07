@@ -42,7 +42,7 @@ struct TestCategoriesView: View {
                 }
                 
                 HStack(alignment: .bottom){
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: OverviewView()) {
                             VStack{
                                 Image(systemName: "binoculars.fill")
                                     .foregroundColor(Color.white)
