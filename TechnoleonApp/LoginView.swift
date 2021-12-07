@@ -88,22 +88,47 @@ struct LoginView: View {
             loggedInUser.userRole = userRole?.string
             loggedInUser.name = name?.string
             
-            if loggedInUser.userId != nil {
-                technoleonAPI.getUserById(id: loggedInUser.userId!) { (result) in
-                    switch result {
-                    case .success(let response):
-                        loggedInUser.getLoggedInUser = response
-                    case .failure(_):
-                        self.isRequestErrorViewPresented = true
+            technoleonAPI.getUserById(id: loggedInUser.userId!) { (result) in
+                switch result {
+                case .success(let response):
+                    loggedInUser.email = response.email
+                    loggedInUser.coachId = response.coachId
+                    loggedInUser.teamId = response.teamId
+                    getTeamById(id: response.teamId)
+                case .failure(let error):
+                    switch error{
+                    case .urlError(let urlError):
+                        print("URL error: \(String(describing: urlError))")
+                    case .decodingError(let decodingError):
+                        print("decode error: \(String(describing: decodingError))")
+                    case .genericError(let error):
+                        print("error: \(String(describing: error))")
                     }
                 }
-            }
-            else{
-                print("userId doesn't exist")
             }
         }
         else{
             print("Unauthorized")
+        }
+    }
+    
+    func getTeamById(id: String){
+        technoleonAPI.getTeamById(id: (loggedInUser.teamId)!) { (result) in
+            switch result {
+            case .success(let response):
+                loggedInUser.teamname = response.teamname
+                loggedInUser.organizationId = response.organizationId
+                loggedInUser.players = response.players
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
         }
     }
 }

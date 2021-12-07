@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TeamSelectionView: View {
+    @ObservedObject var loggedInUser = LoggedInUser.shared
     @State var expand = false
     
     var body: some View {
@@ -19,9 +20,17 @@ struct TeamSelectionView: View {
                     .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: 0))
                 Text("Selecteer een team")
                 VStack() {
-                    HStack(spacing: 200) {
-                        Text("Team")
-                            .foregroundColor(Color.gray)
+                    HStack(spacing: 50) {
+                        if loggedInUser.teamname != nil {
+                            Text(loggedInUser.teamname!)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 100))
+                                .foregroundColor(Color.black)
+                        }
+                        else{
+                            Text("Team")
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 150))
+                                .foregroundColor(Color.gray)
+                        }
                         Image(systemName: expand ? "chevron.up" : "chevron.down")
                             .resizable()
                             .frame(width: 13, height: 6, alignment: .trailing)
@@ -29,14 +38,35 @@ struct TeamSelectionView: View {
                     }
                 }
                 .padding()
+                .frame(width: 300, height: 50)
                 .background(Color(red: 0.93, green: 0.93, blue: 0.93))
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .onTapGesture {
                     self.expand.toggle()
                 }
                 if expand {
-                    //menu items here
+                    /*Button(action: {
+                        self.expand.toggle()
+                    }){
+                        if loggedInUser.team != nil{
+                            Text(loggedInUser.team!)
+                                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 70))
+                                .foregroundColor(Color.black)
+                                .frame(width: 300, height: 40)
+                                .background(Color(red: 0.93, green: 0.93, blue: 0.93))
+                        }
+                        else{
+                            Text("Team 1")
+                                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 70))
+                                .foregroundColor(Color.black)
+                                .frame(width: 300, height: 40)
+                                .background(Color(red: 0.93, green: 0.93, blue: 0.93))
+                        }
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))*/
                 }
+                
+                
                 NavigationLink(destination: PlayerSelectionView()) {
                     Text("Kies speler")
                         .foregroundColor(Color.white)

@@ -14,5 +14,12 @@ final class LoggedInUser : ObservableObject {
     var userRole: String?
     var name: String?
     
-    var getLoggedInUser: UserResponse?
+    var email: String?
+    var coachId: String?
+    var teamId: String?
+    var teamname: String?
+    var organizationId: String?
+    var players: [Player]?
+    
+    var club: String?
 }

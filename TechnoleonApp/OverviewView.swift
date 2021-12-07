@@ -28,12 +28,29 @@ struct OverviewView: View {
                         Text("Naam:")
                             .font(.custom("", size: 14))
                     }
-                    Text("Club:")
-                    VStack {
+                    if loggedInUser.club != nil {
+                        Text("Club:    ")
+                            .font(.custom("", size: 14))
+                        + Text(loggedInUser.club!)
+                            .font(.custom("", size: 14))
+                    }
+                    else{
+                        Text("Club:")
+                            .font(.custom("", size: 14))
+                    }
+                    
+                    VStack(spacing: 30) {
                         HStack {
-                            Text("Zeeburgia 1")
-                                .foregroundColor(Color.black)
-                                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 50))
+                            if loggedInUser.teamname != nil{
+                                Text(loggedInUser.teamname!)
+                                    .foregroundColor(Color.black)
+                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 50))
+                            }
+                            else{
+                                Text("Team")
+                                    .foregroundColor(Color.black)
+                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 100))
+                            }
                             Image(systemName: expand ? "chevron.up" : "chevron.down")
                                 .resizable()
                                 .frame(width: 13, height: 6, alignment: .trailing)
@@ -48,7 +65,7 @@ struct OverviewView: View {
                         self.expand.toggle()
                     }
                     if expand {
-                        //menu items here
+                        
                     }
                 }
             }

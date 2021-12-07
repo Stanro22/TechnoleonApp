@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlayerSelectionView: View {
+    @ObservedObject var loggedInUser = LoggedInUser.shared
+    var playerName = ""
     @State var expand = false
     
     var body: some View {
@@ -18,10 +20,19 @@ struct PlayerSelectionView: View {
                     .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: 0))
                 Text("Selecteer een speler")
+                
                 VStack() {
-                    HStack(spacing: 200) {
-                        Text("Speler")
-                            .foregroundColor(Color.gray)
+                    HStack(spacing: 50) {
+                        if loggedInUser.name != nil {
+                            Text((loggedInUser.name)!)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
+                                .foregroundColor(Color.black)
+                        }
+                        else{
+                            Text("Speler")
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 150))
+                                .foregroundColor(Color.gray)
+                        }
                         Image(systemName: expand ? "chevron.up" : "chevron.down")
                             .resizable()
                             .frame(width: 13, height: 6, alignment: .trailing)

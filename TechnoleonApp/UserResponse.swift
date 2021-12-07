@@ -11,7 +11,6 @@ struct UserResponse: Decodable {
     let email: String
     let coachId: String
     let teamId: String
-    let team: String
     
     enum CodingKeys: String, CodingKey {
         case email = "email"
@@ -21,7 +20,6 @@ struct UserResponse: Decodable {
     
     enum CoachCodingKeys: String, CodingKey {
         case teamId = "teamId"
-        case team = "team"
     }
     
     init(from decoder: Decoder) throws {
@@ -34,7 +32,6 @@ struct UserResponse: Decodable {
                     forKey: .coach
         )
         teamId = try CoachContainer.decode(String.self, forKey: .teamId)
-        team = try CoachContainer.decode(String.self, forKey: .team)
     }
 }
 
