@@ -43,6 +43,7 @@
 		73EB235227469450008111AE /* TechnoleonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235127469450008111AE /* TechnoleonAppUITests.swift */; };
 		73EB235427469450008111AE /* TechnoleonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */; };
 		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
+		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		73EB235127469450008111AE /* TechnoleonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITests.swift; sourceTree = "<group>"; };
 		73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
+		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				734CDD94275BB61D00697CEE /* LoginResponse.swift */,
 				7338BAAA275D009400F42D2F /* LoginView.swift */,
 				947F3F49275E862E000C10CB /* LoggedInUser.swift */,
+				94E7F5E2275F5E770025644B /* UserResponse.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				7338BAAB275D009400F42D2F /* LoginView.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
 				734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */,
+				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,
 				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,

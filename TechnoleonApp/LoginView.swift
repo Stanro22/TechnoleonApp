@@ -87,8 +87,24 @@ struct LoginView: View {
             loggedInUser.userId = userId?.string
             loggedInUser.userRole = userRole?.string
             loggedInUser.name = name?.string
+            
+            if loggedInUser.userId != nil {
+                technoleonAPI.getUserById(id: loggedInUser.userId!) { (result) in
+                    switch result {
+                    case .success(let response):
+                        loggedInUser.getLoggedInUser = response
+                    case .failure(_):
+                        self.isRequestErrorViewPresented = true
+                    }
+                }
+            }
+            else{
+                print("userId doesn't exist")
+            }
         }
-        
+        else{
+            print("Unauthorized")
+        }
     }
 }
 

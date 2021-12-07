@@ -18,7 +18,16 @@ struct OverviewView: View {
                 Image(systemName: "star")
                     .resizable()
                 VStack(alignment: .leading){
-                    Text("Naam:")
+                    if loggedInUser.name != nil{
+                        Text("Naam:    ")
+                            .font(.custom("", size: 14))
+                        + Text(loggedInUser.name!)
+                            .font(.custom("", size: 14))
+                    }
+                    else{
+                        Text("Naam:")
+                            .font(.custom("", size: 14))
+                    }
                     Text("Club:")
                     VStack {
                         HStack {
