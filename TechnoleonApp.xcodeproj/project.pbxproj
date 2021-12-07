@@ -47,6 +47,8 @@
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
 		94E7F5E7275FB2E30025644B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E6275FB2E30025644B /* Team.swift */; };
 		94E7F5E9275FBC3A0025644B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E8275FBC3A0025644B /* Player.swift */; };
+		94E7F5EB275FEA000025644B /* KTK3Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5EA275FEA000025644B /* KTK3Request.swift */; };
+		94E7F5ED275FECCF0025644B /* KTK3RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
 		94E7F5E6275FB2E30025644B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		94E7F5E8275FBC3A0025644B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		94E7F5EA275FEA000025644B /* KTK3Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Request.swift; sourceTree = "<group>"; };
+		94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3RequestBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,8 @@
 				94E7F5E4275FA27E0025644B /* TeamResponse.swift */,
 				94E7F5E6275FB2E30025644B /* Team.swift */,
 				94E7F5E8275FBC3A0025644B /* Player.swift */,
+				94E7F5EA275FEA000025644B /* KTK3Request.swift */,
+				94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				73EB23392746944E008111AE /* ContentView.swift in Sources */,
 				94E7F5E7275FB2E30025644B /* Team.swift in Sources */,
 				734C9A15274E8C310077BFEB /* KTK3MovingSidewaysView.swift in Sources */,
+				94E7F5ED275FECCF0025644B /* KTK3RequestBody.swift in Sources */,
 				734C9A13274E51600077BFEB /* KTK3View.swift in Sources */,
 				734C9A1B274E8E540077BFEB /* KTK3Balk3View.swift in Sources */,
 				947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */,
@@ -390,6 +397,7 @@
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,
 				73975785274946A200A17B6E /* ViewExtension.swift in Sources */,
+				94E7F5EB275FEA000025644B /* KTK3Request.swift in Sources */,
 				7391B8FB274BEFA20003BDDC /* ProfileView.swift in Sources */,
 				73975783274942D900A17B6E /* NavigationBar.swift in Sources */,
 				734C9A0F274E404B0077BFEB /* PhysicalTestView.swift in Sources */,
