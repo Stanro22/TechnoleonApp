@@ -167,11 +167,16 @@ struct KTK3View: View {
         }
     
     func saveFields(){
-        let attempt1Int = Int(attempt1)
-        let attempt2Int = Int(attempt2)
-        
-        ktk3Body.hoppingSideways1 = attempt1Int
-        ktk3Body.hoppingSideways2 = attempt2Int
+        if attempt1.count > 0 && attempt2.count > 0 {
+            let attempt1Int = Int(attempt1)
+            let attempt2Int = Int(attempt2)
+            ktk3Body.hoppingSideways1 = attempt1Int
+            ktk3Body.hoppingSideways2 = attempt2Int
+        }
+        else{
+            ktk3Body.hoppingSideways1 = 0
+            ktk3Body.hoppingSideways2 = 0
+        }
     }
     
     func injury() {

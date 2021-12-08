@@ -167,6 +167,7 @@ struct KTK3HandEyeView: View {
         }
     
     func saveFields(){
+        
         let attempt1Int = Int(attempt1)
         let attempt2Int = Int(attempt2)
         
