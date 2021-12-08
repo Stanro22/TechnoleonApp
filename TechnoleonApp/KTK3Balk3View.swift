@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct KTK3Balk3View: View {
+    @ObservedObject var ktk3Body = KtK3RequestBody.shared
     @State var attempt1: String = ""
     @State var attempt2: String = ""
     @State var attempt3: String = ""
@@ -17,81 +18,93 @@ struct KTK3Balk3View: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(alignment: .top, spacing: 0){
                         NavigationLink(destination: KTK3View()) {
-                            VStack{
-                                Text("Zijwaarts")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
-                                Text("springen")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
+                            Button(action: saveFields){
+                                VStack{
+                                    Text("Zijwaarts")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                    Text("springen")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                }
+                                .frame(width: 70, height: 20)
+                                .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                             }
-                            .frame(width: 70, height: 20)
-                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            
-                        NavigationLink(destination: KTK3MovingSidewaysView()) {
-                            VStack{
-                                Text("Zijwaarts")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
-                                Text("bewegen")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
-                            }
-                            .frame(width: 70, height: 20)
-                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            
-                        NavigationLink(destination: KTK3Balk1View()) {
-                            VStack{
-                                Text("Balk 1")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
-                            }
-                            .frame(width: 70, height: 20)
-                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            
-                        NavigationLink(destination: KTK3Balk2View()) {
-                            VStack{
-                                Text("Balk 2")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
-                            }
-                            .frame(width: 70, height: 20)
-                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            
-                        NavigationLink(destination: KTK3Balk3View()) {
-                            VStack{
-                                Text("Balk 3")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
-                            }
-                            .frame(width: 60, height: 20)
-                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                             
-                        NavigationLink(destination: KTK3HandEyeView()) {
-                            VStack{
-                                Text("Hand-oog")
-                                    .foregroundColor(Color.white)
-                                    .font(.custom("", size: 14))
+                        NavigationLink(destination: KTK3MovingSidewaysView()) {
+                            Button(action: saveFields){
+                                VStack{
+                                    Text("Zijwaarts")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                    Text("bewegen")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                }
+                                .frame(width: 70, height: 20)
+                                .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                             }
-                            .frame(width: 70, height: 20)
-                            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            
+                        NavigationLink(destination: KTK3Balk1View()) {
+                            Button(action: saveFields){
+                                VStack{
+                                    Text("Balk 1")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                }
+                                .frame(width: 70, height: 20)
+                                .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                            }
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            
+                        NavigationLink(destination: KTK3Balk2View()) {
+                            Button(action: saveFields){
+                                VStack{
+                                    Text("Balk 2")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                }
+                                .frame(width: 70, height: 20)
+                                .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                            }
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            
+                        NavigationLink(destination: KTK3Balk3View()) {
+                            Button(action: saveFields){
+                                VStack{
+                                    Text("Balk 3")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                }
+                                .frame(width: 60, height: 20)
+                                .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                            }
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            
+                        NavigationLink(destination: KTK3HandEyeView()) {
+                            Button(action: saveFields){
+                                VStack{
+                                    Text("Hand-oog")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom("", size: 14))
+                                }
+                                .frame(width: 70, height: 20)
+                                .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
@@ -170,6 +183,17 @@ struct KTK3Balk3View: View {
             .navigationTitle("KTK3+")
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
+    
+    func saveFields(){
+        let attempt1Int = Int(attempt1)
+        let attempt2Int = Int(attempt2)
+        let attempt3Int = Int(attempt3)
+        
+        ktk3Body.beam31 = attempt1Int
+        ktk3Body.beam32 = attempt2Int
+        ktk3Body.beam33 = attempt3Int
+    }
+    
     func injury() {
         
     }

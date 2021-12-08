@@ -7,20 +7,22 @@
 
 import Foundation
 
-struct KtK3RequestBody {
-    let hoppingSideways1: Int?
-    let hoppingSideways2: Int?
-    let movingSideways1: Int?
-    let movingSideways2: Int?
-    let handEye1: Int?
-    let handEye2: Int?
-    let beam11: Int?
-    let beam12: Int?
-    let beam13: Int?
-    let beam21: Int?
-    let beam22: Int?
-    let beam23: Int?
-    let beam31: Int?
-    let beam32: Int?
-    let beam33: Int?
+final class KtK3RequestBody : ObservableObject {
+    static let shared = KtK3RequestBody()
+    
+    var hoppingSideways1: Int? = 0
+    var hoppingSideways2: Int? = 0
+    var movingSideways1: Int? = 0
+    var movingSideways2: Int? = 0
+    var handEye1: Int? = 0
+    var handEye2: Int? = 0
+    var beam11: Int? = 0
+    var beam12: Int? = 0
+    var beam13: Int? = 0
+    var beam21: Int? = 0
+    var beam22: Int? = 0
+    var beam23: Int? = 0
+    var beam31: Int? = 0
+    var beam32: Int? = 0
+    var beam33: Int? = 0
 }
