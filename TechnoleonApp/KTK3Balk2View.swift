@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct KTK3Balk2View: View {
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var ktk3Body = KtK3RequestBody.shared
     @State var attempt1: String = ""
     @State var attempt2: String = ""
@@ -17,8 +19,7 @@ struct KTK3Balk2View: View {
             VStack{
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(alignment: .top, spacing: 0){
-                        NavigationLink(destination: KTK3View()) {
-                            Button(action: saveFields){
+                        NavigationLink(destination: KTK3View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Zijwaarts")
                                         .foregroundColor(Color.white)
@@ -30,13 +31,10 @@ struct KTK3Balk2View: View {
                                 .frame(width: 70, height: 20)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                             
-                        NavigationLink(destination: KTK3MovingSidewaysView()) {
-                            Button(action: saveFields){
+                        NavigationLink(destination: KTK3MovingSidewaysView().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Zijwaarts")
                                         .foregroundColor(Color.white)
@@ -48,12 +46,10 @@ struct KTK3Balk2View: View {
                                 .frame(width: 70, height: 20)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                        NavigationLink(destination: KTK3Balk1View()) {
-                            Button(action: saveFields){
+                    NavigationLink(destination: KTK3Balk1View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 1")
                                         .foregroundColor(Color.white)
@@ -62,12 +58,10 @@ struct KTK3Balk2View: View {
                                 .frame(width: 70, height: 20)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                        NavigationLink(destination: KTK3Balk2View()) {
-                            Button(action: saveFields){
+                    NavigationLink(destination: KTK3Balk2View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 2")
                                         .foregroundColor(Color.white)
@@ -76,12 +70,11 @@ struct KTK3Balk2View: View {
                                 .frame(width: 70, height: 20)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                             
-                        NavigationLink(destination: KTK3Balk3View()) {
-                            Button(action: saveFields){
+                    NavigationLink(destination: KTK3Balk3View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 3")
                                         .foregroundColor(Color.white)
@@ -90,12 +83,10 @@ struct KTK3Balk2View: View {
                                 .frame(width: 60, height: 20)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                        NavigationLink(destination: KTK3HandEyeView()) {
-                            Button(action: saveFields){
+                    NavigationLink(destination: KTK3HandEyeView().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Hand-oog")
                                         .foregroundColor(Color.white)
@@ -104,7 +95,6 @@ struct KTK3Balk2View: View {
                                 .frame(width: 70, height: 20)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            }
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
@@ -170,7 +160,7 @@ struct KTK3Balk2View: View {
                 Text("Alle oefeningen gedaan?")
                     .padding(EdgeInsets(top: 180, leading: 0, bottom: 0, trailing: 0))
                 
-                NavigationLink(destination: EndOfTestView()) {
+                NavigationLink(destination: EndOfTestView().onAppear{ setKTK3plusTest()}) {
                     Text("Beëindig de test")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
@@ -185,13 +175,39 @@ struct KTK3Balk2View: View {
         }
     
     func saveFields(){
-        let attempt1Int = Int(attempt1)
-        let attempt2Int = Int(attempt2)
-        let attempt3Int = Int(attempt3)
-        
-        ktk3Body.beam21 = attempt1Int
-        ktk3Body.beam22 = attempt2Int
-        ktk3Body.beam23 = attempt3Int
+        if attempt1.count > 0 && attempt2.count > 0 && attempt3.count > 0 {
+            let attempt1Int = Int(attempt1)
+            let attempt2Int = Int(attempt2)
+            let attempt3Int = Int(attempt3)
+            
+            ktk3Body.beam21 = attempt1Int
+            ktk3Body.beam22 = attempt2Int
+            ktk3Body.beam23 = attempt3Int
+        }
+        else{
+            ktk3Body.beam21 = 0
+            ktk3Body.beam22 = 0
+            ktk3Body.beam23 = 0
+        }
+    }
+    
+    func setKTK3plusTest(){
+        saveFields()
+        technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
     
     func injury() {

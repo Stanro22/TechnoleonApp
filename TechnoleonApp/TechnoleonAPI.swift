@@ -73,6 +73,37 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setKTK3TestForPlayer(id: String, KTK3RequestBody: KtK3RequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/KTK3plus")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = KtK3Request(
+            hoppingSideways1: KTK3RequestBody.hoppingSideways1,
+            hoppingSideways2: KTK3RequestBody.hoppingSideways2,
+            movingSideways1: KTK3RequestBody.movingSideways1,
+            movingSideways2: KTK3RequestBody.movingSideways1,
+            handEye1: KTK3RequestBody.handEye1,
+            handEye2: KTK3RequestBody.handEye2,
+            beam11: KTK3RequestBody.beam11,
+            beam12: KTK3RequestBody.beam12,
+            beam13: KTK3RequestBody.beam13,
+            beam21: KTK3RequestBody.beam21,
+            beam22: KTK3RequestBody.beam22,
+            beam23: KTK3RequestBody.beam23,
+            beam31: KTK3RequestBody.beam31,
+            beam32: KTK3RequestBody.beam32,
+            beam33: KTK3RequestBody.beam33
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>

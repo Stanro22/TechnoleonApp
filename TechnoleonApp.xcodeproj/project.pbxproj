@@ -42,6 +42,7 @@
 		73EB234827469450008111AE /* TechnoleonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB234727469450008111AE /* TechnoleonAppTests.swift */; };
 		73EB235227469450008111AE /* TechnoleonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235127469450008111AE /* TechnoleonAppUITests.swift */; };
 		73EB235427469450008111AE /* TechnoleonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */; };
+		94071ED8276109F300FFB8B4 /* setTestReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071ED7276109F300FFB8B4 /* setTestReponse.swift */; };
 		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
@@ -105,6 +106,7 @@
 		73EB234D27469450008111AE /* TechnoleonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechnoleonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EB235127469450008111AE /* TechnoleonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITests.swift; sourceTree = "<group>"; };
 		73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		94071ED7276109F300FFB8B4 /* setTestReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setTestReponse.swift; sourceTree = "<group>"; };
 		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				94E7F5E8275FBC3A0025644B /* Player.swift */,
 				94E7F5EA275FEA000025644B /* KTK3Request.swift */,
 				94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */,
+				94071ED7276109F300FFB8B4 /* setTestReponse.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */,
 				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
 				7338BAAB275D009400F42D2F /* LoginView.swift in Sources */,
+				94071ED8276109F300FFB8B4 /* setTestReponse.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
 				734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */,
 				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,
