@@ -35,7 +35,7 @@ struct TeamOverviewView: View {
                     //menu items here
                 }
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: ComparePlayerView()) {
                     VStack{
                         Text("Speler")
                             .foregroundColor(Color.white)
