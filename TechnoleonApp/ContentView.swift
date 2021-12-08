@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
     
     var body: some View {
         if technoleonAPI.accesToken == nil{
@@ -19,11 +20,27 @@ struct ContentView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
         else {
-            NavigationView{
-                OverviewView()
+            if loggedInUser.userRole == "coach" {
+                NavigationView{
+                    OverviewView()
+                }
+                .navigationTitle("Overview")
+                .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
             }
-            .navigationTitle("Overview")
-            .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+            else if loggedInUser.userRole == "player" {
+                NavigationView{
+                    OverviewPlayerView()
+                }
+                .navigationTitle("Overview")
+                .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+            }
+            else{
+                NavigationView{
+                    LoginView()
+                }
+                .navigationTitle("Inloggen")
+                .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+            }
         }
     }
 }

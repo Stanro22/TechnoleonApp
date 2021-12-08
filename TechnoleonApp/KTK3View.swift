@@ -11,6 +11,7 @@ struct KTK3View: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var ktk3Body = KtK3RequestBody.shared
+    @ObservedObject var timerManager = TimerManager()
     @State var attempt1: String = ""
     @State var attempt2: String = ""
     
@@ -137,10 +138,20 @@ struct KTK3View: View {
                 }
                 .padding(EdgeInsets(top: -15, leading: 0, bottom: 0, trailing: 0))
                 
-                Text("Stopwatch")
+                Text("\(timerManager.secondsLeft)")
+                    .font(.custom("", size: 30))
+                    
+                Button(action: startTimer){
+                    Image(systemName: "play.fill")
+                        .padding()
+                        .foregroundColor(Color.white)
+                }
+                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                .cornerRadius(90)
+                
                 
                 Text("Alle oefeningen gedaan?")
-                    .padding(EdgeInsets(top: 220, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: 0))
                 
                 NavigationLink(destination: EndOfTestView().onAppear{ setKTK3plusTest()}) {
                     Text("Beëindig de test")
@@ -157,14 +168,18 @@ struct KTK3View: View {
         }
     
     func saveFields(){
-        if attempt1.count > 0 && attempt2.count > 0 {
+        if attempt1.count > 0 {
             let attempt1Int = Int(attempt1)
-            let attempt2Int = Int(attempt2)
             ktk3Body.hoppingSideways1 = attempt1Int
-            ktk3Body.hoppingSideways2 = attempt2Int
         }
         else{
             ktk3Body.hoppingSideways1 = 0
+        }
+        if attempt2.count > 0 {
+            let attempt2Int = Int(attempt2)
+            ktk3Body.hoppingSideways2 = attempt2Int
+        }
+        else{
             ktk3Body.hoppingSideways2 = 0
         }
     }
@@ -190,6 +205,10 @@ struct KTK3View: View {
     
     func injury() {
         
+    }
+    
+    func startTimer() {
+        self.timerManager.start()
     }
 }
     

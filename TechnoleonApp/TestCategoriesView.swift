@@ -54,7 +54,7 @@ struct TestCategoriesView: View {
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
-                        .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: -10))
+                        .padding(EdgeInsets(top: 300, leading: 0, bottom: 0, trailing: -10))
                         NavigationLink(destination: TeamSelectionView()) {
                             VStack{
                                 Image(systemName: "globe")

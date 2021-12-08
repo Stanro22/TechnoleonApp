@@ -9,12 +9,12 @@ import Foundation
 
 struct UserResponse: Decodable {
     let email: String
-    let coachId: String
+    //let coachId: String
     let teamId: String
     
     enum CodingKeys: String, CodingKey {
         case email = "email"
-        case coachId = "coachId"
+        //case coachId = "coachId"
         case coach = "coach"
     }
     
@@ -25,7 +25,7 @@ struct UserResponse: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         email = try container.decode(String.self, forKey: .email)
-        coachId = try container.decode(String.self, forKey: .coachId)
+        //coachId = try container.decode(String.self, forKey: .coachId)
         
         let CoachContainer = try container.nestedContainer( // sprites
                     keyedBy: CoachCodingKeys.self,

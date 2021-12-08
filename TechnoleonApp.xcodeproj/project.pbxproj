@@ -43,6 +43,10 @@
 		73EB235227469450008111AE /* TechnoleonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235127469450008111AE /* TechnoleonAppUITests.swift */; };
 		73EB235427469450008111AE /* TechnoleonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */; };
 		94071ED8276109F300FFB8B4 /* setTestReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071ED7276109F300FFB8B4 /* setTestReponse.swift */; };
+		94071EDA2761163200FFB8B4 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071ED92761163200FFB8B4 /* TimerMode.swift */; };
+		94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDB2761177000FFB8B4 /* TimerManager.swift */; };
+		94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */; };
+		94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */; };
 		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
@@ -107,6 +111,10 @@
 		73EB235127469450008111AE /* TechnoleonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITests.swift; sourceTree = "<group>"; };
 		73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnoleonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94071ED7276109F300FFB8B4 /* setTestReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setTestReponse.swift; sourceTree = "<group>"; };
+		94071ED92761163200FFB8B4 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMode.swift; sourceTree = "<group>"; };
+		94071EDB2761177000FFB8B4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPlayerView.swift; sourceTree = "<group>"; };
+		94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlayerView.swift; sourceTree = "<group>"; };
 		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
@@ -204,6 +212,10 @@
 				94E7F5EA275FEA000025644B /* KTK3Request.swift */,
 				94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */,
 				94071ED7276109F300FFB8B4 /* setTestReponse.swift */,
+				94071ED92761163200FFB8B4 /* TimerMode.swift */,
+				94071EDB2761177000FFB8B4 /* TimerManager.swift */,
+				94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */,
+				94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -388,8 +400,11 @@
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
 				734CDD90275BA52000697CEE /* LoginRequest.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
+				94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */,
+				94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */,
 				733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */,
 				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
+				94071EDA2761163200FFB8B4 /* TimerMode.swift in Sources */,
 				7338BAAB275D009400F42D2F /* LoginView.swift in Sources */,
 				94071ED8276109F300FFB8B4 /* setTestReponse.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
@@ -399,6 +414,7 @@
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
+				94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */,
 				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,
 				73975785274946A200A17B6E /* ViewExtension.swift in Sources */,
 				94E7F5EB275FEA000025644B /* KTK3Request.swift in Sources */,

@@ -92,8 +92,11 @@ struct LoginView: View {
                 switch result {
                 case .success(let response):
                     loggedInUser.email = response.email
-                    loggedInUser.coachId = response.coachId
+                    //loggedInUser.coachId = response.coachId
                     loggedInUser.teamId = response.teamId
+                    if loggedInUser.userRole == "coach"{
+                        
+                    }
                     getTeamById(id: response.teamId)
                 case .failure(let error):
                     switch error{

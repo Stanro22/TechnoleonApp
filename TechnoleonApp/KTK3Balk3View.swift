@@ -175,19 +175,26 @@ struct KTK3Balk3View: View {
         }
     
     func saveFields(){
-        if attempt1.count > 0 && attempt2.count > 0 && attempt3.count > 0 {
+        if attempt1.count > 0 {
             let attempt1Int = Int(attempt1)
-            let attempt2Int = Int(attempt2)
-            let attempt3Int = Int(attempt3)
-            
-            ktk3Body.beam31 = attempt1Int
-            ktk3Body.beam32 = attempt2Int
-            ktk3Body.beam33 = attempt3Int
+            ktk3Body.beam11 = attempt1Int
         }
         else{
-            ktk3Body.beam31 = 0
-            ktk3Body.beam32 = 0
-            ktk3Body.beam33 = 0
+            ktk3Body.beam11 = 0
+        }
+        if attempt2.count > 0 {
+            let attempt2Int = Int(attempt2)
+            ktk3Body.beam12 = attempt2Int
+        }
+        else{
+            ktk3Body.beam12 = 0
+        }
+        if attempt3.count > 0 {
+            let attempt3Int = Int(attempt3)
+            ktk3Body.beam13 = attempt3Int
+        }
+        else{
+            ktk3Body.beam13 = 0
         }
     }
     
