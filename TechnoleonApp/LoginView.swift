@@ -35,7 +35,7 @@ struct LoginView: View {
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 30)
-                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                        .overlay(Rectangle().frame(width: 290, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 }
                 .padding()
                 
@@ -44,7 +44,7 @@ struct LoginView: View {
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 30)
-                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                        .overlay(Rectangle().frame(width: 290, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 }
                 .padding()
                 

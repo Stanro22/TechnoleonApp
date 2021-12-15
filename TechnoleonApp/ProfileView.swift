@@ -41,50 +41,97 @@ struct ProfileView: View {
                     VStack{
                         Text("Doelen")
                             .foregroundColor(Color.white)
-                            .font(.custom("", size: 14))
+                            .font(.custom("", size: 20))
                     }
                     .frame(width: 100, height: 20)
                     .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                     .background(Color.gray)
                 }
                 .cornerRadius(10)
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
                 NavigationLink(destination: OverviewView()) {
                     VStack{
                         Text("Teams")
                             .foregroundColor(Color.white)
-                            .font(.custom("", size: 14))
+                            .font(.custom("", size: 20))
                     }
                     .frame(width: 100, height: 20)
                     .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                     .background(Color(red: 0.38, green: 0.44, blue: 0.64))
                 }
                 .cornerRadius(10)
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             }
             .padding()
                         
             VStack(alignment: .leading){
                 HStack{
-                    Image(systemName: "star")
+                    Image(systemName: "envelope.fill")
+                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Emailadres")
-                    Text("")
+                        .font(.custom("", size: 14))
+                    if loggedInUser.email != nil {
+                        Text(loggedInUser.email!)
+                            .font(.system(size: 14)).italic()
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 58, bottom: 0, trailing: 0))
+                    }
+                    else{
+                        Text("mail@trainer.com")
+                            .font(.system(size: 14)).italic()
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 58, bottom: 0, trailing: 0))
+                    }
                 }
-                .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                .frame(width: 280, height: 20, alignment: .leading)
+                .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 
                 HStack{
-                    Image(systemName: "star")
+                    Image(systemName: "calendar")
+                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Geboortejaar")
-                    Text("")
+                        .font(.custom("", size: 14))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 40))
+                    if loggedInUser.email != nil {
+                        Text("01-02-1968")
+                            .font(.system(size: 14)).italic()
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
+                    }
+                    else{
+                        Text("01-02-1968")
+                            .font(.system(size: 14)).italic()
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
+                    }
                 }
-                .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                .frame(width: 280, height: 20, alignment: .leading)
+                .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 
                 HStack{
-                    Image(systemName: "star")
+                    Image(systemName: "person.fill")
+                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Gender")
-                    Text("")
+                        .font(.custom("", size: 14))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 100))
+                    if loggedInUser.email != nil {
+                        Text("Man")
+                            .font(.system(size: 14)).italic()
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 65, bottom: 0, trailing: 0))
+                    }
+                    else{
+                        Text("Man")
+                            .font(.system(size: 14)).italic()
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 65, bottom: 0, trailing: 0))
+                    }
                 }
-                .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                .frame(width: 280, height: 20, alignment: .leading)
+                .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
             .padding()
             .frame(width: 300, height: 120)
@@ -94,7 +141,7 @@ struct ProfileView: View {
             Button(action: logout){
                 Text("Logout")
             }
-            .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+            .padding(EdgeInsets(top: 23, leading: 15, bottom: 60, trailing: 15))
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: OverviewView()) {
