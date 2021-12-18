@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Player: Decodable{
+struct Player: Decodable, Hashable{
     let playerId: String
     let playerName: String
     

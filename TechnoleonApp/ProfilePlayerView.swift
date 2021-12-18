@@ -193,7 +193,7 @@ struct ProfilePlayerView: View {
             .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
             
             HStack(alignment: .bottom){
-                    NavigationLink(destination: OverviewView()) {
+                    NavigationLink(destination: OverviewPlayerView()) {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
@@ -206,7 +206,7 @@ struct ProfilePlayerView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: -10))
-                    NavigationLink(destination: TeamSelectionView()) {
+                    NavigationLink(destination: OverviewPlayerView()) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)
@@ -219,7 +219,7 @@ struct ProfilePlayerView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
-                    NavigationLink(destination: ProfileView()) {
+                    NavigationLink(destination: ProfilePlayerView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
                                 .foregroundColor(Color.white)

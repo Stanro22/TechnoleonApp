@@ -22,7 +22,7 @@ struct EndOfTestView: View {
                 HStack(spacing: 50) {
                     if loggedInUser.playerName != nil {
                         Text((loggedInUser.playerName)!)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 90))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 80))
                             .foregroundColor(Color.black)
                     }
                     else{
