@@ -10,63 +10,47 @@ import SwiftUI
 struct OverviewView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @State var expand = false
+    @State private var isExpanded = false
+    @State private var selectedTeam = "Team"
     
     var body: some View {
-        VStack{
+        VStack(){
+            Spacer()
             HStack{
                 Image(systemName: "star")
                     .resizable()
+                    .frame(width: 80, height: 80, alignment: .leading)
+
                 VStack(alignment: .leading){
-                    if loggedInUser.name != nil{
-                        Text("Naam:    ")
-                            .font(.custom("", size: 14))
-                        + Text(loggedInUser.name!)
-                            .font(.custom("", size: 14))
-                    }
-                    else{
-                        Text("Naam:")
-                            .font(.custom("", size: 14))
-                    }
-                    if loggedInUser.club != nil {
-                        Text("Club:    ")
-                            .font(.custom("", size: 14))
-                        + Text(loggedInUser.club!)
-                            .font(.custom("", size: 14))
-                    }
-                    else{
-                        Text("Club:")
-                            .font(.custom("", size: 14))
-                    }
-                    
-                    VStack(spacing: 30) {
-                        HStack {
-                            if loggedInUser.teamname != nil{
-                                Text(loggedInUser.teamname!)
-                                    .foregroundColor(Color.black)
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 50))
-                            }
-                            else{
-                                Text("Team")
-                                    .foregroundColor(Color.black)
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 100))
-                            }
-                            Image(systemName: expand ? "chevron.up" : "chevron.down")
-                                .resizable()
-                                .frame(width: 13, height: 6, alignment: .trailing)
-                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    HStack{
+                        if loggedInUser.name != nil{
+                            Text("Naam:    ")
+                                .font(.custom("", size: 14))
+                            + Text(loggedInUser.name!)
+                                .font(.custom("", size: 14))
                         }
+                        else{
+                            Text("Naam:")
+                                .font(.custom("", size: 14))
+                        }
+                        Spacer()
                     }
-                    .padding()
-                    .frame(width: 200, height: 40)
-                    .background(Color(red: 0.93, green: 0.93, blue: 0.93))
-                    .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                    .onTapGesture {
-                        self.expand.toggle()
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 0))
+                    
+                    HStack{
+                        if loggedInUser.teamname != nil {
+                            Text("Team:    ")
+                                .font(.custom("", size: 14))
+                            + Text(loggedInUser.teamname!)
+                                .font(.custom("", size: 14))
+                        }
+                        else{
+                            Text("Team:")
+                                .font(.custom("", size: 14))
+                        }
+                        Spacer()
                     }
-                    if expand {
-                        
-                    }
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                 }
             }
             .frame(width: 300, height: 80)
@@ -104,16 +88,16 @@ struct OverviewView: View {
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("Beste Resultaten")
-                        .padding(EdgeInsets(top: -80, leading: -150, bottom: 12, trailing: 15))
+                    Text("Laatste Resultaten")
+                        .padding(EdgeInsets(top: -180, leading: -150, bottom: 12, trailing: 15))
                 }
             }
-            .frame(width: 300, height: 150)
+            .frame(width: 300, height: 350)
             .padding()
             .foregroundColor(Color.white)
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
-                        
+            Spacer()
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: OverviewView()) {
@@ -128,8 +112,8 @@ struct OverviewView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
-                    .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: -10))
-                    NavigationLink(destination: TeamSelectionView()) {
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
+                    NavigationLink(destination: PlayerSelectionView()) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)
@@ -141,7 +125,7 @@ struct OverviewView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: ProfileView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
@@ -154,7 +138,7 @@ struct OverviewView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
         }
         .navigationTitle("Overzicht")

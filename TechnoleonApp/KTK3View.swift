@@ -100,6 +100,7 @@ struct KTK3View: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                 }
+                Spacer()
                 
                 HStack{
                     TextField("Poging 1", text: $attempt1)
@@ -138,20 +139,32 @@ struct KTK3View: View {
                 }
                 .padding(EdgeInsets(top: -15, leading: 0, bottom: 0, trailing: 0))
                 
-                Text("\(timerManager.secondsLeft)")
-                    .font(.custom("", size: 30))
-                    
-                Button(action: startTimer){
-                    Image(systemName: "play.fill")
-                        .padding()
+                Button(action: timerManager.reset){
+                    Text("Reset")
                         .foregroundColor(Color.white)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .background(Color.red)
                 }
-                .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                .cornerRadius(90)
+                .cornerRadius(15)
                 
-                
+                Text(secondsToMinutesAndSeconds(seconds: timerManager.secondsLeft))
+                    .font(.custom("", size: 30))
+                    .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    
+                Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
+                    .onTapGesture(perform: {
+                        if self.timerManager.timerMode == .initial {
+                            self.timerManager.setTimerLenght(seconds: 15)
+                        }
+                        self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
+                    })
+                                
                 Text("Alle oefeningen gedaan?")
-                    .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 100, leading: 0, bottom: 0, trailing: 0))
                 
                 NavigationLink(destination: EndOfTestView().onAppear{ setKTK3plusTest()}) {
                     Text("Beëindig de test")

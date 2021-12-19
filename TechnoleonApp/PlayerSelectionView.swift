@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PlayerSelectionView: View {
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @State var playerName = ""
     @State private var isExpanded = false
     @State private var selectedPlayer = "Speler"
     
@@ -89,7 +88,7 @@ struct PlayerSelectionView: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                        NavigationLink(destination: TeamSelectionView()) {
+                        NavigationLink(destination: PlayerSelectionView()) {
                             VStack{
                                 Image(systemName: "globe")
                                     .foregroundColor(Color.white)

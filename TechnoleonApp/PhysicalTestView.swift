@@ -30,7 +30,7 @@ struct PhysicalTestView: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: -10))
-                        NavigationLink(destination: TeamSelectionView()) {
+                        NavigationLink(destination: PlayerSelectionView()) {
                             VStack{
                                 Image(systemName: "globe")
                                     .foregroundColor(Color.white)
