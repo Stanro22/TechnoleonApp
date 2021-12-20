@@ -150,6 +150,12 @@ struct KTK3View: View {
                 Text(secondsToMinutesAndSeconds(seconds: timerManager.secondsLeft))
                     .font(.custom("", size: 30))
                     .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    .frame(width: 100, height: 100)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 90)
+                            .stroke(lineWidth: 2)
+                            .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
+                    )
                     .onAppear(){
                         self.timerManager.setTimerLenght(seconds: 15)
                     }
@@ -158,6 +164,7 @@ struct KTK3View: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 50, height: 50)
+                    .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
                     .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     .onTapGesture(perform: {
                         if self.timerManager.timerMode == .initial {
@@ -165,9 +172,10 @@ struct KTK3View: View {
                         }
                         self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
                     })
+                Spacer()
                                 
                 Text("Alle oefeningen gedaan?")
-                    .padding(EdgeInsets(top: 100, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 
                 NavigationLink(destination: EndOfTestView().onAppear{ setKTK3plusTest()}) {
                     Text("Beëindig de test")
