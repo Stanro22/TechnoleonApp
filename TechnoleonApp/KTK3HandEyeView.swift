@@ -160,6 +160,9 @@ struct KTK3HandEyeView: View {
                 Text(secondsToMinutesAndSeconds(seconds: timerManager.secondsLeft))
                     .font(.custom("", size: 30))
                     .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    .onAppear(){
+                        self.timerManager.setTimerLenght(seconds: 30)
+                    }
                     
                 Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
                     .resizable()

@@ -10,37 +10,62 @@ import SwiftUI
 struct TestCategoriesView: View {
     var body: some View {
             VStack{
+                Spacer()
                 Text("Kies een testcategorie")
                     .font(.custom("", size: 24))
                     .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
-                //NavigationLink(destination: PhysicalTestView()){
-                    //Image("categorieen")
-                    //    .resizable()
-                      //  .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
-                      //  .frame(width: 350, height: 400)
-                //}
                 
-                NavigationLink(destination: PhysicalTestView()){
+                NavigationLink(destination: TestListView(chosenCategorie: "Fysiek")){
                     Text("Fysiek")
                         .padding()
                         .foregroundColor(Color.white)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }
+                .cornerRadius(20)
+                Spacer()
                 
-                NavigationLink(destination: PhysicalTestView()){
-                    Text("Cognitief")
-                        .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: TestListView(chosenCategorie: "Cognitief")){
+                        Text("Cognitief")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    }
+                    .cornerRadius(20)
+                    Spacer()
+                    NavigationLink(destination: TestListView(chosenCategorie: "Mentaal")){
+                        Text("Mentaal")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    }
+                    .cornerRadius(20)
+                    Spacer()
                 }
+                Spacer()
                 
-                NavigationLink(destination: PhysicalTestView()){
-                    Text("Technisch")
-                        .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: TestListView(chosenCategorie: "Technisch")){
+                        Text("Technisch")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    }
+                    .cornerRadius(20)
+                    Spacer()
+                    NavigationLink(destination: TestListView(chosenCategorie: "Wedstrijd")){
+                        Text("Wedstrijd")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    }
+                    .cornerRadius(20)
+                    Spacer()
                 }
-                
+                Spacer()
+                                
                 HStack(alignment: .bottom){
                         NavigationLink(destination: OverviewView()) {
                             VStack{
@@ -54,7 +79,7 @@ struct TestCategoriesView: View {
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
-                        .padding(EdgeInsets(top: 300, leading: 0, bottom: 0, trailing: -10))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                         NavigationLink(destination: PlayerSelectionView()) {
                             VStack{
                                 Image(systemName: "globe")
@@ -67,7 +92,7 @@ struct TestCategoriesView: View {
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                             .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                         }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                         NavigationLink(destination: ProfileView()) {
                             VStack{
                                 Image(systemName: "person.circle.fill")
@@ -80,7 +105,7 @@ struct TestCategoriesView: View {
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 }
             }
             .navigationTitle("Categorieën")

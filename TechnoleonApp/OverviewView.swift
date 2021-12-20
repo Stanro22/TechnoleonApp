@@ -17,9 +17,10 @@ struct OverviewView: View {
         VStack(){
             Spacer()
             HStack{
-                Image(systemName: "star")
+                Image(systemName: "person.fill")
                     .resizable()
-                    .frame(width: 80, height: 80, alignment: .leading)
+                    .background(Color.gray)
+                    .frame(width: 75, height: 80, alignment: .leading)
 
                 VStack(alignment: .leading){
                     HStack{
