@@ -8,17 +8,27 @@
 import Foundation
 
 final class LoggedInUser : ObservableObject {
+    //trainer and player
     static let shared = LoggedInUser()
     var userId: String?
     @Published var userRole: String?
     var name: String?
     var email: String?
-    //var coachId: String?
+    var playerId: String?
     var teamId: String?
     @Published var teamname: String?
+    
+    //trainer
+    //var coachId: String?
     var organizationId: String?
     var players: [Player]?
     var club: String?
-    var playerId: String?
     @Published var playerName: String?
+    
+    //player
+    var birthDate: String?
+    var weightInKg: Int?
+    var lengthInCm: Int?
+    var gender: String?
+    @Published var teamRole: String?
 }

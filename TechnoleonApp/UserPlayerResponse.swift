@@ -9,28 +9,43 @@ import Foundation
 
 struct UserPlayerResponse: Decodable {
     let email: String
-    //let coachId: String
+    let playerId: String
+    let birthDate: String
+    let weightInKg: Int
+    let lengthInCm: Int
+    let gender: String
+    let teamRole: String
     let teamId: String
     
     enum CodingKeys: String, CodingKey {
         case email = "email"
-        //case coachId = "coachId"
-        case coach = "coach"
+        case playerId = "playerId"
+        case player = "player"
     }
     
-    enum CoachCodingKeys: String, CodingKey {
+    enum PlayerCodingKeys: String, CodingKey {
+        case birthDate = "birthDate"
+        case weightInKg = "weightInKg"
+        case lengthInCm = "lengthInCm"
+        case gender = "gender"
+        case teamRole = "teamRole"
         case teamId = "teamId"
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         email = try container.decode(String.self, forKey: .email)
-        //coachId = try container.decode(String.self, forKey: .coachId)
+        playerId = try container.decode(String.self, forKey: .playerId)
         
-        let CoachContainer = try container.nestedContainer( // sprites
-                    keyedBy: CoachCodingKeys.self,
-                    forKey: .coach
+        let playerContainer = try container.nestedContainer( // sprites
+                    keyedBy: PlayerCodingKeys.self,
+                    forKey: .player
         )
-        teamId = try CoachContainer.decode(String.self, forKey: .teamId)
+        birthDate = try playerContainer.decode(String.self, forKey: .birthDate)
+        weightInKg = try playerContainer.decode(Int.self, forKey: .weightInKg)
+        lengthInCm = try playerContainer.decode(Int.self, forKey: .lengthInCm)
+        gender = try playerContainer.decode(String.self, forKey: .gender)
+        teamRole = try playerContainer.decode(String.self, forKey: .teamRole)
+        teamId = try playerContainer.decode(String.self, forKey: .teamId)
     }
 }

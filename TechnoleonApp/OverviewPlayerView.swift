@@ -15,52 +15,56 @@ struct OverviewPlayerView: View {
     var body: some View {
         VStack{
             HStack{
-                Image(systemName: "star")
+                Image(systemName: "person.fill")
                     .resizable()
-                    .frame(width: 50, height: 50, alignment: .leading)
-                    .padding(EdgeInsets(top: 10, leading: -60, bottom: 10, trailing: 20))
+                    .background(Color.gray)
+                    .frame(width: 75, height: 80, alignment: .leading)
+
                 VStack(alignment: .leading){
-                    if loggedInUser.name != nil{
-                        Text("Naam:    ")
-                            .font(.custom("", size: 14))
-                        + Text(loggedInUser.name!)
-                            .font(.custom("", size: 14))
+                    HStack{
+                        if loggedInUser.name != nil{
+                            Text("Naam:    ")
+                                .font(.custom("", size: 14))
+                            + Text(loggedInUser.name!)
+                                .font(.custom("", size: 14))
+                        }
+                        else{
+                            Text("Naam:")
+                                .font(.custom("", size: 14))
+                        }
+                        Spacer()
                     }
-                    else{
-                        Text("Naam:")
-                            .font(.custom("", size: 14))
-                    }
-                    if loggedInUser.club != nil {
-                        Text("Leeftijd:    ")
-                            .font(.custom("", size: 14))
-                        + Text(loggedInUser.club!)
-                            .font(.custom("", size: 14))
-                    }
-                    else{
-                        Text("Leeftijd:")
-                            .font(.custom("", size: 14))
-                    }
-                    if loggedInUser.club != nil {
-                        Text("Positie:    ")
-                            .font(.custom("", size: 14))
-                        + Text(loggedInUser.club!)
-                            .font(.custom("", size: 14))
-                    }
-                    else{
-                        Text("Positie:")
-                            .font(.custom("", size: 14))
-                    }
-                    if loggedInUser.club != nil {
-                        Text("Team:    ")
-                            .font(.custom("", size: 14))
-                        + Text(loggedInUser.club!)
-                            .font(.custom("", size: 14))
-                    }
-                    else{
-                        Text("Team:")
-                            .font(.custom("", size: 14))
-                    }
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 1, trailing: 0))
                     
+                    HStack{
+                        if loggedInUser.teamRole != nil{
+                            Text("Positie:    ")
+                                .font(.custom("", size: 14))
+                            + Text(loggedInUser.teamRole!)
+                                .font(.custom("", size: 14))
+                        }
+                        else{
+                            Text("Positie:")
+                                .font(.custom("", size: 14))
+                        }
+                        Spacer()
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 1, trailing: 0))
+                    
+                    HStack{
+                        if loggedInUser.teamname != nil {
+                            Text("Team:    ")
+                                .font(.custom("", size: 14))
+                            + Text(loggedInUser.teamname!)
+                                .font(.custom("", size: 14))
+                        }
+                        else{
+                            Text("Team:")
+                                .font(.custom("", size: 14))
+                        }
+                        Spacer()
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                 }
             }
             .frame(width: 300, height: 80)
@@ -68,6 +72,8 @@ struct OverviewPlayerView: View {
             .foregroundColor(Color.white)
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
+        
+                
             
             HStack{
                 NavigationLink(destination: LatestResultsView()) {

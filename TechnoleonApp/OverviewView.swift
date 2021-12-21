@@ -36,7 +36,7 @@ struct OverviewView: View {
                         }
                         Spacer()
                     }
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 1, trailing: 0))
                     
                     HStack{
                         if loggedInUser.teamname != nil {

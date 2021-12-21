@@ -36,8 +36,9 @@ struct ProfilePlayerView: View {
             .frame(width: 375, height: 200)
             .background(Color(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 0.90)))
             
+            
             HStack{
-                NavigationLink(destination: OverviewView()) {
+                NavigationLink(destination: OverviewPlayerView()) {
                     VStack{
                         Text("Doelen")
                             .foregroundColor(Color.white)
@@ -49,7 +50,9 @@ struct ProfilePlayerView: View {
                 }
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                NavigationLink(destination: OverviewView()) {
+                .disabled(true)
+                
+                NavigationLink(destination: OverviewPlayerView()) {
                     VStack{
                         Text("Sport")
                             .foregroundColor(Color.white)
@@ -64,8 +67,8 @@ struct ProfilePlayerView: View {
                 }
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                .disabled(true)
             }
-            .padding()
                         
             VStack(alignment: .leading){
                 HStack{
@@ -73,17 +76,18 @@ struct ProfilePlayerView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Emailadres")
                         .font(.custom("", size: 14))
+                    Spacer()
                     if loggedInUser.email != nil {
                         Text(loggedInUser.email!)
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 58, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
                         Text("mail@player1.com")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 55, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -95,18 +99,19 @@ struct ProfilePlayerView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Geboortejaar")
                         .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 40))
-                    if loggedInUser.email != nil {
-                        Text("28-11-2011")
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    Spacer()
+                    if loggedInUser.birthDate != nil {
+                        Text(loggedInUser.birthDate!)
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 45, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
                         Text("28-11-2011")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 45, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -118,18 +123,19 @@ struct ProfilePlayerView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Gender")
                         .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 100))
-                    if loggedInUser.email != nil {
-                        Text("Man")
+                        .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
+                    Spacer()
+                    if loggedInUser.gender != nil {
+                        Text(loggedInUser.gender!)
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 70, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
                         Text("Man")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 70, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -141,18 +147,19 @@ struct ProfilePlayerView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Gewicht in kg")
                         .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
-                    if loggedInUser.email != nil {
-                        Text("60")
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    Spacer()
+                    if loggedInUser.weightInKg != nil {
+                        Text("\(loggedInUser.weightInKg!)")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
                         Text("60")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -164,9 +171,10 @@ struct ProfilePlayerView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Lengte in cm")
                         .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
-                    if loggedInUser.email != nil {
-                        Text("130")
+                        .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
+                    Spacer()
+                    if loggedInUser.lengthInCm != nil {
+                        Text("\(loggedInUser.lengthInCm!)")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
@@ -185,7 +193,7 @@ struct ProfilePlayerView: View {
             .padding()
             .frame(width: 300, height: 200)
             .background(Color(UIColor(red: 0.90, green: 0.90, blue: 0.90, alpha: 0.80)))
-            
+            Spacer()
             
             Button(action: logout){
                 Text("Logout")
@@ -205,7 +213,7 @@ struct ProfilePlayerView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: -10))
+                    .padding(EdgeInsets(top: 3, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: OverviewPlayerView()) {
                         VStack{
                             Image(systemName: "globe")
@@ -218,7 +226,7 @@ struct ProfilePlayerView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: ProfilePlayerView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
@@ -231,7 +239,7 @@ struct ProfilePlayerView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
         }
         .navigationTitle("Profiel")

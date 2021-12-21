@@ -120,8 +120,13 @@ struct LoginView: View {
                     switch result {
                     case .success(let response):
                         loggedInUser.email = response.email
-                        //loggedInUser.teamId = response.teamId
-                        //getTeamById(id: response.teamId)
+                        loggedInUser.birthDate = response.birthDate
+                        loggedInUser.weightInKg = response.weightInKg
+                        loggedInUser.lengthInCm = response.lengthInCm
+                        loggedInUser.gender = response.gender
+                        loggedInUser.teamRole = response.teamRole
+                        loggedInUser.teamId = response.teamId
+                        getTeamById(id: response.teamId)
                     case .failure(let error):
                         switch error{
                         case .urlError(let urlError):
@@ -146,8 +151,10 @@ struct LoginView: View {
             switch result {
             case .success(let response):
                 loggedInUser.teamname = response.teamname
-                loggedInUser.organizationId = response.organizationId
-                loggedInUser.players = response.players
+                if loggedInUser.userRole == "coach"{
+                    loggedInUser.organizationId = response.organizationId
+                    loggedInUser.players = response.players
+                }
             case .failure(let error):
                 switch error{
                 case .urlError(let urlError):
