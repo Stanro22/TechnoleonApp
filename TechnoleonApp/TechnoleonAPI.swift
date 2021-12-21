@@ -64,6 +64,15 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)       
     }
     
+    func getUserPlayerById(id: String, completion: @escaping (Result<UserPlayerResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Users/\(id)")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "GET"
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func getTeamById(id: String, completion: @escaping (Result<TeamResponse, RequestError>) -> Void){
         let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Teams/\(id)")!
         var urlRequest = URLRequest(url: url)

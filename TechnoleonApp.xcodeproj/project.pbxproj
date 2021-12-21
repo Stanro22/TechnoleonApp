@@ -47,6 +47,7 @@
 		94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDB2761177000FFB8B4 /* TimerManager.swift */; };
 		94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */; };
 		94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */; };
+		943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943758802771D36C001D3222 /* UserPlayerResponse.swift */; };
 		9438A7AD2770BCA40023E40C /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7AC2770BCA40023E40C /* Test.swift */; };
 		9438A7AF2770CD190023E40C /* MatchTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7AE2770CD190023E40C /* MatchTestList.swift */; };
 		9438A7B12770CF180023E40C /* TechnicalTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7B02770CF180023E40C /* TechnicalTestList.swift */; };
@@ -120,6 +121,7 @@
 		94071EDB2761177000FFB8B4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPlayerView.swift; sourceTree = "<group>"; };
 		94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlayerView.swift; sourceTree = "<group>"; };
+		943758802771D36C001D3222 /* UserPlayerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlayerResponse.swift; sourceTree = "<group>"; };
 		9438A7AC2770BCA40023E40C /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		9438A7AE2770CD190023E40C /* MatchTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTestList.swift; sourceTree = "<group>"; };
 		9438A7B02770CF180023E40C /* TechnicalTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalTestList.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				9438A7B02770CF180023E40C /* TechnicalTestList.swift */,
 				9438A7B22770CF360023E40C /* CognitiveTestList.swift */,
 				9438A7B42770CF480023E40C /* MentalTestList.swift */,
+				943758802771D36C001D3222 /* UserPlayerResponse.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
+				943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */,
 				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,

@@ -26,10 +26,18 @@ struct LoginView: View {
         NavigationView{
             VStack{
                 HStack{
-                    Image(systemName: "star")
-                    Image(systemName: "star")
+                    Spacer()
+                    Image("logo1")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                    Spacer()
+                    Image("logo2")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                    Spacer()
                 }
                 .padding()
+                Spacer()
                 HStack{
                     TextField("Email adres", text: $email)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
@@ -47,7 +55,7 @@ struct LoginView: View {
                         .overlay(Rectangle().frame(width: 290, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 }
                 .padding()
-                
+                Spacer()
                 HStack{
                         Button(action: login){
                             Text("Inloggen")
@@ -58,8 +66,9 @@ struct LoginView: View {
                         .padding()
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(10)
-                        .padding(EdgeInsets(top: 100, leading: 0, bottom: 50, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                 }
+                Spacer()
             }
         }
         .navigationTitle("Inloggen")
@@ -107,7 +116,23 @@ struct LoginView: View {
                 }
             }
             if loggedInUser.userRole == "player"{
-                //getPlayer
+                technoleonAPI.getUserPlayerById(id: loggedInUser.userId!) { (result) in
+                    switch result {
+                    case .success(let response):
+                        loggedInUser.email = response.email
+                        //loggedInUser.teamId = response.teamId
+                        //getTeamById(id: response.teamId)
+                    case .failure(let error):
+                        switch error{
+                        case .urlError(let urlError):
+                            print("URL error: \(String(describing: urlError))")
+                        case .decodingError(let decodingError):
+                            print("decode error: \(String(describing: decodingError))")
+                        case .genericError(let error):
+                            print("error: \(String(describing: error))")
+                        }
+                    }
+                }
             }
             
         }
