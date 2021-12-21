@@ -49,6 +49,7 @@ struct ProfileView: View {
                 }
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                .disabled(true)
                 NavigationLink(destination: OverviewView()) {
                     VStack{
                         Text("Teams")
@@ -61,6 +62,7 @@ struct ProfileView: View {
                 }
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                .disabled(true)
             }
             .padding()
                         
@@ -70,17 +72,18 @@ struct ProfileView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Emailadres")
                         .font(.custom("", size: 14))
+                    Spacer()
                     if loggedInUser.email != nil {
                         Text(loggedInUser.email!)
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 58, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
                         Text("mail@trainer.com")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 58, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -92,18 +95,19 @@ struct ProfileView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Geboortejaar")
                         .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 40))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    Spacer()
                     if loggedInUser.email != nil {
-                        Text("01-02-1968")
+                        Text("")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
-                        Text("01-02-1968")
+                        Text("")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -115,18 +119,19 @@ struct ProfileView: View {
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Gender")
                         .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 100))
+                        .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
+                    Spacer()
                     if loggedInUser.email != nil {
                         Text("Man")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 65, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     else{
-                        Text("Man")
+                        Text("")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 65, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
@@ -136,12 +141,12 @@ struct ProfileView: View {
             .padding()
             .frame(width: 300, height: 120)
             .background(Color(UIColor(red: 0.90, green: 0.90, blue: 0.90, alpha: 0.80)))
-            
+            Spacer()
             
             Button(action: logout){
                 Text("Logout")
             }
-            .padding(EdgeInsets(top: 23, leading: 15, bottom: 60, trailing: 15))
+            .padding(EdgeInsets(top: 23, leading: 15, bottom: 0, trailing: 15))
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: OverviewView()) {
@@ -156,7 +161,7 @@ struct ProfileView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: -10))
+                    .padding(EdgeInsets(top: 20, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: TeamSelectionView()) {
                         VStack{
                             Image(systemName: "globe")
@@ -169,7 +174,7 @@ struct ProfileView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -10))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: ProfileView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
@@ -182,7 +187,7 @@ struct ProfileView: View {
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
         }
         .navigationTitle("Profiel")
