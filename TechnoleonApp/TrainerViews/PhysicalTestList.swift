@@ -36,7 +36,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: PHVView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("PHV")
@@ -61,7 +61,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: SitAndReachView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Sit and reach")
@@ -86,7 +86,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: VetPercentageView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Vetpercentage")
@@ -111,7 +111,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: T_TestView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("T-Test")
@@ -136,7 +136,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: OneLegStanceLeft()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("One leg stance")
@@ -161,7 +161,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: Sprint10m20m35mView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("10, 20 en 35 meter sprint")
@@ -186,7 +186,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: Sprint10x5mView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("10x5 meter sprint")
@@ -211,7 +211,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: ShuttleRunView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Interval shuttle run")
@@ -236,7 +236,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: YoYoView()){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Yo-Yo uithoudingsvermogen test")
