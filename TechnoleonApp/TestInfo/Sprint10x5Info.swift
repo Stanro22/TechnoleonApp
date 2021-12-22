@@ -12,8 +12,8 @@ class Sprint10x5Info : TestInfo {
         super.init(
             name: "10x5 meter sprint",
             skills: "Explosiviteit",
-            description: "",
-            itemsNeeded: ""
+            description: "Deze test zal de snelheid van de speler meten.",
+            itemsNeeded: "Voor deze test is nodig: een pion om de afstand mee te markeren."
         )
     }
 }

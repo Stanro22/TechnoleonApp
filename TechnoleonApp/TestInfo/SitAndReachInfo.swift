@@ -12,8 +12,8 @@ class SitAndReachInfo : TestInfo {
         super.init(
             name: "Sit and reach",
             skills: "Mobiliteit",
-            description: "",
-            itemsNeeded: ""
+            description: "De sit and reach test wordt gebruikt om de flexibiliteit van de wervelkolom en de hamstrings gemeten.",
+            itemsNeeded: "Voor deze test is nodig: een meetlint."
         )
     }
 }

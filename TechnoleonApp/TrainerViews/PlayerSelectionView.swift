@@ -14,11 +14,12 @@ struct PlayerSelectionView: View {
     
     var body: some View {
         VStack{
+            Spacer()
                 Image(systemName: "person.fill")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    .padding(EdgeInsets(top: 150, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 Text("Selecteer een speler")
                 
                 DisclosureGroup("\(selectedPlayer)", isExpanded: $isExpanded){

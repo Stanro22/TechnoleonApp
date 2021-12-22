@@ -12,8 +12,8 @@ class vetPercentageInfo : TestInfo {
         super.init(
             name: "Vetpercentage",
             skills: "Biometrie",
-            description: "",
-            itemsNeeded: ""
+            description: "Met de vetpercentage test kan het vetpercentage van een lichaamsdeel getest worden.",
+            itemsNeeded: "Voor deze test is nodig: een meetlint."
         )
     }
 }

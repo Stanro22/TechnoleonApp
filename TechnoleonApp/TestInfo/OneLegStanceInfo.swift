@@ -12,8 +12,8 @@ class OneLegStanceInfo : TestInfo {
         super.init(
             name: "One leg stance",
             skills: "Coördinatie, balans",
-            description: "",
-            itemsNeeded: ""
+            description: "De one leg stance test de balans van de speler. De speler staat op een been en de trainer houdt met de stopwatch bij hoe lang de speler dit volhoudt.",
+            itemsNeeded: "Voor deze test is niets nodig."
         )
     }
 }

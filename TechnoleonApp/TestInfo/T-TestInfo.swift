@@ -12,8 +12,8 @@ class T_TestInfo : TestInfo {
         super.init(
             name: "T-Test",
             skills: "Wendbaarheid",
-            description: "",
-            itemsNeeded: ""
+            description: "De T-test wordt gebruikt om wendbaarheid en snelheid van de speler te bepalen. De speler gaat zo snel mogelijk langs iedere pion in goede volgorde.",
+            itemsNeeded: "Voor deze test is nodig: een vijftal pionen."
         )
     }
 }

@@ -12,8 +12,8 @@ class EyeCentre : TestInfo {
         super.init(
             name: "Eye centre",
             skills: "Sports vision",
-            description: "",
-            itemsNeeded: ""
+            description: "Deze test is op het moment alleen te doen via ... Contactgegevens ...",
+            itemsNeeded: "Voor deze test is niets nodig."
         )
     }
 }
