@@ -63,7 +63,6 @@ struct T_TestView: View {
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
-            Spacer()
         }
         .navigationTitle("T-Test")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
