@@ -86,6 +86,7 @@
 		947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BA9277333180040CD62 /* EyeCentreInfo.swift */; };
 		947C8BAC277361F70040CD62 /* TestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BAB277361F70040CD62 /* TestInfoView.swift */; };
 		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
+		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
 		94E7F5E7275FB2E30025644B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E6275FB2E30025644B /* Team.swift */; };
@@ -192,6 +193,7 @@
 		947C8BA9277333180040CD62 /* EyeCentreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeCentreInfo.swift; sourceTree = "<group>"; };
 		947C8BAB277361F70040CD62 /* TestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInfoView.swift; sourceTree = "<group>"; };
 		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
+		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
 		94E7F5E6275FB2E30025644B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -347,7 +349,7 @@
 				947C8B8327732A940040CD62 /* YoYoView.swift */,
 				947C8B8527732AAB0040CD62 /* LSPTView.swift */,
 				947C8B8727732AB60040CD62 /* FSTView.swift */,
-				947C8B8927732AD10040CD62 /* InsaitJoyView.swift */,
+				94D729D3277F53A600D071A7 /* Insait Joy */,
 				947C8B8B27732B120040CD62 /* GiTView.swift */,
 				947C8BAB277361F70040CD62 /* TestInfoView.swift */,
 			);
@@ -405,6 +407,15 @@
 				947C8B77277329460040CD62 /* OneLegStanceRight.swift */,
 			);
 			name = OneLegStance;
+			sourceTree = "<group>";
+		};
+		94D729D3277F53A600D071A7 /* Insait Joy */ = {
+			isa = PBXGroup;
+			children = (
+				947C8B8927732AD10040CD62 /* InsaitJoyView.swift */,
+				94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */,
+			);
+			name = "Insait Joy";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +594,7 @@
 				9438A7B12770CF180023E40C /* TechnicalTestList.swift in Sources */,
 				947C8B96277331D80040CD62 /* T-TestInfo.swift in Sources */,
 				733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */,
+				94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */,
 				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
 				94071EDA2761163200FFB8B4 /* TimerMode.swift in Sources */,
 				947C8B8027732A6D0040CD62 /* Sprint10x5mView.swift in Sources */,
