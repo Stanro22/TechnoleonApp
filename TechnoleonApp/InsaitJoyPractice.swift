@@ -46,7 +46,7 @@ struct InsaitJoyPractice: View {
                 }.cornerRadius(10)
                     .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
             }
-            .navigationTitle("PHV")
+            .navigationTitle("Insait Joy oefening")
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     
