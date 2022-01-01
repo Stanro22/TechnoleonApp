@@ -17,7 +17,7 @@ struct LSPTView: View {
                 Text("Reset")
                     .foregroundColor(Color.white)
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
             }
             .cornerRadius(15)
             
@@ -64,6 +64,7 @@ struct LSPTView: View {
                     }
                     .frame(width: 100, height: 70)
                     .background(Color(red: 0.15, green: 0.21, blue: 0.40))
+                    
                     Button(action: {}){
                         Spacer()
                         VStack{
@@ -75,8 +76,14 @@ struct LSPTView: View {
                         }
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
                     .padding(EdgeInsets(top: -8, leading: 0, bottom: 0, trailing: 0))
+                    Text("0")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.87))
+                        .cornerRadius(90)
+                        .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 0))
                 }
                 
                 VStack{
@@ -105,8 +112,14 @@ struct LSPTView: View {
                         }
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
                     .padding(EdgeInsets(top: -8, leading: 0, bottom: 0, trailing: 0))
+                    Text("0")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.87))
+                        .cornerRadius(90)
+                        .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 0))
                 }
                 
                 VStack{
@@ -135,8 +148,14 @@ struct LSPTView: View {
                         }
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
                     .padding(EdgeInsets(top: -8, leading: 0, bottom: 0, trailing: 0))
+                    Text("0")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.87))
+                        .cornerRadius(90)
+                        .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 0))
                 }
             }
             Spacer()
@@ -168,8 +187,14 @@ struct LSPTView: View {
                         }
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
                     .padding(EdgeInsets(top: -8, leading: 0, bottom: 0, trailing: 0))
+                    Text("0")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.87))
+                        .cornerRadius(90)
+                        .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 0))
                 }
                 
                 VStack{
@@ -198,8 +223,14 @@ struct LSPTView: View {
                         }
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
                     .padding(EdgeInsets(top: -8, leading: 0, bottom: 0, trailing: 0))
+                    Text("0")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.87))
+                        .cornerRadius(90)
+                        .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 0))
                 }
                 
                 VStack{
@@ -228,8 +259,14 @@ struct LSPTView: View {
                         }
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
                     .padding(EdgeInsets(top: -8, leading: 0, bottom: 0, trailing: 0))
+                    Text("0")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.87))
+                        .cornerRadius(90)
+                        .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 0))
                 }
             }
             Spacer()

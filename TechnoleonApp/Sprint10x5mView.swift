@@ -23,7 +23,7 @@ struct Sprint10x5mView: View {
                 Text("Reset")
                     .foregroundColor(Color.white)
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .background(Color.red)
+                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
             }
             .cornerRadius(15)
             
