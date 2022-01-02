@@ -11,6 +11,18 @@ struct GiTView: View {
     var body: some View {
         VStack{
             Spacer()
+            HStack{
+                Button(action: {}){
+                    Text("Vorige ronde")
+                        .foregroundColor(Color.white)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .background(Color(red: 0.73, green: 0.05, blue: 0.05))
+                }
+                .cornerRadius(5)
+                .padding(EdgeInsets(top: 0, leading: 29, bottom: 0, trailing: 0))
+                Spacer()
+            }
+            
             VStack{
                 HStack{
                     Button(action: {}){
