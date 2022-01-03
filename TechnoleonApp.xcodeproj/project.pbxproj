@@ -86,6 +86,10 @@
 		947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BA9277333180040CD62 /* EyeCentreInfo.swift */; };
 		947C8BAC277361F70040CD62 /* TestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BAB277361F70040CD62 /* TestInfoView.swift */; };
 		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
+		94A4186A278343F0009B8C41 /* PHVRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A41869278343F0009B8C41 /* PHVRequestBody.swift */; };
+		94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186B27834499009B8C41 /* PHVRequest.swift */; };
+		94A4186E27835448009B8C41 /* SitAndReachRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186D27835448009B8C41 /* SitAndReachRequest.swift */; };
+		94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
@@ -193,6 +197,10 @@
 		947C8BA9277333180040CD62 /* EyeCentreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeCentreInfo.swift; sourceTree = "<group>"; };
 		947C8BAB277361F70040CD62 /* TestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInfoView.swift; sourceTree = "<group>"; };
 		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
+		94A41869278343F0009B8C41 /* PHVRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVRequestBody.swift; sourceTree = "<group>"; };
+		94A4186B27834499009B8C41 /* PHVRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVRequest.swift; sourceTree = "<group>"; };
+		94A4186D27835448009B8C41 /* SitAndReachRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequest.swift; sourceTree = "<group>"; };
+		94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequestBody.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
@@ -282,6 +290,10 @@
 				9438A7AC2770BCA40023E40C /* Test.swift */,
 				943758802771D36C001D3222 /* UserPlayerResponse.swift */,
 				94719BAF2773766D00F164C1 /* StopwatchManager.swift */,
+				94A41869278343F0009B8C41 /* PHVRequestBody.swift */,
+				94A4186B27834499009B8C41 /* PHVRequest.swift */,
+				94A4186D27835448009B8C41 /* SitAndReachRequest.swift */,
+				94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -560,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				733B8B03275A9AE100E68F9E /* LatestResultsView.swift in Sources */,
+				94A4186E27835448009B8C41 /* SitAndReachRequest.swift in Sources */,
 				947C8B8A27732AD10040CD62 /* InsaitJoyView.swift in Sources */,
 				9438A7B32770CF360023E40C /* CognitiveTestList.swift in Sources */,
 				73EB23392746944E008111AE /* ContentView.swift in Sources */,
@@ -586,6 +599,7 @@
 				947C8B98277331FB0040CD62 /* OneLegStanceInfo.swift in Sources */,
 				734C9A17274E8CA30077BFEB /* KTK3Balk1View.swift in Sources */,
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
+				94A4186A278343F0009B8C41 /* PHVRequestBody.swift in Sources */,
 				734CDD90275BA52000697CEE /* LoginRequest.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
 				94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */,
@@ -609,9 +623,11 @@
 				9438A7AD2770BCA40023E40C /* Test.swift in Sources */,
 				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,
 				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
+				94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
 				943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */,
+				94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				947C8BA2277332B00040CD62 /* LSPTInfo.swift in Sources */,
 				947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */,

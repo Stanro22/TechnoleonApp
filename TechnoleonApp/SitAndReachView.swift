@@ -10,7 +10,7 @@ import SwiftUI
 struct SitAndReachView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @ObservedObject var ktk3Body = KtK3RequestBody.shared
+    @ObservedObject var sitAndReachBody = SitAndReachRequestBody()
     @State var attempt1: String = ""
     @State var attempt2: String = ""
     @State var attempt3: String = ""
@@ -47,7 +47,7 @@ struct SitAndReachView: View {
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 Spacer()
                 
-                NavigationLink(destination: EndOfTestView().onAppear{ }) {
+                NavigationLink(destination: EndOfTestView().onAppear{setSitAndReachTest()}) {
                     Text("Sla gegevens op")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
@@ -62,8 +62,31 @@ struct SitAndReachView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     
+    func setSitAndReachBody(){
+        if attempt1.count > 0 {
+            let attempt1Int = Int(attempt1)
+            sitAndReachBody.centimeters = attempt1Int
+        }
+        else{
+            sitAndReachBody.centimeters = 0
+        }
+        if attempt2.count > 0 {
+            let attempt2Int = Int(attempt2)
+            if attempt2Int! > sitAndReachBody.centimeters! {
+                sitAndReachBody.centimeters = attempt2Int
+            }
+        }
+        if attempt3.count > 0 {
+            let attempt3Int = Int(attempt3)
+            if attempt3Int! > sitAndReachBody.centimeters! {
+                sitAndReachBody.centimeters = attempt3Int
+            }
+        }
+    }
+    
     func setSitAndReachTest(){
-        /*technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+        setSitAndReachBody()
+        technoleonAPI.setSitAndReachTestForPlayer(id: loggedInUser.playerId!, SitAndReachRequestBody: sitAndReachBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")
@@ -77,7 +100,7 @@ struct SitAndReachView: View {
                     print("error: \(String(describing: error))")
                 }
             }
-        }*/
+        }
     }
 }
 

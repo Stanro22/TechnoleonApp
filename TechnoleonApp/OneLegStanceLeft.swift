@@ -16,7 +16,7 @@ struct OneLegStanceLeft: View {
         VStack{
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(alignment: .top, spacing: 0){
-                    NavigationLink(destination: KTK3View().onAppear{}) {
+                    NavigationLink(destination: OneLegStanceLeft().onAppear{}) {
                             VStack{
                                 Text("Linkerbeen")
                                     .foregroundColor(Color.white)
@@ -30,7 +30,7 @@ struct OneLegStanceLeft: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                         
-                    NavigationLink(destination: KTK3MovingSidewaysView().onAppear{}) {
+                    NavigationLink(destination: OneLegStanceRight().onAppear{}) {
                             VStack{
                                 Text("Rechterbeen")
                                     .foregroundColor(Color.white)

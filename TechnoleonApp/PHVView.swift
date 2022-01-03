@@ -10,10 +10,10 @@ import SwiftUI
 struct PHVView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @ObservedObject var ktk3Body = KtK3RequestBody.shared
-    @State var attempt1: String = ""
-    @State var attempt2: String = ""
-    @State var attempt3: String = ""
+    @ObservedObject var phvBody = PHVRequestBody()
+    @State var length: String = ""
+    @State var sitHeight: String = ""
+    @State var weight: String = ""
     
     var body: some View {
         VStack{
@@ -21,7 +21,7 @@ struct PHVView: View {
             Text("Voer gegevens in")
                 .font(.title)
                 HStack{
-                    TextField("Lengte (cm)", text: $attempt1)
+                    TextField("Lengte (cm)", text: $length)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -29,7 +29,7 @@ struct PHVView: View {
                 }
                 
                 HStack{
-                    TextField("Zithoogte (cm)", text: $attempt2)
+                    TextField("Zithoogte (cm)", text: $sitHeight)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -38,7 +38,7 @@ struct PHVView: View {
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 
                 HStack{
-                    TextField("Gewicht (kg)", text: $attempt3)
+                    TextField("Gewicht (kg)", text: $weight)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -47,7 +47,7 @@ struct PHVView: View {
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 Spacer()
                 
-                NavigationLink(destination: EndOfTestView().onAppear{ }) {
+                NavigationLink(destination: EndOfTestView().onAppear{setPHVTest()}) {
                     Text("Sla gegevens op")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
@@ -62,8 +62,33 @@ struct PHVView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     
+    func setPHVBody(){
+        if length.count > 0 {
+            let lenghtInt = Int(length)
+            phvBody.lenght = lenghtInt
+        }
+        else{
+            phvBody.lenght = 0
+        }
+        if sitHeight.count > 0 {
+            let sitHeightInt = Int(sitHeight)
+            phvBody.sitHeight = sitHeightInt
+        }
+        else{
+            phvBody.sitHeight = 0
+        }
+        if weight.count > 0 {
+            let weightInt = Int(weight)
+            phvBody.weight = weightInt
+        }
+        else{
+            phvBody.weight = 0
+        }
+    }
+    
     func setPHVTest(){
-        /*technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+        setPHVBody()
+        technoleonAPI.setPHVTestForPlayer(id: loggedInUser.playerId!, PHVRequestBody: phvBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")
@@ -77,7 +102,7 @@ struct PHVView: View {
                     print("error: \(String(describing: error))")
                 }
             }
-        }*/
+        }
     }
 }
 

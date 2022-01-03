@@ -113,6 +113,42 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setPHVTestForPlayer(id: String, PHVRequestBody: PHVRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/PHV")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = PHVRequest(
+            lenght: PHVRequestBody.lenght,
+            sitHeight: PHVRequestBody.sitHeight,
+            weight: PHVRequestBody.weight
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
+    func setSitAndReachTestForPlayer(id: String, SitAndReachRequestBody: SitAndReachRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/SitAndReach")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = SitAndReachRequest(
+            centimeters: SitAndReachRequestBody.centimeters
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>
