@@ -265,6 +265,8 @@
 			children = (
 				73EB233A27469450008111AE /* Assets.xcassets */,
 				73EB233C27469450008111AE /* Preview Content */,
+				94A4187127835C18009B8C41 /* Responses */,
+				94A4187227835C21009B8C41 /* Requests */,
 				947C8B68277323490040CD62 /* TrainerViews */,
 				947C8B67277323410040CD62 /* PlayerViews */,
 				947C8B66277323350040CD62 /* TestViews */,
@@ -274,26 +276,14 @@
 				73EB23362746944E008111AE /* TechnoleonAppApp.swift */,
 				73975784274946A200A17B6E /* ViewExtension.swift */,
 				734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */,
-				734CDD8F275BA52000697CEE /* LoginRequest.swift */,
-				734CDD94275BB61D00697CEE /* LoginResponse.swift */,
 				7338BAAA275D009400F42D2F /* LoginView.swift */,
 				947F3F49275E862E000C10CB /* LoggedInUser.swift */,
-				94E7F5E2275F5E770025644B /* UserResponse.swift */,
-				94E7F5E4275FA27E0025644B /* TeamResponse.swift */,
 				94E7F5E6275FB2E30025644B /* Team.swift */,
 				94E7F5E8275FBC3A0025644B /* Player.swift */,
-				94E7F5EA275FEA000025644B /* KTK3Request.swift */,
-				94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */,
-				94071ED7276109F300FFB8B4 /* setTestReponse.swift */,
 				94071ED92761163200FFB8B4 /* TimerMode.swift */,
 				94071EDB2761177000FFB8B4 /* TimerManager.swift */,
 				9438A7AC2770BCA40023E40C /* Test.swift */,
-				943758802771D36C001D3222 /* UserPlayerResponse.swift */,
 				94719BAF2773766D00F164C1 /* StopwatchManager.swift */,
-				94A41869278343F0009B8C41 /* PHVRequestBody.swift */,
-				94A4186B27834499009B8C41 /* PHVRequest.swift */,
-				94A4186D27835448009B8C41 /* SitAndReachRequest.swift */,
-				94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -419,6 +409,32 @@
 				947C8B77277329460040CD62 /* OneLegStanceRight.swift */,
 			);
 			name = OneLegStance;
+			sourceTree = "<group>";
+		};
+		94A4187127835C18009B8C41 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				734CDD94275BB61D00697CEE /* LoginResponse.swift */,
+				94E7F5E2275F5E770025644B /* UserResponse.swift */,
+				94E7F5E4275FA27E0025644B /* TeamResponse.swift */,
+				94071ED7276109F300FFB8B4 /* setTestReponse.swift */,
+				943758802771D36C001D3222 /* UserPlayerResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		94A4187227835C21009B8C41 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				734CDD8F275BA52000697CEE /* LoginRequest.swift */,
+				94E7F5EA275FEA000025644B /* KTK3Request.swift */,
+				94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */,
+				94A4186B27834499009B8C41 /* PHVRequest.swift */,
+				94A41869278343F0009B8C41 /* PHVRequestBody.swift */,
+				94A4186D27835448009B8C41 /* SitAndReachRequest.swift */,
+				94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		94D729D3277F53A600D071A7 /* Insait Joy */ = {
