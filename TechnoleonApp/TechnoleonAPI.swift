@@ -149,6 +149,58 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setTTestTestForPlayer(id: String, TTestRequestBody: TTestRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/TTest")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = TTestRequest(
+            time: TTestRequestBody.time
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
+    func setOneLegStanceTestForPlayer(id: String, OneLegStanceRequestBody: OneLegStanceRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/OneLegStance")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = OneLegStanceRequest(
+            secondsLeft: OneLegStanceRequestBody.secondsLeft,
+            seconds: OneLegStanceRequestBody.seconds
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
+    func setSprint10x5TestForPlayer(id: String, Sprint10x5RequestBody: Sprint10x5RequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/Tenx5MSprintTest")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = Sprint10x5Request(
+            time: Sprint10x5RequestBody.time
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>

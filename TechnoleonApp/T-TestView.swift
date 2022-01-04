@@ -9,13 +9,18 @@ import SwiftUI
 
 struct T_TestView: View {
     @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var tTestBody = TTestRequestBody()
     
     var body: some View {
         VStack{
             Spacer()
             Text("T-Test")
                 .font(.title)
-            Text("aantal seconden")
+            Text("Tijd om op te slaan:")
+                .font(.custom("", size: 16))
+            Text(timerManager.timeToSave)
                 .font(.custom("", size: 16))
             Spacer()
             
@@ -27,7 +32,7 @@ struct T_TestView: View {
             }
             .cornerRadius(15)
             
-            Text(secondsToMinutesAndSeconds(seconds: timerManager.seconds))
+            Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
                 .font(.custom("", size: 40))
                 .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
                 .frame(width: 180, height: 180)
@@ -54,7 +59,7 @@ struct T_TestView: View {
                 })
             Spacer()
             
-            NavigationLink(destination: EndOfTestView().onAppear{ }) {
+            NavigationLink(destination: EndOfTestView().onAppear{setTTestTest()}) {
                 Text("Sla gegevens op")
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
@@ -66,6 +71,29 @@ struct T_TestView: View {
         }
         .navigationTitle("T-Test")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setTTestBody(){
+        tTestBody.time = "00:\(timerManager.timeToSave)"
+    }
+    
+    func setTTestTest(){
+        setTTestBody()
+        technoleonAPI.setTTestTestForPlayer(id: loggedInUser.playerId!, TTestRequestBody: tTestBody) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
 }
 

@@ -11,12 +11,13 @@ struct OneLegStanceLeft: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var oneLegStanceBody = OneLegStanceRequestBody.shared
     
     var body: some View {
         VStack{
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(alignment: .top, spacing: 0){
-                    NavigationLink(destination: OneLegStanceLeft().onAppear{}) {
+                    NavigationLink(destination: OneLegStanceLeft().onAppear{saveTime()}) {
                             VStack{
                                 Text("Linkerbeen")
                                     .foregroundColor(Color.white)
@@ -30,7 +31,7 @@ struct OneLegStanceLeft: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                         
-                    NavigationLink(destination: OneLegStanceRight().onAppear{}) {
+                    NavigationLink(destination: OneLegStanceRight().onAppear{saveTime()}) {
                             VStack{
                                 Text("Rechterbeen")
                                     .foregroundColor(Color.white)
@@ -45,10 +46,14 @@ struct OneLegStanceLeft: View {
             }
             Spacer()
             
-            Text("Aantal seconden volgehouden")
-                .font(.title2)
-            Text("tijd op de timer wordt opgeslagen")
-                .font(.custom("", size: 16))
+            VStack{
+                Text("Aantal seconden volgehouden")
+                    .font(.title2)
+                Text("Tijd om op te slaan")
+                    .font(.custom("", size: 16))
+                Text(timerManager.timeToSave)
+                    .font(.custom("", size: 16))
+            }
             Spacer()
             
             Button(action: timerManager.reset){
@@ -59,7 +64,7 @@ struct OneLegStanceLeft: View {
             }
             .cornerRadius(15)
             
-            Text(secondsToMinutesAndSeconds(seconds: timerManager.seconds))
+            Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
                 .font(.custom("", size: 40))
                 .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
                 .frame(width: 180, height: 180)
@@ -86,7 +91,7 @@ struct OneLegStanceLeft: View {
                 })
             Spacer()
             
-            NavigationLink(destination: EndOfTestView().onAppear{ }) {
+            NavigationLink(destination: EndOfTestView().onAppear{setOneLegStanceTest()}) {
                 Text("Sla gegevens op")
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
@@ -99,6 +104,29 @@ struct OneLegStanceLeft: View {
         }
         .navigationTitle("One leg stance")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func saveTime(){
+        oneLegStanceBody.secondsLeft = "00:\(timerManager.timeToSave)"
+    }
+    
+    func setOneLegStanceTest(){
+        saveTime()
+        technoleonAPI.setOneLegStanceTestForPlayer(id: loggedInUser.playerId!, OneLegStanceRequestBody: oneLegStanceBody) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
 }
 

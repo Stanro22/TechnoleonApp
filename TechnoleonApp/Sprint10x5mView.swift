@@ -9,15 +9,29 @@ import SwiftUI
 
 struct Sprint10x5mView: View {
     @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var sprint10x5Body = Sprint10x5RequestBody()
     
     var body: some View {
         VStack{
             Spacer()
-            Text("Sprint")
-                .font(.title)
-            Text("Totale duur in seconden")
-                .font(.custom("", size: 16))
+            VStack{
+                Text("Sprint")
+                    .font(.title)
+                Text("Totale duur in seconden")
+                    .italic()
+                
+            }
             Spacer()
+            VStack{
+                Text("Tijd om op te slaan:")
+                    .font(.custom("", size: 16))
+                Text(timerManager.timeToSave)
+                    .font(.custom("", size: 16))
+            }
+            Spacer()
+            
             
             Button(action: timerManager.reset){
                 Text("Reset")
@@ -27,7 +41,7 @@ struct Sprint10x5mView: View {
             }
             .cornerRadius(15)
             
-            Text(secondsToMinutesAndSeconds(seconds: timerManager.seconds))
+            Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
                 .font(.custom("", size: 40))
                 .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
                 .frame(width: 180, height: 180)
@@ -66,6 +80,29 @@ struct Sprint10x5mView: View {
         }
         .navigationTitle("10x5 meter sprint")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setSprint10x5Body(){
+        sprint10x5Body.time = "00:\(timerManager.timeToSave)"
+    }
+    
+    func setSprint10x5Test(){
+        setSprint10x5Body()
+        technoleonAPI.setSprint10x5TestForPlayer(id: loggedInUser.playerId!, Sprint10x5RequestBody: sprint10x5Body) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
 }
 

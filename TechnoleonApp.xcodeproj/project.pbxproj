@@ -97,6 +97,12 @@
 		94E7F5E9275FBC3A0025644B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E8275FBC3A0025644B /* Player.swift */; };
 		94E7F5EB275FEA000025644B /* KTK3Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5EA275FEA000025644B /* KTK3Request.swift */; };
 		94E7F5ED275FECCF0025644B /* KTK3RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */; };
+		94FA16C9278490E100938748 /* TTestRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FA16C8278490E100938748 /* TTestRequestBody.swift */; };
+		94FA16CB2784915300938748 /* TTestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FA16CA2784915300938748 /* TTestRequest.swift */; };
+		94FA16CD2784959400938748 /* Sprint10x5Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FA16CC2784959400938748 /* Sprint10x5Request.swift */; };
+		94FA16CF278495DC00938748 /* Sprint10x5RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FA16CE278495DC00938748 /* Sprint10x5RequestBody.swift */; };
+		94FA16D12784C98300938748 /* OneLegStanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FA16D02784C98300938748 /* OneLegStanceRequest.swift */; };
+		94FA16D32784C9E100938748 /* OneLegStanceRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FA16D22784C9E100938748 /* OneLegStanceRequestBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +214,12 @@
 		94E7F5E8275FBC3A0025644B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		94E7F5EA275FEA000025644B /* KTK3Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Request.swift; sourceTree = "<group>"; };
 		94E7F5EC275FECCF0025644B /* KTK3RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3RequestBody.swift; sourceTree = "<group>"; };
+		94FA16C8278490E100938748 /* TTestRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTestRequestBody.swift; sourceTree = "<group>"; };
+		94FA16CA2784915300938748 /* TTestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTestRequest.swift; sourceTree = "<group>"; };
+		94FA16CC2784959400938748 /* Sprint10x5Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprint10x5Request.swift; sourceTree = "<group>"; };
+		94FA16CE278495DC00938748 /* Sprint10x5RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprint10x5RequestBody.swift; sourceTree = "<group>"; };
+		94FA16D02784C98300938748 /* OneLegStanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLegStanceRequest.swift; sourceTree = "<group>"; };
+		94FA16D22784C9E100938748 /* OneLegStanceRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLegStanceRequestBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +445,12 @@
 				94A41869278343F0009B8C41 /* PHVRequestBody.swift */,
 				94A4186D27835448009B8C41 /* SitAndReachRequest.swift */,
 				94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */,
+				94FA16CA2784915300938748 /* TTestRequest.swift */,
+				94FA16C8278490E100938748 /* TTestRequestBody.swift */,
+				94FA16CC2784959400938748 /* Sprint10x5Request.swift */,
+				94FA16CE278495DC00938748 /* Sprint10x5RequestBody.swift */,
+				94FA16D02784C98300938748 /* OneLegStanceRequest.swift */,
+				94FA16D22784C9E100938748 /* OneLegStanceRequestBody.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -594,6 +612,7 @@
 				73EB23392746944E008111AE /* ContentView.swift in Sources */,
 				947C8B8E27732D310040CD62 /* PHVInfo.swift in Sources */,
 				947C8B6F277328B10040CD62 /* SitAndReachView.swift in Sources */,
+				94FA16D12784C98300938748 /* OneLegStanceRequest.swift in Sources */,
 				947C8B8427732A940040CD62 /* YoYoView.swift in Sources */,
 				94E7F5E7275FB2E30025644B /* Team.swift in Sources */,
 				947C8BA6277332DA0040CD62 /* InsaitJoyInfo.swift in Sources */,
@@ -620,6 +639,7 @@
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
 				94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */,
 				94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */,
+				94FA16C9278490E100938748 /* TTestRequestBody.swift in Sources */,
 				947C8B8827732AB60040CD62 /* FSTView.swift in Sources */,
 				9438A7B12770CF180023E40C /* TechnicalTestList.swift in Sources */,
 				947C8B96277331D80040CD62 /* T-TestInfo.swift in Sources */,
@@ -638,6 +658,7 @@
 				947C8B94277331AB0040CD62 /* VetPercentageInfo.swift in Sources */,
 				9438A7AD2770BCA40023E40C /* Test.swift in Sources */,
 				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,
+				94FA16D32784C9E100938748 /* OneLegStanceRequestBody.swift in Sources */,
 				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
 				94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
@@ -657,16 +678,19 @@
 				947C8BAC277361F70040CD62 /* TestInfoView.swift in Sources */,
 				947C8BA0277332970040CD62 /* YoYoInfo.swift in Sources */,
 				73975785274946A200A17B6E /* ViewExtension.swift in Sources */,
+				94FA16CD2784959400938748 /* Sprint10x5Request.swift in Sources */,
 				94E7F5EB275FEA000025644B /* KTK3Request.swift in Sources */,
 				7391B8FB274BEFA20003BDDC /* ProfileView.swift in Sources */,
 				73975783274942D900A17B6E /* NavigationBar.swift in Sources */,
 				734C9A0F274E404B0077BFEB /* TestListView.swift in Sources */,
 				94E7F5E9275FBC3A0025644B /* Player.swift in Sources */,
+				94FA16CB2784915300938748 /* TTestRequest.swift in Sources */,
 				947C8B9E277332840040CD62 /* ShuttleRunInfo.swift in Sources */,
 				9438A7B52770CF480023E40C /* MentalTestList.swift in Sources */,
 				947C8B78277329460040CD62 /* OneLegStanceRight.swift in Sources */,
 				94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */,
 				94719BB02773766D00F164C1 /* StopwatchManager.swift in Sources */,
+				94FA16CF278495DC00938748 /* Sprint10x5RequestBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

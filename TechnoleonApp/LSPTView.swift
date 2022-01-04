@@ -21,7 +21,7 @@ struct LSPTView: View {
             }
             .cornerRadius(15)
             
-            Text(secondsToMinutesAndSeconds(seconds: timerManager.seconds))
+            Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
                 .font(.custom("", size: 40))
                 .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
                 .frame(width: 180, height: 180)
