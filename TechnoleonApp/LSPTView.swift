@@ -36,9 +36,9 @@ struct LSPTView: View {
                 .cornerRadius(15)
                 
                 Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
-                    .font(.custom("", size: 40))
+                    .font(.custom("", size: 30))
                     .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                    .frame(width: 180, height: 180)
+                    .frame(width: 130, height: 130)
                     .overlay(
                         RoundedRectangle(cornerRadius: 90)
                             .stroke(lineWidth: 3)
