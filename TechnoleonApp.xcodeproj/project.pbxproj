@@ -94,6 +94,8 @@
 		94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */; };
 		94BB5DEC2785DD5200FB6B5A /* ShuttleRunRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */; };
 		94BB5DEE2785DE8900FB6B5A /* YoYoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */; };
+		94BB5DF02785E4C300FB6B5A /* LSPTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */; };
+		94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
@@ -215,6 +217,8 @@
 		94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerYoYoView.swift; sourceTree = "<group>"; };
 		94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuttleRunRequest.swift; sourceTree = "<group>"; };
 		94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoYoRequest.swift; sourceTree = "<group>"; };
+		94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequestBody.swift; sourceTree = "<group>"; };
+		94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequest.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
@@ -461,6 +465,8 @@
 				94FA16D22784C9E100938748 /* OneLegStanceRequestBody.swift */,
 				94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */,
 				94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */,
+				94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */,
+				94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -699,11 +705,13 @@
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				947C8BA2277332B00040CD62 /* LSPTInfo.swift in Sources */,
 				94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */,
+				94BB5DF02785E4C300FB6B5A /* LSPTRequestBody.swift in Sources */,
 				947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */,
 				947C8B922773316C0040CD62 /* SitAndReachInfo.swift in Sources */,
 				94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */,
 				947C8BA8277332F60040CD62 /* GiTInfo.swift in Sources */,
 				947C8B76277329390040CD62 /* OneLegStanceLeft.swift in Sources */,
+				94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */,
 				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,
 				947C8B73277329080040CD62 /* T-TestView.swift in Sources */,
 				947C8B8227732A860040CD62 /* ShuttleRunView.swift in Sources */,

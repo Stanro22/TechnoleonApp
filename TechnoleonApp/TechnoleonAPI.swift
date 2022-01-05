@@ -235,6 +235,31 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setLSPTTestForPlayer(id: String, LSPTRequestBody: LSPTRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/LSPT")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = LSPTRequest(
+            missedBench: LSPTRequestBody.missedBench,
+            hitWrongTarget: LSPTRequestBody.hitWrongTarget,
+            touchedCone: LSPTRequestBody.touchedCone,
+            passOutsideArea: LSPTRequestBody.passOutsideArea,
+            missedTargetArea: LSPTRequestBody.missedTargetArea,
+            hitTenCMStrip: LSPTRequestBody.hitTenCMStrip,
+            time: LSPTRequestBody.time,
+            finalTime: LSPTRequestBody.finalTime,
+            secondsOver: LSPTRequestBody.secondsOver
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>
