@@ -8,8 +8,10 @@
 import Foundation
 
 struct Player: Decodable, Hashable{
-    let playerId: String
-    let playerName: String
+    var playerId: String
+    var playerName: String
+    var playerShuttleRunScore: Int? = 0
+    var playerYoYoScore: Int? = 0
     
     enum CodingKeys: String, CodingKey {
         case user = "user"

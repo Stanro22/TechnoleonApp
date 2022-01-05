@@ -90,6 +90,10 @@
 		94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186B27834499009B8C41 /* PHVRequest.swift */; };
 		94A4186E27835448009B8C41 /* SitAndReachRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186D27835448009B8C41 /* SitAndReachRequest.swift */; };
 		94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */; };
+		94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */; };
+		94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */; };
+		94BB5DEC2785DD5200FB6B5A /* ShuttleRunRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */; };
+		94BB5DEE2785DE8900FB6B5A /* YoYoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
@@ -207,6 +211,10 @@
 		94A4186B27834499009B8C41 /* PHVRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVRequest.swift; sourceTree = "<group>"; };
 		94A4186D27835448009B8C41 /* SitAndReachRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequest.swift; sourceTree = "<group>"; };
 		94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequestBody.swift; sourceTree = "<group>"; };
+		94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShuttleRunView.swift; sourceTree = "<group>"; };
+		94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerYoYoView.swift; sourceTree = "<group>"; };
+		94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuttleRunRequest.swift; sourceTree = "<group>"; };
+		94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoYoRequest.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
@@ -359,8 +367,8 @@
 				947C8B74277329220040CD62 /* OneLegStance */,
 				947C8B7D27732A580040CD62 /* Sprint10m20m35mView.swift */,
 				947C8B7F27732A6D0040CD62 /* Sprint10x5mView.swift */,
-				947C8B8127732A860040CD62 /* ShuttleRunView.swift */,
-				947C8B8327732A940040CD62 /* YoYoView.swift */,
+				94BB5DE72785D68400FB6B5A /* ShuttleRun */,
+				94BB5DE82785D6C800FB6B5A /* YoYo */,
 				947C8B8527732AAB0040CD62 /* LSPTView.swift */,
 				947C8B8727732AB60040CD62 /* FSTView.swift */,
 				94D729D3277F53A600D071A7 /* Insait Joy */,
@@ -451,8 +459,28 @@
 				94FA16CE278495DC00938748 /* Sprint10x5RequestBody.swift */,
 				94FA16D02784C98300938748 /* OneLegStanceRequest.swift */,
 				94FA16D22784C9E100938748 /* OneLegStanceRequestBody.swift */,
+				94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */,
+				94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		94BB5DE72785D68400FB6B5A /* ShuttleRun */ = {
+			isa = PBXGroup;
+			children = (
+				947C8B8127732A860040CD62 /* ShuttleRunView.swift */,
+				94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */,
+			);
+			path = ShuttleRun;
+			sourceTree = "<group>";
+		};
+		94BB5DE82785D6C800FB6B5A /* YoYo */ = {
+			isa = PBXGroup;
+			children = (
+				947C8B8327732A940040CD62 /* YoYoView.swift */,
+				94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */,
+			);
+			path = YoYo;
 			sourceTree = "<group>";
 		};
 		94D729D3277F53A600D071A7 /* Insait Joy */ = {
@@ -626,6 +654,7 @@
 				94E7F5ED275FECCF0025644B /* KTK3RequestBody.swift in Sources */,
 				734C9A13274E51600077BFEB /* KTK3View.swift in Sources */,
 				734C9A1B274E8E540077BFEB /* KTK3Balk3View.swift in Sources */,
+				94BB5DEE2785DE8900FB6B5A /* YoYoRequest.swift in Sources */,
 				947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */,
 				9438A7AF2770CD190023E40C /* MatchTestList.swift in Sources */,
 				947C8B9C277332670040CD62 /* Sprint10x5Info.swift in Sources */,
@@ -636,6 +665,7 @@
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
 				94A4186A278343F0009B8C41 /* PHVRequestBody.swift in Sources */,
 				734CDD90275BA52000697CEE /* LoginRequest.swift in Sources */,
+				94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
 				94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */,
 				94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */,
@@ -650,6 +680,7 @@
 				947C8B8027732A6D0040CD62 /* Sprint10x5mView.swift in Sources */,
 				947C8B6B277324FA0040CD62 /* KTK3Info.swift in Sources */,
 				7338BAAB275D009400F42D2F /* LoginView.swift in Sources */,
+				94BB5DEC2785DD5200FB6B5A /* ShuttleRunRequest.swift in Sources */,
 				947C8B8C27732B120040CD62 /* GiTView.swift in Sources */,
 				94071ED8276109F300FFB8B4 /* setTestReponse.swift in Sources */,
 				947C8B9A2773321A0040CD62 /* Sprint10m20m35mInfo.swift in Sources */,
@@ -667,6 +698,7 @@
 				94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				947C8BA2277332B00040CD62 /* LSPTInfo.swift in Sources */,
+				94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */,
 				947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */,
 				947C8B922773316C0040CD62 /* SitAndReachInfo.swift in Sources */,
 				94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */,

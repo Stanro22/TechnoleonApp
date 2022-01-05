@@ -201,6 +201,40 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setShuttleRunTestForPlayer(id: String, newLevel: Int, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/IntervalShuttleRunTest")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = ShuttleRunRequest(
+            newLevel: newLevel
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
+    func setYoYoTestForPlayer(id: String, newLevel: Int, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/YoYoStaminaTest")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = YoYoRequest(
+            newLevel: newLevel
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>
