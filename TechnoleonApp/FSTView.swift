@@ -9,6 +9,11 @@ import SwiftUI
 
 struct FSTView: View {
     @ObservedObject var timerManager = StopwatchManager()
+    @State var slalomTime: String = "00.00"
+    @State var dribbleTime: String = "00.00"
+    @State var backwardsTime: String = "00.00"
+    @State var figureTime: String = "00.00"
+    @State var passingTime: String = "00.00"
     
     var body: some View {
         VStack{
@@ -17,7 +22,7 @@ struct FSTView: View {
                 HStack{
                     Text("Slalom")
                     Spacer()
-                    Text("00.00")
+                    Text("\(slalomTime)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -25,7 +30,7 @@ struct FSTView: View {
                 HStack{
                     Text("Dribbel")
                     Spacer()
-                    Text("00.00")
+                    Text("\(dribbleTime)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -33,7 +38,7 @@ struct FSTView: View {
                 HStack{
                     Text("Achterwaarts")
                     Spacer()
-                    Text("00.00")
+                    Text("\(backwardsTime)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -41,7 +46,7 @@ struct FSTView: View {
                 HStack{
                     Text("8-figuur")
                     Spacer()
-                    Text("00.00")
+                    Text("\(figureTime)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -49,7 +54,7 @@ struct FSTView: View {
                 HStack{
                     Text("Passen")
                     Spacer()
-                    Text("00.00")
+                    Text("\(passingTime)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -57,7 +62,7 @@ struct FSTView: View {
                 HStack{
                     Text("Eindtijd")
                     Spacer()
-                    Text("00.00")
+                    Text("\(timerManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -84,19 +89,32 @@ struct FSTView: View {
                 .onAppear(){
                     self.timerManager.seconds = 0
                 }
+            
+            HStack{
+                Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
+                    .onTapGesture(perform: {
+                        if self.timerManager.timerMode == .initial {
+                            self.timerManager.seconds = 0
+                        }
+                        self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
+                    })
+                Spacer()
+                Button(action: {}){
+                    Text("Ronde")
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.62, green: 0.65, blue: 0.90))
+                }
+                .cornerRadius(10)
+            }
+            .frame(width: 170, height: 50)
                 
-            Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
-                .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                .onTapGesture(perform: {
-                    if self.timerManager.timerMode == .initial {
-                        self.timerManager.seconds = 0
-                    }
-                    self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
-                })
+            
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{ }) {
