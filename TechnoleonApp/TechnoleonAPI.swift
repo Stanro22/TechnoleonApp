@@ -282,6 +282,29 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setFatPercentageTestForPlayer(id: String, FatPercentageRequestBody: FatPercentageRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/FatPercentage")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = FatPercentageRequest(
+            breastThickness: FatPercentageRequestBody.breastThickness,
+            thighThickness: FatPercentageRequestBody.thighThickness,
+            bellyThickness: FatPercentageRequestBody.bellyThickness,
+            hipThickness: FatPercentageRequestBody.hipThickness,
+            armPitThickness: FatPercentageRequestBody.armPitThickness,
+            shoulderBladeThickness: FatPercentageRequestBody.shoulderBladeThickness,
+            tricepThickness: FatPercentageRequestBody.tricepThickness
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>

@@ -10,76 +10,112 @@ import SwiftUI
 struct VetPercentageView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @ObservedObject var ktk3Body = KtK3RequestBody.shared
-    @State var attempt1: String = ""
-    @State private var isExpanded = false
-    @State private var selectedLichaamsdeel = "Lichaamsdeel"
-    
-    private var lichaamsdelen = ["Borst", "Bovenbeen", "Buik", "Heup"]
+    @ObservedObject var fatPercentageBody = FatPercentageRequestBody()
+    @State var breast: String = ""
+    @State var thigh: String = ""
+    @State var belly: String = ""
+    @State var hip: String = ""
+    @State var armPit: String = ""
+    @State var shoulderBlade: String = ""
+    @State var tricep: String = ""
     
     var body: some View {
         VStack{
             Spacer()
-            Text("Kies lichaamsdeel voor test")
-                .font(.title2)
-                
-            DisclosureGroup("\(selectedLichaamsdeel)", isExpanded: $isExpanded){
-                ScrollView {
-                    VStack{
-                        ForEach(lichaamsdelen, id: \.self) { lichaamsdeel in
-                            Text("\(lichaamsdeel)")
-                                .frame(maxWidth: .infinity)
-                                .font(.title3)
-                                .padding(.all)
-                                .onTapGesture {
-                                    self.selectedLichaamsdeel = lichaamsdeel
-                                    withAnimation{
-                                        self.isExpanded.toggle()
-                                    }
-                                }
-                        }
-                    }
-                }.frame(width: 300, height: 150)
-            }
-            .accentColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-            .foregroundColor(Color.black)
-            .frame(width: 300)
-            .padding(.all)
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-            Spacer()
-        
             Text("Dikte van de huidplooi")
                 .font(.title2)
             Text("in millimeter")
                 .font(.custom("", size: 16))
             
+            VStack{
                 HStack{
-                    TextField("Dikte (mm)", text: $attempt1)
+                    TextField("Dikte borst (mm)", text: $breast)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
-                Spacer()
-                                
-                NavigationLink(destination: EndOfTestView().onAppear{ }) {
-                    Text("Sla gegevens op")
-                        .font(.custom("", size: 22))
-                        .foregroundColor(Color.white)
-                        .frame(width: 250, height: 20)
-                        .padding()
-                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
-                }.cornerRadius(10)
-                    .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
-            Spacer()
+                HStack{
+                    TextField("Dikte dij (mm)", text: $thigh)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .frame(width: 300, height: 40)
+                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                }
+                .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
+                HStack{
+                    TextField("Dikte buik (mm)", text: $belly)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .frame(width: 300, height: 40)
+                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                }
+                .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
+                HStack{
+                    TextField("Dikte heup (mm)", text: $hip)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .frame(width: 300, height: 40)
+                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                }
+                .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
+                HStack{
+                    TextField("Dikte oksel (mm)", text: $armPit)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .frame(width: 300, height: 40)
+                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                }
+                .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
+                HStack{
+                    TextField("Dikte schouderblad (mm)", text: $shoulderBlade)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .frame(width: 300, height: 40)
+                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                }
+                .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
+                HStack{
+                    TextField("Dikte tricep (mm)", text: $tricep)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .frame(width: 300, height: 40)
+                        .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
+                }
+                .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
             }
-            .navigationTitle("Vetpercentage")
-            .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+            
+            Spacer()
+                                
+            NavigationLink(destination: EndOfTestView().onAppear{setFatPercentageTest()}) {
+                Text("Sla gegevens op")
+                    .font(.custom("", size: 22))
+                    .foregroundColor(Color.white)
+                    .frame(width: 250, height: 20)
+                    .padding()
+                    .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+            }.cornerRadius(10)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            Spacer()
         }
+        .navigationTitle("Vetpercentage")
+        .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
     
-    func setSitAndReachTest(){
-        /*technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+    func setFatPercantageBody(){
+        fatPercentageBody.breastThickness = Int(breast)
+        fatPercentageBody.thighThickness = Int(thigh)
+        fatPercentageBody.bellyThickness = Int(belly)
+        fatPercentageBody.hipThickness = Int(hip)
+        fatPercentageBody.armPitThickness = Int(armPit)
+        fatPercentageBody.shoulderBladeThickness = Int(shoulderBlade)
+        fatPercentageBody.tricepThickness = Int(tricep)
+    }
+    
+    func setFatPercentageTest(){
+        setFatPercantageBody()
+        technoleonAPI.setFatPercentageTestForPlayer(id: loggedInUser.playerId!, FatPercentageRequestBody: fatPercentageBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")
@@ -93,7 +129,7 @@ struct VetPercentageView: View {
                     print("error: \(String(describing: error))")
                 }
             }
-        }*/
+        }
     }
 }
 struct VetPercentageView_Previews: PreviewProvider {
