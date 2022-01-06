@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct FSTView: View {
+    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
+    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var fstBody = FSTRequestBody()
     @ObservedObject var timerManager = StopwatchManager()
-    @State var slalomTime: String = "00.00"
-    @State var dribbleTime: String = "00.00"
-    @State var backwardsTime: String = "00.00"
-    @State var figureTime: String = "00.00"
-    @State var passingTime: String = "00.00"
+    @ObservedObject var slalomManager = StopwatchManager()
+    @ObservedObject var dribbleManager = StopwatchManager()
+    @ObservedObject var backwardsManager = StopwatchManager()
+    @ObservedObject var figureManager = StopwatchManager()
+    @ObservedObject var passManager = StopwatchManager()
+    @State var round: Int = 0
     
     var body: some View {
         VStack{
@@ -22,7 +26,7 @@ struct FSTView: View {
                 HStack{
                     Text("Slalom")
                     Spacer()
-                    Text("\(slalomTime)")
+                    Text("\(slalomManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -30,7 +34,7 @@ struct FSTView: View {
                 HStack{
                     Text("Dribbel")
                     Spacer()
-                    Text("\(dribbleTime)")
+                    Text("\(dribbleManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -38,7 +42,7 @@ struct FSTView: View {
                 HStack{
                     Text("Achterwaarts")
                     Spacer()
-                    Text("\(backwardsTime)")
+                    Text("\(backwardsManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -46,7 +50,7 @@ struct FSTView: View {
                 HStack{
                     Text("8-figuur")
                     Spacer()
-                    Text("\(figureTime)")
+                    Text("\(figureManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -54,7 +58,7 @@ struct FSTView: View {
                 HStack{
                     Text("Passen")
                     Spacer()
-                    Text("\(passingTime)")
+                    Text("\(passManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
@@ -69,7 +73,7 @@ struct FSTView: View {
             }
             Spacer()
             
-            Button(action: timerManager.reset){
+            Button(action: resetTimes){
                 Text("Reset")
                     .foregroundColor(Color.white)
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
@@ -100,11 +104,15 @@ struct FSTView: View {
                     .onTapGesture(perform: {
                         if self.timerManager.timerMode == .initial {
                             self.timerManager.seconds = 0
+                            self.slalomManager.seconds = 0
                         }
                         self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
+                        if self.timerManager.timerMode == .running {
+                            self.slalomManager.start()
+                        }
                     })
                 Spacer()
-                Button(action: {}){
+                Button(action: {setTableTimes()}){
                     Text("Ronde")
                         .padding()
                         .foregroundColor(Color.white)
@@ -113,11 +121,9 @@ struct FSTView: View {
                 .cornerRadius(10)
             }
             .frame(width: 170, height: 50)
-                
-            
             Spacer()
             
-            NavigationLink(destination: EndOfTestView().onAppear{ }) {
+            NavigationLink(destination: EndOfTestView().onAppear{setFSTTest()}) {
                 Text("Sla gegevens op")
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
@@ -129,6 +135,68 @@ struct FSTView: View {
         }
         .navigationTitle("FST")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setTableTimes(){
+        self.round += 1
+        if round == 1 {
+            self.slalomManager.pause()
+            self.dribbleManager.start()
+        }
+        if round == 2 {
+            self.dribbleManager.pause()
+            self.backwardsManager.start()
+        }
+        if round == 3 {
+            self.backwardsManager.pause()
+            self.figureManager.start()
+        }
+        if round == 4 {
+            self.figureManager.pause()
+            self.passManager.start()
+        }
+        if round == 5 {
+            self.passManager.pause()
+            self.timerManager.pause()
+        }
+    }
+    
+    func resetTimes(){
+        timerManager.reset()
+        slalomManager.reset()
+        dribbleManager.reset()
+        backwardsManager.reset()
+        figureManager.reset()
+        passManager.reset()
+        self.round = 0
+    }
+    
+    func setFSTBody(){
+        fstBody.slalomTime = "00:\(slalomManager.timeToSave)"
+        fstBody.dribbletime = "00:\(dribbleManager.timeToSave)"
+        fstBody.backwardTime = "00:\(backwardsManager.timeToSave)"
+        fstBody.figureTime = "00:\(figureManager.timeToSave)"
+        fstBody.passingTime = "00:\(passManager.timeToSave)"
+        fstBody.goalPostMiss = "GOAL"
+    }
+    
+    func setFSTTest(){
+        setFSTBody()
+        technoleonAPI.setFSTTestForPlayer(id: loggedInUser.playerId!, FSTRequestBody: fstBody) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
 }
 
