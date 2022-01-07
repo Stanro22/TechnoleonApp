@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct InsaitJoyView: View {
-    @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var insaitJoyBody = InsaitJoyRequestBody.shared
     @State private var isExpanded1 = false
     @State private var isExpanded2 = false
     @State private var isExpanded3 = false
@@ -19,6 +18,7 @@ struct InsaitJoyView: View {
     private var practices = ["Juggle", "Pull a vee", "Back side chop"]
     @State private var selectedTime = "Tijd"
     private var times = ["30 seconden", "60 seconden"]
+    
     var body: some View {
         VStack{
             Spacer()
@@ -99,7 +99,7 @@ struct InsaitJoyView: View {
             .background(Color(red: 0.95, green: 0.95, blue: 0.95))
             Spacer()
             
-            NavigationLink(destination: EndOfTestView().onAppear{ }) {
+            NavigationLink(destination: InsaitJoyPractice().onAppear{setInsaitJoyBody()}) {
                 Text("Naar oefening")
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
@@ -111,6 +111,45 @@ struct InsaitJoyView: View {
         }
         .navigationTitle("Insait Joy instellingen")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setInsaitJoyBody(){
+        setNiveau()
+        setDrill()
+        setTime()
+    }
+    
+    func setNiveau(){
+        if selectedNiveau == "Beginner" {
+            insaitJoyBody.level = "BEGINNER"
+        }
+        if selectedNiveau == "Geavanceerd" {
+            insaitJoyBody.level = "ADVANCED"
+        }
+        if selectedNiveau == "Expert" {
+            insaitJoyBody.level = "EXPERT"
+        }
+    }
+    
+    func setDrill(){
+        if selectedPractice == "Juggle" {
+            insaitJoyBody.drill = "JUGGLE"
+        }
+        if selectedPractice == "Pull a vee" {
+            insaitJoyBody.drill = "PULL_A_VEE"
+        }
+        if selectedPractice == "Back side chop" {
+            insaitJoyBody.drill = "BACK_SIDE_CHOP"
+        }
+    }
+    
+    func setTime(){
+        if selectedTime == "30 seconden" {
+            insaitJoyBody.time = "THIRTY_SECONDS"
+        }
+        if selectedTime == "60 seconden" {
+            insaitJoyBody.time = "SIXTY_SECONDS"
+        }
     }
 }
 

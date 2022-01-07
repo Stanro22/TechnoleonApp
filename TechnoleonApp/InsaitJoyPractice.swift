@@ -10,8 +10,9 @@ import SwiftUI
 struct InsaitJoyPractice: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @State var attempt1: String = ""
-    @State var attempt2: String = ""
+    @ObservedObject var insaitJoyBody = InsaitJoyRequestBody.shared
+    @State var count: String = ""
+    @State var fluency: String = ""
     
     var body: some View {
         VStack{
@@ -19,7 +20,7 @@ struct InsaitJoyPractice: View {
             Text("Voer de data in ui de Insait Joy App")
                 .font(.title3)
                 HStack{
-                    TextField("Aantal", text: $attempt1)
+                    TextField("Aantal", text: $count)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -27,7 +28,7 @@ struct InsaitJoyPractice: View {
                 }
                 
                 HStack{
-                    TextField("Vloeiendheid", text: $attempt2)
+                    TextField("Vloeiendheid", text: $fluency)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -36,7 +37,7 @@ struct InsaitJoyPractice: View {
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 Spacer()
                 
-                NavigationLink(destination: EndOfTestView().onAppear{ }) {
+                NavigationLink(destination: EndOfTestView().onAppear{setInsaitJoyTest()}) {
                     Text("Sla gegevens op")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
@@ -50,7 +51,19 @@ struct InsaitJoyPractice: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     
-    func setPHVTest(){
+    func setInsaitJoyFields(){
+        insaitJoyBody.count = Int(count)
+        insaitJoyBody.fluency = Int(fluency)
+        if insaitJoyBody.time == "THIRTY_SECONDS" {
+            insaitJoyBody.frequency = insaitJoyBody.count!/30
+        }
+        if insaitJoyBody.time == "SIXTY_SECONDS" {
+            insaitJoyBody.frequency = insaitJoyBody.count!/60
+        }
+    }
+    
+    func setInsaitJoyTest(){
+        setInsaitJoyFields()
         /*technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
             switch result {
             case .success(_):

@@ -305,6 +305,28 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)
     }
     
+    func setInsaitJoyTestForPlayer(id: String, insaitJoyRequestBody: InsaitJoyRequestBody, completion: @escaping (Result<setTestResponse, RequestError>) -> Void){
+        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Tests/players/\(id)/FluencyInsaitJoyTest")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(accesToken!)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "POST"
+        
+        let parameters = InsaitJoyRequest(
+            level: insaitJoyRequestBody.level,
+            drill: insaitJoyRequestBody.drill,
+            time: insaitJoyRequestBody.time,
+            count: insaitJoyRequestBody.count,
+            frequency: insaitJoyRequestBody.frequency,
+            fluency: insaitJoyRequestBody.fluency
+        )
+        
+        let encoder = JSONEncoder()
+        guard let body = try? encoder.encode(parameters) else {return}
+        urlRequest.httpBody = body
+        execute(request: urlRequest, completion: completion)
+    }
+    
     func execute<Response: Decodable>(
         request: URLRequest,
         completion: @escaping (Result<Response, RequestError>
