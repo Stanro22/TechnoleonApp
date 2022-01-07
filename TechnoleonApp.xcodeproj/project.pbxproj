@@ -59,6 +59,9 @@
 		9438A7B52770CF480023E40C /* MentalTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7B42770CF480023E40C /* MentalTestList.swift */; };
 		946768B62788449400393708 /* InsaitJoyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946768B52788449400393708 /* InsaitJoyRequest.swift */; };
 		946768B82788453A00393708 /* InsaitJoyRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946768B72788453A00393708 /* InsaitJoyRequestBody.swift */; };
+		946768BB278873AA00393708 /* GiTRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946768BA278873AA00393708 /* GiTRoundView.swift */; };
+		946768BD2788792E00393708 /* GiTRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946768BC2788792E00393708 /* GiTRound.swift */; };
+		946768BF278883EE00393708 /* GiTRoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946768BE278883EE00393708 /* GiTRoundManager.swift */; };
 		94719BB02773766D00F164C1 /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94719BAF2773766D00F164C1 /* StopwatchManager.swift */; };
 		947C8B6B277324FA0040CD62 /* KTK3Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8B6A277324FA0040CD62 /* KTK3Info.swift */; };
 		947C8B6D277328810040CD62 /* PHVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8B6C277328810040CD62 /* PHVView.swift */; };
@@ -188,6 +191,9 @@
 		9438A7B42770CF480023E40C /* MentalTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalTestList.swift; sourceTree = "<group>"; };
 		946768B52788449400393708 /* InsaitJoyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyRequest.swift; sourceTree = "<group>"; };
 		946768B72788453A00393708 /* InsaitJoyRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyRequestBody.swift; sourceTree = "<group>"; };
+		946768BA278873AA00393708 /* GiTRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTRoundView.swift; sourceTree = "<group>"; };
+		946768BC2788792E00393708 /* GiTRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTRound.swift; sourceTree = "<group>"; };
+		946768BE278883EE00393708 /* GiTRoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTRoundManager.swift; sourceTree = "<group>"; };
 		94719BAF2773766D00F164C1 /* StopwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchManager.swift; sourceTree = "<group>"; };
 		947C8B6A277324FA0040CD62 /* KTK3Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Info.swift; sourceTree = "<group>"; };
 		947C8B6C277328810040CD62 /* PHVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVView.swift; sourceTree = "<group>"; };
@@ -320,6 +326,8 @@
 				94071EDB2761177000FFB8B4 /* TimerManager.swift */,
 				9438A7AC2770BCA40023E40C /* Test.swift */,
 				94719BAF2773766D00F164C1 /* StopwatchManager.swift */,
+				946768BC2788792E00393708 /* GiTRound.swift */,
+				946768BE278883EE00393708 /* GiTRoundManager.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -347,6 +355,15 @@
 				73EB235327469450008111AE /* TechnoleonAppUITestsLaunchTests.swift */,
 			);
 			path = TechnoleonAppUITests;
+			sourceTree = "<group>";
+		};
+		946768B92788739400393708 /* GiT */ = {
+			isa = PBXGroup;
+			children = (
+				947C8B8B27732B120040CD62 /* GiTView.swift */,
+				946768BA278873AA00393708 /* GiTRoundView.swift */,
+			);
+			name = GiT;
 			sourceTree = "<group>";
 		};
 		947C8B65277323240040CD62 /* TestInfo */ = {
@@ -377,7 +394,6 @@
 			children = (
 				947C8B69277323DE0040CD62 /* KTK3 */,
 				947C8B6C277328810040CD62 /* PHVView.swift */,
-				947C8B6E277328B10040CD62 /* SitAndReachView.swift */,
 				947C8B70277328F90040CD62 /* VetPercentageView.swift */,
 				947C8B72277329080040CD62 /* T-TestView.swift */,
 				947C8B74277329220040CD62 /* OneLegStance */,
@@ -388,7 +404,7 @@
 				947C8B8527732AAB0040CD62 /* LSPTView.swift */,
 				947C8B8727732AB60040CD62 /* FSTView.swift */,
 				94D729D3277F53A600D071A7 /* Insait Joy */,
-				947C8B8B27732B120040CD62 /* GiTView.swift */,
+				946768B92788739400393708 /* GiT */,
 				947C8BAB277361F70040CD62 /* TestInfoView.swift */,
 			);
 			name = TestViews;
@@ -434,6 +450,7 @@
 				734C9A18274E8DCA0077BFEB /* KTK3Balk2View.swift */,
 				734C9A1A274E8E540077BFEB /* KTK3Balk3View.swift */,
 				734C9A1C274E8F4E0077BFEB /* KTK3HandEyeView.swift */,
+				947C8B6E277328B10040CD62 /* SitAndReachView.swift */,
 			);
 			name = KTK3;
 			sourceTree = "<group>";
@@ -689,6 +706,7 @@
 				734C9A17274E8CA30077BFEB /* KTK3Balk1View.swift in Sources */,
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
 				94A4186A278343F0009B8C41 /* PHVRequestBody.swift in Sources */,
+				946768BB278873AA00393708 /* GiTRoundView.swift in Sources */,
 				734CDD90275BA52000697CEE /* LoginRequest.swift in Sources */,
 				94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */,
 				942E3127278729CB00A96991 /* FSTRequest.swift in Sources */,
@@ -734,6 +752,7 @@
 				947C8BA8277332F60040CD62 /* GiTInfo.swift in Sources */,
 				947C8B76277329390040CD62 /* OneLegStanceLeft.swift in Sources */,
 				94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */,
+				946768BF278883EE00393708 /* GiTRoundManager.swift in Sources */,
 				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,
 				947C8B73277329080040CD62 /* T-TestView.swift in Sources */,
 				947C8B8227732A860040CD62 /* ShuttleRunView.swift in Sources */,
@@ -753,6 +772,7 @@
 				942E312B27873B5900A96991 /* FatPercentageRequest.swift in Sources */,
 				947C8B78277329460040CD62 /* OneLegStanceRight.swift in Sources */,
 				94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */,
+				946768BD2788792E00393708 /* GiTRound.swift in Sources */,
 				94719BB02773766D00F164C1 /* StopwatchManager.swift in Sources */,
 				94FA16CF278495DC00938748 /* Sprint10x5RequestBody.swift in Sources */,
 			);

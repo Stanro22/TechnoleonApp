@@ -64,7 +64,7 @@ struct InsaitJoyPractice: View {
     
     func setInsaitJoyTest(){
         setInsaitJoyFields()
-        /*technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+        technoleonAPI.setInsaitJoyTestForPlayer(id: loggedInUser.playerId!, insaitJoyRequestBody: insaitJoyBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")
@@ -78,7 +78,7 @@ struct InsaitJoyPractice: View {
                     print("error: \(String(describing: error))")
                 }
             }
-        }*/
+        }
     }
 }
 
