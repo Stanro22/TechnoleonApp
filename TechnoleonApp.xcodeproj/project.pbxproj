@@ -106,6 +106,20 @@
 		94BB5DF02785E4C300FB6B5A /* LSPTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */; };
 		94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
+		94E63DA8278B2C40009CAF5D /* SpecificTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DA7278B2C40009CAF5D /* SpecificTest.swift */; };
+		94E63DAB278B35A7009CAF5D /* KTK3Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DAA278B35A7009CAF5D /* KTK3Test.swift */; };
+		94E63DAD278B3747009CAF5D /* SitAndReachTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DAC278B3747009CAF5D /* SitAndReachTest.swift */; };
+		94E63DAF278B378A009CAF5D /* PHVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DAE278B378A009CAF5D /* PHVTest.swift */; };
+		94E63DB1278B37B0009CAF5D /* TTestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DB0278B37B0009CAF5D /* TTestTest.swift */; };
+		94E63DB3278B3897009CAF5D /* Sprint10x5Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DB2278B3897009CAF5D /* Sprint10x5Test.swift */; };
+		94E63DB5278B38D6009CAF5D /* OneLegStanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DB4278B38D6009CAF5D /* OneLegStanceTest.swift */; };
+		94E63DB7278B3971009CAF5D /* IntervalShuttleRunTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DB6278B3971009CAF5D /* IntervalShuttleRunTest.swift */; };
+		94E63DB9278B3998009CAF5D /* YoYoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DB8278B3998009CAF5D /* YoYoTest.swift */; };
+		94E63DBB278B39B2009CAF5D /* LSPTTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DBA278B39B2009CAF5D /* LSPTTest.swift */; };
+		94E63DBD278B3A43009CAF5D /* FSTTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DBC278B3A43009CAF5D /* FSTTest.swift */; };
+		94E63DBF278B3A6F009CAF5D /* FatPercentageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DBE278B3A6F009CAF5D /* FatPercentageTest.swift */; };
+		94E63DC1278B3AB2009CAF5D /* InsaitJoyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DC0278B3AB2009CAF5D /* InsaitJoyTest.swift */; };
+		94E63DC3278B3AF1009CAF5D /* GiTTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DC2278B3AF1009CAF5D /* GiTTest.swift */; };
 		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
 		94E7F5E7275FB2E30025644B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E6275FB2E30025644B /* Team.swift */; };
@@ -238,6 +252,20 @@
 		94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequestBody.swift; sourceTree = "<group>"; };
 		94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequest.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
+		94E63DA7278B2C40009CAF5D /* SpecificTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificTest.swift; sourceTree = "<group>"; };
+		94E63DAA278B35A7009CAF5D /* KTK3Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Test.swift; sourceTree = "<group>"; };
+		94E63DAC278B3747009CAF5D /* SitAndReachTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachTest.swift; sourceTree = "<group>"; };
+		94E63DAE278B378A009CAF5D /* PHVTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVTest.swift; sourceTree = "<group>"; };
+		94E63DB0278B37B0009CAF5D /* TTestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTestTest.swift; sourceTree = "<group>"; };
+		94E63DB2278B3897009CAF5D /* Sprint10x5Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprint10x5Test.swift; sourceTree = "<group>"; };
+		94E63DB4278B38D6009CAF5D /* OneLegStanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLegStanceTest.swift; sourceTree = "<group>"; };
+		94E63DB6278B3971009CAF5D /* IntervalShuttleRunTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalShuttleRunTest.swift; sourceTree = "<group>"; };
+		94E63DB8278B3998009CAF5D /* YoYoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoYoTest.swift; sourceTree = "<group>"; };
+		94E63DBA278B39B2009CAF5D /* LSPTTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTTest.swift; sourceTree = "<group>"; };
+		94E63DBC278B3A43009CAF5D /* FSTTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTTest.swift; sourceTree = "<group>"; };
+		94E63DBE278B3A6F009CAF5D /* FatPercentageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageTest.swift; sourceTree = "<group>"; };
+		94E63DC0278B3AB2009CAF5D /* InsaitJoyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyTest.swift; sourceTree = "<group>"; };
+		94E63DC2278B3AF1009CAF5D /* GiTTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTTest.swift; sourceTree = "<group>"; };
 		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
 		94E7F5E6275FB2E30025644B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -311,6 +339,7 @@
 				94A4187227835C21009B8C41 /* Requests */,
 				947C8B68277323490040CD62 /* TrainerViews */,
 				947C8B67277323410040CD62 /* PlayerViews */,
+				94E63DA9278B3583009CAF5D /* TestBody */,
 				947C8B66277323350040CD62 /* TestViews */,
 				947C8B65277323240040CD62 /* TestInfo */,
 				73975782274942D900A17B6E /* NavigationBar.swift */,
@@ -328,6 +357,7 @@
 				94719BAF2773766D00F164C1 /* StopwatchManager.swift */,
 				946768BC2788792E00393708 /* GiTRound.swift */,
 				946768BE278883EE00393708 /* GiTRoundManager.swift */,
+				94E63DA7278B2C40009CAF5D /* SpecificTest.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -393,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				947C8B69277323DE0040CD62 /* KTK3 */,
+				947C8B6E277328B10040CD62 /* SitAndReachView.swift */,
 				947C8B6C277328810040CD62 /* PHVView.swift */,
 				947C8B70277328F90040CD62 /* VetPercentageView.swift */,
 				947C8B72277329080040CD62 /* T-TestView.swift */,
@@ -450,7 +481,6 @@
 				734C9A18274E8DCA0077BFEB /* KTK3Balk2View.swift */,
 				734C9A1A274E8E540077BFEB /* KTK3Balk3View.swift */,
 				734C9A1C274E8F4E0077BFEB /* KTK3HandEyeView.swift */,
-				947C8B6E277328B10040CD62 /* SitAndReachView.swift */,
 			);
 			name = KTK3;
 			sourceTree = "<group>";
@@ -531,6 +561,26 @@
 				94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */,
 			);
 			name = "Insait Joy";
+			sourceTree = "<group>";
+		};
+		94E63DA9278B3583009CAF5D /* TestBody */ = {
+			isa = PBXGroup;
+			children = (
+				94E63DAA278B35A7009CAF5D /* KTK3Test.swift */,
+				94E63DAC278B3747009CAF5D /* SitAndReachTest.swift */,
+				94E63DAE278B378A009CAF5D /* PHVTest.swift */,
+				94E63DB0278B37B0009CAF5D /* TTestTest.swift */,
+				94E63DB2278B3897009CAF5D /* Sprint10x5Test.swift */,
+				94E63DB4278B38D6009CAF5D /* OneLegStanceTest.swift */,
+				94E63DB6278B3971009CAF5D /* IntervalShuttleRunTest.swift */,
+				94E63DB8278B3998009CAF5D /* YoYoTest.swift */,
+				94E63DBA278B39B2009CAF5D /* LSPTTest.swift */,
+				94E63DBC278B3A43009CAF5D /* FSTTest.swift */,
+				94E63DBE278B3A6F009CAF5D /* FatPercentageTest.swift */,
+				94E63DC0278B3AB2009CAF5D /* InsaitJoyTest.swift */,
+				94E63DC2278B3AF1009CAF5D /* GiTTest.swift */,
+			);
+			path = TestBody;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,6 +747,7 @@
 				734C9A13274E51600077BFEB /* KTK3View.swift in Sources */,
 				734C9A1B274E8E540077BFEB /* KTK3Balk3View.swift in Sources */,
 				94BB5DEE2785DE8900FB6B5A /* YoYoRequest.swift in Sources */,
+				94E63DC3278B3AF1009CAF5D /* GiTTest.swift in Sources */,
 				947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */,
 				9438A7AF2770CD190023E40C /* MatchTestList.swift in Sources */,
 				947C8B9C277332670040CD62 /* Sprint10x5Info.swift in Sources */,
@@ -711,8 +762,11 @@
 				94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */,
 				942E3127278729CB00A96991 /* FSTRequest.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
+				94E63DBD278B3A43009CAF5D /* FSTTest.swift in Sources */,
 				94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */,
 				94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */,
+				94E63DB9278B3998009CAF5D /* YoYoTest.swift in Sources */,
+				94E63DBF278B3A6F009CAF5D /* FatPercentageTest.swift in Sources */,
 				94FA16C9278490E100938748 /* TTestRequestBody.swift in Sources */,
 				947C8B8827732AB60040CD62 /* FSTView.swift in Sources */,
 				9438A7B12770CF180023E40C /* TechnicalTestList.swift in Sources */,
@@ -730,6 +784,7 @@
 				947C8B8C27732B120040CD62 /* GiTView.swift in Sources */,
 				94071ED8276109F300FFB8B4 /* setTestReponse.swift in Sources */,
 				947C8B9A2773321A0040CD62 /* Sprint10m20m35mInfo.swift in Sources */,
+				94E63DB3278B3897009CAF5D /* Sprint10x5Test.swift in Sources */,
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
 				734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */,
 				947C8B94277331AB0040CD62 /* VetPercentageInfo.swift in Sources */,
@@ -742,20 +797,28 @@
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
 				943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */,
 				94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */,
+				94E63DB1278B37B0009CAF5D /* TTestTest.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				947C8BA2277332B00040CD62 /* LSPTInfo.swift in Sources */,
 				94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */,
 				94BB5DF02785E4C300FB6B5A /* LSPTRequestBody.swift in Sources */,
 				947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */,
+				94E63DC1278B3AB2009CAF5D /* InsaitJoyTest.swift in Sources */,
 				947C8B922773316C0040CD62 /* SitAndReachInfo.swift in Sources */,
 				94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */,
+				94E63DAF278B378A009CAF5D /* PHVTest.swift in Sources */,
+				94E63DAB278B35A7009CAF5D /* KTK3Test.swift in Sources */,
 				947C8BA8277332F60040CD62 /* GiTInfo.swift in Sources */,
 				947C8B76277329390040CD62 /* OneLegStanceLeft.swift in Sources */,
+				94E63DB7278B3971009CAF5D /* IntervalShuttleRunTest.swift in Sources */,
 				94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */,
 				946768BF278883EE00393708 /* GiTRoundManager.swift in Sources */,
+				94E63DA8278B2C40009CAF5D /* SpecificTest.swift in Sources */,
 				73E59D652758FBDB005545F3 /* OverviewView.swift in Sources */,
+				94E63DB5278B38D6009CAF5D /* OneLegStanceTest.swift in Sources */,
 				947C8B73277329080040CD62 /* T-TestView.swift in Sources */,
 				947C8B8227732A860040CD62 /* ShuttleRunView.swift in Sources */,
+				94E63DBB278B39B2009CAF5D /* LSPTTest.swift in Sources */,
 				947C8BAC277361F70040CD62 /* TestInfoView.swift in Sources */,
 				947C8BA0277332970040CD62 /* YoYoInfo.swift in Sources */,
 				946768B82788453A00393708 /* InsaitJoyRequestBody.swift in Sources */,
@@ -774,6 +837,7 @@
 				94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */,
 				946768BD2788792E00393708 /* GiTRound.swift in Sources */,
 				94719BB02773766D00F164C1 /* StopwatchManager.swift in Sources */,
+				94E63DAD278B3747009CAF5D /* SitAndReachTest.swift in Sources */,
 				94FA16CF278495DC00938748 /* Sprint10x5RequestBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

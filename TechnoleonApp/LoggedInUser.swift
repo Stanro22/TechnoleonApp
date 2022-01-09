@@ -24,6 +24,7 @@ final class LoggedInUser : ObservableObject {
     var players: [Player]?
     var club: String?
     @Published var playerName: String?
+    var testList: [Test]?
     
     //player
     var birthDate: String?

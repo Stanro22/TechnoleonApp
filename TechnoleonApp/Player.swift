@@ -12,6 +12,7 @@ struct Player: Decodable, Hashable{
     var playerName: String
     var playerShuttleRunScore: Int? = 0
     var playerYoYoScore: Int? = 0
+    //var tests: [Test]
     
     enum CodingKeys: String, CodingKey {
         case user = "user"
