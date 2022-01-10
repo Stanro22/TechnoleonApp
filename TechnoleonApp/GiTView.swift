@@ -17,7 +17,7 @@ struct GiTView: View {
     var body: some View {
         VStack{
             Spacer()
-            HStack{
+            /*HStack{
                 Button(action: {currentRound -= 1}){
                     Text("Vorige ronde")
                         .foregroundColor(Color.white)
@@ -27,8 +27,9 @@ struct GiTView: View {
                 .cornerRadius(5)
                 .padding(EdgeInsets(top: 0, leading: 29, bottom: 0, trailing: 0))
                 Spacer()
-            }
+            }*/
             GiTRoundView(round: currentRound)
+            
             Spacer()
             
             if currentRound < 10 {
@@ -44,7 +45,7 @@ struct GiTView: View {
             }
             if currentRound == 10 {
                 NavigationLink(destination: EndOfTestView().onAppear{ }) {
-                    Text("Volgende ronde")
+                    Text("Sla gegevens op")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
@@ -56,15 +57,6 @@ struct GiTView: View {
         }
         .navigationTitle("GiT")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
-        .onAppear(perform: setRounds)
-    }
-    
-    func setRounds(){
-        for number in numberOfRounds{
-            let gitRound: GiTRound = GiTRound()
-            gitRound.id = number
-            gitManager.rounds![number] = gitRound
-        }
     }
 }
 

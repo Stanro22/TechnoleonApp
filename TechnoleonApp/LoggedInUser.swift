@@ -21,10 +21,10 @@ final class LoggedInUser : ObservableObject {
     //trainer
     //var coachId: String?
     var organizationId: String?
-    var players: [Player]?
+    @Published var players: [Player]?
     var club: String?
     @Published var playerName: String?
-    var testList: [Test]?
+    @Published var testList: [Test]?
     
     //player
     var birthDate: String?

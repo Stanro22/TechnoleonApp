@@ -61,7 +61,7 @@ struct GiTRoundView: View {
                     .background(Color(red: 0.38, green: 0.44, blue: 0.64))
                 }
             }
-            Text("\(gitManager.rounds![round].id!)")
+            Text("\(round)")
                 .font(.custom("", size: 50))
             + Text("/10")
                 .font(.custom("", size: 50))

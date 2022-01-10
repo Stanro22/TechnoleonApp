@@ -10,8 +10,10 @@ import SwiftUI
 struct OverviewView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @State private var isExpanded = false
-    @State private var selectedTeam = "Team"
+    let colums = [
+        GridItem(.fixed(142)),
+        GridItem(.flexible())
+    ]
     
     var body: some View {
         VStack(){
@@ -90,8 +92,48 @@ struct OverviewView: View {
             HStack{
                 VStack(alignment: .leading){
                     Text("Laatste Resultaten")
-                        .padding(EdgeInsets(top: -180, leading: -150, bottom: 12, trailing: 15))
+                        .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
+                    ScrollView{
+                        LazyVGrid(columns: colums, spacing: 10){
+                            if loggedInUser.players == nil {
+                                ProgressView("Loading players")
+                            }
+                            else{
+                                ForEach(loggedInUser.players!, id: \.self) { player in
+                                    if player.tests == nil {
+                                        ProgressView("Loading tests")
+                                    }
+                                    else{
+                                        ForEach(player.tests!, id: \.self) { test in
+                                            NavigationLink(destination: TeamOverviewView()) {
+                                                VStack{
+                                                    if test.testName != nil {
+                                                        Text("\(test.testName!)")
+                                                            .foregroundColor(Color.white)
+                                                            .font(.custom("", size: 14))
+                                                    }
+                                                    else{
+                                                        ProgressView("Loading test")
+                                                            .onAppear(){
+                                                                setTestNames()
+                                                            }
+                                                    }
+                                                }
+                                                .frame(width: 110, height: 50)
+                                                .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
+                                                .background(Color(red: 0.18, green: 0.25, blue: 0.44))
+                                            }
+                                            .cornerRadius(15)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    //Spacer()
                 }
+                Spacer()
             }
             .frame(width: 300, height: 350)
             .padding()
@@ -144,6 +186,19 @@ struct OverviewView: View {
         }
         .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setTestNames(){
+        if loggedInUser.players != nil {
+            for player in loggedInUser.players!{
+                if player.tests != nil{
+                    for var test in player.tests!{
+                        test.setTestName()
+                        //print("\(test.testName)")
+                    }
+                }
+            }
+        }
     }
 }
 

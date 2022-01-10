@@ -8,53 +8,65 @@
 import Foundation
 
 struct Test: Decodable, Hashable{
-    let playerId: String
-    //let player: Player?
-    //let category: String
-    //let skills: List<Any?>
-    //let lsptTestId: String
-    //let lsptTest: LSPTTest?
-    //let ktk3PlusTestId: String
-    //let ktk3PlusTest: KTK3Test?
-    //let giTTestId: String
-    //let giTTest: GiTTest?
-    //let phvTestId: String
-    //let phvTest: PHVTest?
-    //let sitAndReachTestId: String
-    //let sitAndReachTest: SitAndReachTest?
-    //let fatPercentageTestId: String
-    //let fatPercentageTest: FatPercentageTest?
-    //let fstTestId: String
-    //let fstTest: FSTTest?
-    //let insaitJoyTestId: String
-    //let insaitJoyTTest: InsaitJoyTTest?
-    //let intervalShuttleRunTestId: String
-    //let intervalShuttleRunTest: IntervalShuttleRunTest?
-    //let yoyoTestId: String
-    //let yoyoTest: YoYoTest?
-    //let oneLegStanceTestId: String
-    //let oneLegStanceTest: OneLegStanceTest?
-    //let tTestTestId: String
-    //let tTestTest: TTestTest?
-    //let sprint10x5TestId: String
-    //let sprint10x5Test: Sprint10x5Test?
-    //let id: String
-    //let createdAt: String
-    //let modified: String
+    let playerId: String?
+    let category: String?
+    let lsptTestId: String?
+    let ktk3PlusTestId: String?
+    let giTTestId: String?
+    let phvTestId: String?
+    let sitAndReachTestId: String?
+    let fatPercentageTestId: String?
+    let fstTestId: String?
+    let insaitJoyTestId: String?
+    let intervalShuttleRunTestId: String?
+    let yoyoTestId: String?
+    let oneLegStanceTestId: String?
+    let tTestTestId: String?
+    let sprint10x5TestId: String?
+    let id: String?
+    let created: String?
+    let modified: String?
+    var testName: String?
     
-    enum CodingKeys: String, CodingKey {
-        case user = "user"
-    }
-    
-    enum UserCodingKeys: String, CodingKey {
-        case playerId = "playerId"
-        case playername = "name"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let userContainer = try container.nestedContainer(keyedBy: UserCodingKeys.self, forKey: .user)
-        playerId = try userContainer.decode(String.self, forKey: .playerId)
-        //category = try userContainer.decode(String.self, forKey: .category)
+    mutating func setTestName(){
+        if lsptTestId != nil {
+            testName = "LSPT"
+        }
+        if ktk3PlusTestId != nil {
+            testName = "KTK3"
+        }
+        if giTTestId != nil {
+            testName = "GiT"
+        }
+        if phvTestId != nil {
+            testName = "PHV"
+        }
+        if sitAndReachTestId != nil {
+            testName = "Sit and Reach"
+        }
+        if fatPercentageTestId != nil {
+            testName = "Fat percentage"
+        }
+        if fstTestId != nil {
+            testName = "FST"
+        }
+        if insaitJoyTestId != nil {
+            testName = "Insait Joy"
+        }
+        if intervalShuttleRunTestId != nil {
+            testName = "Shuttle run"
+        }
+        if yoyoTestId != nil {
+            testName = "Yo-Yo"
+        }
+        if oneLegStanceTestId != nil {
+            testName = "One Leg Stance"
+        }
+        if tTestTestId != nil {
+            testName = "T-Test"
+        }
+        if sprint10x5TestId != nil {
+            testName = "10x5 Sprint"
+        }
     }
 }

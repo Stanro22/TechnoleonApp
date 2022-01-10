@@ -12,10 +12,11 @@ struct Player: Decodable, Hashable{
     var playerName: String
     var playerShuttleRunScore: Int? = 0
     var playerYoYoScore: Int? = 0
-    //var tests: [Test]
+    var tests: [Test]?
     
     enum CodingKeys: String, CodingKey {
         case user = "user"
+        case tests = "tests"
     }
     
     enum UserCodingKeys: String, CodingKey {
@@ -28,5 +29,6 @@ struct Player: Decodable, Hashable{
         let userContainer = try container.nestedContainer(keyedBy: UserCodingKeys.self, forKey: .user)
         playerId = try userContainer.decode(String.self, forKey: .playerId)
         playerName = try userContainer.decode(String.self, forKey: .playername)
+        tests = try container.decode(Array.self, forKey: .tests)
     }
 }

@@ -20,8 +20,8 @@ struct TeamResponse: Decodable {
         case players = "players"
     }
     
-    //enum PlayerCodingKeys: String , CodingKey {
-        //case tests = "tests"
+    //enum PlayerCodingKeys: String, CodingKey {
+     //   case tests = "tests"
     //}
     
     init(from decoder: Decoder) throws {

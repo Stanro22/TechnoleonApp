@@ -139,10 +139,6 @@ struct LoginView: View {
                     }
                 }
             }
-            
-        }
-        else{
-            print("Unauthorized")
         }
     }
     
@@ -154,6 +150,15 @@ struct LoginView: View {
                 if loggedInUser.userRole == "coach"{
                     loggedInUser.organizationId = response.organizationId
                     loggedInUser.players = response.players
+                    if loggedInUser.players != nil {
+                        for player in loggedInUser.players!{
+                            if player.tests != nil{
+                                for var test in player.tests!{
+                                    test.setTestName()
+                                }
+                            }
+                        }
+                    }
                 }
             case .failure(let error):
                 switch error{
