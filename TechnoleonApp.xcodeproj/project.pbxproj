@@ -49,6 +49,7 @@
 		94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */; };
 		9426D2BA278D8895009B6541 /* OverviewTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2B9278D8895009B6541 /* OverviewTestItem.swift */; };
 		9426D2BC278D8BAE009B6541 /* TestLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BB278D8BAE009B6541 /* TestLists.swift */; };
+		9426D2BE278DE7D0009B6541 /* TestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BD278DE7D0009B6541 /* TestDetailView.swift */; };
 		942E3127278729CB00A96991 /* FSTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E3126278729CB00A96991 /* FSTRequest.swift */; };
 		942E312927872A4E00A96991 /* FSTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312827872A4E00A96991 /* FSTRequestBody.swift */; };
 		942E312B27873B5900A96991 /* FatPercentageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312A27873B5900A96991 /* FatPercentageRequest.swift */; };
@@ -197,6 +198,7 @@
 		94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlayerView.swift; sourceTree = "<group>"; };
 		9426D2B9278D8895009B6541 /* OverviewTestItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItem.swift; sourceTree = "<group>"; };
 		9426D2BB278D8BAE009B6541 /* TestLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLists.swift; sourceTree = "<group>"; };
+		9426D2BD278DE7D0009B6541 /* TestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailView.swift; sourceTree = "<group>"; };
 		942E3126278729CB00A96991 /* FSTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequest.swift; sourceTree = "<group>"; };
 		942E312827872A4E00A96991 /* FSTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequestBody.swift; sourceTree = "<group>"; };
 		942E312A27873B5900A96991 /* FatPercentageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageRequest.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				73E59D642758FBDB005545F3 /* OverviewView.swift */,
 				733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */,
 				733B8B06275A9F5500E68F9E /* ComparePlayerView.swift */,
+				9426D2BD278DE7D0009B6541 /* TestDetailView.swift */,
 			);
 			path = TrainerViews;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */,
 				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
 				94071EDA2761163200FFB8B4 /* TimerMode.swift in Sources */,
+				9426D2BE278DE7D0009B6541 /* TestDetailView.swift in Sources */,
 				947C8B8027732A6D0040CD62 /* Sprint10x5mView.swift in Sources */,
 				947C8B6B277324FA0040CD62 /* KTK3Info.swift in Sources */,
 				7338BAAB275D009400F42D2F /* LoginView.swift in Sources */,

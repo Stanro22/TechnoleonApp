@@ -125,7 +125,7 @@ struct OverviewView: View {
                             }
                             ForEach(testList!, id: \.self) { overviewItem in
                                 VStack{
-                                    NavigationLink(destination: TestCategoriesView()) {
+                                    NavigationLink(destination: TestDetailView()) {
                                         Text("\(overviewItem.name)")
                                             .foregroundColor(Color.white)
                                             .font(.custom("", size: 14))
