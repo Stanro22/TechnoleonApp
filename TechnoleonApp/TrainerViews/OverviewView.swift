@@ -10,10 +10,14 @@ import SwiftUI
 struct OverviewView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var testManager = TestList.shared
     let colums = [
         GridItem(.fixed(142)),
         GridItem(.flexible())
     ]
+    @State var testList: [OverviewTestItem]?
+    @State var loadingTests: Bool = false
+    
     
     var body: some View {
         VStack(){
@@ -91,7 +95,7 @@ struct OverviewView: View {
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("Laatste Resultaten")
+                    Text("Resultaten")
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
@@ -107,15 +111,17 @@ struct OverviewView: View {
                                         ForEach(player.tests!, id: \.self) { test in
                                             NavigationLink(destination: TeamOverviewView()) {
                                                 VStack{
-                                                    if test.testName != nil {
-                                                        Text("\(test.testName!)")
+                                                    if loadingTests != false {
+                                                        let testName = test.getTestName(test: test)
+                                                        Text("\(testName)")
                                                             .foregroundColor(Color.white)
                                                             .font(.custom("", size: 14))
                                                     }
                                                     else{
                                                         ProgressView("Loading test")
                                                             .onAppear(){
-                                                                setTestNames()
+                                                                testManager.addToList(test: test)
+                                                                setTestList()
                                                             }
                                                     }
                                                 }
@@ -188,17 +194,13 @@ struct OverviewView: View {
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     
-    func setTestNames(){
-        if loggedInUser.players != nil {
-            for player in loggedInUser.players!{
-                if player.tests != nil{
-                    for var test in player.tests!{
-                        test.setTestName()
-                        //print("\(test.testName)")
-                    }
-                }
+    func setTestList(){
+        if testManager.testListLSPT != nil {
+            for test in testManager.testListLSPT!{
+                print("\(test.getTestName(test: test))")
             }
         }
+        loadingTests = true
     }
 }
 

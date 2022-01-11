@@ -47,6 +47,8 @@
 		94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDB2761177000FFB8B4 /* TimerManager.swift */; };
 		94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */; };
 		94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */; };
+		9426D2BA278D8895009B6541 /* OverviewTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2B9278D8895009B6541 /* OverviewTestItem.swift */; };
+		9426D2BC278D8BAE009B6541 /* TestLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BB278D8BAE009B6541 /* TestLists.swift */; };
 		942E3127278729CB00A96991 /* FSTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E3126278729CB00A96991 /* FSTRequest.swift */; };
 		942E312927872A4E00A96991 /* FSTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312827872A4E00A96991 /* FSTRequestBody.swift */; };
 		942E312B27873B5900A96991 /* FatPercentageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312A27873B5900A96991 /* FatPercentageRequest.swift */; };
@@ -193,6 +195,8 @@
 		94071EDB2761177000FFB8B4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPlayerView.swift; sourceTree = "<group>"; };
 		94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlayerView.swift; sourceTree = "<group>"; };
+		9426D2B9278D8895009B6541 /* OverviewTestItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItem.swift; sourceTree = "<group>"; };
+		9426D2BB278D8BAE009B6541 /* TestLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLists.swift; sourceTree = "<group>"; };
 		942E3126278729CB00A96991 /* FSTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequest.swift; sourceTree = "<group>"; };
 		942E312827872A4E00A96991 /* FSTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequestBody.swift; sourceTree = "<group>"; };
 		942E312A27873B5900A96991 /* FatPercentageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageRequest.swift; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 				946768BC2788792E00393708 /* GiTRound.swift */,
 				946768BE278883EE00393708 /* GiTRoundManager.swift */,
 				94E63DA7278B2C40009CAF5D /* SpecificTest.swift */,
+				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
+				9426D2BB278D8BAE009B6541 /* TestLists.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -826,7 +832,9 @@
 				94FA16CD2784959400938748 /* Sprint10x5Request.swift in Sources */,
 				94E7F5EB275FEA000025644B /* KTK3Request.swift in Sources */,
 				7391B8FB274BEFA20003BDDC /* ProfileView.swift in Sources */,
+				9426D2BC278D8BAE009B6541 /* TestLists.swift in Sources */,
 				73975783274942D900A17B6E /* NavigationBar.swift in Sources */,
+				9426D2BA278D8895009B6541 /* OverviewTestItem.swift in Sources */,
 				734C9A0F274E404B0077BFEB /* TestListView.swift in Sources */,
 				94E7F5E9275FBC3A0025644B /* Player.swift in Sources */,
 				94FA16CB2784915300938748 /* TTestRequest.swift in Sources */,

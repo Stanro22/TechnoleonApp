@@ -11,62 +11,78 @@ struct Test: Decodable, Hashable{
     let playerId: String?
     let category: String?
     let lsptTestId: String?
-    let ktk3PlusTestId: String?
+    let ktK3plusTestId: String?
     let giTTestId: String?
     let phvTestId: String?
     let sitAndReachTestId: String?
     let fatPercentageTestId: String?
+    let ijtBallControllTestId: String?
     let fstTestId: String?
     let insaitJoyTestId: String?
     let intervalShuttleRunTestId: String?
-    let yoyoTestId: String?
+    let tvpS3TestId: String?
+    let yoYoStaminaTestId: String?
     let oneLegStanceTestId: String?
     let tTestTestId: String?
-    let sprint10x5TestId: String?
+    let vfmtTestId: String?
+    let tenx5MSprintTestId: String?
+    let tenTwentyThirtyFiveSprintId: String?
     let id: String?
     let created: String?
     let modified: String?
-    var testName: String?
     
-    mutating func setTestName(){
+    func getTestName(test: Test) -> String {
         if lsptTestId != nil {
-            testName = "LSPT"
+            return "LSPT"
         }
-        if ktk3PlusTestId != nil {
-            testName = "KTK3"
+        if ktK3plusTestId != nil {
+            return "KTK3"
         }
         if giTTestId != nil {
-            testName = "GiT"
+            return "GiT"
         }
         if phvTestId != nil {
-            testName = "PHV"
+            return "PHV"
         }
         if sitAndReachTestId != nil {
-            testName = "Sit and Reach"
+            return "Sit and Reach"
         }
         if fatPercentageTestId != nil {
-            testName = "Fat percentage"
+            return "Fat percentage"
         }
         if fstTestId != nil {
-            testName = "FST"
+            return "FST"
         }
         if insaitJoyTestId != nil {
-            testName = "Insait Joy"
+            return "Insait Joy"
         }
         if intervalShuttleRunTestId != nil {
-            testName = "Shuttle run"
+            return "Shuttle run"
         }
-        if yoyoTestId != nil {
-            testName = "Yo-Yo"
+        if yoYoStaminaTestId != nil {
+            return "Yo-Yo"
         }
         if oneLegStanceTestId != nil {
-            testName = "One Leg Stance"
+            return "One Leg Stance"
         }
         if tTestTestId != nil {
-            testName = "T-Test"
+            return"T-Test"
         }
-        if sprint10x5TestId != nil {
-            testName = "10x5 Sprint"
+        if tenx5MSprintTestId != nil {
+            return "10x5 Sprint"
         }
+        if tenTwentyThirtyFiveSprintId != nil {
+            return "10, 20, 35m Sprint"
+        }
+        if vfmtTestId != nil {
+            return "VFMT"
+        }
+        if ijtBallControllTestId != nil {
+            return "IJT Ball Controll"
+        }
+        if tvpS3TestId != nil {
+            return "TVPS3"
+        }
+        return "not specified test"
     }
 }
