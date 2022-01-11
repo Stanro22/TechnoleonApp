@@ -7,7 +7,12 @@
 
 import Foundation
 
-class OverviewTestItem {
-    var name: String = ""
-    var tests: [Test]?
+struct OverviewTestItem : Hashable {
+    var name: String
+    var tests: [Test]
+    
+    init(name: String, tests: [Test]){
+        self.name = name
+        self.tests = tests
+    }
 }

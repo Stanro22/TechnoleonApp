@@ -15,9 +15,25 @@ struct OverviewView: View {
         GridItem(.fixed(142)),
         GridItem(.flexible())
     ]
-    @State var testList: [OverviewTestItem]?
+    @State var testList: [OverviewTestItem]? = [OverviewTestItem]()
     @State var loadingTests: Bool = false
-    
+    @State var lsptSet: Bool = false
+    @State var ktk3Set: Bool = false
+    @State var gitSet: Bool = false
+    @State var phvSet: Bool = false
+    @State var sitAndReachSet: Bool = false
+    @State var fatPercentageSet: Bool = false
+    @State var ijtSet: Bool = false
+    @State var fstSet: Bool = false
+    @State var insaitJoySet: Bool = false
+    @State var shuttleRunSet: Bool = false
+    @State var oneLegStanceSet: Bool = false
+    @State var tvps3Set: Bool = false
+    @State var tTestSet: Bool = false
+    @State var vfmtSet: Bool = false
+    @State var Sprint10x5Set: Bool = false
+    @State var yoyoSet: Bool = false
+    @State var tenTwentyThirtyFiveSet: Bool = false
     
     var body: some View {
         VStack(){
@@ -67,26 +83,13 @@ struct OverviewView: View {
             .cornerRadius(20)
             
             HStack{
-                NavigationLink(destination: LatestResultsView()) {
-                    VStack{
-                        Text("Laatste Resultaten")
-                            .foregroundColor(Color.white)
-                            .font(.custom("", size: 14))
-                    }
-                    .frame(width: 120, height: 20)
-                    .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
-                    .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                }
-                .cornerRadius(15)
-                .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
-                    
                     NavigationLink(destination: TeamOverviewView()) {
                         VStack{
                             Text("Team Overzicht")
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
-                        .frame(width: 120, height: 20)
+                        .frame(width: 240, height: 20)
                         .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
@@ -109,37 +112,33 @@ struct OverviewView: View {
                                     }
                                     else{
                                         ForEach(player.tests!, id: \.self) { test in
-                                            NavigationLink(destination: TeamOverviewView()) {
-                                                VStack{
-                                                    if loadingTests != false {
-                                                        let testName = test.getTestName(test: test)
-                                                        Text("\(testName)")
-                                                            .foregroundColor(Color.white)
-                                                            .font(.custom("", size: 14))
+                                            if loadingTests == false {
+                                                ProgressView("Loading test")
+                                                    .onAppear(){
+                                                        testManager.addToList(test: test)
+                                                        setTestList()
                                                     }
-                                                    else{
-                                                        ProgressView("Loading test")
-                                                            .onAppear(){
-                                                                testManager.addToList(test: test)
-                                                                setTestList()
-                                                            }
-                                                    }
-                                                }
-                                                .frame(width: 110, height: 50)
-                                                .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
-                                                .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                                             }
-                                            .cornerRadius(15)
                                         }
                                     }
                                 }
                             }
+                            ForEach(testList!, id: \.self) { overviewItem in
+                                VStack{
+                                    NavigationLink(destination: TestCategoriesView()) {
+                                        Text("\(overviewItem.name)")
+                                            .foregroundColor(Color.white)
+                                            .font(.custom("", size: 14))
+                                    }
+                                    .frame(width: 110, height: 50)
+                                    .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
+                                    .background(Color(red: 0.18, green: 0.25, blue: 0.44))
+                                    .cornerRadius(10)
+                                }
+                            }
                         }
-                        
                     }
-                    //Spacer()
                 }
-                Spacer()
             }
             .frame(width: 300, height: 350)
             .padding()
@@ -195,11 +194,87 @@ struct OverviewView: View {
     }
     
     func setTestList(){
-        if testManager.testListLSPT != nil {
-            for test in testManager.testListLSPT!{
-                print("\(test.getTestName(test: test))")
-            }
+        if testManager.testListLSPT != nil && lsptSet == false{
+            let overviewTestItem = OverviewTestItem(name: "LSPT", tests: testManager.testListLSPT!)
+            self.testList?.append(overviewTestItem)
+            lsptSet = true
         }
+        if testManager.testListKTK3 != nil && ktk3Set == false{
+            let overviewTestItem = OverviewTestItem(name: "KTK3", tests: testManager.testListKTK3!)
+            self.testList?.append(overviewTestItem)
+            ktk3Set = true
+        }
+        if testManager.testListGIT != nil && gitSet == false{
+            let overviewTestItem = OverviewTestItem(name: "GiT", tests: testManager.testListGIT!)
+            self.testList?.append(overviewTestItem)
+            gitSet = true
+        }
+        if testManager.testListPHV != nil && phvSet == false{
+            let overviewTestItem = OverviewTestItem(name: "PHV", tests: testManager.testListPHV!)
+            self.testList?.append(overviewTestItem)
+            phvSet = true
+        }
+        if testManager.testListsitAndReach != nil && sitAndReachSet == false{
+            let overviewTestItem = OverviewTestItem(name: "Sit and Reach", tests: testManager.testListsitAndReach!)
+            self.testList?.append(overviewTestItem)
+            sitAndReachSet = true
+        }
+        if testManager.testListfatPercentage != nil && fatPercentageSet == false{
+            let overviewTestItem = OverviewTestItem(name: "Fat percentage", tests: testManager.testListfatPercentage!)
+            self.testList?.append(overviewTestItem)
+            fatPercentageSet = true
+        }
+        if testManager.testListIJT != nil && ijtSet == false{
+            let overviewTestItem = OverviewTestItem(name: "IJT", tests: testManager.testListIJT!)
+            self.testList?.append(overviewTestItem)
+            ijtSet = true
+        }
+        if testManager.testListInsaitJoy != nil && insaitJoySet == false{
+            let overviewTestItem = OverviewTestItem(name: "Insait Joy", tests: testManager.testListInsaitJoy!)
+            self.testList?.append(overviewTestItem)
+            insaitJoySet = true
+        }
+        if testManager.testListShuttleRun != nil && shuttleRunSet == false{
+            let overviewTestItem = OverviewTestItem(name: "Shuttle run", tests: testManager.testListShuttleRun!)
+            self.testList?.append(overviewTestItem)
+            shuttleRunSet = true
+        }
+        if testManager.testListOneLegStance != nil && oneLegStanceSet == false{
+            let overviewTestItem = OverviewTestItem(name: "One leg stance", tests: testManager.testListOneLegStance!)
+            self.testList?.append(overviewTestItem)
+            oneLegStanceSet = true
+        }
+        if testManager.testListTVPS3 != nil && tvps3Set == false{
+            let overviewTestItem = OverviewTestItem(name: "TVPS3", tests: testManager.testListTVPS3!)
+            self.testList?.append(overviewTestItem)
+            tvps3Set = true
+        }
+        if testManager.testListTTest != nil && tTestSet == false{
+            let overviewTestItem = OverviewTestItem(name: "T-Test", tests: testManager.testListTTest!)
+            self.testList?.append(overviewTestItem)
+            tTestSet = true
+        }
+        if testManager.testListVFMT != nil && vfmtSet == false{
+            let overviewTestItem = OverviewTestItem(name: "VFMT", tests: testManager.testListVFMT!)
+            self.testList?.append(overviewTestItem)
+            vfmtSet = true
+        }
+        if testManager.testList10x5Sprint != nil && Sprint10x5Set == false{
+            let overviewTestItem = OverviewTestItem(name: "10x5m Sprint", tests: testManager.testList10x5Sprint!)
+            self.testList?.append(overviewTestItem)
+            Sprint10x5Set = true
+        }
+        if testManager.testListYoYo != nil && yoyoSet == false{
+            let overviewTestItem = OverviewTestItem(name: "Yo-Yo", tests: testManager.testListYoYo!)
+            self.testList?.append(overviewTestItem)
+            yoyoSet = true
+        }
+        if testManager.testListTenTwentyThirtyFiveSprint != nil && tenTwentyThirtyFiveSet == false{
+            let overviewTestItem = OverviewTestItem(name: "10, 20, 35m Sprint", tests: testManager.testListTenTwentyThirtyFiveSprint!)
+            self.testList?.append(overviewTestItem)
+            tenTwentyThirtyFiveSet = true
+        }
+        //print("\(testList!.count)")
         loadingTests = true
     }
 }

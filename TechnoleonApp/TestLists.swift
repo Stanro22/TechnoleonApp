@@ -30,55 +30,106 @@ class TestList : ObservableObject {
     
     func addToList(test: Test){
         if test.lsptTestId != nil {
-            TestList.shared.testListLSPT?.insert(test, at: testListLSPT!.endIndex)
+            if TestList.shared.testListLSPT == nil{
+                TestList.shared.testListLSPT = [Test]()
+            }
+            TestList.shared.testListLSPT?.append(test)
         }
         if test.ktK3plusTestId != nil {
-            TestList.shared.testListKTK3?.insert(test, at: testListKTK3!.endIndex)
+            if TestList.shared.testListKTK3 == nil{
+                TestList.shared.testListKTK3 = [Test]()
+            }
+            TestList.shared.testListKTK3?.append(test)
         }
         if test.giTTestId != nil {
-            TestList.shared.testListGIT?.insert(test, at: testListGIT!.endIndex)
+            if TestList.shared.testListGIT == nil{
+                TestList.shared.testListGIT = [Test]()
+            }
+            TestList.shared.testListGIT?.append(test)
         }
         if test.phvTestId != nil {
-            TestList.shared.testListPHV?.insert(test, at: testListPHV!.endIndex)
+            if TestList.shared.testListPHV == nil{
+                TestList.shared.testListPHV = [Test]()
+            }
+            TestList.shared.testListPHV?.append(test)
         }
         if test.sitAndReachTestId != nil {
-            TestList.shared.testListsitAndReach?.insert(test, at: testListsitAndReach!.endIndex)
+            if TestList.shared.testListsitAndReach == nil{
+                TestList.shared.testListsitAndReach = [Test]()
+            }
+            TestList.shared.testListsitAndReach?.append(test)
         }
         if test.fatPercentageTestId != nil {
-            TestList.shared.testListfatPercentage?.insert(test, at: testListfatPercentage!.endIndex)
+            if TestList.shared.testListfatPercentage == nil{
+                TestList.shared.testListfatPercentage = [Test]()
+            }
+            TestList.shared.testListfatPercentage?.append(test)
         }
         if test.fstTestId != nil {
-            TestList.shared.testListFST?.insert(test, at: testListFST!.endIndex)
+            if TestList.shared.testListFST == nil{
+                TestList.shared.testListFST = [Test]()
+            }
+            TestList.shared.testListFST?.append(test)
         }
         if test.insaitJoyTestId != nil {
-            TestList.shared.testListInsaitJoy?.insert(test, at: testListInsaitJoy!.endIndex)
+            if TestList.shared.testListInsaitJoy == nil{
+                TestList.shared.testListInsaitJoy = [Test]()
+            }
+            TestList.shared.testListInsaitJoy?.append(test)
         }
         if test.intervalShuttleRunTestId != nil {
-            TestList.shared.testListShuttleRun?.insert(test, at: testListShuttleRun!.endIndex)
+            if TestList.shared.testListShuttleRun == nil{
+                TestList.shared.testListShuttleRun = [Test]()
+            }
+            TestList.shared.testListShuttleRun?.append(test)
         }
         if test.yoYoStaminaTestId != nil {
-            TestList.shared.testListYoYo?.insert(test, at: testListYoYo!.endIndex)
+            if TestList.shared.testListYoYo == nil{
+                TestList.shared.testListYoYo = [Test]()
+            }
+            TestList.shared.testListYoYo?.append(test)
         }
         if test.oneLegStanceTestId != nil {
-            TestList.shared.testListOneLegStance?.insert(test, at: testListOneLegStance!.endIndex)
+            if TestList.shared.testListOneLegStance == nil{
+                TestList.shared.testListOneLegStance = [Test]()
+            }
+            TestList.shared.testListOneLegStance?.append(test)
         }
         if test.tTestTestId != nil {
-            TestList.shared.testListTTest?.insert(test, at: testListTTest!.endIndex)
+            if TestList.shared.testListTTest == nil{
+                TestList.shared.testListTTest = [Test]()
+            }
+            TestList.shared.testListTTest?.append(test)
         }
         if test.tenx5MSprintTestId != nil {
-            TestList.shared.testList10x5Sprint?.insert(test, at: testListLSPT!.endIndex)
+            if TestList.shared.testList10x5Sprint == nil{
+                TestList.shared.testList10x5Sprint = [Test]()
+            }
+            TestList.shared.testList10x5Sprint?.append(test)
         }
         if test.tenTwentyThirtyFiveSprintId != nil {
-            TestList.shared.testListLSPT?.insert(test, at: testList10x5Sprint!.endIndex)
+            if TestList.shared.testListTenTwentyThirtyFiveSprint == nil{
+                TestList.shared.testListTenTwentyThirtyFiveSprint = [Test]()
+            }
+            TestList.shared.testListTenTwentyThirtyFiveSprint?.append(test)
         }
         if test.vfmtTestId != nil {
-            TestList.shared.testListVFMT?.insert(test, at: testListVFMT!.endIndex)
+            if TestList.shared.testListVFMT == nil{
+                TestList.shared.testListVFMT = [Test]()
+            }
+            TestList.shared.testListVFMT?.append(test)
         }
         if test.ijtBallControllTestId != nil {
-            TestList.shared.testListIJT?.insert(test, at: testListIJT!.endIndex)
+            if TestList.shared.testListIJT == nil{
+                TestList.shared.testListIJT = [Test]()
+            }
+            TestList.shared.testListIJT?.append(test)
         }
         if test.tvpS3TestId != nil {
-            TestList.shared.testListTVPS3?.insert(test, at: testListTVPS3!.endIndex)
+            if TestList.shared.testListTVPS3 == nil{
+                TestList.shared.testListTVPS3 = [Test]()
+            }
+            TestList.shared.testListTVPS3?.append(test)
         }
     }
 }
