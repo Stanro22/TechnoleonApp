@@ -11,7 +11,7 @@ struct LSPTView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var lsptBody = LSPTRequestBody()
-    @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var timerManager = TimerManager()
     @State var missedBench: Int = 0
     @State var wrongBench: Int = 0
     @State var missedZone: Int = 0
@@ -22,10 +22,6 @@ struct LSPTView: View {
     var body: some View {
         VStack{
             Spacer()
-            VStack{
-                Text("Tijd om op te slaan: \(timerManager.timeToSave)")
-                    .font(.custom("", size: 16))
-            }
             VStack(){
                 Button(action: timerManager.reset){
                     Text("Reset")
@@ -35,17 +31,17 @@ struct LSPTView: View {
                 }
                 .cornerRadius(15)
                 
-                Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
+                Text(secondsToMinutesAndSeconds(seconds: timerManager.secondsLeft))
                     .font(.custom("", size: 30))
                     .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                    .frame(width: 130, height: 130)
+                    .frame(width: 100, height: 100)
                     .overlay(
                         RoundedRectangle(cornerRadius: 90)
-                            .stroke(lineWidth: 3)
+                            .stroke(lineWidth: 2)
                             .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     )
                     .onAppear(){
-                        self.timerManager.seconds = 0
+                        self.timerManager.setTimerLenght(seconds: 300)
                     }
                     
                 Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
@@ -56,7 +52,7 @@ struct LSPTView: View {
                     .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     .onTapGesture(perform: {
                         if self.timerManager.timerMode == .initial {
-                            self.timerManager.seconds = 0
+                            self.timerManager.setTimerLenght(seconds: 300)
                         }
                         self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
                     })

@@ -12,6 +12,7 @@ class TimerManager: ObservableObject {
     
     @Published var timerMode: TimerMode = .initial
     @Published var secondsLeft = UserDefaults.standard.integer(forKey: "timerLength")
+    @Published var timeToSave = "00:00.00"
     var timer = Timer()
     
     func setTimerLenght(seconds: Int){
@@ -33,11 +34,23 @@ class TimerManager: ObservableObject {
     func reset(){
         self.timerMode = .initial
         self.secondsLeft = UserDefaults.standard.integer(forKey: "timerLength")
+        timeToSave = "00:00.00"
         timer.invalidate()
     }
     
     func pause(){
         self.timerMode = .paused
         timer.invalidate()
+        formatTime()
+    }
+    
+    func formatTime() {
+        let minutes : Int32 = Int32(secondsLeft/60)
+        let secondsElapsed : Int32 = Int32(secondsLeft) - (minutes * 60)
+        //let milliseconds: Int32 = Int32(secondsLeft.truncatingRemainder(dividingBy: 1) * 100)
+        let minutesString = (minutes < 10) ? "0\(minutes)" : "\(minutes)"
+        let secondsString = (secondsElapsed < 10) ? "0\(secondsElapsed)" : "\(secondsElapsed)"
+        //let millisecondsString = (milliseconds < 10) ? "0\(milliseconds)" : "\(milliseconds)"
+        timeToSave = minutesString + ":" + secondsString + "." + "000"
     }
 }
