@@ -22,10 +22,13 @@ struct CognitiveTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: GiTInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
+
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)

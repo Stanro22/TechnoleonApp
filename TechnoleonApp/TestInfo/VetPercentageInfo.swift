@@ -7,7 +7,7 @@
 
 import Foundation
 
-class vetPercentageInfo : TestInfo {
+class VetPercentageInfo : TestInfo {
     init() {
         super.init(
             name: "Vetpercentage",

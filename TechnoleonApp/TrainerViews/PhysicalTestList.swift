@@ -22,10 +22,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: KTK3Info())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -47,10 +49,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: PHVInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -72,10 +76,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: SitAndReachInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -97,9 +103,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                        NavigationLink(destination: TestInfoView(testInfo: VetPercentageInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                             .frame(width: 25, height: 25)
                         Image(systemName: "chevron.right")
                             .resizable()
@@ -122,10 +131,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: T_TestInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -147,10 +158,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: OneLegStanceInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -172,10 +185,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: Sprint10m20m35mInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -197,10 +212,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: Sprint10x5Info())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -222,10 +239,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: ShuttleRunInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
@@ -247,10 +266,12 @@ struct PhysicalTestList: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         Spacer()
-                        Image(systemName: "info.circle.fill")
-                            .resizable()
-                            .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                            .frame(width: 25, height: 25)
+                        NavigationLink(destination: TestInfoView(testInfo: YoYoInfo())){
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
+                                .frame(width: 25, height: 25)
+                        }
                         Image(systemName: "chevron.right")
                             .resizable()
                             .foregroundColor(Color.black)
