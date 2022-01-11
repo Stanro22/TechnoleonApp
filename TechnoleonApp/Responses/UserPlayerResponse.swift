@@ -16,6 +16,7 @@ struct UserPlayerResponse: Decodable {
     let gender: String
     let teamRole: String
     let teamId: String
+    let tests: [Test]
     
     enum CodingKeys: String, CodingKey {
         case email = "email"
@@ -30,6 +31,7 @@ struct UserPlayerResponse: Decodable {
         case gender = "gender"
         case teamRole = "teamRole"
         case teamId = "teamId"
+        case tests = "tests"
     }
     
     init(from decoder: Decoder) throws {
@@ -47,5 +49,6 @@ struct UserPlayerResponse: Decodable {
         gender = try playerContainer.decode(String.self, forKey: .gender)
         teamRole = try playerContainer.decode(String.self, forKey: .teamRole)
         teamId = try playerContainer.decode(String.self, forKey: .teamId)
+        tests = try playerContainer.decode(Array.self, forKey: .tests)
     }
 }

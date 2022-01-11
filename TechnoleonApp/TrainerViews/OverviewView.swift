@@ -195,6 +195,8 @@ struct OverviewView: View {
     
     func setTestList(){
         if testManager.testListLSPT != nil && lsptSet == false{
+            //var players: [Player] = [Player]()
+            //players.append(player)
             let overviewTestItem = OverviewTestItem(name: "LSPT", tests: testManager.testListLSPT!)
             self.testList?.append(overviewTestItem)
             lsptSet = true

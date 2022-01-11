@@ -126,6 +126,7 @@ struct LoginView: View {
                         loggedInUser.gender = response.gender
                         loggedInUser.teamRole = response.teamRole
                         loggedInUser.teamId = response.teamId
+                        loggedInUser.testList = response.tests
                         getTeamById(id: response.teamId)
                     case .failure(let error):
                         switch error{

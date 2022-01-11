@@ -24,7 +24,6 @@ final class LoggedInUser : ObservableObject {
     @Published var players: [Player]?
     var club: String?
     @Published var playerName: String?
-    @Published var testList: [Test]?
     
     //player
     var birthDate: String?
@@ -32,4 +31,5 @@ final class LoggedInUser : ObservableObject {
     var lengthInCm: Int?
     var gender: String?
     @Published var teamRole: String?
+    @Published var testList: [Test]?
 }

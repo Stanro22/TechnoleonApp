@@ -50,6 +50,7 @@
 		9426D2BA278D8895009B6541 /* OverviewTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2B9278D8895009B6541 /* OverviewTestItem.swift */; };
 		9426D2BC278D8BAE009B6541 /* TestLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BB278D8BAE009B6541 /* TestLists.swift */; };
 		9426D2BE278DE7D0009B6541 /* TestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BD278DE7D0009B6541 /* TestDetailView.swift */; };
+		9426D2C0278E03BF009B6541 /* TestDetailPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BF278E03BF009B6541 /* TestDetailPlayerView.swift */; };
 		942E3127278729CB00A96991 /* FSTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E3126278729CB00A96991 /* FSTRequest.swift */; };
 		942E312927872A4E00A96991 /* FSTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312827872A4E00A96991 /* FSTRequestBody.swift */; };
 		942E312B27873B5900A96991 /* FatPercentageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312A27873B5900A96991 /* FatPercentageRequest.swift */; };
@@ -199,6 +200,7 @@
 		9426D2B9278D8895009B6541 /* OverviewTestItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItem.swift; sourceTree = "<group>"; };
 		9426D2BB278D8BAE009B6541 /* TestLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLists.swift; sourceTree = "<group>"; };
 		9426D2BD278DE7D0009B6541 /* TestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailView.swift; sourceTree = "<group>"; };
+		9426D2BF278E03BF009B6541 /* TestDetailPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailPlayerView.swift; sourceTree = "<group>"; };
 		942E3126278729CB00A96991 /* FSTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequest.swift; sourceTree = "<group>"; };
 		942E312827872A4E00A96991 /* FSTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequestBody.swift; sourceTree = "<group>"; };
 		942E312A27873B5900A96991 /* FatPercentageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageRequest.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			children = (
 				94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */,
 				94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */,
+				9426D2BF278E03BF009B6541 /* TestDetailPlayerView.swift */,
 			);
 			path = PlayerViews;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				94FA16D12784C98300938748 /* OneLegStanceRequest.swift in Sources */,
 				946768B62788449400393708 /* InsaitJoyRequest.swift in Sources */,
 				947C8B8427732A940040CD62 /* YoYoView.swift in Sources */,
+				9426D2C0278E03BF009B6541 /* TestDetailPlayerView.swift in Sources */,
 				94E7F5E7275FB2E30025644B /* Team.swift in Sources */,
 				947C8BA6277332DA0040CD62 /* InsaitJoyInfo.swift in Sources */,
 				947C8B7E27732A580040CD62 /* Sprint10m20m35mView.swift in Sources */,
