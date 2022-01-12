@@ -89,54 +89,6 @@ struct ProfileView: View {
                 .frame(width: 280, height: 20, alignment: .leading)
                 .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-                
-                HStack{
-                    Image(systemName: "calendar")
-                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Geboortejaar")
-                        .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    Spacer()
-                    if loggedInUser.email != nil {
-                        Text("")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
-                    else{
-                        Text("")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
-                }
-                .frame(width: 280, height: 20, alignment: .leading)
-                .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-                
-                HStack{
-                    Image(systemName: "person.fill")
-                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Gender")
-                        .font(.custom("", size: 14))
-                        .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
-                    Spacer()
-                    if loggedInUser.email != nil {
-                        Text("Man")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
-                    else{
-                        Text("")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
-                }
-                .frame(width: 280, height: 20, alignment: .leading)
-                .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
             .padding()
             .frame(width: 300, height: 120)
@@ -162,7 +114,7 @@ struct ProfileView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: TeamSelectionView()) {
+                    NavigationLink(destination: PlayerSelectionView()) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)

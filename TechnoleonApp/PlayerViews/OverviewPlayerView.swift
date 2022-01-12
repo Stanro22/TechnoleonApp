@@ -92,6 +92,7 @@ struct OverviewPlayerView: View {
                 }
                 .cornerRadius(15)
                 .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
+                .disabled(true)
             }
             
             HStack{
