@@ -8,5 +8,11 @@
 import Foundation
 
 class SpecificTest {
-    var name: String = ""
+    var scoreFields: String?
+    var values: String?
+    
+    init(scoreFields: String, values: String){
+        self.scoreFields = scoreFields
+        self.values = values
+    }
 }

@@ -49,57 +49,112 @@ struct Test: Decodable, Hashable{
     let modified: String?
     
     func getTestName(test: Test) -> String {
-        if lsptTestId != nil {
+        if test.lsptTestId != nil {
             return "LSPT"
         }
-        if ktK3plusTestId != nil {
+        if test.ktK3plusTestId != nil {
             return "KTK3"
         }
-        if giTTestId != nil {
+        if test.giTTestId != nil {
             return "GiT"
         }
-        if phvTestId != nil {
+        if test.phvTestId != nil {
             return "PHV"
         }
-        if sitAndReachTestId != nil {
+        if test.sitAndReachTestId != nil {
             return "Sit and Reach"
         }
-        if fatPercentageTestId != nil {
+        if test.fatPercentageTestId != nil {
             return "Fat percentage"
         }
-        if fstTestId != nil {
+        if test.fstTestId != nil {
             return "FST"
         }
-        if insaitJoyTestId != nil {
+        if test.insaitJoyTestId != nil {
             return "Insait Joy"
         }
-        if intervalShuttleRunTestId != nil {
+        if test.intervalShuttleRunTestId != nil {
             return "Shuttle run"
         }
-        if yoYoStaminaTestId != nil {
+        if test.yoYoStaminaTestId != nil {
             return "Yo-Yo"
         }
-        if oneLegStanceTestId != nil {
+        if test.oneLegStanceTestId != nil {
             return "One Leg Stance"
         }
-        if tTestTestId != nil {
+        if test.tTestTestId != nil {
             return"T-Test"
         }
-        if tenx5MSprintTestId != nil {
+        if test.tenx5MSprintTestId != nil {
             return "10x5 Sprint"
         }
-        if tenTwentyThirtyFiveSprintId != nil {
+        if test.tenTwentyThirtyFiveSprintId != nil {
             return "10, 20, 35m Sprint"
         }
-        if vfmtTestId != nil {
+        if test.vfmtTestId != nil {
             return "VFMT"
         }
-        if ijtBallControllTestId != nil {
+        if test.ijtBallControllTestId != nil {
             return "IJT Ball Controll"
         }
-        if tvpS3TestId != nil {
+        if test.tvpS3TestId != nil {
             return "TVPS3"
         }
         return "not specified test"
+    }
+    
+    func getChild(test: Test) -> Any?{
+        if test.lsptTest != nil {
+            return test.lsptTest
+        }
+        if test.ktk3PlusTest != nil {
+            return test.ktk3PlusTest
+        }
+        if test.giTTest != nil {
+            return test.giTTest
+        }
+        if test.phvTest != nil {
+            return test.phvTest
+        }
+        if test.sitAndReachTest != nil {
+            return test.sitAndReachTest
+        }
+        if test.fatPercentageTest != nil {
+            return test.fatPercentageTest
+        }
+        if test.fstTest != nil {
+            return test.fstTest
+        }
+        if test.insaitJoyTest != nil {
+            return test.insaitJoyTest
+        }
+        if test.intervalShuttleRunTest != nil {
+            return test.intervalShuttleRunTest
+        }
+        if test.yoYoStaminaTest != nil {
+            return test.yoYoStaminaTest
+        }
+        if test.oneLegStanceTest != nil {
+            return test.oneLegStanceTest
+        }
+        if test.tTestTest != nil {
+            return test.tTestTest
+        }
+        if test.tenx5MSprintTest != nil {
+            return test.tenx5MSprintTest
+        }
+        if test.tenTwentyThirtyFiveSprint != nil {
+            return test.tenTwentyThirtyFiveSprint
+        }
+        /*if test.vfmtTestId != nil {
+            return vfmtTest
+        }
+        if test.ijtBallControllTestId != nil {
+            return "ijtBallControlTest
+        }
+        if test.tvpS3TestId != nil {
+            return tvps3Test
+        }*/
+        return nil
     }
 }

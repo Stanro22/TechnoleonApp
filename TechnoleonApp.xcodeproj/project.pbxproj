@@ -105,6 +105,21 @@
 		94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */; };
 		94A6F2B3278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2B2278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift */; };
 		94A6F2B5278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2B4278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift */; };
+		94A6F2B9278F211100DE845E /* TestDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2B8278F211100DE845E /* TestDetailsFactory.swift */; };
+		94A6F2BC278F28A000DE845E /* KTK3Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2BB278F28A000DE845E /* KTK3Strategy.swift */; };
+		94A6F2BE278F315300DE845E /* FatPercentageStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2BD278F315300DE845E /* FatPercentageStrategy.swift */; };
+		94A6F2C0278F322300DE845E /* Sprint10x5MStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2BF278F322300DE845E /* Sprint10x5MStrategy.swift */; };
+		94A6F2C2278F325300DE845E /* FSTStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2C1278F325300DE845E /* FSTStrategy.swift */; };
+		94A6F2C4278F326F00DE845E /* GiTStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2C3278F326F00DE845E /* GiTStrategy.swift */; };
+		94A6F2C6278F328D00DE845E /* InsaitJoyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2C5278F328D00DE845E /* InsaitJoyStrategy.swift */; };
+		94A6F2C8278F332700DE845E /* IntervalShuttleRunStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2C7278F332700DE845E /* IntervalShuttleRunStrategy.swift */; };
+		94A6F2CA278F335200DE845E /* LSPTStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2C9278F335200DE845E /* LSPTStrategy.swift */; };
+		94A6F2CC278F336F00DE845E /* OneLegStanceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2CB278F336F00DE845E /* OneLegStanceStrategy.swift */; };
+		94A6F2CE278F338D00DE845E /* PHVStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2CD278F338D00DE845E /* PHVStrategy.swift */; };
+		94A6F2D0278F33AD00DE845E /* SitAndReachStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2CF278F33AD00DE845E /* SitAndReachStrategy.swift */; };
+		94A6F2D2278F33EA00DE845E /* TenTwentyThirtyFiveStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2D1278F33EA00DE845E /* TenTwentyThirtyFiveStrategy.swift */; };
+		94A6F2D4278F341600DE845E /* TTestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2D3278F341600DE845E /* TTestStrategy.swift */; };
+		94A6F2D6278F343800DE845E /* YoYoStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2D5278F343800DE845E /* YoYoStrategy.swift */; };
 		94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */; };
 		94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */; };
 		94BB5DEC2785DD5200FB6B5A /* ShuttleRunRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */; };
@@ -257,6 +272,21 @@
 		94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequestBody.swift; sourceTree = "<group>"; };
 		94A6F2B2278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTestDetailPlayerView.swift; sourceTree = "<group>"; };
 		94A6F2B4278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyThirtyFiveSprintTest.swift; sourceTree = "<group>"; };
+		94A6F2B8278F211100DE845E /* TestDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailsFactory.swift; sourceTree = "<group>"; };
+		94A6F2BB278F28A000DE845E /* KTK3Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Strategy.swift; sourceTree = "<group>"; };
+		94A6F2BD278F315300DE845E /* FatPercentageStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageStrategy.swift; sourceTree = "<group>"; };
+		94A6F2BF278F322300DE845E /* Sprint10x5MStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprint10x5MStrategy.swift; sourceTree = "<group>"; };
+		94A6F2C1278F325300DE845E /* FSTStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTStrategy.swift; sourceTree = "<group>"; };
+		94A6F2C3278F326F00DE845E /* GiTStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTStrategy.swift; sourceTree = "<group>"; };
+		94A6F2C5278F328D00DE845E /* InsaitJoyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyStrategy.swift; sourceTree = "<group>"; };
+		94A6F2C7278F332700DE845E /* IntervalShuttleRunStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalShuttleRunStrategy.swift; sourceTree = "<group>"; };
+		94A6F2C9278F335200DE845E /* LSPTStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTStrategy.swift; sourceTree = "<group>"; };
+		94A6F2CB278F336F00DE845E /* OneLegStanceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLegStanceStrategy.swift; sourceTree = "<group>"; };
+		94A6F2CD278F338D00DE845E /* PHVStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVStrategy.swift; sourceTree = "<group>"; };
+		94A6F2CF278F33AD00DE845E /* SitAndReachStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachStrategy.swift; sourceTree = "<group>"; };
+		94A6F2D1278F33EA00DE845E /* TenTwentyThirtyFiveStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyThirtyFiveStrategy.swift; sourceTree = "<group>"; };
+		94A6F2D3278F341600DE845E /* TTestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTestStrategy.swift; sourceTree = "<group>"; };
+		94A6F2D5278F343800DE845E /* YoYoStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoYoStrategy.swift; sourceTree = "<group>"; };
 		94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShuttleRunView.swift; sourceTree = "<group>"; };
 		94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerYoYoView.swift; sourceTree = "<group>"; };
 		94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuttleRunRequest.swift; sourceTree = "<group>"; };
@@ -351,6 +381,7 @@
 				94A4187227835C21009B8C41 /* Requests */,
 				947C8B68277323490040CD62 /* TrainerViews */,
 				947C8B67277323410040CD62 /* PlayerViews */,
+				94A6F2BA278F287000DE845E /* TestStrategies */,
 				94E63DA9278B3583009CAF5D /* TestBody */,
 				947C8B66277323350040CD62 /* TestViews */,
 				947C8B65277323240040CD62 /* TestInfo */,
@@ -372,6 +403,7 @@
 				94E63DA7278B2C40009CAF5D /* SpecificTest.swift */,
 				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
 				9426D2BB278D8BAE009B6541 /* TestLists.swift */,
+				94A6F2B8278F211100DE845E /* TestDetailsFactory.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -551,6 +583,27 @@
 				946768B72788453A00393708 /* InsaitJoyRequestBody.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		94A6F2BA278F287000DE845E /* TestStrategies */ = {
+			isa = PBXGroup;
+			children = (
+				94A6F2BB278F28A000DE845E /* KTK3Strategy.swift */,
+				94A6F2BD278F315300DE845E /* FatPercentageStrategy.swift */,
+				94A6F2BF278F322300DE845E /* Sprint10x5MStrategy.swift */,
+				94A6F2C1278F325300DE845E /* FSTStrategy.swift */,
+				94A6F2C3278F326F00DE845E /* GiTStrategy.swift */,
+				94A6F2C5278F328D00DE845E /* InsaitJoyStrategy.swift */,
+				94A6F2C7278F332700DE845E /* IntervalShuttleRunStrategy.swift */,
+				94A6F2C9278F335200DE845E /* LSPTStrategy.swift */,
+				94A6F2CB278F336F00DE845E /* OneLegStanceStrategy.swift */,
+				94A6F2CD278F338D00DE845E /* PHVStrategy.swift */,
+				94A6F2CF278F33AD00DE845E /* SitAndReachStrategy.swift */,
+				94A6F2D1278F33EA00DE845E /* TenTwentyThirtyFiveStrategy.swift */,
+				94A6F2D3278F341600DE845E /* TTestStrategy.swift */,
+				94A6F2D5278F343800DE845E /* YoYoStrategy.swift */,
+			);
+			path = TestStrategies;
 			sourceTree = "<group>";
 		};
 		94BB5DE72785D68400FB6B5A /* ShuttleRun */ = {
@@ -742,10 +795,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A6F2D0278F33AD00DE845E /* SitAndReachStrategy.swift in Sources */,
+				94A6F2C8278F332700DE845E /* IntervalShuttleRunStrategy.swift in Sources */,
+				94A6F2CE278F338D00DE845E /* PHVStrategy.swift in Sources */,
+				94A6F2C2278F325300DE845E /* FSTStrategy.swift in Sources */,
 				733B8B03275A9AE100E68F9E /* LatestResultsView.swift in Sources */,
 				94A4186E27835448009B8C41 /* SitAndReachRequest.swift in Sources */,
 				947C8B8A27732AD10040CD62 /* InsaitJoyView.swift in Sources */,
 				9438A7B32770CF360023E40C /* CognitiveTestList.swift in Sources */,
+				94A6F2D6278F343800DE845E /* YoYoStrategy.swift in Sources */,
 				94A6F2B3278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift in Sources */,
 				73EB23392746944E008111AE /* ContentView.swift in Sources */,
 				947C8B8E27732D310040CD62 /* PHVInfo.swift in Sources */,
@@ -760,7 +818,9 @@
 				947C8B71277328F90040CD62 /* VetPercentageView.swift in Sources */,
 				947C8B6D277328810040CD62 /* PHVView.swift in Sources */,
 				947C8BA4277332C50040CD62 /* FSTInfo.swift in Sources */,
+				94A6F2BE278F315300DE845E /* FatPercentageStrategy.swift in Sources */,
 				734C9A15274E8C310077BFEB /* KTK3MovingSidewaysView.swift in Sources */,
+				94A6F2BC278F28A000DE845E /* KTK3Strategy.swift in Sources */,
 				947C8B8627732AAB0040CD62 /* LSPTView.swift in Sources */,
 				947C8B90277330C10040CD62 /* TestInfo.swift in Sources */,
 				94E7F5ED275FECCF0025644B /* KTK3RequestBody.swift in Sources */,
@@ -773,6 +833,7 @@
 				947C8B9C277332670040CD62 /* Sprint10x5Info.swift in Sources */,
 				734C9A19274E8DCA0077BFEB /* KTK3Balk2View.swift in Sources */,
 				734C9A11274E48260077BFEB /* PhysicalTestList.swift in Sources */,
+				94A6F2D2278F33EA00DE845E /* TenTwentyThirtyFiveStrategy.swift in Sources */,
 				947C8B98277331FB0040CD62 /* OneLegStanceInfo.swift in Sources */,
 				734C9A17274E8CA30077BFEB /* KTK3Balk1View.swift in Sources */,
 				7363E07F274CF9C700FD5BBD /* PlayerSelectionView.swift in Sources */,
@@ -787,6 +848,7 @@
 				94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */,
 				94E63DB9278B3998009CAF5D /* YoYoTest.swift in Sources */,
 				94E63DBF278B3A6F009CAF5D /* FatPercentageTest.swift in Sources */,
+				94A6F2C4278F326F00DE845E /* GiTStrategy.swift in Sources */,
 				94FA16C9278490E100938748 /* TTestRequestBody.swift in Sources */,
 				947C8B8827732AB60040CD62 /* FSTView.swift in Sources */,
 				9438A7B12770CF180023E40C /* TechnicalTestList.swift in Sources */,
@@ -795,8 +857,10 @@
 				942E312927872A4E00A96991 /* FSTRequestBody.swift in Sources */,
 				733B8B07275A9F5500E68F9E /* ComparePlayerView.swift in Sources */,
 				94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */,
+				94A6F2C0278F322300DE845E /* Sprint10x5MStrategy.swift in Sources */,
 				733B8B05275A9B3C00E68F9E /* TeamOverviewView.swift in Sources */,
 				94071EDA2761163200FFB8B4 /* TimerMode.swift in Sources */,
+				94A6F2CC278F336F00DE845E /* OneLegStanceStrategy.swift in Sources */,
 				9426D2BE278DE7D0009B6541 /* TestDetailView.swift in Sources */,
 				947C8B8027732A6D0040CD62 /* Sprint10x5mView.swift in Sources */,
 				947C8B6B277324FA0040CD62 /* KTK3Info.swift in Sources */,
@@ -809,10 +873,12 @@
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
 				734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */,
 				947C8B94277331AB0040CD62 /* VetPercentageInfo.swift in Sources */,
+				94A6F2D4278F341600DE845E /* TTestStrategy.swift in Sources */,
 				9438A7AD2770BCA40023E40C /* Test.swift in Sources */,
 				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,
 				94FA16D32784C9E100938748 /* OneLegStanceRequestBody.swift in Sources */,
 				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
+				94A6F2CA278F335200DE845E /* LSPTStrategy.swift in Sources */,
 				94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
@@ -832,6 +898,7 @@
 				94E63DAB278B35A7009CAF5D /* KTK3Test.swift in Sources */,
 				947C8BA8277332F60040CD62 /* GiTInfo.swift in Sources */,
 				947C8B76277329390040CD62 /* OneLegStanceLeft.swift in Sources */,
+				94A6F2C6278F328D00DE845E /* InsaitJoyStrategy.swift in Sources */,
 				94E63DB7278B3971009CAF5D /* IntervalShuttleRunTest.swift in Sources */,
 				94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */,
 				946768BF278883EE00393708 /* GiTRoundManager.swift in Sources */,
@@ -854,6 +921,7 @@
 				734C9A0F274E404B0077BFEB /* TestListView.swift in Sources */,
 				94E7F5E9275FBC3A0025644B /* Player.swift in Sources */,
 				94FA16CB2784915300938748 /* TTestRequest.swift in Sources */,
+				94A6F2B9278F211100DE845E /* TestDetailsFactory.swift in Sources */,
 				947C8B9E277332840040CD62 /* ShuttleRunInfo.swift in Sources */,
 				9438A7B52770CF480023E40C /* MentalTestList.swift in Sources */,
 				942E312B27873B5900A96991 /* FatPercentageRequest.swift in Sources */,
