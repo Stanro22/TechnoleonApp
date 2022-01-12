@@ -104,6 +104,7 @@
 		94A4186E27835448009B8C41 /* SitAndReachRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186D27835448009B8C41 /* SitAndReachRequest.swift */; };
 		94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */; };
 		94A6F2B3278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2B2278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift */; };
+		94A6F2B5278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6F2B4278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift */; };
 		94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */; };
 		94BB5DEA2785D75A00FB6B5A /* PlayerYoYoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */; };
 		94BB5DEC2785DD5200FB6B5A /* ShuttleRunRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */; };
@@ -255,6 +256,7 @@
 		94A4186D27835448009B8C41 /* SitAndReachRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequest.swift; sourceTree = "<group>"; };
 		94A4186F27835507009B8C41 /* SitAndReachRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequestBody.swift; sourceTree = "<group>"; };
 		94A6F2B2278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTestDetailPlayerView.swift; sourceTree = "<group>"; };
+		94A6F2B4278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyThirtyFiveSprintTest.swift; sourceTree = "<group>"; };
 		94BB5DE52785D1D400FB6B5A /* PlayerShuttleRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShuttleRunView.swift; sourceTree = "<group>"; };
 		94BB5DE92785D75A00FB6B5A /* PlayerYoYoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerYoYoView.swift; sourceTree = "<group>"; };
 		94BB5DEB2785DD5200FB6B5A /* ShuttleRunRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuttleRunRequest.swift; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 				94E63DBE278B3A6F009CAF5D /* FatPercentageTest.swift */,
 				94E63DC0278B3AB2009CAF5D /* InsaitJoyTest.swift */,
 				94E63DC2278B3AF1009CAF5D /* GiTTest.swift */,
+				94A6F2B4278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift */,
 			);
 			path = TestBody;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */,
 				94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */,
 				94E63DB1278B37B0009CAF5D /* TTestTest.swift in Sources */,
+				94A6F2B5278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift in Sources */,
 				734C9A1D274E8F4E0077BFEB /* KTK3HandEyeView.swift in Sources */,
 				947C8BA2277332B00040CD62 /* LSPTInfo.swift in Sources */,
 				94BB5DE62785D1D400FB6B5A /* PlayerShuttleRunView.swift in Sources */,
