@@ -8,10 +8,55 @@
 import SwiftUI
 
 struct TestDetailView: View {
+    var overviewTestItem: OverviewTestItem
+    
     var body: some View {
         VStack{
             Spacer()
-            Text("Details")
+            HStack{
+                NavigationLink(destination: TestDetailView(overviewTestItem: overviewTestItem)) {
+                    Text("Trainingsadvies")
+                        .font(.custom("", size: 16))
+                        .foregroundColor(Color.white)
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                }.cornerRadius(10)
+                .disabled(true)
+                Spacer()
+                NavigationLink(destination: TestDetailView(overviewTestItem: overviewTestItem)) {
+                    Text("Ontwikkeling")
+                        .font(.custom("", size: 16))
+                        .foregroundColor(Color.black)
+                        .frame(width: 120, height: 20)
+                        .padding()
+                        .background(Color.gray)
+                }.cornerRadius(10)
+                .disabled(true)
+            }
+            .frame(width: 300, height: 20)
+            Spacer()
+            
+            VStack{
+                ForEach(overviewTestItem.players, id: \.self) { player in
+                    NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests[0], playerName: player.playerName)) {
+                        VStack{
+                            Text("\(player.playerName)")
+                                .foregroundColor(Color.black)
+                                .font(.custom("", size: 18))
+                        }
+                        .frame(width: 200, height: 20)
+                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
+                        .background(Color(red: 0.47, green: 1.00, blue: 0.62))
+                        .cornerRadius(10)
+                    }
+                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
+                }
+                Spacer()
+            }
+            .frame(width: 300, height: 480)
+            .background(Color(red: 0.62, green: 0.65, blue: 0.90))
+            .cornerRadius(20)
             Spacer()
             
             HStack(alignment: .bottom){
@@ -56,13 +101,13 @@ struct TestDetailView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
         }
-        .navigationTitle("Test details")
+        .navigationTitle("\(overviewTestItem.name)")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
 }
 
-struct TestDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestDetailView()
-    }
-}
+//struct TestDetailView_Previews: PreviewProvider {
+ //   static var previews: some View {
+   //     TestDetailView()
+   // }
+//}

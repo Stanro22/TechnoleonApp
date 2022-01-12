@@ -9,12 +9,12 @@ import Foundation
 
 struct OverviewTestItem : Hashable {
     var name: String
-    //var players: [Player]
+    var players: [Player]
     var tests: [Test]
     
-    init(name: String, tests: [Test]){
+    init(name: String, players: [Player], tests: [Test]){
         self.name = name
-        //self.players = players
+        self.players = players
         self.tests = tests
     }
 }

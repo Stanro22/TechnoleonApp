@@ -1,16 +1,17 @@
 //
-//  TestDetailPlayerView.swift
+//  TrainerTestDetailPlayerView.swift
 //  TechnoleonApp
 //
-//  Created by user206503 on 1/11/22.
+//  Created by user206503 on 1/12/22.
 //
 
 import SwiftUI
 
-struct TestDetailPlayerView: View {
+struct TrainerTestDetailPlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     var test: Test
+    var playerName: String
     @State var dateSet: Bool = false
     @State var date: Date?
     @State var loadingTest: Bool = false
@@ -24,7 +25,7 @@ struct TestDetailPlayerView: View {
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 0))
                         .font(.custom("", size: 20))
                     Spacer()
-                    Text("\(loggedInUser.name!)")
+                    Text("\(playerName)")
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 0))
                         .font(.custom("", size: 20))
                 }
@@ -60,7 +61,7 @@ struct TestDetailPlayerView: View {
             Spacer()
             
             HStack(alignment: .bottom){
-                    NavigationLink(destination: OverviewPlayerView()) {
+                    NavigationLink(destination: OverviewView()) {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
@@ -73,7 +74,7 @@ struct TestDetailPlayerView: View {
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: {}) {
+                    NavigationLink(destination: PlayerSelectionView()) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)
@@ -86,7 +87,7 @@ struct TestDetailPlayerView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: ProfilePlayerView()) {
+                    NavigationLink(destination: ProfileView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
                                 .foregroundColor(Color.white)
@@ -120,8 +121,9 @@ struct TestDetailPlayerView: View {
     }
 }
 
-//struct TestDetailPlayerView_Previews: PreviewProvider {
-  //  static var previews: some View {
-  //      TestDetailPlayerView()
-  //  }
+
+//struct TrainerTestDetailPlayerView_Previews: PreviewProvider {
+ //   static var previews: some View {
+ //       TrainerTestDetailPlayerView()
+ //   }
 //}
