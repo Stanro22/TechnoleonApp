@@ -11,10 +11,14 @@ struct TrainerTestDetailPlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     var test: Test
-    var playerName: String
+    @State var testForData: Test?
+    @State var specificTest: SpecificTest?
     @State var dateSet: Bool = false
     @State var date: Date?
     @State var loadingTest: Bool = false
+    @State var loadingData: Bool = false
+    var playerName: String
+    
     
     var body: some View {
         VStack{
@@ -60,8 +64,45 @@ struct TrainerTestDetailPlayerView: View {
             }
             Spacer()
             
+            
+            VStack{
+                HStack{
+                    if loadingTest == false{
+                        ProgressView("Loading test")
+                            .onAppear(){
+                                getTestById(id: test.id!)
+                            }
+                    }
+                    else{
+                        if loadingData == false {
+                            ProgressView("Loading data")
+                                .onAppear(){
+                                    if testForData != nil {
+                                        setSpecificTest(test: testForData!)
+                                    }
+                                }
+                        }
+                        else{
+                            Text("\(specificTest!.scoreFields!)")
+                                .padding()
+                                .foregroundColor(Color.white)
+                            Spacer()
+                            Text("\(specificTest!.values!)")
+                                .padding()
+                                .foregroundColor(Color.white)
+                        }
+                    }
+                }
+                .frame(width: 320)
+                Spacer()
+            }
+            .frame(width: 300, height: 200)
+            .background(Color(red: 0.62, green: 0.65, blue: 0.90))
+            .cornerRadius(20)
+            Spacer()
+            
             HStack(alignment: .bottom){
-                    NavigationLink(destination: OverviewView()) {
+                    NavigationLink(destination: OverviewPlayerView()) {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
@@ -74,7 +115,7 @@ struct TrainerTestDetailPlayerView: View {
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: PlayerSelectionView()) {
+                    NavigationLink(destination: {}) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)
@@ -87,7 +128,7 @@ struct TrainerTestDetailPlayerView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: ProfileView()) {
+                    NavigationLink(destination: ProfilePlayerView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
                                 .foregroundColor(Color.white)
@@ -118,6 +159,70 @@ struct TrainerTestDetailPlayerView: View {
             self.date = finalDate
             dateSet = true
         }
+    }
+    
+    func setSpecificTest(test: Test){
+        let testDetailsFactory = TestDetailsFactory()
+        self.specificTest = testDetailsFactory.getSpecificTest(test: test)
+        loadingData = true
+    }
+    
+    func getTestById(id: String){
+        technoleonAPI.getTestById(id: id) { (result) in
+            switch result {
+            case .success(let response):
+                setTestData(response: response)
+                loadingTest = true
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
+    }
+    
+    func setTestData(response: TestResponse){
+        self.testForData = Test()
+        self.testForData?.playerId = response.playerId
+        self.testForData?.category = response.category
+        self.testForData?.lsptTestId = response.lsptTestId
+        self.testForData?.lsptTest = response.lsptTest
+        self.testForData?.ktK3plusTestId = response.ktK3plusTestId
+        self.testForData?.ktK3PlusTest = response.ktK3PlusTest
+        self.testForData?.giTTestId = response.giTTestId
+        self.testForData?.giTTest = response.giTTest
+        self.testForData?.phvTestId = response.phvTestId
+        self.testForData?.phvTest = response.phvTest
+        self.testForData?.sitAndReachTestId = response.sitAndReachTestId
+        self.testForData?.sitAndReachTest = response.sitAndReachTest
+        self.testForData?.fatPercentageTestId = response.fatPercentageTestId
+        self.testForData?.fatPercentageTest = response.fatPercentageTest
+        self.testForData?.fstTestId = response.fstTestId
+        self.testForData?.fstTest = response.fstTest
+        self.testForData?.insaitJoyTestId = response.insaitJoyTestId
+        self.testForData?.insaitJoyTest = response.insaitJoyTest
+        self.testForData?.intervalShuttleRunTestId = response.intervalShuttleRunTestId
+        self.testForData?.intervalShuttleRunTest = response.intervalShuttleRunTest
+        self.testForData?.oneLegStanceTestId = response.oneLegStanceTestId
+        self.testForData?.oneLegStanceTest = response.oneLegStanceTest
+        self.testForData?.tvpS3TestId = response.tvpS3TestId
+        self.testForData?.tTestTestId = response.tTestTestId
+        self.testForData?.tTestTest = response.tTestTest
+        self.testForData?.vfmtTestId = response.vfmtTestId
+        self.testForData?.tenx5MSprintTestId = response.tenx5MSprintTestId
+        self.testForData?.tenx5MSprintTest = response.tenx5MSprintTest
+        self.testForData?.yoYoStaminaTestId = response.yoYoStaminaTestId
+        self.testForData?.yoYoStaminaTest = response.yoYoStaminaTest
+        self.testForData?.tenTwentyThirtyFiveSprintId = response.tenTwentyThirtyFiveSprintId
+        self.testForData?.tenTwentyThirtyFiveSprint = response.tenTwentyThirtyFiveSprint
+        self.testForData?.id = response.id
+        self.testForData?.created = response.created
+        self.testForData?.modified = response.modified
     }
 }
 

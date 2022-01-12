@@ -11,6 +11,6 @@ struct TenTwentyThirtyFiveSprintTest: Decodable, Hashable{
     var distanceInM: Int? = 0
     var seconds: String? = ""
     var id: String? = ""
-    var createdAt: String = "" //format to compare
-    var modifiedAt: String = "" //format to compare
+    var created: String = "" //format to compare
+    var modified: String = "" //format to compare
 }

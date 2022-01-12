@@ -8,13 +8,13 @@
 import Foundation
 
 struct FSTTest: Decodable, Hashable{
-    var slalomTime: String? = "00:00:00.00"
-    var dribbletime: String? = "00:00:00.00"
-    var backwardTime: String? = "00:00:00.00"
-    var passingTime: String? = "00:00:00.00"
-    var figureTime: String? = "00:00:00.00"
+    var timeSlalom: String? = "00:00:00.00"
+    var timeDribble: String? = "00:00:00.00"
+    var timeBackward: String? = "00:00:00.00"
+    var timePassing: String? = "00:00:00.00"
+    var timeEightFigure: String? = "00:00:00.00"
     var goalPostMiss: String? = "GOAL"
     var id: String? = ""
-    var createdAt: String = "" //format to compare
-    var modifiedAt: String = "" //format to compare
+    var created: String = "" //format to compare
+    var modified: String = "" //format to compare
 }

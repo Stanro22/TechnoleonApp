@@ -24,6 +24,6 @@ struct KTK3Test: Decodable, Hashable{
     var beam32: Int? = 0
     var beam33: Int? = 0
     var id: String? = ""
-    var createdAt: String = "" //format to compare
-    var modifiedAt: String = "" //format to compare
+    var created: String = "" //format to compare
+    var modified: String = "" //format to compare
 }

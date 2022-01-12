@@ -10,6 +10,6 @@ import Foundation
 struct IntervalShuttleRunTest: Decodable, Hashable{
     var newLevel: Int? = 0
     var id: String? = ""
-    var createdAt: String = "" //format to compare
-    var modifiedAt: String = "" //format to compare
+    var created: String = "" //format to compare
+    var modified: String = "" //format to compare
 }

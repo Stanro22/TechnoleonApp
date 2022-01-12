@@ -19,11 +19,11 @@ class FSTStrategy {
     func setTestValues(test: FSTTest) -> String{
         var value = ""
         
-        value += "\(processValue(value: test.slalomTime!)) \n"
-        value += "\(processValue(value: test.backwardTime!)) \n"
-        value += "\(processValue(value: test.dribbletime!)) \n"
-        value += "\(processValue(value: test.figureTime!)) \n"
-        value += "\(processValue(value: test.passingTime!)) \n"
+        value += "\(processValue(value: test.timeSlalom!)) \n"
+        value += "\(processValue(value: test.timeBackward!)) \n"
+        value += "\(processValue(value: test.timeDribble!)) \n"
+        value += "\(processValue(value: test.timeEightFigure!)) \n"
+        value += "\(processValue(value: test.timePassing!)) \n"
         return value
     }
     

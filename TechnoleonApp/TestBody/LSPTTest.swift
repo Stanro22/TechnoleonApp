@@ -18,6 +18,6 @@ struct LSPTTest: Decodable, Hashable{
     var finalTime: String? = "00:00:00.00"
     var secondsOver: String? = "00:00:00.00"
     var id: String? = ""
-    var createdAt: String = "" //format to compare
-    var modifiedAt: String = "" //format to compare
+    var created: String = "" //format to compare
+    var modified: String = "" //format to compare
 }

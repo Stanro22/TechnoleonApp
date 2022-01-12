@@ -22,7 +22,7 @@ class TestDetailsFactory {
             let lsptStrategy = LSPTStrategy()
             return lsptStrategy.setTestFields()
         }
-        if test.ktk3PlusTest != nil {
+        if test.ktK3PlusTest != nil {
             let ktk3Strategy = KTK3Strategy()
             return ktk3Strategy.setTestFields()
         }
@@ -91,7 +91,7 @@ class TestDetailsFactory {
             let lsptStrategy = LSPTStrategy()
             return lsptStrategy.setTestValues(test: child as! LSPTTest)
         }
-        if test.ktk3PlusTest != nil {
+        if test.ktK3PlusTest != nil {
             let ktk3Strategy = KTK3Strategy()
             return ktk3Strategy.setTestValues(test: child as! KTK3Test)
         }

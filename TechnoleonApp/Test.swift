@@ -8,45 +8,45 @@
 import Foundation
 
 struct Test: Decodable, Hashable{
-    let playerId: String?
-    let category: String?
-    let lsptTestId: String?
-    let lsptTest: LSPTTest?
-    let ktK3plusTestId: String?
-    let ktk3PlusTest: KTK3Test?
-    let giTTestId: String?
-    let giTTest: GiTTest?
-    let phvTestId: String?
-    let phvTest: PHVTest?
-    let sitAndReachTestId: String?
-    let sitAndReachTest: SitAndReachTest?
-    let fatPercentageTestId: String?
-    let fatPercentageTest: FatPercentageTest?
-    let ijtBallControllTestId: String?
-    //let ijtTest: IJTTest?
-    let fstTestId: String?
-    let fstTest: FSTTest?
-    let insaitJoyTestId: String?
-    let insaitJoyTest: InsaitJoyTest?
-    let intervalShuttleRunTestId: String?
-    let intervalShuttleRunTest: IntervalShuttleRunTest?
-    let tvpS3TestId: String?
-    //let tvpS3Test: TVPS3Test?
-    let yoYoStaminaTestId: String?
-    let yoYoStaminaTest: YoYoTest?
-    let oneLegStanceTestId: String?
-    let oneLegStanceTest: OneLegStanceTest?
-    let tTestTestId: String?
-    let tTestTest: TTestTest?
-    let vfmtTestId: String?
-    //let vfmtTest: VFMTTest?
-    let tenx5MSprintTestId: String?
-    let tenx5MSprintTest: Sprint10x5Test?
-    let tenTwentyThirtyFiveSprintId: String?
-    let tenTwentyThirtyFiveSprint: TenTwentyThirtyFiveSprintTest?
-    let id: String?
-    let created: String?
-    let modified: String?
+    var playerId: String?
+    var category: String?
+    var lsptTestId: String?
+    var lsptTest: LSPTTest?
+    var ktK3plusTestId: String?
+    var ktK3PlusTest: KTK3Test?
+    var giTTestId: String?
+    var giTTest: GiTTest?
+    var phvTestId: String?
+    var phvTest: PHVTest?
+    var sitAndReachTestId: String?
+    var sitAndReachTest: SitAndReachTest?
+    var fatPercentageTestId: String?
+    var fatPercentageTest: FatPercentageTest?
+    var ijtBallControllTestId: String?
+    //var ijtTest: IJTTest?
+    var fstTestId: String?
+    var fstTest: FSTTest?
+    var insaitJoyTestId: String?
+    var insaitJoyTest: InsaitJoyTest?
+    var intervalShuttleRunTestId: String?
+    var intervalShuttleRunTest: IntervalShuttleRunTest?
+    var tvpS3TestId: String?
+    //var tvpS3Test: TVPS3Test?
+    var yoYoStaminaTestId: String?
+    var yoYoStaminaTest: YoYoTest?
+    var oneLegStanceTestId: String?
+    var oneLegStanceTest: OneLegStanceTest?
+    var tTestTestId: String?
+    var tTestTest: TTestTest?
+    var vfmtTestId: String?
+    //var vfmtTest: VFMTTest?
+    var tenx5MSprintTestId: String?
+    var tenx5MSprintTest: Sprint10x5Test?
+    var tenTwentyThirtyFiveSprintId: String?
+    var tenTwentyThirtyFiveSprint: TenTwentyThirtyFiveSprintTest?
+    var id: String?
+    var created: String?
+    var modified: String?
     
     func getTestName(test: Test) -> String {
         if test.lsptTestId != nil {
@@ -107,8 +107,8 @@ struct Test: Decodable, Hashable{
         if test.lsptTest != nil {
             return test.lsptTest
         }
-        if test.ktk3PlusTest != nil {
-            return test.ktk3PlusTest
+        if test.ktK3PlusTest != nil {
+            return test.ktK3PlusTest
         }
         if test.giTTest != nil {
             return test.giTTest

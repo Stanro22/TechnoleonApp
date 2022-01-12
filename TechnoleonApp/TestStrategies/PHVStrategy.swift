@@ -17,9 +17,9 @@ class PHVStrategy {
     func setTestValues(test: PHVTest) -> String{
         var value = ""
         
-        value += "\(processValue(value: test.sitHeight!)) \n"
-        value += "\(processValue(value: test.lenght!)) \n"
-        value += "\(processValue(value: test.weight!))"
+        value += "\(processValue(value: test.sitHeightCM!)) \n"
+        value += "\(processValue(value: test.lengthCM!)) \n"
+        value += "\(processValue(value: test.weightKG!))"
         return value
     }
     
