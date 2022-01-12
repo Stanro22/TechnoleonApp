@@ -9,7 +9,7 @@ import Foundation
 
 struct KTK3Test: Decodable, Hashable{
     var hoppingSideways1: Int? = 0
-    var hoppingSideways2: Int? = 0
+    var hoppingSideWays2: Int? = 0
     var movingSideways1: Int? = 0
     var movingSideways2: Int? = 0
     var handEye1: Int? = 0

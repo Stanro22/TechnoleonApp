@@ -13,7 +13,7 @@ struct Test: Decodable, Hashable{
     var lsptTestId: String?
     var lsptTest: LSPTTest?
     var ktK3plusTestId: String?
-    var ktK3PlusTest: KTK3Test?
+    var ktK3plusTest: KTK3Test?
     var giTTestId: String?
     var giTTest: GiTTest?
     var phvTestId: String?
@@ -107,8 +107,8 @@ struct Test: Decodable, Hashable{
         if test.lsptTest != nil {
             return test.lsptTest
         }
-        if test.ktK3PlusTest != nil {
-            return test.ktK3PlusTest
+        if test.ktK3plusTest != nil {
+            return test.ktK3plusTest
         }
         if test.giTTest != nil {
             return test.giTTest

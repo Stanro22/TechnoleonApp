@@ -21,7 +21,7 @@ class KTK3Strategy {
         var values = ""
         
         let jumpFirstAttempt = test.hoppingSideways1!
-        let jumpSecondAttempt = test.hoppingSideways2!
+        let jumpSecondAttempt = test.hoppingSideWays2!
         let hoppingSideways = processValueTwoAttempts(first: jumpFirstAttempt, second: jumpSecondAttempt)
         values += "\(hoppingSideways) \n"
         

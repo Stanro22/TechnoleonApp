@@ -14,7 +14,7 @@ struct TestResponse: Decodable, Hashable {
     let lsptTestId: String?
     let lsptTest: LSPTTest?
     let ktK3plusTestId: String?
-    let ktK3PlusTest: KTK3Test?
+    let ktK3plusTest: KTK3Test?
     let giTTestId: String?
     let giTTest: GiTTest?
     let phvTestId: String?

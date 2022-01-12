@@ -193,7 +193,7 @@ struct TrainerTestDetailPlayerView: View {
         self.testForData?.lsptTestId = response.lsptTestId
         self.testForData?.lsptTest = response.lsptTest
         self.testForData?.ktK3plusTestId = response.ktK3plusTestId
-        self.testForData?.ktK3PlusTest = response.ktK3PlusTest
+        self.testForData?.ktK3plusTest = response.ktK3plusTest
         self.testForData?.giTTestId = response.giTTestId
         self.testForData?.giTTest = response.giTTest
         self.testForData?.phvTestId = response.phvTestId
