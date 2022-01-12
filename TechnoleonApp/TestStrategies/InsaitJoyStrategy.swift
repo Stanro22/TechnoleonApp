@@ -22,7 +22,7 @@ class InsaitJoyStrategy {
         
         value += "\(processValue(value: test.level!)) \n"
         value += "\(processValue(value: test.drill!)) \n"
-        value += "\(processValue(value: test.time!)) \n"
+        value += "\(processValue(value: test.trainingTime!)) \n"
         value += "\(processValue(value: String(test.count!))) \n"
         value += "\(processValue(value: String(test.frequency!))) \n"
         value += "\(processValue(value: String(test.fluency!)))"

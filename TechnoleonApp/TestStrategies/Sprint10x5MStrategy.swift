@@ -15,7 +15,7 @@ class Sprint10x5MStrategy {
     func setTestValues(test: Sprint10x5Test) -> String{
         var value = ""
         
-        value += "\(processValue(value: test.time!))"
+        value += "\(processValue(value: test.seconds!))"
         return value
     }
     

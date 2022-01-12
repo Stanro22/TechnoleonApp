@@ -130,9 +130,9 @@ final class TechnoleonAPI : ObservableObject{
         urlRequest.httpMethod = "POST"
         
         let parameters = PHVRequest(
-            lenght: PHVRequestBody.lenght,
-            sitHeight: PHVRequestBody.sitHeight,
-            weight: PHVRequestBody.weight
+            lengthCM: PHVRequestBody.lengthCM,
+            sitHeightCM: PHVRequestBody.sitHeightCM,
+            weightKG: PHVRequestBody.weightKG
         )
         
         let encoder = JSONEncoder()
@@ -166,7 +166,7 @@ final class TechnoleonAPI : ObservableObject{
         urlRequest.httpMethod = "POST"
         
         let parameters = TTestRequest(
-            time: TTestRequestBody.time
+            seconds: TTestRequestBody.seconds
         )
         
         let encoder = JSONEncoder()
@@ -201,7 +201,7 @@ final class TechnoleonAPI : ObservableObject{
         urlRequest.httpMethod = "POST"
         
         let parameters = Sprint10x5Request(
-            time: Sprint10x5RequestBody.time
+            seconds: Sprint10x5RequestBody.seconds
         )
         
         let encoder = JSONEncoder()
@@ -324,7 +324,7 @@ final class TechnoleonAPI : ObservableObject{
         let parameters = InsaitJoyRequest(
             level: insaitJoyRequestBody.level,
             drill: insaitJoyRequestBody.drill,
-            time: insaitJoyRequestBody.time,
+            trainingTime: insaitJoyRequestBody.trainingTime,
             count: insaitJoyRequestBody.count,
             frequency: insaitJoyRequestBody.frequency,
             fluency: insaitJoyRequestBody.fluency

@@ -65,24 +65,24 @@ struct PHVView: View {
     func setPHVBody(){
         if length.count > 0 {
             let lenghtInt = Int(length)
-            phvBody.lenght = lenghtInt
+            phvBody.lengthCM = lenghtInt
         }
         else{
-            phvBody.lenght = 0
+            phvBody.lengthCM = 0
         }
         if sitHeight.count > 0 {
             let sitHeightInt = Int(sitHeight)
-            phvBody.sitHeight = sitHeightInt
+            phvBody.sitHeightCM = sitHeightInt
         }
         else{
-            phvBody.sitHeight = 0
+            phvBody.sitHeightCM = 0
         }
         if weight.count > 0 {
             let weightInt = Int(weight)
-            phvBody.weight = weightInt
+            phvBody.weightKG = weightInt
         }
         else{
-            phvBody.weight = 0
+            phvBody.weightKG = 0
         }
     }
     

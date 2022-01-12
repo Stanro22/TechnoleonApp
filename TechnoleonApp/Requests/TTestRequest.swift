@@ -8,5 +8,5 @@
 import Foundation
 
 struct TTestRequest: Encodable{
-    let time: String?
+    let seconds: String?
 }

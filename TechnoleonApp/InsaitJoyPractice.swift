@@ -54,10 +54,10 @@ struct InsaitJoyPractice: View {
     func setInsaitJoyFields(){
         insaitJoyBody.count = Int(count)
         insaitJoyBody.fluency = Int(fluency)
-        if insaitJoyBody.time == "THIRTY_SECONDS" {
+        if insaitJoyBody.trainingTime == "THIRTY_SECONDS" {
             insaitJoyBody.frequency = insaitJoyBody.count!/30
         }
-        if insaitJoyBody.time == "SIXTY_SECONDS" {
+        if insaitJoyBody.trainingTime == "SIXTY_SECONDS" {
             insaitJoyBody.frequency = insaitJoyBody.count!/60
         }
     }

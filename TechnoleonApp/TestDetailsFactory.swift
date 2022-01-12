@@ -62,7 +62,7 @@ class TestDetailsFactory {
             let oneLegStanceStrategy = OneLegStanceStrategy()
             return oneLegStanceStrategy.setTestFields()
         }
-        if test.tTestTest != nil {
+        if test.tTest != nil {
             let tTestStrategy = TTestStrategy()
             return tTestStrategy.setTestFields()
         }
@@ -131,7 +131,7 @@ class TestDetailsFactory {
             let oneLegStanceStrategy = OneLegStanceStrategy()
             return oneLegStanceStrategy.setTestValues(test: child as! OneLegStanceTest)
         }
-        if test.tTestTest != nil {
+        if test.tTest != nil {
             let tTestStrategy = TTestStrategy()
             return tTestStrategy.setTestValues(test: child as! TTestTest)
         }

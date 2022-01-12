@@ -10,7 +10,7 @@ import Foundation
 struct InsaitJoyRequest: Encodable{
     let level: String?
     let drill: String?
-    let time: String?
+    let trainingTime: String?
     let count: Int?
     let frequency: Int?
     let fluency: Int?

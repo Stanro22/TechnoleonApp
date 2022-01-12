@@ -145,7 +145,7 @@ class TestList : ObservableObject {
             }
             TestList.shared.testListOneLegStance?.append(test)
         }
-        if test.tTestTestId != nil {
+        if test.tTestId != nil {
             if TestList.shared.testListTTest == nil{
                 TestList.shared.testListTTest = [Test]()
             }

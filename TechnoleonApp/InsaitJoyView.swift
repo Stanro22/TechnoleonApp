@@ -145,10 +145,10 @@ struct InsaitJoyView: View {
     
     func setTime(){
         if selectedTime == "30 seconden" {
-            insaitJoyBody.time = "THIRTY_SECONDS"
+            insaitJoyBody.trainingTime = "THIRTY_SECONDS"
         }
         if selectedTime == "60 seconden" {
-            insaitJoyBody.time = "SIXTY_SECONDS"
+            insaitJoyBody.trainingTime = "SIXTY_SECONDS"
         }
     }
 }

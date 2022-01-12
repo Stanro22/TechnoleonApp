@@ -8,7 +8,7 @@
 import Foundation
 
 final class PHVRequestBody : ObservableObject {
-    var lenght: Int? = 0
-    var sitHeight: Int? = 0
-    var weight: Int? = 0
+    var lengthCM: Int? = 0
+    var sitHeightCM: Int? = 0
+    var weightKG: Int? = 0
 }

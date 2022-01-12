@@ -8,5 +8,5 @@
 import Foundation
 
 struct Sprint10x5Request: Encodable{
-    let time: String?
+    let seconds: String?
 }

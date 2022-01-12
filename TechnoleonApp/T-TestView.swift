@@ -74,7 +74,7 @@ struct T_TestView: View {
     }
     
     func setTTestBody(){
-        tTestBody.time = "00:\(timerManager.timeToSave)"
+        tTestBody.seconds = "00:\(timerManager.timeToSave)"
     }
     
     func setTTestTest(){

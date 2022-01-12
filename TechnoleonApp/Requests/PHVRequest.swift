@@ -8,7 +8,7 @@
 import Foundation
 
 struct PHVRequest: Encodable{
-    let lenght: Int?
-    let sitHeight: Int?
-    let weight: Int?
+    let lengthCM: Int?
+    let sitHeightCM: Int?
+    let weightKG: Int?
 }

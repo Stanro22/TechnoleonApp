@@ -37,8 +37,8 @@ struct TestResponse: Decodable, Hashable {
     let yoYoStaminaTest: YoYoTest?
     let oneLegStanceTestId: String?
     let oneLegStanceTest: OneLegStanceTest?
-    let tTestTestId: String?
-    let tTestTest: TTestTest?
+    let tTestId: String?
+    let tTest: TTestTest?
     let vfmtTestId: String?
     //let vfmtTest: VFMTTest?
     let tenx5MSprintTestId: String?

@@ -15,11 +15,11 @@ class TTestStrategy {
     func setTestValues(test: TTestTest) -> String{
         var value = ""
         
-        value += "\(processValue(value: test.time!))"
+        value += "\(processValue(value: test.seconds!))"
         return value
     }
     
-    func processValue(value: String) -> String{
+    func processValue(value: String) -> String {
         if value.isEmpty {
             return "Onbekend"
         }

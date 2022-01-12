@@ -208,8 +208,8 @@ struct TestDetailPlayerView: View {
         self.testForData?.oneLegStanceTestId = response.oneLegStanceTestId
         self.testForData?.oneLegStanceTest = response.oneLegStanceTest
         self.testForData?.tvpS3TestId = response.tvpS3TestId
-        self.testForData?.tTestTestId = response.tTestTestId
-        self.testForData?.tTestTest = response.tTestTest
+        self.testForData?.tTestId = response.tTestId
+        self.testForData?.tTest = response.tTest
         self.testForData?.vfmtTestId = response.vfmtTestId
         self.testForData?.tenx5MSprintTestId = response.tenx5MSprintTestId
         self.testForData?.tenx5MSprintTest = response.tenx5MSprintTest

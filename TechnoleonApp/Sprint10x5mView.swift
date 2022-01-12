@@ -68,7 +68,7 @@ struct Sprint10x5mView: View {
                 })
             Spacer()
             
-            NavigationLink(destination: EndOfTestView().onAppear{ }) {
+            NavigationLink(destination: EndOfTestView().onAppear{setSprint10x5Test()}) {
                 Text("Sla gegevens op")
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
@@ -83,7 +83,7 @@ struct Sprint10x5mView: View {
     }
     
     func setSprint10x5Body(){
-        sprint10x5Body.time = "00:\(timerManager.timeToSave)"
+        sprint10x5Body.seconds = "00:\(timerManager.timeToSave)"
     }
     
     func setSprint10x5Test(){

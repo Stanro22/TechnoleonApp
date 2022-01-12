@@ -8,5 +8,5 @@
 import Foundation
 
 final class TTestRequestBody : ObservableObject {
-    var time: String? = "00:00:00.00"
+    var seconds: String? = "00:00:00.00"
 }

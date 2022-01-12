@@ -10,7 +10,7 @@ import Foundation
 struct InsaitJoyTest: Decodable, Hashable{
     var level: String? = "BEGINNER"
     var drill: String? = "JUGGLE"
-    var time: String? = "THRITY_SECONDS"
+    var trainingTime: String? = "THRITY_SECONDS"
     var count: Int? = 0
     var frequency: Int? = 0
     var fluency: Int? = 0
