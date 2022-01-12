@@ -70,16 +70,6 @@ struct EndOfTestView: View {
             }
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(10)
-            Text("Of")
-            
-            NavigationLink(destination: TeamSelectionView()) {
-                Text("Wissel team")
-                    .padding()
-                    .foregroundColor(Color.white)
-            }
-            .background(Color(red: 0.62, green: 0.65, blue: 0.90))
-            .cornerRadius(10)
-
             
             NavigationLink(destination: KTK3View()) {
                 Text("Start test opnieuw")
@@ -89,6 +79,7 @@ struct EndOfTestView: View {
             .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             .cornerRadius(10)
             .padding(EdgeInsets(top: 80, leading: 15, bottom: 20, trailing: 15))
+            .disabled(true)
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: OverviewView()) {
