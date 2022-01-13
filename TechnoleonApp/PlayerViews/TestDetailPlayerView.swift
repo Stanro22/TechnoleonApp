@@ -112,7 +112,7 @@ struct TestDetailPlayerView: View {
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: {}) {
+                    NavigationLink(destination: OverviewPlayerView()) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)
@@ -125,6 +125,7 @@ struct TestDetailPlayerView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
+                
                     NavigationLink(destination: ProfilePlayerView()) {
                         VStack{
                             Image(systemName: "person.circle.fill")
