@@ -11,6 +11,7 @@ struct Sprint10m20m35mView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var tenTwentyThirtyFiveSprintBody = TenTwentyThirtyFiveSprintRequestBody()
     @State private var isExpanded = false
     @State private var selectedDistance = "Afstand"
     
@@ -82,7 +83,7 @@ struct Sprint10m20m35mView: View {
                 })
             Spacer()
             
-            NavigationLink(destination: EndOfTestView().onAppear{ }) {
+            NavigationLink(destination: EndOfTestView().onAppear{setTenTwentyThirtyFiveTest()}) {
                 Text("Sla gegevens op")
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
@@ -94,6 +95,38 @@ struct Sprint10m20m35mView: View {
         }
         .navigationTitle("10, 20 ,35 meter sprint")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setTenTwentyThirtyFiveTest(){
+        setDistance()
+        tenTwentyThirtyFiveSprintBody.seconds = "00:\(timerManager.timeToSave)"
+        technoleonAPI.setTenTwentyThirtyFiveSprintTestForPlayer(id: loggedInUser.playerId!, tenTwentyThirtyFiveSprintRequestBody: tenTwentyThirtyFiveSprintBody) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
+    }
+    
+    func setDistance(){
+        if selectedDistance == "10 meter" {
+            tenTwentyThirtyFiveSprintBody.distance = 10
+        }
+        if selectedDistance == "20 meter" {
+            tenTwentyThirtyFiveSprintBody.distance = 20
+        }
+        if selectedDistance == "35 meter" {
+            tenTwentyThirtyFiveSprintBody.distance = 35
+        }
     }
 }
 

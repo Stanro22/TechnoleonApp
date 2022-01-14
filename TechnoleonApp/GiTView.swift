@@ -10,9 +10,11 @@ import SwiftUI
 struct GiTView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @ObservedObject var gitManager = GiTRoundManager.shared
+    @ObservedObject var giTBody = GiTRequestBody()
+    @State var zones: String = ""
     @State var currentRound: Int = 1
     @State var maxRounds: Int = 10
+    @State var isZoneNotSet: Bool = true
     @State var didOneTapped: Bool = false
     @State var didTwoTapped: Bool = false
     @State var didThreeTapped: Bool = false
@@ -23,22 +25,12 @@ struct GiTView: View {
     var body: some View {
         VStack{
             Spacer()
-            /*HStack{
-                Button(action: {currentRound -= 1}){
-                    Text("Vorige ronde")
-                        .foregroundColor(Color.white)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                        .background(Color(red: 0.73, green: 0.05, blue: 0.05))
-                }
-                .cornerRadius(5)
-                .padding(EdgeInsets(top: 0, leading: 29, bottom: 0, trailing: 0))
-                Spacer()
-            }*/
             VStack{
                 HStack{
                     Button(action: {
                         resetButtonColors()
                         didOneTapped = true
+                        isZoneNotSet = false
                     }){
                         Text("1")
                             .font(.custom("", size: 60))
@@ -49,6 +41,7 @@ struct GiTView: View {
                     Button(action: {
                         resetButtonColors()
                         didTwoTapped = true
+                        isZoneNotSet = false
                     }){
                         Text("2")
                             .font(.custom("", size: 60))
@@ -59,6 +52,7 @@ struct GiTView: View {
                     Button(action: {
                         resetButtonColors()
                         didThreeTapped = true
+                        isZoneNotSet = false
                     }){
                         Text("3")
                             .font(.custom("", size: 60))
@@ -71,6 +65,7 @@ struct GiTView: View {
                     Button(action: {
                         resetButtonColors()
                         didFourTapped = true
+                        isZoneNotSet = false
                     }){
                         Text("4")
                             .font(.custom("", size: 60))
@@ -81,6 +76,7 @@ struct GiTView: View {
                     Button(action: {
                         resetButtonColors()
                         didFiveTapped = true
+                        isZoneNotSet = false
                     }){
                         Text("5")
                             .font(.custom("", size: 60))
@@ -91,6 +87,7 @@ struct GiTView: View {
                     Button(action: {
                         resetButtonColors()
                         didSixTapped = true
+                        isZoneNotSet = false
                     }){
                         Text("6")
                             .font(.custom("", size: 60))
@@ -108,6 +105,7 @@ struct GiTView: View {
             
             if currentRound < maxRounds {
                 Button(action: {
+                    setZone()
                     currentRound += 1
                     resetButtonColors()
                 }){
@@ -119,21 +117,69 @@ struct GiTView: View {
                         .background(Color(red: 0.38, green: 0.44, blue: 0.64))
                 }
                 .cornerRadius(10)
+                .disabled(isZoneNotSet)
             }
             if currentRound == maxRounds {
-                NavigationLink(destination: EndOfTestView().onAppear{ }) {
+                NavigationLink(destination: EndOfTestView().onAppear{setGiTTest()}) {
                     Text("Sla gegevens op")
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
                         .padding()
                         .background(Color(red: 0.38, green: 0.44, blue: 0.64))
-                }.cornerRadius(10)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                }
+                .cornerRadius(10)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                .disabled(isZoneNotSet)
             }
         }
         .navigationTitle("GiT")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setGiTTest(){
+        setZone()
+        giTBody.zones = zones
+        technoleonAPI.setGiTTestForPlayer(id: loggedInUser.playerId!, giTRequestBody: giTBody) { (result) in
+            switch result {
+            case .success(_):
+                print("SUCCES")
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
+    }
+    
+    func setZone(){
+        if didOneTapped == true{
+            zones += "1"
+        }
+        if didTwoTapped == true{
+            zones += "2"
+        }
+        if didThreeTapped == true{
+            zones += "3"
+        }
+        if didFourTapped == true{
+            zones += "4"
+        }
+        if didFiveTapped == true{
+            zones += "5"
+        }
+        if didSixTapped == true{
+            zones += "6"
+        }
+        if currentRound < maxRounds {
+            zones += ", "
+        }
+        isZoneNotSet = true
     }
 
     func resetButtonColors(){
