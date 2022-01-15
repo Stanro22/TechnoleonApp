@@ -486,6 +486,7 @@
 				94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */,
 				94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */,
 				9426D2BF278E03BF009B6541 /* TestDetailPlayerView.swift */,
+				733B8B02275A9AE100E68F9E /* LatestResultsView.swift */,
 			);
 			path = PlayerViews;
 			sourceTree = "<group>";
@@ -504,7 +505,6 @@
 				9438A7B42770CF480023E40C /* MentalTestList.swift */,
 				9438A7B02770CF180023E40C /* TechnicalTestList.swift */,
 				73E5B607274F951600EBFE9E /* EndOfTestView.swift */,
-				733B8B02275A9AE100E68F9E /* LatestResultsView.swift */,
 				73E59D642758FBDB005545F3 /* OverviewView.swift */,
 				733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */,
 				733B8B06275A9F5500E68F9E /* ComparePlayerView.swift */,
