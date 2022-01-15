@@ -16,6 +16,8 @@ struct KTK3HandEyeView: View {
     @State var attempt2: String = ""
     @State var attempt1Disabled = false
     @State var attempt2Disabled = false
+    @State var didInjuryOneTapped: Bool = false
+    @State var didInjuryTwoTapped: Bool = false
     
     var body: some View {
             VStack{
@@ -106,16 +108,20 @@ struct KTK3HandEyeView: View {
                 
                 HStack{
                     TextField("Poging 1", text: $attempt1)
-                        //.placeholder(when: attempt1.isEmpty) {
-                         //   Text("Poging 1").accentColor(Color.black)
-                        //}
                         .accentColor(Color.black)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                        .disabled(attempt1Disabled == true)
-                    Button(action: {attempt1Disabled = true }) {
+                        .disabled(didInjuryOneTapped)
+                    Button(action: {
+                        if didInjuryOneTapped == false{
+                            didInjuryOneTapped = true
+                        }
+                        else{
+                            didInjuryOneTapped = false
+                        }
+                    }) {
                         Image(systemName: "person.fill")
                             .resizable()
                             .foregroundColor(Color.white)
@@ -135,8 +141,15 @@ struct KTK3HandEyeView: View {
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                        .disabled(attempt2Disabled == true)
-                    Button(action: {attempt2Disabled = true }) {
+                        .disabled(didInjuryTwoTapped)
+                    Button(action: {
+                        if didInjuryTwoTapped == false{
+                            didInjuryTwoTapped = true
+                        }
+                        else{
+                            didInjuryTwoTapped = false
+                        }
+                    }) {
                         Image(systemName: "person.fill")
                             .resizable()
                             .foregroundColor(Color.white)

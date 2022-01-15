@@ -14,6 +14,9 @@ struct KTK3Balk2View: View {
     @State var attempt1: String = ""
     @State var attempt2: String = ""
     @State var attempt3: String = ""
+    @State var didInjuryOneTapped: Bool = false
+    @State var didInjuryTwoTapped: Bool = false
+    @State var didInjuryThreeTapped: Bool = false
     
     var body: some View {
             VStack{
@@ -107,7 +110,15 @@ struct KTK3Balk2View: View {
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                    Button(action: injury) {
+                        .disabled(didInjuryOneTapped)
+                    Button(action: {
+                        if didInjuryOneTapped == false{
+                            didInjuryOneTapped = true
+                        }
+                        else{
+                            didInjuryOneTapped = false
+                        }
+                    }) {
                         Image(systemName: "person.fill")
                             .resizable()
                             .foregroundColor(Color.white)
@@ -125,7 +136,15 @@ struct KTK3Balk2View: View {
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                    Button(action: injury) {
+                        .disabled(didInjuryTwoTapped)
+                    Button(action: {
+                        if didInjuryTwoTapped == false{
+                            didInjuryTwoTapped = true
+                        }
+                        else{
+                            didInjuryTwoTapped = false
+                        }
+                    }) {
                         Image(systemName: "person.fill")
                             .resizable()
                             .foregroundColor(Color.white)
@@ -144,7 +163,15 @@ struct KTK3Balk2View: View {
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
-                    Button(action: injury) {
+                        .disabled(didInjuryThreeTapped)
+                    Button(action: {
+                        if didInjuryThreeTapped == false{
+                            didInjuryThreeTapped = true
+                        }
+                        else{
+                            didInjuryThreeTapped = false
+                        }
+                    }) {
                         Image(systemName: "person.fill")
                             .resizable()
                             .foregroundColor(Color.white)
