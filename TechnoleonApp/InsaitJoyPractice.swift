@@ -13,6 +13,12 @@ struct InsaitJoyPractice: View {
     @ObservedObject var insaitJoyBody = InsaitJoyRequestBody.shared
     @State var count: String = ""
     @State var fluency: String = ""
+    var isFormNotValid: Bool {
+        if count.count >= 1 && fluency.count >= 1 {
+            return false
+        }
+        return true
+    }
     
     var body: some View {
         VStack{
@@ -46,6 +52,7 @@ struct InsaitJoyPractice: View {
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }.cornerRadius(10)
                     .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
+                    .disabled(isFormNotValid)
             }
             .navigationTitle("Insait Joy oefening")
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

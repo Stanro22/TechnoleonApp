@@ -18,6 +18,12 @@ struct VetPercentageView: View {
     @State var armPit: String = ""
     @State var shoulderBlade: String = ""
     @State var tricep: String = ""
+    var isFormNotValid: Bool {
+        if breast.count >= 1 && thigh.count >= 1 && belly.count >= 1 && hip.count >= 1 && armPit.count >= 1 && shoulderBlade.count >= 1 && tricep.count >= 1{
+            return false
+        }
+        return true
+    }
     
     var body: some View {
         VStack{
@@ -97,6 +103,7 @@ struct VetPercentageView: View {
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .disabled(isFormNotValid)
             Spacer()
         }
         .navigationTitle("Vetpercentage")

@@ -12,6 +12,12 @@ struct Sprint10x5mView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var sprint10x5Body = Sprint10x5RequestBody()
+    var isFormNotValid: Bool {
+        if timerManager.timeToSave.isEmpty {
+            return true
+        }
+        return false
+    }
     
     var body: some View {
         VStack{
@@ -77,6 +83,7 @@ struct Sprint10x5mView: View {
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 5, trailing: 0))
+                .disabled(isFormNotValid)
         }
         .navigationTitle("10x5 meter sprint")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

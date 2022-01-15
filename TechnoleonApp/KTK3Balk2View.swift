@@ -17,6 +17,16 @@ struct KTK3Balk2View: View {
     @State var didInjuryOneTapped: Bool = false
     @State var didInjuryTwoTapped: Bool = false
     @State var didInjuryThreeTapped: Bool = false
+    @State var isInjured: Bool = false
+    var isFormNotValid: Bool {
+        if isInjured == true{
+            return false
+        }
+        if attempt1.count >= 1 && attempt2.count >= 1 && attempt3.count >= 1{
+            return false
+        }
+        return true
+    }
     
     var body: some View {
             VStack{
@@ -114,9 +124,11 @@ struct KTK3Balk2View: View {
                     Button(action: {
                         if didInjuryOneTapped == false{
                             didInjuryOneTapped = true
+                            isInjured = true
                         }
                         else{
                             didInjuryOneTapped = false
+                            isInjured = false
                         }
                     }) {
                         Image(systemName: "person.fill")
@@ -140,9 +152,11 @@ struct KTK3Balk2View: View {
                     Button(action: {
                         if didInjuryTwoTapped == false{
                             didInjuryTwoTapped = true
+                            isInjured = true
                         }
                         else{
                             didInjuryTwoTapped = false
+                            isInjured = false
                         }
                     }) {
                         Image(systemName: "person.fill")
@@ -167,9 +181,11 @@ struct KTK3Balk2View: View {
                     Button(action: {
                         if didInjuryThreeTapped == false{
                             didInjuryThreeTapped = true
+                            isInjured = true
                         }
                         else{
                             didInjuryThreeTapped = false
+                            isInjured = false
                         }
                     }) {
                         Image(systemName: "person.fill")
@@ -196,6 +212,7 @@ struct KTK3Balk2View: View {
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }.cornerRadius(10)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+                    .disabled(isFormNotValid)
             }
             .navigationTitle("KTK3+")
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

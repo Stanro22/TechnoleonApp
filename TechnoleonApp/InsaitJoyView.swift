@@ -18,6 +18,15 @@ struct InsaitJoyView: View {
     private var practices = ["Juggle", "Pull a vee", "Back side chop"]
     @State private var selectedTime = "Tijd"
     private var times = ["30 seconden", "60 seconden"]
+    @State var isNiveauSelected: Bool = false
+    @State var isPracticeSelected: Bool = false
+    @State var isTimeSelected: Bool = false
+    var isFormNotValid: Bool {
+        if isNiveauSelected == false && isPracticeSelected == false && isTimeSelected == false {
+            return true
+        }
+        return false
+    }
     
     var body: some View {
         VStack{
@@ -35,6 +44,7 @@ struct InsaitJoyView: View {
                                 .padding(.all)
                                 .onTapGesture {
                                     self.selectedNiveau = niveau
+                                    isNiveauSelected = true
                                     withAnimation{
                                         self.isExpanded1.toggle()
                                     }
@@ -60,6 +70,7 @@ struct InsaitJoyView: View {
                                 .padding(.all)
                                 .onTapGesture {
                                     self.selectedPractice = practice
+                                    isPracticeSelected = true
                                     withAnimation{
                                         self.isExpanded2.toggle()
                                     }
@@ -84,6 +95,7 @@ struct InsaitJoyView: View {
                                 .padding(.all)
                                 .onTapGesture {
                                     self.selectedTime = time
+                                    isTimeSelected = true
                                     withAnimation{
                                         self.isExpanded3.toggle()
                                     }
@@ -108,6 +120,7 @@ struct InsaitJoyView: View {
                     .background(Color(red: 0.38, green: 0.44, blue: 0.64))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
+                .disabled(isFormNotValid)
         }
         .navigationTitle("Insait Joy instellingen")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

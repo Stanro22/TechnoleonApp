@@ -14,6 +14,12 @@ struct SitAndReachView: View {
     @State var attempt1: String = ""
     @State var attempt2: String = ""
     @State var attempt3: String = ""
+    var isFormNotValid: Bool {
+        if attempt1.count >= 1 && attempt2.count >= 1 && attempt3.count >= 1{
+            return false
+        }
+        return true
+    }
     
     var body: some View {
         VStack{
@@ -56,6 +62,8 @@ struct SitAndReachView: View {
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }.cornerRadius(10)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+                    .disabled(isFormNotValid)
+            
             Spacer()
             }
             .navigationTitle("Sit and reach")

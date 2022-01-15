@@ -14,6 +14,12 @@ struct PHVView: View {
     @State var length: String = ""
     @State var sitHeight: String = ""
     @State var weight: String = ""
+    var isFormNotValid: Bool {
+        if length.count >= 1 && sitHeight.count >= 1 && weight.count >= 1{
+            return false
+        }
+        return true
+    }
     
     var body: some View {
         VStack{
@@ -56,6 +62,7 @@ struct PHVView: View {
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }.cornerRadius(10)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+                    .disabled(isFormNotValid)
             Spacer()
             }
             .navigationTitle("PHV")

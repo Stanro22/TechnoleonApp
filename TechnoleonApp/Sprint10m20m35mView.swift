@@ -14,8 +14,14 @@ struct Sprint10m20m35mView: View {
     @ObservedObject var tenTwentyThirtyFiveSprintBody = TenTwentyThirtyFiveSprintRequestBody()
     @State private var isExpanded = false
     @State private var selectedDistance = "Afstand"
-    
     private var distances = ["10 meter", "20 meter", "35 meter"]
+    @State var IsDistanceSelected: Bool = false
+    var isFormNotValid: Bool {
+        if IsDistanceSelected == true {
+            return false
+        }
+        return true
+    }
     
     var body: some View {
         VStack{
@@ -33,6 +39,7 @@ struct Sprint10m20m35mView: View {
                                 .padding(.all)
                                 .onTapGesture {
                                     self.selectedDistance = distance
+                                    IsDistanceSelected = true
                                     withAnimation{
                                         self.isExpanded.toggle()
                                     }
@@ -92,6 +99,7 @@ struct Sprint10m20m35mView: View {
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
+                .disabled(isFormNotValid)
         }
         .navigationTitle("10, 20 ,35 meter sprint")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

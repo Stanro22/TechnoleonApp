@@ -18,6 +18,12 @@ struct FSTView: View {
     @ObservedObject var figureManager = StopwatchManager()
     @ObservedObject var passManager = StopwatchManager()
     @State var round: Int = 0
+    var isFormNotValid: Bool {
+        if timerManager.timeToSave.isEmpty {
+            return true
+        }
+        return false
+    }
     
     var body: some View {
         VStack{
@@ -132,6 +138,7 @@ struct FSTView: View {
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                .disabled(isFormNotValid)
         }
         .navigationTitle("FST")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

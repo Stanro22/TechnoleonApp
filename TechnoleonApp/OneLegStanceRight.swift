@@ -12,6 +12,12 @@ struct OneLegStanceRight: View {
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @ObservedObject var timerManager = StopwatchManager()
     @ObservedObject var oneLegStanceBody = OneLegStanceRequestBody.shared
+    var isFormNotValid: Bool {
+        if timerManager.timeToSave.isEmpty {
+            return true
+        }
+        return false
+    }
     
     var body: some View {
         VStack{
@@ -100,7 +106,7 @@ struct OneLegStanceRight: View {
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
-
+                .disabled(isFormNotValid)
         }
         .navigationTitle("One leg stance")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
