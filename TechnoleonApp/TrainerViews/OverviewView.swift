@@ -15,7 +15,7 @@ struct OverviewView: View {
         GridItem(.fixed(142)),
         GridItem(.flexible())
     ]
-    @State var testList: [OverviewTestItem]? = [OverviewTestItem]()
+    @State var testList: [OverviewTestItem]?
     @State var loadingTests: Bool = false
     @State var lsptSet: Bool = false
     @State var ktk3Set: Bool = false
@@ -103,37 +103,45 @@ struct OverviewView: View {
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
                             if loggedInUser.players == nil {
-                                ProgressView("Loading players")
+                                ProgressView("")
                             }
                             else{
                                 ForEach(loggedInUser.players!, id: \.self) { player in
                                     if player.tests == nil {
-                                        ProgressView("Loading tests")
+                                        ProgressView("")
                                     }
                                     else{
                                         ForEach(player.tests!, id: \.self) { test in
                                             if loadingTests == false {
-                                                ProgressView("Loading test")
+                                                ProgressView("")
                                                     .onAppear(){
                                                         testManager.addToList(test: test, player: player)
-                                                        setTestList()
+                                                        let arraySize = loggedInUser.players!.count
+                                                        if player == loggedInUser.players![arraySize - 1]{
+                                                            setTestList()
+                                                        }
                                                     }
                                             }
                                         }
                                     }
                                 }
                             }
-                            ForEach(testList!, id: \.self) { overviewItem in
-                                VStack{
-                                    NavigationLink(destination: TestDetailView(overviewTestItem: overviewItem)) {
-                                        Text("\(overviewItem.name)")
-                                            .foregroundColor(Color.white)
-                                            .font(.custom("", size: 14))
+                            if testList == nil{
+                                ProgressView("Loading tests")
+                            }
+                            else{
+                                ForEach(testList!, id: \.self) { overviewItem in
+                                    VStack{
+                                        NavigationLink(destination: TestDetailView(overviewTestItem: overviewItem)) {
+                                            Text("\(overviewItem.name)")
+                                                .foregroundColor(Color.white)
+                                                .font(.custom("", size: 14))
+                                        }
+                                        .frame(width: 110, height: 50)
+                                        .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
+                                        .background(Color(red: 0.18, green: 0.25, blue: 0.44))
+                                        .cornerRadius(10)
                                     }
-                                    .frame(width: 110, height: 50)
-                                    .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
-                                    .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                                    .cornerRadius(10)
                                 }
                             }
                         }
@@ -194,6 +202,7 @@ struct OverviewView: View {
     }
     
     func setTestList(){
+        testList = [OverviewTestItem]()
         if testManager.testListLSPT != nil && lsptSet == false{
             let overviewTestItem = OverviewTestItem(name: "LSPT", players: testManager.playerListLSPT! ,tests: testManager.testListLSPT!)
             self.testList?.append(overviewTestItem)
@@ -274,7 +283,6 @@ struct OverviewView: View {
             self.testList?.append(overviewTestItem)
             tenTwentyThirtyFiveSet = true
         }
-        //print("\(testList!.count)")
         loadingTests = true
     }
 }
