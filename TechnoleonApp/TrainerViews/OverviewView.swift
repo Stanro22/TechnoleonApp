@@ -102,26 +102,18 @@ struct OverviewView: View {
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
-                            if loggedInUser.players == nil {
-                                ProgressView("")
-                            }
-                            else{
+                            if loggedInUser.players != nil {
                                 ForEach(loggedInUser.players!, id: \.self) { player in
-                                    if player.tests == nil {
-                                        ProgressView("")
-                                    }
-                                    else{
-                                        ForEach(player.tests!, id: \.self) { test in
-                                            if loadingTests == false {
-                                                ProgressView("")
-                                                    .onAppear(){
-                                                        testManager.addToList(test: test, player: player)
-                                                        let arraySize = loggedInUser.players!.count
-                                                        if player == loggedInUser.players![arraySize - 1]{
-                                                            setTestList()
-                                                        }
+                                    ForEach(player.tests!, id: \.self) { test in
+                                        if loadingTests == false {
+                                            ProgressView("")
+                                                .onAppear(){
+                                                    testManager.addToList(test: test, player: player)
+                                                    let arraySize = loggedInUser.players!.count
+                                                    if player == loggedInUser.players![arraySize - 1]{
+                                                        setTestList()
                                                     }
-                                            }
+                                                }
                                         }
                                     }
                                 }
@@ -199,6 +191,18 @@ struct OverviewView: View {
         }
         .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setOverview(){
+        for player in loggedInUser.players!{
+            for test in player.tests!{
+                testManager.addToList(test: test, player: player)
+                let arraySize = loggedInUser.players!.count
+                if player == loggedInUser.players![arraySize - 1]{
+                    setTestList()
+                }
+            }
+        }
     }
     
     func setTestList(){
