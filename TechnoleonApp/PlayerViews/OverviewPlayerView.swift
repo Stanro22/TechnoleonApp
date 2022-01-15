@@ -10,6 +10,9 @@ import SwiftUI
 struct OverviewPlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var testManager = TestList()
+    @State var testList: [OverviewTestItemPlayer]?
+    @State var loadingTests: Bool = false
     let colums = [
         GridItem(.fixed(142)),
         GridItem(.flexible())
@@ -100,14 +103,23 @@ struct OverviewPlayerView: View {
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
-                            if loggedInUser.testList == nil {
+                            if loggedInUser.testList != nil {
+                                ForEach(loggedInUser.testList!, id: \.self) { test in
+                                    if loadingTests == false {
+                                        ProgressView("")
+                                            .onAppear(){
+                                                setTestListForPlayer(test: test)                                            }
+                                    }
+                                }
+                            }
+                            if testList == nil{
                                 ProgressView("Loading tests")
                             }
                             else{
-                                ForEach(loggedInUser.testList!, id: \.self) { test in
+                                ForEach(testList!, id: \.self) { overviewItem in
                                     VStack{
-                                        NavigationLink(destination: TestDetailPlayerView(test: test)) {
-                                            Text("\(test.getTestName(test: test))")
+                                        NavigationLink(destination: TestDetailPlayerView(test: overviewItem.test)) {
+                                            Text("\(overviewItem.name)")
                                                 .foregroundColor(Color.white)
                                                 .font(.custom("", size: 14))
                                         }
@@ -174,6 +186,20 @@ struct OverviewPlayerView: View {
         }
         .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setTestListForPlayer(test: Test){
+        if testList == nil{
+            testList = [OverviewTestItemPlayer]()
+        }
+        let testName = test.getTestName(test: test)
+        let result = testList!.filter {$0.name == testName}
+        let exists = result.isEmpty == false
+        if exists == false{
+            let overviewTestItem = OverviewTestItemPlayer(name: testName, test: test)
+            self.testList?.append(overviewTestItem)
+        }
+        loadingTests = true
     }
 }
 

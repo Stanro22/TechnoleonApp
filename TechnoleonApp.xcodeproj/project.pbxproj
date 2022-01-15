@@ -125,6 +125,7 @@
 		94BB5DF02785E4C300FB6B5A /* LSPTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */; };
 		94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
+		94E2D22027934D6400330C19 /* OverviewTestItemPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */; };
 		94E63DA8278B2C40009CAF5D /* SpecificTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DA7278B2C40009CAF5D /* SpecificTest.swift */; };
 		94E63DAB278B35A7009CAF5D /* KTK3Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DAA278B35A7009CAF5D /* KTK3Test.swift */; };
 		94E63DAD278B3747009CAF5D /* SitAndReachTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DAC278B3747009CAF5D /* SitAndReachTest.swift */; };
@@ -294,6 +295,7 @@
 		94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequestBody.swift; sourceTree = "<group>"; };
 		94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequest.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
+		94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItemPlayer.swift; sourceTree = "<group>"; };
 		94E63DA7278B2C40009CAF5D /* SpecificTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificTest.swift; sourceTree = "<group>"; };
 		94E63DAA278B35A7009CAF5D /* KTK3Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTK3Test.swift; sourceTree = "<group>"; };
 		94E63DAC278B3747009CAF5D /* SitAndReachTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachTest.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
 				9426D2BB278D8BAE009B6541 /* TestLists.swift */,
 				94A6F2B8278F211100DE845E /* TestDetailsFactory.swift */,
+				94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				947C8B6F277328B10040CD62 /* SitAndReachView.swift in Sources */,
 				94FA16D12784C98300938748 /* OneLegStanceRequest.swift in Sources */,
 				946768B62788449400393708 /* InsaitJoyRequest.swift in Sources */,
+				94E2D22027934D6400330C19 /* OverviewTestItemPlayer.swift in Sources */,
 				947C8B8427732A940040CD62 /* YoYoView.swift in Sources */,
 				9426D2C0278E03BF009B6541 /* TestDetailPlayerView.swift in Sources */,
 				94E7F5E7275FB2E30025644B /* Team.swift in Sources */,
