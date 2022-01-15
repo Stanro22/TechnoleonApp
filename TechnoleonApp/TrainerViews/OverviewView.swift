@@ -17,23 +17,6 @@ struct OverviewView: View {
     ]
     @State var testList: [OverviewTestItem]?
     @State var loadingTests: Bool = false
-    @State var lsptSet: Bool = false
-    @State var ktk3Set: Bool = false
-    @State var gitSet: Bool = false
-    @State var phvSet: Bool = false
-    @State var sitAndReachSet: Bool = false
-    @State var fatPercentageSet: Bool = false
-    @State var ijtSet: Bool = false
-    @State var fstSet: Bool = false
-    @State var insaitJoySet: Bool = false
-    @State var shuttleRunSet: Bool = false
-    @State var oneLegStanceSet: Bool = false
-    @State var tvps3Set: Bool = false
-    @State var tTestSet: Bool = false
-    @State var vfmtSet: Bool = false
-    @State var Sprint10x5Set: Bool = false
-    @State var yoyoSet: Bool = false
-    @State var tenTwentyThirtyFiveSet: Bool = false
     
     var body: some View {
         VStack(){
@@ -207,85 +190,85 @@ struct OverviewView: View {
     
     func setTestList(){
         testList = [OverviewTestItem]()
-        if testManager.testListLSPT != nil && lsptSet == false{
+        if testManager.testListLSPT != nil{
+            testManager.testListLSPT!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "LSPT", players: testManager.playerListLSPT! ,tests: testManager.testListLSPT!)
             self.testList?.append(overviewTestItem)
-            lsptSet = true
         }
-        if testManager.testListKTK3 != nil && ktk3Set == false{
+        if testManager.testListKTK3 != nil{
+            testManager.testListKTK3!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "KTK3", players: testManager.playerListKTK3!, tests: testManager.testListKTK3!)
             self.testList?.append(overviewTestItem)
-            ktk3Set = true
         }
-        if testManager.testListGIT != nil && gitSet == false{
+        if testManager.testListGIT != nil{
+            testManager.testListGIT!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "GiT", players: testManager.playerListGIT!, tests: testManager.testListGIT!)
             self.testList?.append(overviewTestItem)
-            gitSet = true
         }
-        if testManager.testListPHV != nil && phvSet == false{
+        if testManager.testListPHV != nil{
+            testManager.testListPHV!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "PHV", players: testManager.playerListPHV!, tests: testManager.testListPHV!)
             self.testList?.append(overviewTestItem)
-            phvSet = true
         }
-        if testManager.testListsitAndReach != nil && sitAndReachSet == false{
+        if testManager.testListsitAndReach != nil{
+            testManager.testListsitAndReach!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "Sit and Reach", players: testManager.playerListsitAndReach!, tests: testManager.testListsitAndReach!)
             self.testList?.append(overviewTestItem)
-            sitAndReachSet = true
         }
-        if testManager.testListfatPercentage != nil && fatPercentageSet == false{
+        if testManager.testListfatPercentage != nil{
+            testManager.testListfatPercentage!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "Fat percentage", players: testManager.playerListfatPercentage!, tests: testManager.testListfatPercentage!)
             self.testList?.append(overviewTestItem)
-            fatPercentageSet = true
         }
-        if testManager.testListIJT != nil && ijtSet == false{
+        if testManager.testListIJT != nil{
+            testManager.testListIJT!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "IJT", players: testManager.playerListIJT!, tests: testManager.testListIJT!)
             self.testList?.append(overviewTestItem)
-            ijtSet = true
         }
-        if testManager.testListInsaitJoy != nil && insaitJoySet == false{
+        if testManager.testListInsaitJoy != nil{
+            testManager.testListInsaitJoy!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "Insait Joy", players: testManager.playerListInsaitJoy!, tests: testManager.testListInsaitJoy!)
             self.testList?.append(overviewTestItem)
-            insaitJoySet = true
         }
-        if testManager.testListShuttleRun != nil && shuttleRunSet == false{
+        if testManager.testListShuttleRun != nil{
+            testManager.testListShuttleRun!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "Shuttle run", players: testManager.playerListShuttleRun!, tests: testManager.testListShuttleRun!)
             self.testList?.append(overviewTestItem)
-            shuttleRunSet = true
         }
-        if testManager.testListOneLegStance != nil && oneLegStanceSet == false{
+        if testManager.testListOneLegStance != nil{
+            testManager.testListOneLegStance!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "One leg stance", players: testManager.playerListOneLegStance!, tests: testManager.testListOneLegStance!)
             self.testList?.append(overviewTestItem)
-            oneLegStanceSet = true
         }
-        if testManager.testListTVPS3 != nil && tvps3Set == false{
+        if testManager.testListTVPS3 != nil{
+            testManager.testListTVPS3!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "TVPS3", players: testManager.playerListTVPS3!, tests: testManager.testListTVPS3!)
             self.testList?.append(overviewTestItem)
-            tvps3Set = true
         }
-        if testManager.testListTTest != nil && tTestSet == false{
+        if testManager.testListTTest != nil{
+            testManager.testListTTest!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "T-Test", players: testManager.playerListTTest!, tests: testManager.testListTTest!)
             self.testList?.append(overviewTestItem)
-            tTestSet = true
         }
-        if testManager.testListVFMT != nil && vfmtSet == false{
+        if testManager.testListVFMT != nil{
+            testManager.testListVFMT!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "VFMT", players: testManager.playerListVFMT!, tests: testManager.testListVFMT!)
             self.testList?.append(overviewTestItem)
-            vfmtSet = true
         }
-        if testManager.testList10x5Sprint != nil && Sprint10x5Set == false{
+        if testManager.testList10x5Sprint != nil{
+            testManager.testList10x5Sprint!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "10x5m Sprint", players: testManager.playerList10x5Sprint!, tests: testManager.testList10x5Sprint!)
             self.testList?.append(overviewTestItem)
-            Sprint10x5Set = true
         }
-        if testManager.testListYoYo != nil && yoyoSet == false{
+        if testManager.testListYoYo != nil{
+            testManager.testListYoYo!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "Yo-Yo", players: testManager.playerListYoYo!, tests: testManager.testListYoYo!)
             self.testList?.append(overviewTestItem)
-            yoyoSet = true
         }
-        if testManager.testListTenTwentyThirtyFiveSprint != nil && tenTwentyThirtyFiveSet == false{
+        if testManager.testListTenTwentyThirtyFiveSprint != nil{
+            testManager.testListTenTwentyThirtyFiveSprint!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "10, 20, 35m Sprint", players: testManager.playerListTenTwentyThirtyFiveSprint!, tests: testManager.testListTenTwentyThirtyFiveSprint!)
             self.testList?.append(overviewTestItem)
-            tenTwentyThirtyFiveSet = true
         }
         loadingTests = true
     }

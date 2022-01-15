@@ -19,7 +19,6 @@ struct TrainerTestDetailPlayerView: View {
     @State var loadingData: Bool = false
     var playerName: String
     
-    
     var body: some View {
         VStack{
             Spacer()

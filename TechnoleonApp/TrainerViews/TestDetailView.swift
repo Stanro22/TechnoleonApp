@@ -39,7 +39,7 @@ struct TestDetailView: View {
             
             VStack{
                 ForEach(overviewTestItem.players, id: \.self) { player in
-                    NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests[0], playerName: player.playerName)) {
+                    NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests.first(where: {$0.playerId == player.playerId})!, playerName: player.playerName)) {
                         VStack{
                             Text("\(player.playerName)")
                                 .foregroundColor(Color.black)
