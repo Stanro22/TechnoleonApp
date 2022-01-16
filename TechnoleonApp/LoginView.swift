@@ -114,32 +114,6 @@ struct LoginView: View {
                     }
                 }
             }
-            /*if loggedInUser.userRole == "player"{
-                technoleonAPI.getUserPlayerById(id: loggedInUser.userId!) { (result) in
-                    switch result {
-                    case .success(let response):
-                        loggedInUser.email = response.email
-                        loggedInUser.birthDate = response.birthDate
-                        loggedInUser.weightInKg = response.weightInKg
-                        loggedInUser.lengthInCm = response.lengthInCm
-                        loggedInUser.gender = response.gender
-                        loggedInUser.teamRole = response.teamRole
-                        loggedInUser.teamId = response.teamId
-                        loggedInUser.testList = response.tests
-                        loggedInUser.testList!.sort{$0.created! > $1.created!}
-                        getTeamById(id: response.teamId)
-                    case .failure(let error):
-                        switch error{
-                        case .urlError(let urlError):
-                            print("URL error: \(String(describing: urlError))")
-                        case .decodingError(let decodingError):
-                            print("decode error: \(String(describing: decodingError))")
-                        case .genericError(let error):
-                            print("error: \(String(describing: error))")
-                        }
-                    }
-                }
-            }*/
         }
     }
     
