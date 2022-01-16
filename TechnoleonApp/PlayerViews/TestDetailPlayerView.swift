@@ -38,9 +38,9 @@ struct TestDetailPlayerView: View {
                 .cornerRadius(20)
                 
                 HStack{
-                    Text("Test date:")
+                    Text("Test datum:")
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 0))
-                        .font(.custom("", size: 14))
+                        .font(.custom("", size: 20))
                     Spacer()
                         if dateSet == false{
                             ProgressView("Loading date")
@@ -49,12 +49,12 @@ struct TestDetailPlayerView: View {
                                 }
                         }
                         else{
-                            Text("\(date!)")
+                            Text(date!, style: .date)
                                 .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
-                                .font(.custom("", size: 14))
+                                .font(.custom("", size: 20))
                         }
                 }
-                .frame(width: 300, height: 60)
+                .frame(width: 300, height: 40)
                 .padding()
                 .foregroundColor(Color.white)
                 .background(Color(red: 0.62, green: 0.65, blue: 0.90))

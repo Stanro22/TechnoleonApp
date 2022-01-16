@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfilePlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
+    @State var dateSet: Bool = false
+    @State var date: Date?
     
     var body: some View {
         VStack{
@@ -25,13 +27,6 @@ struct ProfilePlayerView: View {
                         .foregroundColor(Color.white)
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 15))
                 }
-                else{
-                    Text("Klaas Janssen")
-                        .font(.custom("", size: 20))
-                        .foregroundColor(Color.white)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 15))
-                }
-                
             }
             .frame(width: 375, height: 200)
             .background(Color(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 0.90)))
@@ -83,12 +78,6 @@ struct ProfilePlayerView: View {
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
-                    else{
-                        Text("mail@player1.com")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
                 .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
@@ -101,14 +90,14 @@ struct ProfilePlayerView: View {
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     Spacer()
-                    if loggedInUser.birthDate != nil {
-                        Text(loggedInUser.birthDate!)
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    if dateSet == false{
+                        ProgressView("Loading date")
+                            .onAppear(){
+                                setDate()
+                            }
                     }
                     else{
-                        Text("28-11-2011")
+                        Text(date!, style: .date)
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -248,6 +237,20 @@ struct ProfilePlayerView: View {
     
     func logout(){
         technoleonAPI.accesToken = nil
+    }
+    
+    func setDate(){
+        if loggedInUser.birthDate != nil{
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            let dateFormat = dateFormatter.date(from: loggedInUser.birthDate!)!
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: dateFormat)
+            let finalDate = calendar.date(from: components)
+            self.date = finalDate
+            dateSet = true
+        }
     }
 }
 

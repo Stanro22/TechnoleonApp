@@ -23,7 +23,8 @@ class Sprint10x5MStrategy {
         if value.isEmpty {
             return "Niet gemeten"
         }
-        
-        return "\(value)"
+        let time = value.dropFirst(3)
+        let finalTime = time.dropLast(4)
+        return "\(finalTime)"
     }
 }

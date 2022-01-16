@@ -25,7 +25,8 @@ class OneLegStanceStrategy {
         if value.isEmpty {
             return "Onbekend"
         }
-        
-        return "\(value)"
+        let time = value.dropFirst(3)
+        let finalTime = time.dropLast(4)
+        return "\(finalTime)"
     }
 }

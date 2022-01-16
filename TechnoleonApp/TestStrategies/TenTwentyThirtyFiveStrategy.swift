@@ -17,7 +17,7 @@ class TenTwentyThirtyFiveStrategy {
         var value = ""
         
         value += "\(processValue(value: String(test.distanceInM!))) \n"
-        value += "\(processValue(value: test.seconds!))"
+        value += "\(processValueTime(value: test.seconds!))"
         return value
     }
     
@@ -27,5 +27,14 @@ class TenTwentyThirtyFiveStrategy {
         }
         
         return "\(value)"
+    }
+    
+    func processValueTime(value: String) -> String{
+        if value.isEmpty {
+            return "Onbekend"
+        }
+        let time = value.dropFirst(3)
+        //let finalTime = time.dropLast(4)
+        return "\(time)"
     }
 }
