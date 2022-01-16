@@ -85,37 +85,34 @@ struct OverviewView: View {
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
-                            if loggedInUser.players != nil {
-                                ForEach(loggedInUser.players!, id: \.self) { player in
-                                    ForEach(player.tests!, id: \.self) { test in
-                                        if loadingTests == false {
-                                            ProgressView("")
-                                                .onAppear(){
-                                                    testManager.addToList(test: test, player: player)
-                                                    let arraySize = loggedInUser.players!.count
-                                                    if player == loggedInUser.players![arraySize - 1]{
-                                                        setTestList()
-                                                    }
-                                                }
-                                        }
+                            if loggedInUser.players == nil{
+                                ProgressView("")
+                                    .onAppear(){
+                                        if loggedInUser.teamId != nil{
+                                            getTeamById(id: loggedInUser.teamId!)
+                                        }                                      
                                     }
-                                }
-                            }
-                            if testList == nil{
-                                ProgressView("Loading tests")
                             }
                             else{
-                                ForEach(testList!, id: \.self) { overviewItem in
-                                    VStack{
-                                        NavigationLink(destination: TestDetailView(overviewTestItem: overviewItem)) {
-                                            Text("\(overviewItem.name)")
-                                                .foregroundColor(Color.white)
-                                                .font(.custom("", size: 14))
+                                if testList == nil{
+                                    ProgressView("Loading tests")
+                                        .onAppear(){
+                                            setOverview()
                                         }
-                                        .frame(width: 110, height: 50)
-                                        .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
-                                        .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                                        .cornerRadius(10)
+                                }
+                                else{
+                                    ForEach(testList!, id: \.self) { overviewItem in
+                                        VStack{
+                                            NavigationLink(destination: TestDetailView(overviewTestItem: overviewItem)) {
+                                                Text("\(overviewItem.name)")
+                                                    .foregroundColor(Color.white)
+                                                    .font(.custom("", size: 14))
+                                            }
+                                            .frame(width: 110, height: 50)
+                                            .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
+                                            .background(Color(red: 0.18, green: 0.25, blue: 0.44))
+                                            .cornerRadius(10)
+                                        }
                                     }
                                 }
                             }
@@ -174,6 +171,28 @@ struct OverviewView: View {
         }
         .navigationTitle("Overzicht")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func getTeamById(id: String){
+        technoleonAPI.getTeamById(id: (loggedInUser.teamId)!) { (result) in
+            switch result {
+            case .success(let response):
+                loggedInUser.teamname = response.teamname
+                if loggedInUser.userRole == "coach"{
+                    loggedInUser.organizationId = response.organizationId
+                    loggedInUser.players = response.players
+                }
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
     
     func setOverview(){

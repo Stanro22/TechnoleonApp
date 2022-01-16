@@ -103,30 +103,34 @@ struct OverviewPlayerView: View {
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
-                            if loggedInUser.testList != nil {
-                                ForEach(loggedInUser.testList!, id: \.self) { test in
-                                    if loadingTests == false {
-                                        ProgressView("")
-                                            .onAppear(){
-                                                setTestListForPlayer(test: test)                                            }
+                            if loggedInUser.testList == nil{
+                                ProgressView("")
+                                    .onAppear(){
+                                        if loggedInUser.userId != nil{
+                                            getUserById()
+                                        }
                                     }
-                                }
-                            }
-                            if testList == nil{
-                                ProgressView("Loading tests")
                             }
                             else{
-                                ForEach(testList!, id: \.self) { overviewItem in
-                                    VStack{
-                                        NavigationLink(destination: TestDetailPlayerView(test: overviewItem.test)) {
-                                            Text("\(overviewItem.name)")
-                                                .foregroundColor(Color.white)
-                                                .font(.custom("", size: 14))
+                                if testList == nil{
+                                    ProgressView("Loading tests")
+                                        .onAppear(){
+                                            setTestListForPlayer()
                                         }
-                                        .frame(width: 110, height: 50)
-                                        .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
-                                        .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                                        .cornerRadius(10)
+                                }
+                                else{
+                                    ForEach(testList!, id: \.self) { overviewItem in
+                                        VStack{
+                                            NavigationLink(destination: TestDetailPlayerView(test: overviewItem.test)) {
+                                                Text("\(overviewItem.name)")
+                                                    .foregroundColor(Color.white)
+                                                    .font(.custom("", size: 14))
+                                            }
+                                            .frame(width: 110, height: 50)
+                                            .padding(EdgeInsets(top: 12, leading: 15, bottom: 12, trailing: 15))
+                                            .background(Color(red: 0.18, green: 0.25, blue: 0.44))
+                                            .cornerRadius(10)
+                                        }
                                     }
                                 }
                             }
@@ -188,18 +192,69 @@ struct OverviewPlayerView: View {
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     
-    func setTestListForPlayer(test: Test){
-        if testList == nil{
-            testList = [OverviewTestItemPlayer]()
+    func setTestListForPlayer(){
+        for test in loggedInUser.testList!{
+            if testList == nil{
+                testList = [OverviewTestItemPlayer]()
+            }
+            let testName = test.getTestName(test: test)
+            let result = testList!.filter {$0.name == testName}
+            let exists = result.isEmpty == false
+            if exists == false{
+                let overviewTestItem = OverviewTestItemPlayer(name: testName, test: test)
+                self.testList?.append(overviewTestItem)
+            }
+            loadingTests = true
         }
-        let testName = test.getTestName(test: test)
-        let result = testList!.filter {$0.name == testName}
-        let exists = result.isEmpty == false
-        if exists == false{
-            let overviewTestItem = OverviewTestItemPlayer(name: testName, test: test)
-            self.testList?.append(overviewTestItem)
+    }
+    
+    func getUserById(){
+        technoleonAPI.getUserPlayerById(id: loggedInUser.userId!) { (result) in
+            switch result {
+            case .success(let response):
+                loggedInUser.email = response.email
+                loggedInUser.birthDate = response.birthDate
+                loggedInUser.weightInKg = response.weightInKg
+                loggedInUser.lengthInCm = response.lengthInCm
+                loggedInUser.gender = response.gender
+                loggedInUser.teamRole = response.teamRole
+                loggedInUser.teamId = response.teamId
+                loggedInUser.testList = response.tests
+                loggedInUser.testList!.sort{$0.created! > $1.created!}
+                getTeamById(id: response.teamId)
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
         }
-        loadingTests = true
+    }
+    
+    func getTeamById(id: String){
+        technoleonAPI.getTeamById(id: (loggedInUser.teamId)!) { (result) in
+            switch result {
+            case .success(let response):
+                loggedInUser.teamname = response.teamname
+                if loggedInUser.userRole == "coach"{
+                    loggedInUser.organizationId = response.organizationId
+                    loggedInUser.players = response.players
+                }
+            case .failure(let error):
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
     }
 }
 

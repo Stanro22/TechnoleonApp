@@ -102,7 +102,6 @@ struct LoginView: View {
                     case .success(let response):
                         loggedInUser.email = response.email
                         loggedInUser.teamId = response.teamId
-                        getTeamById(id: response.teamId)
                     case .failure(let error):
                         switch error{
                         case .urlError(let urlError):
@@ -115,7 +114,7 @@ struct LoginView: View {
                     }
                 }
             }
-            if loggedInUser.userRole == "player"{
+            /*if loggedInUser.userRole == "player"{
                 technoleonAPI.getUserPlayerById(id: loggedInUser.userId!) { (result) in
                     switch result {
                     case .success(let response):
@@ -140,7 +139,7 @@ struct LoginView: View {
                         }
                     }
                 }
-            }
+            }*/
         }
     }
     
