@@ -12,19 +12,28 @@ struct PlayerShuttleRunView: View {
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @State var niveau = ""
     @State var didInjuryTapped: Bool = false
+    @State var buttonColor: Color = Color(red: 0.62, green: 0.65, blue: 0.90)
     
     var body: some View {
         HStack{
             Text(loggedInUser.players![index].playerName)
                 .font(.custom("", size: 22))
                 .frame(width: 150, height: 80, alignment: .center)
-            Button(action: {}){
+            Button(action: {
+                if buttonColor == Color(red: 0.62, green: 0.65, blue: 0.90){
+                    buttonColor = Color(red: 0.91, green: 0.92, blue: 0.31)
+                } else if buttonColor == Color(red: 0.91, green: 0.92, blue: 0.31){
+                    buttonColor = Color(red: 0.73, green: 0.05, blue: 0.05)
+                } else{
+                    buttonColor = Color(red: 0.62, green: 0.65, blue: 0.90)
+                }
+            }){
                 Image(systemName: "star")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .padding()
                     .foregroundColor(Color.white)
-                    .background(Color(red: 0.62, green: 0.65, blue: 0.90))
+                    .background(buttonColor)
                     .cornerRadius(10)
             }
             

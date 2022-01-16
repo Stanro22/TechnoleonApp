@@ -91,7 +91,7 @@ struct ProfileView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             }
             .padding()
-            .frame(width: 300, height: 120)
+            .frame(width: 300, height: 50)
             .background(Color(UIColor(red: 0.90, green: 0.90, blue: 0.90, alpha: 0.80)))
             Spacer()
             
