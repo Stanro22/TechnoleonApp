@@ -47,6 +47,7 @@
 		94071EDC2761177100FFB8B4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDB2761177000FFB8B4 /* TimerManager.swift */; };
 		94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */; };
 		94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */; };
+		940BDC5927942E100063415E /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940BDC5827942E100063415E /* TestManager.swift */; };
 		9426D2BA278D8895009B6541 /* OverviewTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2B9278D8895009B6541 /* OverviewTestItem.swift */; };
 		9426D2BC278D8BAE009B6541 /* TestLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BB278D8BAE009B6541 /* TestLists.swift */; };
 		9426D2BE278DE7D0009B6541 /* TestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426D2BD278DE7D0009B6541 /* TestDetailView.swift */; };
@@ -217,6 +218,7 @@
 		94071EDB2761177000FFB8B4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		94071EDD2761294900FFB8B4 /* OverviewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPlayerView.swift; sourceTree = "<group>"; };
 		94071EDF276130C300FFB8B4 /* ProfilePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlayerView.swift; sourceTree = "<group>"; };
+		940BDC5827942E100063415E /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
 		9426D2B9278D8895009B6541 /* OverviewTestItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItem.swift; sourceTree = "<group>"; };
 		9426D2BB278D8BAE009B6541 /* TestLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLists.swift; sourceTree = "<group>"; };
 		9426D2BD278DE7D0009B6541 /* TestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailView.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				9426D2BB278D8BAE009B6541 /* TestLists.swift */,
 				94A6F2B8278F211100DE845E /* TestDetailsFactory.swift */,
 				94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */,
+				940BDC5827942E100063415E /* TestManager.swift */,
 			);
 			path = TechnoleonApp;
 			sourceTree = "<group>";
@@ -935,6 +938,7 @@
 				94719BB02773766D00F164C1 /* StopwatchManager.swift in Sources */,
 				94E63DAD278B3747009CAF5D /* SitAndReachTest.swift in Sources */,
 				94FA16CF278495DC00938748 /* Sprint10x5RequestBody.swift in Sources */,
+				940BDC5927942E100063415E /* TestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

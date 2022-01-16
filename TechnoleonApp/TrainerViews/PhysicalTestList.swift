@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PhysicalTestList: View {
+    @ObservedObject var testManager = TestManager.shared
+    
     var body: some View {
         ScrollView{
             VStack{
-                NavigationLink(destination: KTK3View()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){testManager.isKTK3set = true}}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("KTK3+")
