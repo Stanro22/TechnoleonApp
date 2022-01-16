@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlayerSelectionView: View {
     @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var testManager = TestManager.shared
     @State private var isExpanded = false
     @State private var selectedPlayer = "Speler"
     
@@ -66,7 +67,7 @@ struct PlayerSelectionView: View {
                 Spacer()
                 
                 
-                NavigationLink(destination: TestCategoriesView()) {
+                NavigationLink(destination: getTestView()) {
                     Text("Kies categorie")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 20)
@@ -89,7 +90,7 @@ struct PlayerSelectionView: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                        NavigationLink(destination: PlayerSelectionView()) {
+                        NavigationLink(destination: TestCategoriesView()) {
                             VStack{
                                 Image(systemName: "globe")
                                     .foregroundColor(Color.white)
@@ -126,6 +127,52 @@ struct PlayerSelectionView: View {
             loggedInUser.playerId = loggedInUser.players![i].playerId
             loggedInUser.playerName = loggedInUser.players![i].playerName
         }
+    }
+    
+    func getTestView() -> AnyView{
+        if testManager.isKTK3set == true{
+            return AnyView(KTK3View())
+        }
+        if testManager.isPHVset == true{
+            return AnyView(PHVView())
+        }
+        if testManager.isSitAndReachset == true{
+            return AnyView(SitAndReachView())
+        }
+        if testManager.isFatPercentageset == true{
+            return AnyView(VetPercentageView())
+        }
+        if testManager.isTTestset == true{
+            return AnyView(T_TestView())
+        }
+        if testManager.isOneLegStanceset == true{
+            return AnyView(OneLegStanceLeft())
+        }
+        if testManager.isTenTwentyThirtyFiveset == true{
+            return AnyView(Sprint10m20m35mView())
+        }
+        if testManager.isTenxFiveset == true{
+            return AnyView(Sprint10x5mView())
+        }
+        if testManager.isShuttleRunset == true{
+            return AnyView(ShuttleRunView())
+        }
+        if testManager.isYoYoset == true{
+            return AnyView(YoYoView())
+        }
+        if testManager.isFSTset == true{
+            return AnyView(FSTView())
+        }
+        if testManager.isLSPTset == true{
+            return AnyView(LSPTView())
+        }
+        if testManager.isInsaitJoyset == true{
+            return AnyView(InsaitJoyView())
+        }
+        if testManager.isGiTset == true{
+            return AnyView(GiTView())
+        }
+        return AnyView(TestCategoriesView())
     }
 }
 

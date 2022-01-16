@@ -13,7 +13,10 @@ struct PhysicalTestList: View {
     var body: some View {
         ScrollView{
             VStack{
-                NavigationLink(destination: {PlayerSelectionView().onAppear(){testManager.isKTK3set = true}}){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isKTK3set = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("KTK3+")
@@ -40,7 +43,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: PHVView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isPHVset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("PHV")
@@ -67,7 +73,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: SitAndReachView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isSitAndReachset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Sit and reach")
@@ -94,7 +103,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: VetPercentageView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isFatPercentageset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Vetpercentage")
@@ -122,7 +134,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: T_TestView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isTTestset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("T-Test")
@@ -149,7 +164,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: OneLegStanceLeft()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isOneLegStanceset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("One leg stance")
@@ -176,7 +194,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: Sprint10m20m35mView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isTenTwentyThirtyFiveset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("10, 20 en 35 meter sprint")
@@ -203,7 +224,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: Sprint10x5mView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isTenxFiveset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("10x5 meter sprint")
@@ -230,7 +254,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: ShuttleRunView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isShuttleRunset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Interval shuttle run")
@@ -257,7 +284,10 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: YoYoView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isYoYoset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Yo-Yo uithoudingsvermogen test")
@@ -285,6 +315,23 @@ struct PhysicalTestList: View {
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
             }
         }
+    }
+    
+    func resetTests(){
+        testManager.isKTK3set = false
+        testManager.isPHVset = false
+        testManager.isSitAndReachset = false
+        testManager.isFatPercentageset = false
+        testManager.isTTestset = false
+        testManager.isOneLegStanceset = false
+        testManager.isTenTwentyThirtyFiveset = false
+        testManager.isTenxFiveset = false
+        testManager.isShuttleRunset = false
+        testManager.isYoYoset = false
+        testManager.isFSTset = false
+        testManager.isLSPTset = false
+        testManager.isInsaitJoyset = false
+        testManager.isGiTset = false
     }
 }
 

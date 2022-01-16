@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct TechnicalTestList: View {
+    @ObservedObject var testManager = TestManager.shared
+    
     var body: some View {
         ScrollView{
             VStack{
-                NavigationLink(destination: FSTView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isFSTset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("FST")
@@ -39,7 +44,10 @@ struct TechnicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: LSPTView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isLSPTset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("LSPT")
@@ -67,7 +75,10 @@ struct TechnicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: InsaitJoyView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isInsaitJoyset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("Insait Joy")
@@ -96,6 +107,23 @@ struct TechnicalTestList: View {
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
             }
         }
+    }
+    
+    func resetTests(){
+        testManager.isKTK3set = false
+        testManager.isPHVset = false
+        testManager.isSitAndReachset = false
+        testManager.isFatPercentageset = false
+        testManager.isTTestset = false
+        testManager.isOneLegStanceset = false
+        testManager.isTenTwentyThirtyFiveset = false
+        testManager.isTenxFiveset = false
+        testManager.isShuttleRunset = false
+        testManager.isYoYoset = false
+        testManager.isFSTset = false
+        testManager.isLSPTset = false
+        testManager.isInsaitJoyset = false
+        testManager.isGiTset = false
     }
 }
 

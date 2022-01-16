@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct CognitiveTestList: View {
+    @ObservedObject var testManager = TestManager.shared
+    
     var body: some View {
         ScrollView{
             VStack{
-                NavigationLink(destination: GiTView()){
+                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                    resetTests()
+                    testManager.isGiTset = true
+                }}){
                     HStack{
                         VStack(alignment: .leading){
                             Text("GiT")
@@ -40,6 +45,23 @@ struct CognitiveTestList: View {
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
             }
         }
+    }
+    
+    func resetTests(){
+        testManager.isKTK3set = false
+        testManager.isPHVset = false
+        testManager.isSitAndReachset = false
+        testManager.isFatPercentageset = false
+        testManager.isTTestset = false
+        testManager.isOneLegStanceset = false
+        testManager.isTenTwentyThirtyFiveset = false
+        testManager.isTenxFiveset = false
+        testManager.isShuttleRunset = false
+        testManager.isYoYoset = false
+        testManager.isFSTset = false
+        testManager.isLSPTset = false
+        testManager.isInsaitJoyset = false
+        testManager.isGiTset = false
     }
 }
 

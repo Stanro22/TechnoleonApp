@@ -114,7 +114,7 @@ struct ProfileView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: PlayerSelectionView()) {
+                    NavigationLink(destination: TestCategoriesView()) {
                         VStack{
                             Image(systemName: "globe")
                                 .foregroundColor(Color.white)
