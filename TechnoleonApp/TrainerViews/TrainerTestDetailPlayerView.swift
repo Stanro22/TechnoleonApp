@@ -61,8 +61,6 @@ struct TrainerTestDetailPlayerView: View {
                 .background(Color(red: 0.62, green: 0.65, blue: 0.90))
                 .cornerRadius(20)
             }
-            Spacer()
-            
             
             VStack{
                 HStack{
@@ -92,10 +90,10 @@ struct TrainerTestDetailPlayerView: View {
                         }
                     }
                 }
-                .frame(width: 320)
+                .frame(width: 330)
                 Spacer()
             }
-            .frame(width: 300, height: 200)
+            .frame(width: 330, height: 200)
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
             Spacer()
