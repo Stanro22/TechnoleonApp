@@ -148,7 +148,7 @@ struct ProfilePlayerView: View {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
-                            Text("Mijn overzicht")
+                            Text("Overzicht")
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
@@ -157,9 +157,12 @@ struct ProfilePlayerView: View {
                         .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     }
                     .padding(EdgeInsets(top: 3, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: OverviewPlayerView()) {
+                    NavigationLink(destination: TestCategoriesPlayerView()) {
                         VStack{
-                            Image(systemName: "globe")
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 20, height: 20)
                                 .foregroundColor(Color.white)
                             Text("Testen")
                                 .foregroundColor(Color.white)

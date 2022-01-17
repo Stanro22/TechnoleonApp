@@ -1,13 +1,13 @@
 //
-//  TestCategoriesView.swift
+//  TestCategoriesPlayerView.swift
 //  TechnoleonApp
 //
-//  Created by user206981 on 11/22/21.
+//  Created by user206503 on 1/17/22.
 //
 
 import SwiftUI
 
-struct TestCategoriesView: View {
+struct TestCategoriesPlayerView: View {
     var body: some View {
             VStack{
                 Spacer()
@@ -28,6 +28,7 @@ struct TestCategoriesView: View {
                     .frame(width: 70, height: 70)
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                     .cornerRadius(90)
+                    .disabled(true)
                 }
                 .frame(width: 130, height: 130)
                 Spacer()
@@ -47,6 +48,7 @@ struct TestCategoriesView: View {
                         .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
+                        .disabled(true)
                     }
                     .frame(width: 130, height: 130)
                     Spacer()
@@ -63,6 +65,7 @@ struct TestCategoriesView: View {
                         .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
+                        .disabled(true)
                     }
                     .frame(width: 130, height: 130)
                     Spacer()
@@ -84,6 +87,7 @@ struct TestCategoriesView: View {
                         .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
+                        .disabled(true)
                     }
                     .frame(width: 130, height: 130)
                     .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
@@ -101,6 +105,7 @@ struct TestCategoriesView: View {
                         .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
+                        .disabled(true)
                     }
                     .frame(width: 130, height: 130)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
@@ -109,7 +114,7 @@ struct TestCategoriesView: View {
                 Spacer()
                                 
                 HStack(alignment: .bottom){
-                        NavigationLink(destination: OverviewView()) {
+                        NavigationLink(destination: OverviewPlayerView()) {
                             VStack{
                                 Image(systemName: "binoculars.fill")
                                     .foregroundColor(Color.white)
@@ -122,7 +127,7 @@ struct TestCategoriesView: View {
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                        NavigationLink(destination: TestCategoriesView()) {
+                        NavigationLink(destination: TestCategoriesPlayerView()) {
                             VStack{
                                 Image("ball")
                                     .resizable()
@@ -138,7 +143,7 @@ struct TestCategoriesView: View {
                             .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                        NavigationLink(destination: ProfileView()) {
+                        NavigationLink(destination: ProfilePlayerView()) {
                             VStack{
                                 Image(systemName: "person.circle.fill")
                                     .foregroundColor(Color.white)
@@ -160,8 +165,8 @@ struct TestCategoriesView: View {
     }
 
 
-struct TestCategoriesView_Previews: PreviewProvider {
+struct TestCategoriesPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        TestCategoriesView()
+        TestCategoriesPlayerView()
     }
 }

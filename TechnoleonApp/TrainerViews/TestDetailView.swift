@@ -64,7 +64,7 @@ struct TestDetailView: View {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
-                            Text("Mijn overzicht")
+                            Text("Overzicht")
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
@@ -75,7 +75,10 @@ struct TestDetailView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: TestCategoriesView()) {
                         VStack{
-                            Image(systemName: "globe")
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 20, height: 20)
                                 .foregroundColor(Color.white)
                             Text("Testen")
                                 .foregroundColor(Color.white)

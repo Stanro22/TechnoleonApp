@@ -134,11 +134,11 @@ struct OverviewView: View {
             Spacer()
             
             HStack(alignment: .bottom){
-                    NavigationLink(destination: OverviewView()) {
+                Button(action: {}) {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
-                            Text("Mijn overzicht")
+                            Text("Overzicht")
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
@@ -179,6 +179,7 @@ struct OverviewView: View {
             }
         }
         .navigationTitle("Overzicht")
+        .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     

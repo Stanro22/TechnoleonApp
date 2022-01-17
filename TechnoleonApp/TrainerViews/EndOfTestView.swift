@@ -71,7 +71,7 @@ struct EndOfTestView: View {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
-                            Text("Mijn overzicht")
+                            Text("Overzicht")
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
@@ -82,7 +82,10 @@ struct EndOfTestView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: TestCategoriesView()) {
                         VStack{
-                            Image(systemName: "globe")
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 20, height: 20)
                                 .foregroundColor(Color.white)
                             Text("Testen")
                                 .foregroundColor(Color.white)
@@ -109,6 +112,7 @@ struct EndOfTestView: View {
             }
         }
         .navigationTitle("Einde test")
+        .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     

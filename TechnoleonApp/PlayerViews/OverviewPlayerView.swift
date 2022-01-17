@@ -157,7 +157,7 @@ struct OverviewPlayerView: View {
                         VStack{
                             Image(systemName: "binoculars.fill")
                                 .foregroundColor(Color.white)
-                            Text("Mijn overzicht")
+                            Text("Overzicht")
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
@@ -166,7 +166,7 @@ struct OverviewPlayerView: View {
                         .background(Color(red: 0.18, green: 0.25, blue: 0.44))
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: OverviewPlayerView()) {
+                    NavigationLink(destination: TestCategoriesPlayerView()) {
                         VStack{
                             Image("ball")
                                 .resizable()
@@ -198,6 +198,7 @@ struct OverviewPlayerView: View {
             }
         }
         .navigationTitle("Overzicht")
+        .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     
