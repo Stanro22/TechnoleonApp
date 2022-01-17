@@ -19,15 +19,14 @@ struct TestCategoriesView: View {
                     Text("Fysiek")
                         .padding()
                         .foregroundColor(Color.black)
-                    Spacer()
                     NavigationLink(destination: TestListView(chosenCategorie: "Fysiek")){
-                        Image("ball")
+                        Image("heart")
                             .resizable()
                             .renderingMode(.template)
                             .frame(width: 50, height: 50)
                             .foregroundColor(Color.white)
                     }
-                    .frame(width: 100, height: 100)
+                    .frame(width: 80, height: 80)
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                     .cornerRadius(90)
                 }
@@ -40,15 +39,14 @@ struct TestCategoriesView: View {
                         Text("Cognitief")
                             .padding()
                             .foregroundColor(Color.black)
-                        Spacer()
                         NavigationLink(destination: TestListView(chosenCategorie: "Cognitief")){
-                            Image("ball")
+                            Image("eye")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 50, height: 40)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 100, height: 100)
+                        .frame(width: 80, height: 80)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
@@ -58,15 +56,14 @@ struct TestCategoriesView: View {
                         Text("Mentaal")
                             .padding()
                             .foregroundColor(Color.black)
-                        Spacer()
                         NavigationLink(destination: TestListView(chosenCategorie: "Mentaal")){
-                            Image("ball")
+                            Image("mental")
                                 .resizable()
                                 .renderingMode(.template)
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 100, height: 100)
+                        .frame(width: 80, height: 80)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
@@ -81,7 +78,6 @@ struct TestCategoriesView: View {
                         Text("Technisch")
                             .padding()
                             .foregroundColor(Color.black)
-                        Spacer()
                         NavigationLink(destination: TestListView(chosenCategorie: "Technisch")){
                             Image("ball")
                                 .resizable()
@@ -89,7 +85,7 @@ struct TestCategoriesView: View {
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 100, height: 100)
+                        .frame(width: 80, height: 80)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
@@ -101,15 +97,14 @@ struct TestCategoriesView: View {
                         Text("Wedstrijd")
                             .padding()
                             .foregroundColor(Color.black)
-                        Spacer()
                         NavigationLink(destination: TestListView(chosenCategorie: "Wedstrijd")){
-                            Image("ball")
+                            Image("match")
                                 .resizable()
                                 .renderingMode(.template)
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 100, height: 100)
+                        .frame(width: 80, height: 80)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
