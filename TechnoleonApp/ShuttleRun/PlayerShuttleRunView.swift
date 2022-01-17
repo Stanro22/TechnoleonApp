@@ -45,8 +45,9 @@ struct PlayerShuttleRunView: View {
                     didInjuryTapped = false
                 }
             }) {
-                Image(systemName: "person.fill")
+                Image("injury")
                     .resizable()
+                    .renderingMode(.template)
                     .frame(width: 30, height: 30)
                     .padding()
                     .foregroundColor(Color.white)

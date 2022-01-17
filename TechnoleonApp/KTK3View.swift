@@ -131,12 +131,13 @@ struct KTK3View: View {
                             isInjured = false
                         }
                     }) {
-                        Image(systemName: "person.fill")
+                        Image("injury")
                             .resizable()
+                            .renderingMode(.template)
+                            .frame(width: 40, height: 40)
                             .foregroundColor(Color.white)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            .frame(width: 40, height: 40)
                     }
                     .cornerRadius(5)
                     .padding()
@@ -159,12 +160,13 @@ struct KTK3View: View {
                             isInjured = false
                         }
                     }) {
-                        Image(systemName: "person.fill")
+                        Image("injury")
                             .resizable()
+                            .renderingMode(.template)
+                            .frame(width: 40, height: 40)
                             .foregroundColor(Color.white)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                            .frame(width: 40, height: 40)
                     }
                     .cornerRadius(5)
                     .padding()

@@ -254,7 +254,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                NavigationLink(destination: {ShuttleRunView().onAppear(){
                     resetTests()
                     testManager.isShuttleRunset = true
                 }}){
@@ -284,7 +284,7 @@ struct PhysicalTestList: View {
                 .overlay(Divider().background(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
-                NavigationLink(destination: {PlayerSelectionView().onAppear(){
+                NavigationLink(destination: {YoYoView().onAppear(){
                     resetTests()
                     testManager.isYoYoset = true
                 }}){
