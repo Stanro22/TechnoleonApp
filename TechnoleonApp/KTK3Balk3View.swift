@@ -217,7 +217,7 @@ struct KTK3Balk3View: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                     .disabled(isFormNotValid)
             }
-            .navigationTitle("KTK3+")
+            .navigationTitle("KTK3+").navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     

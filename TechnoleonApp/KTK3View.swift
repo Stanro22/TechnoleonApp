@@ -223,6 +223,7 @@ struct KTK3View: View {
                     .disabled(isFormNotValid)
             }
             .navigationTitle("KTK3+")
+            .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     

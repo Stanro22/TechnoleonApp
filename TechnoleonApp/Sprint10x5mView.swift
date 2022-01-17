@@ -86,6 +86,7 @@ struct Sprint10x5mView: View {
                 .disabled(isFormNotValid)
         }
         .navigationTitle("10x5 meter sprint")
+        .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     
