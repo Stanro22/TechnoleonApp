@@ -28,8 +28,9 @@ struct PlayerShuttleRunView: View {
                     buttonColor = Color(red: 0.62, green: 0.65, blue: 0.90)
                 }
             }){
-                Image(systemName: "star")
+                Image("warning")
                     .resizable()
+                    .renderingMode(.template)
                     .frame(width: 30, height: 30)
                     .padding()
                     .foregroundColor(Color.white)
