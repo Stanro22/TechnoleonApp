@@ -104,6 +104,12 @@ struct OverviewView: View {
                                     ForEach(testList!, id: \.self) { overviewItem in
                                         VStack{
                                             NavigationLink(destination: TestDetailView(overviewTestItem: overviewItem)) {
+                                                Image("ball")
+                                                    .resizable()
+                                                    .renderingMode(.template)
+                                                    .frame(width: 25, height: 25)
+                                                    .foregroundColor(Color.white)
+                                                Spacer()
                                                 Text("\(overviewItem.name)")
                                                     .foregroundColor(Color.white)
                                                     .font(.custom("", size: 14))
@@ -143,7 +149,10 @@ struct OverviewView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                     NavigationLink(destination: TestCategoriesView()) {
                         VStack{
-                            Image(systemName: "globe")
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 20, height: 20)
                                 .foregroundColor(Color.white)
                             Text("Testen")
                                 .foregroundColor(Color.white)

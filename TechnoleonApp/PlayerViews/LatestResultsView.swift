@@ -37,7 +37,7 @@ struct LatestResultsView: View {
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                     Spacer()
-                                    Text("\(test.created!)")
+                                    Text("\(setDate(test: test), style: .date)")
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
@@ -102,6 +102,17 @@ struct LatestResultsView: View {
         }
         .navigationTitle("Laatste resultaten")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
+    }
+    
+    func setDate(test: Test) -> Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let dateFormat = dateFormatter.date(from: test.created!)!
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: dateFormat)
+        let finalDate = calendar.date(from: components)
+        return finalDate!
     }
 }
 

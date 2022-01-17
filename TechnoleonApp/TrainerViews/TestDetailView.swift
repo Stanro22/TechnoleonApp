@@ -14,7 +14,7 @@ struct TestDetailView: View {
         VStack{
             Spacer()
             HStack{
-                NavigationLink(destination: TestDetailView(overviewTestItem: overviewTestItem)) {
+                NavigationLink(destination: {}) {
                     Text("Trainingsadvies")
                         .font(.custom("", size: 16))
                         .foregroundColor(Color.white)
@@ -24,7 +24,7 @@ struct TestDetailView: View {
                 }.cornerRadius(10)
                 .disabled(true)
                 Spacer()
-                NavigationLink(destination: TestDetailView(overviewTestItem: overviewTestItem)) {
+                NavigationLink(destination: {}) {
                     Text("Ontwikkeling")
                         .font(.custom("", size: 16))
                         .foregroundColor(Color.black)
