@@ -14,54 +14,106 @@ struct TestCategoriesView: View {
                 Text("Kies een testcategorie")
                     .font(.custom("", size: 24))
                     .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
-                
-                NavigationLink(destination: TestListView(chosenCategorie: "Fysiek")){
+                                
+                VStack{
                     Text("Fysiek")
                         .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                        .foregroundColor(Color.black)
+                    Spacer()
+                    NavigationLink(destination: TestListView(chosenCategorie: "Fysiek")){
+                        Image("ball")
+                            .resizable()
+                            .renderingMode(.template)
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(width: 100, height: 100)
+                    .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    .cornerRadius(90)
                 }
-                .cornerRadius(20)
+                .frame(width: 150, height: 150)
                 Spacer()
                 
                 HStack{
                     Spacer()
-                    NavigationLink(destination: TestListView(chosenCategorie: "Cognitief")){
+                    VStack{
                         Text("Cognitief")
                             .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                            .foregroundColor(Color.black)
+                        Spacer()
+                        NavigationLink(destination: TestListView(chosenCategorie: "Cognitief")){
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(width: 100, height: 100)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                        .cornerRadius(90)
                     }
-                    .cornerRadius(20)
+                    .frame(width: 150, height: 150)
                     Spacer()
-                    NavigationLink(destination: TestListView(chosenCategorie: "Mentaal")){
+                    VStack{
                         Text("Mentaal")
                             .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                            .foregroundColor(Color.black)
+                        Spacer()
+                        NavigationLink(destination: TestListView(chosenCategorie: "Mentaal")){
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(width: 100, height: 100)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                        .cornerRadius(90)
                     }
-                    .cornerRadius(20)
+                    .frame(width: 150, height: 150)
                     Spacer()
                 }
                 Spacer()
                 
                 HStack{
                     Spacer()
-                    NavigationLink(destination: TestListView(chosenCategorie: "Technisch")){
+                    VStack{
                         Text("Technisch")
                             .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                            .foregroundColor(Color.black)
+                        Spacer()
+                        NavigationLink(destination: TestListView(chosenCategorie: "Technisch")){
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(width: 100, height: 100)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                        .cornerRadius(90)
                     }
-                    .cornerRadius(20)
+                    .frame(width: 150, height: 150)
+                    
                     Spacer()
-                    NavigationLink(destination: TestListView(chosenCategorie: "Wedstrijd")){
+                    
+                    VStack{
                         Text("Wedstrijd")
                             .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                            .foregroundColor(Color.black)
+                        Spacer()
+                        NavigationLink(destination: TestListView(chosenCategorie: "Wedstrijd")){
+                            Image("ball")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(width: 100, height: 100)
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                        .cornerRadius(90)
                     }
-                    .cornerRadius(20)
+                    .frame(width: 150, height: 150)
                     Spacer()
                 }
                 Spacer()
