@@ -120,12 +120,6 @@ struct ProfilePlayerView: View {
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
-                    else{
-                        Text("Man")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
                 .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
@@ -140,12 +134,6 @@ struct ProfilePlayerView: View {
                     Spacer()
                     if loggedInUser.weightInKg != nil {
                         Text("\(loggedInUser.weightInKg!)")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
-                    else{
-                        Text("60")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -168,12 +156,6 @@ struct ProfilePlayerView: View {
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
                     }
-                    else{
-                        Text("130")
-                            .font(.system(size: 14)).italic()
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
-                    }
                 }
                 .frame(width: 280, height: 20, alignment: .leading)
                 .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
@@ -185,9 +167,15 @@ struct ProfilePlayerView: View {
             Spacer()
             
             Button(action: logout){
-                Text("Logout")
+                Text("Log out")
+                    .font(.custom("", size: 22))
+                    .foregroundColor(Color.white)
+                    .frame(width: 250, height: 20)
+                    .padding()
+                    .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }
-            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+            .cornerRadius(10)
+            .padding(EdgeInsets(top: 23, leading: 15, bottom: 0, trailing: 15))
             
             HStack(alignment: .bottom){
                     NavigationLink(destination: OverviewPlayerView()) {

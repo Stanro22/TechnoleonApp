@@ -96,8 +96,14 @@ struct ProfileView: View {
             Spacer()
             
             Button(action: logout){
-                Text("Logout")
+                Text("Log out")
+                    .font(.custom("", size: 22))
+                    .foregroundColor(Color.white)
+                    .frame(width: 250, height: 20)
+                    .padding()
+                    .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }
+            .cornerRadius(10)
             .padding(EdgeInsets(top: 23, leading: 15, bottom: 0, trailing: 15))
             
             HStack(alignment: .bottom){
