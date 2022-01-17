@@ -68,7 +68,7 @@ struct PlayerSelectionView: View {
                 
                 
                 NavigationLink(destination: getTestView()) {
-                    Text("Kies categorie")
+                    Text("Doe de test")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 20)
                         .padding()
@@ -76,6 +76,8 @@ struct PlayerSelectionView: View {
                 }.cornerRadius(10)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 Spacer()
+            
+            
                 HStack(alignment: .bottom){
                         NavigationLink(destination: OverviewView()) {
                             VStack{

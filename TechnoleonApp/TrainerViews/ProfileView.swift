@@ -35,36 +35,6 @@ struct ProfileView: View {
             }
             .frame(width: 375, height: 200)
             .background(Color(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 0.90)))
-            
-            HStack{
-                NavigationLink(destination: OverviewView()) {
-                    VStack{
-                        Text("Doelen")
-                            .foregroundColor(Color.white)
-                            .font(.custom("", size: 20))
-                    }
-                    .frame(width: 100, height: 20)
-                    .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                    .background(Color.gray)
-                }
-                .cornerRadius(10)
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                .disabled(true)
-                NavigationLink(destination: OverviewView()) {
-                    VStack{
-                        Text("Teams")
-                            .foregroundColor(Color.white)
-                            .font(.custom("", size: 20))
-                    }
-                    .frame(width: 100, height: 20)
-                    .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                    .background(Color(red: 0.38, green: 0.44, blue: 0.64))
-                }
-                .cornerRadius(10)
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                .disabled(true)
-            }
-            .padding()
                         
             VStack(alignment: .leading){
                 HStack{

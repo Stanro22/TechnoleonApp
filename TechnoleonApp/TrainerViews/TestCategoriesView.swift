@@ -13,61 +13,58 @@ struct TestCategoriesView: View {
                 Spacer()
                 Text("Kies een testcategorie")
                     .font(.custom("", size: 24))
-                    .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                                 
                 VStack{
                     Text("Fysiek")
-                        .padding()
                         .foregroundColor(Color.black)
                     NavigationLink(destination: TestListView(chosenCategorie: "Fysiek")){
                         Image("heart")
                             .resizable()
                             .renderingMode(.template)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 40, height: 40)
                             .foregroundColor(Color.white)
                     }
-                    .frame(width: 80, height: 80)
+                    .frame(width: 70, height: 70)
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                     .cornerRadius(90)
                 }
-                .frame(width: 150, height: 150)
+                .frame(width: 130, height: 130)
                 Spacer()
                 
                 HStack{
                     Spacer()
                     VStack{
                         Text("Cognitief")
-                            .padding()
                             .foregroundColor(Color.black)
                         NavigationLink(destination: TestListView(chosenCategorie: "Cognitief")){
                             Image("eye")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 50, height: 40)
+                                .frame(width: 40, height: 30)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 80, height: 80)
+                        .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
-                    .frame(width: 150, height: 150)
+                    .frame(width: 130, height: 130)
                     Spacer()
                     VStack{
                         Text("Mentaal")
-                            .padding()
                             .foregroundColor(Color.black)
                         NavigationLink(destination: TestListView(chosenCategorie: "Mentaal")){
                             Image("mental")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 80, height: 80)
+                        .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
-                    .frame(width: 150, height: 150)
+                    .frame(width: 130, height: 130)
                     Spacer()
                 }
                 Spacer()
@@ -76,39 +73,37 @@ struct TestCategoriesView: View {
                     Spacer()
                     VStack{
                         Text("Technisch")
-                            .padding()
                             .foregroundColor(Color.black)
                         NavigationLink(destination: TestListView(chosenCategorie: "Technisch")){
                             Image("ball")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 80, height: 80)
+                        .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
-                    .frame(width: 150, height: 150)
-                    
+                    .frame(width: 130, height: 130)
+                    .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
                     Spacer()
-                    
                     VStack{
                         Text("Wedstrijd")
-                            .padding()
                             .foregroundColor(Color.black)
                         NavigationLink(destination: TestListView(chosenCategorie: "Wedstrijd")){
                             Image("match")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(Color.white)
                         }
-                        .frame(width: 80, height: 80)
+                        .frame(width: 70, height: 70)
                         .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                         .cornerRadius(90)
                     }
-                    .frame(width: 150, height: 150)
+                    .frame(width: 130, height: 130)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
                     Spacer()
                 }
                 Spacer()
