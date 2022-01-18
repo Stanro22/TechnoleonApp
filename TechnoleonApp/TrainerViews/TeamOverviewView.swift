@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TeamOverviewView: View {
-    //@ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
     
     var body: some View {

@@ -63,7 +63,7 @@ struct KTK3HandEyeView: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3Balk1View().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3Balk1View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 1")
                                         .foregroundColor(Color.white)
@@ -75,7 +75,7 @@ struct KTK3HandEyeView: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3Balk2View().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3Balk2View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 2")
                                         .foregroundColor(Color.white)
@@ -87,7 +87,7 @@ struct KTK3HandEyeView: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3Balk3View().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3Balk3View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 3")
                                         .foregroundColor(Color.white)
@@ -99,7 +99,7 @@ struct KTK3HandEyeView: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3HandEyeView().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3HandEyeView().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Hand-oog")
                                         .foregroundColor(Color.white)
@@ -178,39 +178,7 @@ struct KTK3HandEyeView: View {
                 }
                 .padding(EdgeInsets(top: -15, leading: 0, bottom: 0, trailing: 0))
                 
-                Button(action: timerManager.reset){
-                    Text("Reset")
-                        .foregroundColor(Color.white)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                        .background(Color(red: 0.73, green: 0.05, blue: 0.05))
-                }
-                .cornerRadius(15)
-                
-                Text(secondsToMinutesAndSeconds(seconds: timerManager.secondsLeft))
-                    .font(.custom("", size: 30))
-                    .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                    .frame(width: 100, height: 100)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 90)
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    )
-                    .onAppear(){
-                        self.timerManager.setTimerLenght(seconds: 30)
-                    }
-                    
-                Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
-                    .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
-                    .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    .onTapGesture(perform: {
-                        if self.timerManager.timerMode == .initial {
-                            self.timerManager.setTimerLenght(seconds: 30)
-                        }
-                        self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
-                    })
+                TimerView(timerManager: timerManager, seconds: 30)
                 Spacer()
                 
                 Text("Alle oefeningen gedaan?")
@@ -269,8 +237,6 @@ struct KTK3HandEyeView: View {
     }
 }
     
-    
-
 struct KTK3HandEyeView_Previews: PreviewProvider {
     static var previews: some View {
         KTK3HandEyeView()

@@ -13,11 +13,8 @@ struct LoginView: View {
     @ObservedObject var loggedInUser = LoggedInUser.shared
     @State var email: String = ""
     @State var password: String = ""
-    
     @State var isRequestErrorViewPresented: Bool = false
-    
     @State var isRegisterRequestErrorViewPresented: Bool = false
-    
     var isFormValid: Bool {
         return email.count >= 3 && password.count >= 3
     }
@@ -57,16 +54,16 @@ struct LoginView: View {
                 .padding()
                 Spacer()
                 HStack{
-                        Button(action: login){
-                            Text("Inloggen")
-                                .font(.custom("", size: 22))
-                        }
-                        .foregroundColor(Color.white)
-                        .frame(width: 250, height: 20)
-                        .padding()
-                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
-                        .cornerRadius(10)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+                    Button(action: login){
+                        Text("Inloggen")
+                            .font(.custom("", size: 22))
+                    }
+                    .foregroundColor(Color.white)
+                    .frame(width: 250, height: 20)
+                    .padding()
+                    .background(Color(red: 0.90, green: 0.31, blue: 0.11))
+                    .cornerRadius(10)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                 }
                 Spacer()
             }

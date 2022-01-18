@@ -62,7 +62,7 @@ struct KTK3Balk1View: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3Balk1View().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3Balk1View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 1")
                                         .foregroundColor(Color.white)
@@ -75,7 +75,7 @@ struct KTK3Balk1View: View {
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         .overlay(Rectangle().frame(width: nil, height: 3, alignment: .bottom).foregroundColor(Color.white), alignment: .bottom)
                             
-                    NavigationLink(destination: KTK3Balk2View().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3Balk2View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 2")
                                         .foregroundColor(Color.white)
@@ -87,7 +87,7 @@ struct KTK3Balk1View: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3Balk3View().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3Balk3View().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Balk 3")
                                         .foregroundColor(Color.white)
@@ -99,7 +99,7 @@ struct KTK3Balk1View: View {
                         }
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
-                    NavigationLink(destination: KTK3HandEyeView().onAppear{saveFields()}) {
+                        NavigationLink(destination: KTK3HandEyeView().onAppear{saveFields()}) {
                                 VStack{
                                     Text("Hand-oog")
                                         .foregroundColor(Color.white)
@@ -266,8 +266,6 @@ struct KTK3Balk1View: View {
     }
 }
     
-    
-
 struct KTK3Balk1View_Previews: PreviewProvider {
     static var previews: some View {
         KTK3Balk1View()

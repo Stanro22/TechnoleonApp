@@ -114,8 +114,7 @@ struct TestCategoriesView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
-    }
-
+}
 
 struct TestCategoriesView_Previews: PreviewProvider {
     static var previews: some View {

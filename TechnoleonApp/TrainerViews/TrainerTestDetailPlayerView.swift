@@ -10,13 +10,13 @@ import SwiftUI
 struct TrainerTestDetailPlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    var test: Test
     @State var testForData: Test?
     @State var specificTest: SpecificTest?
     @State var dateSet: Bool = false
     @State var date: Date?
     @State var loadingTest: Bool = false
     @State var loadingData: Bool = false
+    var test: Test
     var playerName: String
     
     var body: some View {

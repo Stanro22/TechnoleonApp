@@ -26,7 +26,6 @@ class LSPTStrategy {
         value += "\(processValue(value: test.passOutsideArea!)) \n"
         value += "\(processValue(value: test.missedTargetArea!)) \n"
         value += "\(processValue(value: test.hitTenCMStrip!))"
-        //value += "\(processValue(value: test.finalTime!))"
         return value
     }
     

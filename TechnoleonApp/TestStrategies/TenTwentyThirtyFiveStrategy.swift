@@ -34,7 +34,6 @@ class TenTwentyThirtyFiveStrategy {
             return "Onbekend"
         }
         let time = value.dropFirst(3)
-        //let finalTime = time.dropLast(4)
         return "\(time)"
     }
 }

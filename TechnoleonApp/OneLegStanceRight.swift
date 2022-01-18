@@ -10,10 +10,10 @@ import SwiftUI
 struct OneLegStanceRight: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var oneLegStanceBody = OneLegStanceRequestBody.shared
     var isFormNotValid: Bool {
-        if timerManager.timeToSave.isEmpty {
+        if stopwatchManager.timeToSave.isEmpty {
             return true
         }
         return false
@@ -28,7 +28,6 @@ struct OneLegStanceRight: View {
                                 Text("Linkerbeen")
                                     .foregroundColor(Color.white)
                                     .font(.custom("", size: 14))
-
                             }
                             .frame(width: 157, height: 20)
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
@@ -57,44 +56,12 @@ struct OneLegStanceRight: View {
                     .font(.title2)
                 Text("Tijd om op te slaan")
                     .font(.custom("", size: 16))
-                Text(timerManager.timeToSave)
+                Text(stopwatchManager.timeToSave)
                     .font(.custom("", size: 16))
             }
             Spacer()
             
-            Button(action: timerManager.reset){
-                Text("Reset")
-                    .foregroundColor(Color.white)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
-            }
-            .cornerRadius(15)
-            
-            Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
-                .font(.custom("", size: 40))
-                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                .frame(width: 180, height: 180)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 90)
-                        .stroke(lineWidth: 3)
-                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                )
-                .onAppear(){
-                    self.timerManager.seconds = 0
-                }
-                
-            Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
-                .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                .onTapGesture(perform: {
-                    if self.timerManager.timerMode == .initial {
-                        self.timerManager.seconds = 0
-                    }
-                    self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
-                })
+            StopwatchView(stopwatchManager: stopwatchManager)
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setOneLegStanceTest()}) {
@@ -114,7 +81,7 @@ struct OneLegStanceRight: View {
     }
     
     func saveTime(){
-        oneLegStanceBody.seconds = "00:\(timerManager.timeToSave)"
+        oneLegStanceBody.seconds = "00:\(stopwatchManager.timeToSave)"
     }
     
     func setOneLegStanceTest(){

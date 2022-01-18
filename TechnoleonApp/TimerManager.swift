@@ -47,10 +47,8 @@ class TimerManager: ObservableObject {
     func formatTime() {
         let minutes : Int32 = Int32(secondsLeft/60)
         let secondsElapsed : Int32 = Int32(secondsLeft) - (minutes * 60)
-        //let milliseconds: Int32 = Int32(secondsLeft.truncatingRemainder(dividingBy: 1) * 100)
         let minutesString = (minutes < 10) ? "0\(minutes)" : "\(minutes)"
         let secondsString = (secondsElapsed < 10) ? "0\(secondsElapsed)" : "\(secondsElapsed)"
-        //let millisecondsString = (milliseconds < 10) ? "0\(milliseconds)" : "\(milliseconds)"
         timeToSave = minutesString + ":" + secondsString + "." + "000"
     }
 }

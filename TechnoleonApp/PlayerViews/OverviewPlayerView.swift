@@ -80,8 +80,6 @@ struct OverviewPlayerView: View {
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
         
-                
-            
             HStack{
                 NavigationLink(destination: LatestResultsView()) {
                     VStack{

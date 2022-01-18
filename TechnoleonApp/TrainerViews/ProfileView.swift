@@ -31,7 +31,6 @@ struct ProfileView: View {
                         .foregroundColor(Color.white)
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 15))
                 }
-                
             }
             .frame(width: 375, height: 200)
             .background(Color(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 0.90)))

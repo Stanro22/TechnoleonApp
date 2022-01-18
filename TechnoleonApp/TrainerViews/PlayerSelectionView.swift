@@ -41,21 +41,6 @@ struct PlayerSelectionView: View {
                                         }
                                 }
                             }
-                            else{
-                                ForEach(1...20, id: \.self) { num in
-                                    Text("\(num)")
-                                        .frame(maxWidth: .infinity)
-                                        .font(.title3)
-                                        .padding(.all)
-                                        .onTapGesture {
-                                            self.selectedPlayer = "Speler"
-                                            withAnimation{
-                                                self.isExpanded.toggle()
-                                            }
-                                        }
-                                }
-                            }
-                            
                         }
                     }.frame(width: 300, height: 150)
                 }
@@ -65,8 +50,7 @@ struct PlayerSelectionView: View {
                 .padding(.all)
                 .background(Color(red: 0.93, green: 0.93, blue: 0.93))
                 Spacer()
-                
-                
+                                
                 NavigationLink(destination: getTestView()) {
                     Text("Doe de test")
                         .foregroundColor(Color.white)

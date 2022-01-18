@@ -127,6 +127,8 @@
 		94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */; };
 		94C47D07279705280061E180 /* TrainerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C47D06279705270061E180 /* TrainerTabBar.swift */; };
 		94C47D0927970B6C0061E180 /* PlayerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C47D0827970B6C0061E180 /* PlayerTabBar.swift */; };
+		94C47D0B279716240061E180 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C47D0A279716240061E180 /* StopwatchView.swift */; };
+		94C47D0D27971E3F0061E180 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C47D0C27971E3F0061E180 /* TimerView.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
 		94E2D22027934D6400330C19 /* OverviewTestItemPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */; };
 		94E63DA8278B2C40009CAF5D /* SpecificTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DA7278B2C40009CAF5D /* SpecificTest.swift */; };
@@ -300,6 +302,8 @@
 		94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequest.swift; sourceTree = "<group>"; };
 		94C47D06279705270061E180 /* TrainerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabBar.swift; sourceTree = "<group>"; };
 		94C47D0827970B6C0061E180 /* PlayerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTabBar.swift; sourceTree = "<group>"; };
+		94C47D0A279716240061E180 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		94C47D0C27971E3F0061E180 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
 		94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItemPlayer.swift; sourceTree = "<group>"; };
 		94E63DA7278B2C40009CAF5D /* SpecificTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificTest.swift; sourceTree = "<group>"; };
@@ -397,24 +401,26 @@
 				94E63DA9278B3583009CAF5D /* TestBody */,
 				947C8B66277323350040CD62 /* TestViews */,
 				947C8B65277323240040CD62 /* TestInfo */,
-				73975782274942D900A17B6E /* NavigationBar.swift */,
-				73EB23382746944E008111AE /* ContentView.swift */,
 				73EB23362746944E008111AE /* TechnoleonAppApp.swift */,
+				73975782274942D900A17B6E /* NavigationBar.swift */,
 				73975784274946A200A17B6E /* ViewExtension.swift */,
-				734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */,
+				73EB23382746944E008111AE /* ContentView.swift */,
 				7338BAAA275D009400F42D2F /* LoginView.swift */,
+				734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */,
+				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
+				94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */,
 				947F3F49275E862E000C10CB /* LoggedInUser.swift */,
 				94E7F5E6275FB2E30025644B /* Team.swift */,
 				94E7F5E8275FBC3A0025644B /* Player.swift */,
+				9438A7AC2770BCA40023E40C /* Test.swift */,
+				94E63DA7278B2C40009CAF5D /* SpecificTest.swift */,
 				94071ED92761163200FFB8B4 /* TimerMode.swift */,
 				94071EDB2761177000FFB8B4 /* TimerManager.swift */,
-				9438A7AC2770BCA40023E40C /* Test.swift */,
+				94C47D0C27971E3F0061E180 /* TimerView.swift */,
 				94719BAF2773766D00F164C1 /* StopwatchManager.swift */,
-				94E63DA7278B2C40009CAF5D /* SpecificTest.swift */,
-				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
+				94C47D0A279716240061E180 /* StopwatchView.swift */,
 				9426D2BB278D8BAE009B6541 /* TestLists.swift */,
 				94A6F2B8278F211100DE845E /* TestDetailsFactory.swift */,
-				94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */,
 				940BDC5827942E100063415E /* TestManager.swift */,
 			);
 			path = TechnoleonApp;
@@ -859,6 +865,7 @@
 				942E3127278729CB00A96991 /* FSTRequest.swift in Sources */,
 				7363E07B274CE84600FD5BBD /* TeamSelectionView.swift in Sources */,
 				94E63DBD278B3A43009CAF5D /* FSTTest.swift in Sources */,
+				94C47D0D27971E3F0061E180 /* TimerView.swift in Sources */,
 				94071EE0276130C300FFB8B4 /* ProfilePlayerView.swift in Sources */,
 				94A6F2D8278F4C5800DE845E /* TestResponse.swift in Sources */,
 				94071EDE2761294900FFB8B4 /* OverviewPlayerView.swift in Sources */,
@@ -888,6 +895,7 @@
 				73EB23372746944E008111AE /* TechnoleonAppApp.swift in Sources */,
 				734CDD95275BB61D00697CEE /* LoginResponse.swift in Sources */,
 				947C8B94277331AB0040CD62 /* VetPercentageInfo.swift in Sources */,
+				94C47D0B279716240061E180 /* StopwatchView.swift in Sources */,
 				94A6F2D4278F341600DE845E /* TTestStrategy.swift in Sources */,
 				9438A7AD2770BCA40023E40C /* Test.swift in Sources */,
 				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,

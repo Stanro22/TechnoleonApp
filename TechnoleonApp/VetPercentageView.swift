@@ -90,8 +90,7 @@ struct VetPercentageView: View {
                         .overlay(Rectangle().frame(width: nil, height: 1, alignment: .bottom).padding(EdgeInsets(top: 10, leading: 0, bottom: -5, trailing: 0)).foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11)), alignment: .bottom)
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
-            }
-            
+            }            
             Spacer()
                                 
             NavigationLink(destination: EndOfTestView().onAppear{setFatPercentageTest()}) {

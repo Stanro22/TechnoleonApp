@@ -10,7 +10,7 @@ import SwiftUI
 struct Sprint10m20m35mView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
     @ObservedObject var loggedInUser = LoggedInUser.shared
-    @ObservedObject var timerManager = StopwatchManager()
+    @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var tenTwentyThirtyFiveSprintBody = TenTwentyThirtyFiveSprintRequestBody()
     @State private var isExpanded = false
     @State private var selectedDistance = "Afstand"
@@ -54,40 +54,12 @@ struct Sprint10m20m35mView: View {
             .padding(.all)
             .background(Color(red: 0.95, green: 0.95, blue: 0.95))
             Spacer()
-        
-            Button(action: timerManager.reset){
-                Text("Reset")
-                    .foregroundColor(Color.white)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .background(Color(red: 0.73, green: 0.05, blue: 0.05))
-            }
-            .cornerRadius(15)
             
-            Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.seconds)))
-                .font(.custom("", size: 40))
-                .foregroundColor(Color(red: 0.90, green: 0.31, blue: 0.11))
-                .frame(width: 180, height: 180)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 90)
-                        .stroke(lineWidth: 3)
-                        .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                )
-                .onAppear(){
-                    self.timerManager.seconds = 0
-                }
-                
-            Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
-                .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                .onTapGesture(perform: {
-                    if self.timerManager.timerMode == .initial {
-                        self.timerManager.seconds = 0
-                    }
-                    self.timerManager.timerMode == .running ? self.timerManager.pause() : self.timerManager.start()
-                })
+            Text("Tijd om op te slaan")
+                .font(.custom("", size: 16))
+            Text(stopwatchManager.timeToSave)
+                .font(.custom("", size: 16))
+            StopwatchView(stopwatchManager: stopwatchManager)
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setTenTwentyThirtyFiveTest()}) {
@@ -98,8 +70,9 @@ struct Sprint10m20m35mView: View {
                     .padding()
                     .background(Color(red: 0.90, green: 0.31, blue: 0.11))
             }.cornerRadius(10)
-                .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .disabled(isFormNotValid)
+            Spacer()
         }
         .navigationTitle("10, 20 ,35 meter sprint")
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
@@ -108,7 +81,7 @@ struct Sprint10m20m35mView: View {
     
     func setTenTwentyThirtyFiveTest(){
         setDistance()
-        tenTwentyThirtyFiveSprintBody.seconds = "00:\(timerManager.timeToSave)"
+        tenTwentyThirtyFiveSprintBody.seconds = "00:\(stopwatchManager.timeToSave)"
         technoleonAPI.setTenTwentyThirtyFiveSprintTestForPlayer(id: loggedInUser.playerId!, tenTwentyThirtyFiveSprintRequestBody: tenTwentyThirtyFiveSprintBody) { (result) in
             switch result {
             case .success(_):

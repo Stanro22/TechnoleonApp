@@ -27,7 +27,6 @@ struct TestListView: View {
                 if chosenCategorie == "Mentaal" {
                     MentalTestList()
                 }
-                //Spacer()
                 TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)
             }
             .navigationTitle(chosenCategorie)
