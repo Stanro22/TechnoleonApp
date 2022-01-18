@@ -125,6 +125,8 @@
 		94BB5DEE2785DE8900FB6B5A /* YoYoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */; };
 		94BB5DF02785E4C300FB6B5A /* LSPTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */; };
 		94BB5DF22785E59000FB6B5A /* LSPTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */; };
+		94C47D07279705280061E180 /* TrainerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C47D06279705270061E180 /* TrainerTabBar.swift */; };
+		94C47D0927970B6C0061E180 /* PlayerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C47D0827970B6C0061E180 /* PlayerTabBar.swift */; };
 		94D729D5277F543400D071A7 /* InsaitJoyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */; };
 		94E2D22027934D6400330C19 /* OverviewTestItemPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */; };
 		94E63DA8278B2C40009CAF5D /* SpecificTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DA7278B2C40009CAF5D /* SpecificTest.swift */; };
@@ -296,6 +298,8 @@
 		94BB5DED2785DE8900FB6B5A /* YoYoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoYoRequest.swift; sourceTree = "<group>"; };
 		94BB5DEF2785E4C300FB6B5A /* LSPTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequestBody.swift; sourceTree = "<group>"; };
 		94BB5DF12785E59000FB6B5A /* LSPTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPTRequest.swift; sourceTree = "<group>"; };
+		94C47D06279705270061E180 /* TrainerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabBar.swift; sourceTree = "<group>"; };
+		94C47D0827970B6C0061E180 /* PlayerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTabBar.swift; sourceTree = "<group>"; };
 		94D729D4277F543400D071A7 /* InsaitJoyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyPractice.swift; sourceTree = "<group>"; };
 		94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTestItemPlayer.swift; sourceTree = "<group>"; };
 		94E63DA7278B2C40009CAF5D /* SpecificTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificTest.swift; sourceTree = "<group>"; };
@@ -494,6 +498,7 @@
 				9426D2BF278E03BF009B6541 /* TestDetailPlayerView.swift */,
 				733B8B02275A9AE100E68F9E /* LatestResultsView.swift */,
 				944808492795EDF900EF42AA /* TestCategoriesPlayerView.swift */,
+				94C47D0827970B6C0061E180 /* PlayerTabBar.swift */,
 			);
 			path = PlayerViews;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				733B8B04275A9B3C00E68F9E /* TeamOverviewView.swift */,
 				9426D2BD278DE7D0009B6541 /* TestDetailView.swift */,
 				94A6F2B2278ECD1C00DE845E /* TrainerTestDetailPlayerView.swift */,
+				94C47D06279705270061E180 /* TrainerTabBar.swift */,
 			);
 			path = TrainerViews;
 			sourceTree = "<group>";
@@ -819,6 +825,7 @@
 				947C8B8427732A940040CD62 /* YoYoView.swift in Sources */,
 				9426D2C0278E03BF009B6541 /* TestDetailPlayerView.swift in Sources */,
 				94E7F5E7275FB2E30025644B /* Team.swift in Sources */,
+				94C47D0927970B6C0061E180 /* PlayerTabBar.swift in Sources */,
 				947C8BA6277332DA0040CD62 /* InsaitJoyInfo.swift in Sources */,
 				947C8B7E27732A580040CD62 /* Sprint10m20m35mView.swift in Sources */,
 				947C8B71277328F90040CD62 /* VetPercentageView.swift in Sources */,
@@ -926,6 +933,7 @@
 				9426D2BC278D8BAE009B6541 /* TestLists.swift in Sources */,
 				73975783274942D900A17B6E /* NavigationBar.swift in Sources */,
 				9426D2BA278D8895009B6541 /* OverviewTestItem.swift in Sources */,
+				94C47D07279705280061E180 /* TrainerTabBar.swift in Sources */,
 				734C9A0F274E404B0077BFEB /* TestListView.swift in Sources */,
 				94E7F5E9275FBC3A0025644B /* Player.swift in Sources */,
 				94FA16CB2784915300938748 /* TTestRequest.swift in Sources */,

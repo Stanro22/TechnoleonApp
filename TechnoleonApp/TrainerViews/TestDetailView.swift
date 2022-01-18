@@ -35,74 +35,35 @@ struct TestDetailView: View {
                 .disabled(true)
             }
             .frame(width: 300, height: 20)
+            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
             Spacer()
             
             VStack{
-                ForEach(overviewTestItem.players, id: \.self) { player in
-                    NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests.first(where: {$0.playerId == player.playerId})!, playerName: player.playerName)) {
-                        VStack{
-                            Text("\(player.playerName)")
-                                .foregroundColor(Color.black)
-                                .font(.custom("", size: 18))
+                ScrollView{
+                    ForEach(overviewTestItem.players, id: \.self) { player in
+                        NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests.first(where: {$0.playerId == player.playerId})!, playerName: player.playerName)) {
+                            VStack{
+                                Text("\(player.playerName)")
+                                    .foregroundColor(Color.black)
+                                    .font(.custom("", size: 18))
+                            }
+                            .frame(width: 200, height: 20)
+                            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+                            .background(Color(red: 0.47, green: 1.00, blue: 0.62))
+                            .cornerRadius(10)
                         }
-                        .frame(width: 200, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.47, green: 1.00, blue: 0.62))
-                        .cornerRadius(10)
+                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
                     }
-                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
                 }
                 Spacer()
             }
-            .frame(width: 300, height: 480)
+            .frame(width: 300, height: 450)
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             Spacer()
             
-            HStack(alignment: .bottom){
-                    NavigationLink(destination: OverviewView()) {
-                        VStack{
-                            Image(systemName: "binoculars.fill")
-                                .foregroundColor(Color.white)
-                            Text("Overzicht")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: TestCategoriesView()) {
-                        VStack{
-                            Image("ball")
-                                .resizable()
-                                .renderingMode(.template)
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(Color.white)
-                            Text("Testen")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: ProfileView()) {
-                        VStack{
-                            Image(systemName: "person.circle.fill")
-                                .foregroundColor(Color.white)
-                            Text("Profiel")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-            }
+            TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)
         }
         .navigationTitle("\(overviewTestItem.name)")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

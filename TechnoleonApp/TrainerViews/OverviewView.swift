@@ -127,56 +127,13 @@ struct OverviewView: View {
                 }
             }
             .frame(width: 300, height: 350)
-            .padding()
+            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
             .foregroundColor(Color.white)
             .background(Color(red: 0.62, green: 0.65, blue: 0.90))
             .cornerRadius(20)
             Spacer()
             
-            HStack(alignment: .bottom){
-                Button(action: {}) {
-                        VStack{
-                            Image(systemName: "binoculars.fill")
-                                .foregroundColor(Color.white)
-                            Text("Overzicht")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: TestCategoriesView()) {
-                        VStack{
-                            Image("ball")
-                                .resizable()
-                                .renderingMode(.template)
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(Color.white)
-                            Text("Testen")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: ProfileView()) {
-                        VStack{
-                            Image(systemName: "person.circle.fill")
-                                .foregroundColor(Color.white)
-                            Text("Profiel")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-            }
+            TrainerTabBar(isOverviewActive: true, isTestsActive: false, isProfileActive: false)
         }
         .navigationTitle("Overzicht")
         .navigationBarBackButtonHidden(true)

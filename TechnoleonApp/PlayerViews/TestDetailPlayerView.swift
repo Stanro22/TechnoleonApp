@@ -97,51 +97,7 @@ struct TestDetailPlayerView: View {
             .cornerRadius(20)
             Spacer()
             
-            HStack(alignment: .bottom){
-                    NavigationLink(destination: OverviewPlayerView()) {
-                        VStack{
-                            Image(systemName: "binoculars.fill")
-                                .foregroundColor(Color.white)
-                            Text("Overzicht")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.18, green: 0.25, blue: 0.44))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                    NavigationLink(destination: TestCategoriesPlayerView()) {
-                        VStack{
-                            Image("ball")
-                                .resizable()
-                                .renderingMode(.template)
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(Color.white)
-                            Text("Testen")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
-                
-                    NavigationLink(destination: ProfilePlayerView()) {
-                        VStack{
-                            Image(systemName: "person.circle.fill")
-                                .foregroundColor(Color.white)
-                            Text("Profiel")
-                                .foregroundColor(Color.white)
-                                .font(.custom("", size: 14))
-                        }
-                        .frame(width: 100, height: 20)
-                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-                        .background(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-            }
+            PlayerTabBar(isOverViewActive: false, isTestsActive: false, isProfileActive: false)
         }
         .navigationTitle("\(test.getTestName(test: test))")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
