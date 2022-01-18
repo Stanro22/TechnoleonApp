@@ -27,7 +27,7 @@ struct TrainerTabBar: View {
                     .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                     .background(isOverviewActive ? Color(red: 0.18, green: 0.25, blue: 0.44) : Color(red: 0.15, green: 0.21, blue: 0.40))
                 }
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 5, trailing: -10))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: -10))
                 .disabled(isOverviewActive)
             
                 NavigationLink(destination: TestCategoriesView()) {

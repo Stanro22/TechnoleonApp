@@ -27,7 +27,8 @@ struct TestListView: View {
                 if chosenCategorie == "Mentaal" {
                     MentalTestList()
                 }
-                Spacer()
+                //Spacer()
+                TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)
             }
             .navigationTitle(chosenCategorie)
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
