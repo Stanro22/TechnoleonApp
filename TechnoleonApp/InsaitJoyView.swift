@@ -119,7 +119,7 @@ struct InsaitJoyView: View {
                     .padding()
                     .background(Color(red: 0.38, green: 0.44, blue: 0.64))
             }.cornerRadius(10)
-                .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
+                .padding(EdgeInsets(top: 180, leading: 0, bottom: 5, trailing: 0))
                 .disabled(isFormNotValid)
         }
         .navigationTitle("Insait Joy instellingen")

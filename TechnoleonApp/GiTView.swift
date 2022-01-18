@@ -126,7 +126,7 @@ struct GiTView: View {
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
                         .padding()
-                        .background(Color(red: 0.38, green: 0.44, blue: 0.64))
+                        .background(Color(red: 0.90, green: 0.31, blue: 0.11))
                 }
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))

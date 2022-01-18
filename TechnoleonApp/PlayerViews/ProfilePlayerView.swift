@@ -74,7 +74,10 @@ struct ProfilePlayerView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 
                 HStack{
-                    Image(systemName: "person.fill")
+                    Image("gender")
+                        .resizable()
+                        .renderingMode(.template)
+                        .frame(width: 20, height: 20)
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     Text("Gender")
                         .font(.custom("", size: 14))
