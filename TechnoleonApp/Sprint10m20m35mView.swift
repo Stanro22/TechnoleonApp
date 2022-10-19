@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Sprint10m20m35mView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var tenTwentyThirtyFiveSprintBody = TenTwentyThirtyFiveSprintRequestBody()
     @State private var isExpanded = false
@@ -82,7 +82,7 @@ struct Sprint10m20m35mView: View {
     func setTenTwentyThirtyFiveTest(){
         setDistance()
         tenTwentyThirtyFiveSprintBody.seconds = "00:\(stopwatchManager.timeToSave)"
-        technoleonAPI.setTenTwentyThirtyFiveSprintTestForPlayer(id: loggedInUser.playerId!, tenTwentyThirtyFiveSprintRequestBody: tenTwentyThirtyFiveSprintBody) { (result) in
+        technoleonAPI.setTenTwentyThirtyFiveSprintTestForPlayer(id: loggedInUser.player_id!, tenTwentyThirtyFiveSprintRequestBody: tenTwentyThirtyFiveSprintBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

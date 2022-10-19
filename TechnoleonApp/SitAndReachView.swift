@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SitAndReachView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var sitAndReachBody = SitAndReachRequestBody()
     @State var attempt1: String = ""
     @State var attempt2: String = ""
@@ -95,7 +95,7 @@ struct SitAndReachView: View {
     
     func setSitAndReachTest(){
         setSitAndReachBody()
-        technoleonAPI.setSitAndReachTestForPlayer(id: loggedInUser.playerId!, SitAndReachRequestBody: sitAndReachBody) { (result) in
+        technoleonAPI.setSitAndReachTestForPlayer(id: loggedInUser.player_id!, SitAndReachRequestBody: sitAndReachBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

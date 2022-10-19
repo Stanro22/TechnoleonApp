@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfilePlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @State var dateSet: Bool = false
     @State var date: Date?
     
@@ -101,8 +101,8 @@ struct ProfilePlayerView: View {
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     Spacer()
-                    if loggedInUser.weightInKg != nil {
-                        Text("\(loggedInUser.weightInKg!)")
+                    if loggedInUser.weight_in_kg != nil {
+                        Text("\(loggedInUser.weight_in_kg!)")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -119,8 +119,8 @@ struct ProfilePlayerView: View {
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
                     Spacer()
-                    if loggedInUser.lengthInCm != nil {
-                        Text("\(loggedInUser.lengthInCm!)")
+                    if loggedInUser.height_in_cm != nil {
+                        Text("\(loggedInUser.height_in_cm!)")
                             .font(.system(size: 14)).italic()
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 90, bottom: 0, trailing: 0))
@@ -158,11 +158,11 @@ struct ProfilePlayerView: View {
     }
     
     func setDate(){
-        if loggedInUser.birthDate != nil{
+        if loggedInUser.date_of_birth != nil{
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US_POSIX")
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-            let dateFormat = dateFormatter.date(from: loggedInUser.birthDate!)!
+            let dateFormat = dateFormatter.date(from: loggedInUser.date_of_birth!)!
             let calendar = Calendar.current
             let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: dateFormat)
             let finalDate = calendar.date(from: components)

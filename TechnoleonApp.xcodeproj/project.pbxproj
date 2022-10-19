@@ -55,7 +55,7 @@
 		942E312927872A4E00A96991 /* FSTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312827872A4E00A96991 /* FSTRequestBody.swift */; };
 		942E312B27873B5900A96991 /* FatPercentageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312A27873B5900A96991 /* FatPercentageRequest.swift */; };
 		942E312D27873BEE00A96991 /* FatPercentageRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E312C27873BEE00A96991 /* FatPercentageRequestBody.swift */; };
-		943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943758802771D36C001D3222 /* UserPlayerResponse.swift */; };
+		943758812771D36C001D3222 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943758802771D36C001D3222 /* UserResponse.swift */; };
 		9438A7AD2770BCA40023E40C /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7AC2770BCA40023E40C /* Test.swift */; };
 		9438A7AF2770CD190023E40C /* MatchTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7AE2770CD190023E40C /* MatchTestList.swift */; };
 		9438A7B12770CF180023E40C /* TechnicalTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A7B02770CF180023E40C /* TechnicalTestList.swift */; };
@@ -96,7 +96,7 @@
 		947C8BA8277332F60040CD62 /* GiTInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BA7277332F60040CD62 /* GiTInfo.swift */; };
 		947C8BAA277333180040CD62 /* EyeCentreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BA9277333180040CD62 /* EyeCentreInfo.swift */; };
 		947C8BAC277361F70040CD62 /* TestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8BAB277361F70040CD62 /* TestInfoView.swift */; };
-		947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* LoggedInUser.swift */; };
+		947F3F4A275E862E000C10CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F49275E862E000C10CB /* User.swift */; };
 		94A4186A278343F0009B8C41 /* PHVRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A41869278343F0009B8C41 /* PHVRequestBody.swift */; };
 		94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186B27834499009B8C41 /* PHVRequest.swift */; };
 		94A4186E27835448009B8C41 /* SitAndReachRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4186D27835448009B8C41 /* SitAndReachRequest.swift */; };
@@ -145,7 +145,7 @@
 		94E63DBF278B3A6F009CAF5D /* FatPercentageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DBE278B3A6F009CAF5D /* FatPercentageTest.swift */; };
 		94E63DC1278B3AB2009CAF5D /* InsaitJoyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DC0278B3AB2009CAF5D /* InsaitJoyTest.swift */; };
 		94E63DC3278B3AF1009CAF5D /* GiTTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63DC2278B3AF1009CAF5D /* GiTTest.swift */; };
-		94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserResponse.swift */; };
+		94E7F5E3275F5E770025644B /* UserIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E2275F5E770025644B /* UserIdResponse.swift */; };
 		94E7F5E5275FA27E0025644B /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E4275FA27E0025644B /* TeamResponse.swift */; };
 		94E7F5E7275FB2E30025644B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E6275FB2E30025644B /* Team.swift */; };
 		94E7F5E9275FBC3A0025644B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7F5E8275FBC3A0025644B /* Player.swift */; };
@@ -230,7 +230,7 @@
 		942E312827872A4E00A96991 /* FSTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTRequestBody.swift; sourceTree = "<group>"; };
 		942E312A27873B5900A96991 /* FatPercentageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageRequest.swift; sourceTree = "<group>"; };
 		942E312C27873BEE00A96991 /* FatPercentageRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageRequestBody.swift; sourceTree = "<group>"; };
-		943758802771D36C001D3222 /* UserPlayerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlayerResponse.swift; sourceTree = "<group>"; };
+		943758802771D36C001D3222 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		9438A7AC2770BCA40023E40C /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		9438A7AE2770CD190023E40C /* MatchTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTestList.swift; sourceTree = "<group>"; };
 		9438A7B02770CF180023E40C /* TechnicalTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalTestList.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 		947C8BA7277332F60040CD62 /* GiTInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTInfo.swift; sourceTree = "<group>"; };
 		947C8BA9277333180040CD62 /* EyeCentreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeCentreInfo.swift; sourceTree = "<group>"; };
 		947C8BAB277361F70040CD62 /* TestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInfoView.swift; sourceTree = "<group>"; };
-		947F3F49275E862E000C10CB /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
+		947F3F49275E862E000C10CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94A41869278343F0009B8C41 /* PHVRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVRequestBody.swift; sourceTree = "<group>"; };
 		94A4186B27834499009B8C41 /* PHVRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHVRequest.swift; sourceTree = "<group>"; };
 		94A4186D27835448009B8C41 /* SitAndReachRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAndReachRequest.swift; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 		94E63DBE278B3A6F009CAF5D /* FatPercentageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatPercentageTest.swift; sourceTree = "<group>"; };
 		94E63DC0278B3AB2009CAF5D /* InsaitJoyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsaitJoyTest.swift; sourceTree = "<group>"; };
 		94E63DC2278B3AF1009CAF5D /* GiTTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTTest.swift; sourceTree = "<group>"; };
-		94E7F5E2275F5E770025644B /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		94E7F5E2275F5E770025644B /* UserIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdResponse.swift; sourceTree = "<group>"; };
 		94E7F5E4275FA27E0025644B /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
 		94E7F5E6275FB2E30025644B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		94E7F5E8275FBC3A0025644B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -409,7 +409,7 @@
 				734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */,
 				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
 				94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */,
-				947F3F49275E862E000C10CB /* LoggedInUser.swift */,
+				947F3F49275E862E000C10CB /* User.swift */,
 				94E7F5E6275FB2E30025644B /* Team.swift */,
 				94E7F5E8275FBC3A0025644B /* Player.swift */,
 				9438A7AC2770BCA40023E40C /* Test.swift */,
@@ -558,10 +558,10 @@
 			isa = PBXGroup;
 			children = (
 				734CDD94275BB61D00697CEE /* LoginResponse.swift */,
-				94E7F5E2275F5E770025644B /* UserResponse.swift */,
+				94E7F5E2275F5E770025644B /* UserIdResponse.swift */,
 				94E7F5E4275FA27E0025644B /* TeamResponse.swift */,
 				94071ED7276109F300FFB8B4 /* setTestReponse.swift */,
-				943758802771D36C001D3222 /* UserPlayerResponse.swift */,
+				943758802771D36C001D3222 /* UserResponse.swift */,
 				94A6F2D7278F4C5800DE845E /* TestResponse.swift */,
 			);
 			path = Responses;
@@ -848,7 +848,7 @@
 				734C9A1B274E8E540077BFEB /* KTK3Balk3View.swift in Sources */,
 				94BB5DEE2785DE8900FB6B5A /* YoYoRequest.swift in Sources */,
 				94E63DC3278B3AF1009CAF5D /* GiTTest.swift in Sources */,
-				947F3F4A275E862E000C10CB /* LoggedInUser.swift in Sources */,
+				947F3F4A275E862E000C10CB /* User.swift in Sources */,
 				94FD93C42791F86400A4819C /* GiTRequest.swift in Sources */,
 				9438A7AF2770CD190023E40C /* MatchTestList.swift in Sources */,
 				947C8B9C277332670040CD62 /* Sprint10x5Info.swift in Sources */,
@@ -898,14 +898,14 @@
 				94C47D0B279716240061E180 /* StopwatchView.swift in Sources */,
 				94A6F2D4278F341600DE845E /* TTestStrategy.swift in Sources */,
 				9438A7AD2770BCA40023E40C /* Test.swift in Sources */,
-				94E7F5E3275F5E770025644B /* UserResponse.swift in Sources */,
+				94E7F5E3275F5E770025644B /* UserIdResponse.swift in Sources */,
 				94FA16D32784C9E100938748 /* OneLegStanceRequestBody.swift in Sources */,
 				734CDD8E275BA30900697CEE /* TechnoleonAPI.swift in Sources */,
 				94A6F2CA278F335200DE845E /* LSPTStrategy.swift in Sources */,
 				94A4187027835507009B8C41 /* SitAndReachRequestBody.swift in Sources */,
 				73E5B608274F951600EBFE9E /* EndOfTestView.swift in Sources */,
 				7391B8F7274BECB80003BDDC /* TestCategoriesView.swift in Sources */,
-				943758812771D36C001D3222 /* UserPlayerResponse.swift in Sources */,
+				943758812771D36C001D3222 /* UserResponse.swift in Sources */,
 				94A4186C27834499009B8C41 /* PHVRequest.swift in Sources */,
 				94E63DB1278B37B0009CAF5D /* TTestTest.swift in Sources */,
 				94A6F2B5278EE75200DE845E /* TenTwentyThirtyFiveSprintTest.swift in Sources */,

@@ -10,11 +10,13 @@ import JWTDecode
 
 struct LoginView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @State var email: String = ""
     @State var password: String = ""
     @State var isRequestErrorViewPresented: Bool = false
     @State var isRegisterRequestErrorViewPresented: Bool = false
+    
+    //Validation
     var isFormValid: Bool {
         return email.count >= 3 && password.count >= 3
     }
@@ -22,21 +24,24 @@ struct LoginView: View {
     var body: some View {
         NavigationView{
             VStack{
+                Spacer()
+                //Display logo's
                 HStack{
                     Spacer()
-                    Image("logo1")
+                    Image("logo_forwardfootball")
                         .resizable()
-                        .frame(width: 120, height: 120)
+                        .frame(width: 150, height: 150)
                     Spacer()
-                    Image("logo2")
+                    Image("logo_technoleon")
                         .resizable()
-                        .frame(width: 120, height: 120)
+                        .frame(width: 150, height: 150)
                     Spacer()
                 }
                 .padding()
                 Spacer()
+                
                 HStack{
-                    TextField("Email adres", text: $email)
+                    TextField("E-mail", text: $email)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 30)
@@ -53,6 +58,7 @@ struct LoginView: View {
                 }
                 .padding()
                 Spacer()
+                //Button with login action
                 HStack{
                     Button(action: login){
                         Text("Inloggen")
@@ -68,23 +74,79 @@ struct LoginView: View {
                 Spacer()
             }
         }
+        //Page title and color
         .navigationTitle("Inloggen")
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     
+    //Login with filled in email and password
     func login(){
-        technoleonAPI.login(email: email, password: password) { (result) in
+        //make api call: login
+        technoleonAPI.login(email: email, password: password, client_id: "mobile-app") { (result) in
             switch result {
             case .success(let response):
-                technoleonAPI.accesToken = response.accesToken
-                getLoggedInUser(token: response.accesToken)
+                technoleonAPI.accesToken = response.accesToken //set accestoken
+                loggedInUser.email = email //set email from logged in user
+                getUserIdByEmail(accesToken: response.accesToken) //call to function getUserIdByEmail
             case .failure(_):
                 self.isRequestErrorViewPresented = true
             }
         }
     }
     
-    func getLoggedInUser(token: String){
+    //get the user_id by filled in email
+    func getUserIdByEmail(accesToken: String){
+        //make api call: getUserIdByEmail
+        technoleonAPI.getUserIdByEmail(email: email) { (result) in
+            switch result {
+            case .success(let response):
+                loggedInUser.user_id = response.user_id //set user_id from logged in user
+                getUserByUserId(accestoken: accesToken, user_id: response.user_id) //call to function getUserByUserId
+            case .failure(let error):
+                //set error messages
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
+    }
+    
+    //get all user info with the user_id
+    func getUserByUserId(accestoken: String, user_id: String){
+        //make api call: getUserByUserId
+        technoleonAPI.getUserByUserId(user_id: user_id) { (result) in
+            switch result {
+            case .success(let response):
+                //set logged in user info
+                loggedInUser.type = response.type
+                loggedInUser.name = response.name
+                loggedInUser.gender = response.gender
+                loggedInUser.date_of_birth = response.date_of_birth
+                loggedInUser.weight_in_kg = response.weight_in_kg
+                loggedInUser.height_in_cm = response.height_in_cm
+                loggedInUser.player_id = response.player_id
+                loggedInUser.coach_clubs = response.coach_clubs
+                loggedInUser.teams = response.teams
+            case .failure(let error):
+                //set error messages
+                switch error{
+                case .urlError(let urlError):
+                    print("URL error: \(String(describing: urlError))")
+                case .decodingError(let decodingError):
+                    print("decode error: \(String(describing: decodingError))")
+                case .genericError(let error):
+                    print("error: \(String(describing: error))")
+                }
+            }
+        }
+    }
+        
+    /*func getLoggedInUser(token: String){
         if technoleonAPI.accesToken != nil {
             let jwt = try? decode(jwt: token)
             let userId = jwt?.claim(name: "id")
@@ -134,7 +196,7 @@ struct LoginView: View {
                 }
             }
         }
-    }
+    }*/
 }
 
 

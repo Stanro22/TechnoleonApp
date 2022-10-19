@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PHVView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var phvBody = PHVRequestBody()
     @State var length: String = ""
     @State var sitHeight: String = ""
@@ -96,7 +96,7 @@ struct PHVView: View {
     
     func setPHVTest(){
         setPHVBody()
-        technoleonAPI.setPHVTestForPlayer(id: loggedInUser.playerId!, PHVRequestBody: phvBody) { (result) in
+        technoleonAPI.setPHVTestForPlayer(id: loggedInUser.player_id!, PHVRequestBody: phvBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

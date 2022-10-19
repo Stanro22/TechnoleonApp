@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PlayerShuttleRunView: View {
     var index: Int
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @State var niveau = ""
     @State var didInjuryTapped: Bool = false
     @State var buttonColor: Color = Color(red: 0.62, green: 0.65, blue: 0.90)
     
     var body: some View {
         HStack{
-            Text(loggedInUser.players![index].playerName)
+            Text(loggedInUser.teams![0].players![index].player_name!)
                 .font(.custom("", size: 22))
                 .frame(width: 150, height: 80, alignment: .center)
             Button(action: {
@@ -61,7 +61,7 @@ struct PlayerShuttleRunView: View {
                 .background(Color(red: 0.90, green: 0.90, blue: 0.90))
                 .cornerRadius(10)
                 .onChange(of: niveau){ newValue in
-                    loggedInUser.players![index].playerShuttleRunScore = Int(niveau)
+                    loggedInUser.teams![0].players![index].playerShuttleRunScore = Int(niveau)
                 }
                 .disabled(didInjuryTapped)
         }

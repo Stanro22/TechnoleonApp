@@ -10,13 +10,22 @@ import Combine
 import UIKit
 import KeychainAccess
 
+enum RequestError: Error {
+    case urlError(URLError)
+    case decodingError(DecodingError)
+    case genericError(Error)
+}
+
 final class TechnoleonAPI : ObservableObject{
     static let shared = TechnoleonAPI()
     private var cancellable: Set<AnyCancellable> = .init()
+    private var keycloak_base_url = ""
+    private var dashboard_base_url = ""
 
     private let keychain = Keychain()
     private var accesTokenKeychainKey = "accesToken"
     
+    //Get and Set accestoken with keychain
     var accesToken: String? {
         get{
             try? keychain.get(accesTokenKeychainKey)
@@ -32,19 +41,57 @@ final class TechnoleonAPI : ObservableObject{
         }
     }
     
+    //Set boolean isAuthenticated
     @Published var isAuthenticated: Bool = false
     
     private init() {
         isAuthenticated = accesToken != nil
     }
+
+    //Execute request function
+    func execute<Response: Decodable>(
+        request: URLRequest,
+        completion: @escaping (Result<Response, RequestError>
+    ) -> Void) {
+        //setting url session
+        URLSession.shared.dataTaskPublisher(for: request)
+            .map { $0.data }
+            .decode(type: Response.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { (result) in
+                switch result {
+                //if finished -> stop/break out of function
+                case .finished:
+                    break
+                //if failure -> define error
+                case .failure(let error):
+                    switch error {
+                    case let urlError as URLError:
+                        completion(.failure(.urlError(urlError)))
+                    case let decodingError as DecodingError:
+                        completion(.failure(.decodingError(decodingError)))
+                    default:
+                        completion(.failure(.genericError(error)))
+                    }
+                }
+            }, receiveValue: { (response) in
+                completion(.success(response))
+            }).store(in: &cancellable)
+        }
     
-    func login(email: String, password: String, completion: @escaping (Result<LoginResponse, RequestError>) -> Void){
-        let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Authentication/Login")!
+    //URL request: Login with filled in email and password -> login response
+    func login(email: String, password: String, client_id: String, completion: @escaping (Result<LoginResponse, RequestError>) -> Void){
+        let url = URL(string: "\(keycloak_base_url)auth/realms/DEV/protocol/openid-connect/token")!
         var urlRequest = URLRequest(url: url)
+        
+        //Set values
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = "POST"
         
+        //Assign parameters
         let parameters = LoginRequest(
+            grant_type: "password",
+            client_id: client_id,
             email: email,
             password: password
         )
@@ -52,8 +99,42 @@ final class TechnoleonAPI : ObservableObject{
         let encoder = JSONEncoder()
         guard let body = try? encoder.encode(parameters) else {return}
         urlRequest.httpBody = body
+        
+        //Execute request
         execute(request: urlRequest, completion: completion)
     }
+    
+    //URL request: get user_id by email -> userid response
+    func getUserIdByEmail(email: String, completion: @escaping (Result<UserIdResponse, RequestError>) -> Void){
+        let url = URL(string: "\(dashboard_base_url)getUserIdByEmail/\(email)")!
+        var urlRequest = URLRequest(url: url)
+        
+        //Set values
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue(accesToken, forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "GET"
+        
+        //Execute request
+        execute(request: urlRequest, completion: completion)
+    }
+    
+    //URL request: get user by user_id -> user response
+    func getUserByUserId(user_id: String, completion: @escaping(Result<UserResponse,RequestError>) -> Void){
+        let url = URL(string: "\(dashboard_base_url)getUserByUserId/\(user_id)")!
+        var urlRequest = URLRequest(url: url)
+        
+        //Set values
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue(accesToken, forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "GET"
+        
+        //Execute request
+        execute(request: urlRequest, completion: completion)
+    }
+    
+    
+    
+    //---- OLD INHOLLAND PROJECT----
     
     func getUserById(id: String, completion: @escaping (Result<UserResponse, RequestError>) -> Void){
         let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Users/\(id)")!
@@ -64,7 +145,7 @@ final class TechnoleonAPI : ObservableObject{
         execute(request: urlRequest, completion: completion)       
     }
     
-    func getUserPlayerById(id: String, completion: @escaping (Result<UserPlayerResponse, RequestError>) -> Void){
+    func getUserPlayerById(id: String, completion: @escaping (Result<UserResponse, RequestError>) -> Void){
         let url = URL(string: "https://forwardfootballwebapp.azurewebsites.net/v1/Users/\(id)")!
         var urlRequest = URLRequest(url: url)
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -370,37 +451,4 @@ final class TechnoleonAPI : ObservableObject{
         urlRequest.httpBody = body
         execute(request: urlRequest, completion: completion)
     }
-    
-    func execute<Response: Decodable>(
-        request: URLRequest,
-        completion: @escaping (Result<Response, RequestError>
-    ) -> Void) {
-        URLSession.shared.dataTaskPublisher(for: request)
-            .map { $0.data }
-            .decode(type: Response.self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { (result) in
-                switch result {
-                case .finished:
-                    break
-                case .failure(let error):
-                    switch error {
-                    case let urlError as URLError:
-                        completion(.failure(.urlError(urlError)))
-                    case let decodingError as DecodingError:
-                        completion(.failure(.decodingError(decodingError)))
-                    default:
-                        completion(.failure(.genericError(error)))
-                    }
-                }
-            }, receiveValue: { (response) in
-                completion(.success(response))
-            }).store(in: &cancellable)
-        }
-}
-
-enum RequestError: Error {
-    case urlError(URLError)
-    case decodingError(DecodingError)
-    case genericError(Error)
 }

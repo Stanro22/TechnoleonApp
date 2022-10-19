@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InsaitJoyPractice: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var insaitJoyBody = InsaitJoyRequestBody.shared
     @State var count: String = ""
     @State var fluency: String = ""
@@ -72,7 +72,7 @@ struct InsaitJoyPractice: View {
     
     func setInsaitJoyTest(){
         setInsaitJoyFields()
-        technoleonAPI.setInsaitJoyTestForPlayer(id: loggedInUser.playerId!, insaitJoyRequestBody: insaitJoyBody) { (result) in
+        technoleonAPI.setInsaitJoyTestForPlayer(id: loggedInUser.player_id!, insaitJoyRequestBody: insaitJoyBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     
     var body: some View {
         if technoleonAPI.accesToken == nil{
@@ -20,14 +20,14 @@ struct ContentView: View {
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
         else {
-            if loggedInUser.userRole == "coach" {
+            if loggedInUser.type == "coach" {
                 NavigationView{
                     OverviewView()
                 }
                 .navigationTitle("Overview")
                 .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
             }
-            else if loggedInUser.userRole == "player" {
+            else if loggedInUser.type == "player" {
                 NavigationView{
                     OverviewPlayerView()
                 }

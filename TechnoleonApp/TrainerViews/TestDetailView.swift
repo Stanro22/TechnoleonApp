@@ -41,9 +41,9 @@ struct TestDetailView: View {
             VStack{
                 ScrollView{
                     ForEach(overviewTestItem.players, id: \.self) { player in
-                        NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests.first(where: {$0.playerId == player.playerId})!, playerName: player.playerName)) {
+                        NavigationLink(destination: TrainerTestDetailPlayerView(test: overviewTestItem.tests.first(where: {$0.playerId == player.player_id})!, playerName: player.player_name!)) {
                             VStack{
-                                Text("\(player.playerName)")
+                                Text("\(player.player_name!)")
                                     .foregroundColor(Color.black)
                                     .font(.custom("", size: 18))
                             }

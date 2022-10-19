@@ -7,7 +7,14 @@
 
 import Foundation
 
+/*struct LoginRequest: Encodable{
+    let email: String?
+    let password: String?
+}*/
+
 struct LoginRequest: Encodable{
+    let grant_type: String?
+    let client_id: String?
     let email: String?
     let password: String?
 }

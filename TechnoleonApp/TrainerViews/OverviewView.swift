@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OverviewView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var testManager = TestList.shared
     let colums = [
         GridItem(.fixed(142)),
@@ -44,10 +44,10 @@ struct OverviewView: View {
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 1, trailing: 0))
                     
                     HStack{
-                        if loggedInUser.teamname != nil {
+                        if loggedInUser.teams![0].team_name != nil {
                             Text("Team:    ")
                                 .font(.custom("", size: 14))
-                            + Text(loggedInUser.teamname!)
+                            + Text(loggedInUser.teams![0].team_name!)
                                 .font(.custom("", size: 14))
                         }
                         else{
@@ -85,11 +85,11 @@ struct OverviewView: View {
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
-                            if loggedInUser.players == nil{
+                            if loggedInUser.teams![0].players == nil{
                                 ProgressView("")
                                     .onAppear(){
-                                        if loggedInUser.teamId != nil{
-                                            getTeamById(id: loggedInUser.teamId!)
+                                        if loggedInUser.teams![0].team_id != nil{
+                                            getTeamById(id: loggedInUser.teams![0].team_id!)
                                         }                                      
                                     }
                             }
@@ -141,13 +141,13 @@ struct OverviewView: View {
     }
     
     func getTeamById(id: String){
-        technoleonAPI.getTeamById(id: (loggedInUser.teamId)!) { (result) in
+        technoleonAPI.getTeamById(id: (loggedInUser.teams![0].team_id)!) { (result) in
             switch result {
             case .success(let response):
-                loggedInUser.teamname = response.teamname
-                if loggedInUser.userRole == "coach"{
-                    loggedInUser.organizationId = response.organizationId
-                    loggedInUser.players = response.players
+                loggedInUser.teams![0].team_name = response.teamname
+                if loggedInUser.type == "coach"{
+                    //loggedInUser.organizationId = response.organizationId
+                    loggedInUser.teams![0].players = response.players
                 }
             case .failure(let error):
                 switch error{
@@ -163,11 +163,11 @@ struct OverviewView: View {
     }
     
     func setOverview(){
-        for player in loggedInUser.players!{
+        for player in loggedInUser.teams![0].players!{
             for test in player.tests!{
                 testManager.addToList(test: test, player: player)
-                let arraySize = loggedInUser.players!.count
-                if player == loggedInUser.players![arraySize - 1]{
+                let arraySize = loggedInUser.teams![0].players!.count
+                if player == loggedInUser.teams![0].players![arraySize - 1]{
                     setTestList()
                 }
             }

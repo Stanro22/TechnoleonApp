@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OneLegStanceLeft: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var oneLegStanceBody = OneLegStanceRequestBody.shared
     var isFormNotValid: Bool {
@@ -86,7 +86,7 @@ struct OneLegStanceLeft: View {
     
     func setOneLegStanceTest(){
         saveTime()
-        technoleonAPI.setOneLegStanceTestForPlayer(id: loggedInUser.playerId!, OneLegStanceRequestBody: oneLegStanceBody) { (result) in
+        technoleonAPI.setOneLegStanceTestForPlayer(id: loggedInUser.player_id!, OneLegStanceRequestBody: oneLegStanceBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

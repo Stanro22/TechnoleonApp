@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeamSelectionView: View {
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var testManager = TestManager.shared
     @State private var isExpanded = false
     @State private var selectedTeam = "Team"

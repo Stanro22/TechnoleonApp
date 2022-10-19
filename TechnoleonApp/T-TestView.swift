@@ -10,7 +10,7 @@ import SwiftUI
 struct T_TestView: View {
     @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var tTestBody = TTestRequestBody()
     var isFormNotValid: Bool {
         if stopwatchManager.timeToSave.isEmpty {
@@ -55,7 +55,7 @@ struct T_TestView: View {
     
     func setTTestTest(){
         setTTestBody()
-        technoleonAPI.setTTestTestForPlayer(id: loggedInUser.playerId!, TTestRequestBody: tTestBody) { (result) in
+        technoleonAPI.setTTestTestForPlayer(id: loggedInUser.player_id!, TTestRequestBody: tTestBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

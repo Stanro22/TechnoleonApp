@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OverviewPlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var testManager = TestList()
     @State var testList: [OverviewTestItemPlayer]?
     @State var loadingTests: Bool = false
@@ -44,10 +44,10 @@ struct OverviewPlayerView: View {
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 1, trailing: 0))
                     
                     HStack{
-                        if loggedInUser.teamRole != nil{
+                        if loggedInUser.type != nil{
                             Text("Positie:    ")
                                 .font(.custom("", size: 14))
-                            + Text(loggedInUser.teamRole!)
+                            + Text(loggedInUser.type!)
                                 .font(.custom("", size: 14))
                         }
                         else{
@@ -59,10 +59,10 @@ struct OverviewPlayerView: View {
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 1, trailing: 0))
                     
                     HStack{
-                        if loggedInUser.teamname != nil {
+                        if loggedInUser.teams![0].team_name != nil {
                             Text("Team:    ")
                                 .font(.custom("", size: 14))
-                            + Text(loggedInUser.teamname!)
+                            + Text(loggedInUser.teams![0].team_name!)
                                 .font(.custom("", size: 14))
                         }
                         else{
@@ -104,7 +104,7 @@ struct OverviewPlayerView: View {
                             if loggedInUser.testList == nil{
                                 ProgressView("")
                                     .onAppear(){
-                                        if loggedInUser.userId != nil{
+                                        if loggedInUser.user_id != nil{
                                             getUserById()
                                         }
                                     }
@@ -174,19 +174,19 @@ struct OverviewPlayerView: View {
     }
     
     func getUserById(){
-        technoleonAPI.getUserPlayerById(id: loggedInUser.userId!) { (result) in
+        technoleonAPI.getUserPlayerById(id: loggedInUser.user_id!) { (result) in
             switch result {
             case .success(let response):
-                loggedInUser.email = response.email
-                loggedInUser.birthDate = response.birthDate
-                loggedInUser.weightInKg = response.weightInKg
-                loggedInUser.lengthInCm = response.lengthInCm
+                //loggedInUser.email = response.email
+                loggedInUser.date_of_birth = response.date_of_birth
+                loggedInUser.weight_in_kg = response.weight_in_kg
+                loggedInUser.height_in_cm = response.height_in_cm
                 loggedInUser.gender = response.gender
-                loggedInUser.teamRole = response.teamRole
-                loggedInUser.teamId = response.teamId
-                loggedInUser.testList = response.tests
+                loggedInUser.type = response.type
+                loggedInUser.teams![0].team_id = response.teams[0].team_id
+                //loggedInUser.testList = response.tests
                 loggedInUser.testList!.sort{$0.created! > $1.created!}
-                getTeamById(id: response.teamId)
+                getTeamById(id: response.teams[0].team_id!)
             case .failure(let error):
                 switch error{
                 case .urlError(let urlError):
@@ -201,13 +201,13 @@ struct OverviewPlayerView: View {
     }
     
     func getTeamById(id: String){
-        technoleonAPI.getTeamById(id: (loggedInUser.teamId)!) { (result) in
+        technoleonAPI.getTeamById(id: (loggedInUser.teams![0].team_id)!) { (result) in
             switch result {
             case .success(let response):
-                loggedInUser.teamname = response.teamname
-                if loggedInUser.userRole == "coach"{
-                    loggedInUser.organizationId = response.organizationId
-                    loggedInUser.players = response.players
+                loggedInUser.teams![0].team_name = response.teamname
+                if loggedInUser.type == "coach"{
+                    //loggedInUser.organizationId = response.organizationId
+                    loggedInUser.teams![0].players = response.players
                 }
             case .failure(let error):
                 switch error{

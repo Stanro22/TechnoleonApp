@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeamOverviewView: View {
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     
     var body: some View {
         VStack{
@@ -17,9 +17,9 @@ struct TeamOverviewView: View {
                 Text("Team players")
                     .font(.custom("", size: 16))
                 ScrollView{
-                    ForEach(loggedInUser.players!, id: \.self) { player in
+                    ForEach(loggedInUser.teams![0].players!, id: \.self) { player in
                         HStack{
-                            Text("\(player.playerName)")
+                            Text("\(player.player_name!)")
                                 .foregroundColor(Color.black)
                                 .font(.custom("", size: 20))
                         }

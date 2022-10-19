@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KTK3HandEyeView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var ktk3Body = KtK3RequestBody.shared
     @ObservedObject var timerManager = TimerManager()
     @State var attempt1: String = ""
@@ -219,7 +219,7 @@ struct KTK3HandEyeView: View {
     
     func setKTK3plusTest(){
         saveFields()
-        technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+        technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.player_id!, KTK3RequestBody: ktk3Body) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

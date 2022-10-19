@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GiTView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var giTBody = GiTRequestBody()
     @State var zones: String = ""
     @State var currentRound: Int = 1
@@ -141,7 +141,7 @@ struct GiTView: View {
     func setGiTTest(){
         setZone()
         giTBody.zones = zones
-        technoleonAPI.setGiTTestForPlayer(id: loggedInUser.playerId!, giTRequestBody: giTBody) { (result) in
+        technoleonAPI.setGiTTestForPlayer(id: loggedInUser.player_id!, giTRequestBody: giTBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

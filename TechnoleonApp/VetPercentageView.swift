@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VetPercentageView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var fatPercentageBody = FatPercentageRequestBody()
     @State var breast: String = ""
     @State var thigh: String = ""
@@ -122,7 +122,7 @@ struct VetPercentageView: View {
     
     func setFatPercentageTest(){
         setFatPercantageBody()
-        technoleonAPI.setFatPercentageTestForPlayer(id: loggedInUser.playerId!, FatPercentageRequestBody: fatPercentageBody) { (result) in
+        technoleonAPI.setFatPercentageTestForPlayer(id: loggedInUser.player_id!, FatPercentageRequestBody: fatPercentageBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

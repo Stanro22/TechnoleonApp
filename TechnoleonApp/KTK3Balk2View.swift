@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KTK3Balk2View: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var ktk3Body = KtK3RequestBody.shared
     @State var attempt1: String = ""
     @State var attempt2: String = ""
@@ -248,7 +248,7 @@ struct KTK3Balk2View: View {
     
     func setKTK3plusTest(){
         saveFields()
-        technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.playerId!, KTK3RequestBody: ktk3Body) { (result) in
+        technoleonAPI.setKTK3TestForPlayer(id: loggedInUser.player_id!, KTK3RequestBody: ktk3Body) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EndOfTestView: View {
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var testManager = TestManager.shared
     @State private var isExpanded = false
     @State private var selectedPlayer = "Speler"
@@ -22,15 +22,15 @@ struct EndOfTestView: View {
             DisclosureGroup("\(selectedPlayer)", isExpanded: $isExpanded){
                 ScrollView {
                     VStack{
-                        if loggedInUser.players != nil{
-                            ForEach(loggedInUser.players!, id: \.self) { player in
-                                Text("\(player.playerName)")
+                        if loggedInUser.teams![0].players != nil{
+                            ForEach(loggedInUser.teams![0].players!, id: \.self) { player in
+                                Text("\(player.player_name!)")
                                     .frame(maxWidth: .infinity)
                                     .font(.title3)
                                     .padding(.all)
                                     .onTapGesture {
-                                        self.selectedPlayer = player.playerName
-                                        loggedInUser.playerId = player.playerId
+                                        self.selectedPlayer = player.player_name!
+                                        loggedInUser.player_id = player.player_id
                                         withAnimation{
                                             self.isExpanded.toggle()
                                         }

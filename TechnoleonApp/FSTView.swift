@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FSTView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var fstBody = FSTRequestBody()
     @ObservedObject var timerManager = StopwatchManager()
     @ObservedObject var slalomManager = StopwatchManager()
@@ -67,7 +67,7 @@ struct FSTView: View {
                     Text("\(passManager.timeToSave)")
                 }
                 .frame(width: 200, height: 30)
-                .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: -5, leading: 0, bottom: 5, trailing: 0))
                 .overlay(Rectangle().frame(width: 230, height: 4, alignment: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)).foregroundColor(Color(red: 0.38, green: 0.44, blue: 0.64)), alignment: .bottom)
                 HStack{
                     Text("Eindtijd")
@@ -190,7 +190,7 @@ struct FSTView: View {
     
     func setFSTTest(){
         setFSTBody()
-        technoleonAPI.setFSTTestForPlayer(id: loggedInUser.playerId!, FSTRequestBody: fstBody) { (result) in
+        technoleonAPI.setFSTTestForPlayer(id: loggedInUser.player_id!, FSTRequestBody: fstBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

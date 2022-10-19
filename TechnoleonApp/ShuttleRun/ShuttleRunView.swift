@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ShuttleRunView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     
     var body: some View {
         VStack{
             Spacer()
             ScrollView{
-                if loggedInUser.players != nil{
-                    ForEach(0..<loggedInUser.players!.count){ index in
+                if loggedInUser.teams![0].players != nil{
+                    ForEach(0..<loggedInUser.teams![0].players!.count){ index in
                         PlayerShuttleRunView(index: index)
                     }
                 }                
@@ -45,8 +45,8 @@ struct ShuttleRunView: View {
     }
     
     func setShuttleRunTest(){
-        for player in loggedInUser.players!{
-            technoleonAPI.setShuttleRunTestForPlayer(id: player.playerId, newLevel: player.playerShuttleRunScore!) { (result) in
+        for player in loggedInUser.teams![0].players!{
+            technoleonAPI.setShuttleRunTestForPlayer(id: player.player_id!, newLevel: player.playerShuttleRunScore!) { (result) in
                 switch result {
                 case .success(_):
                     print("SUCCES")

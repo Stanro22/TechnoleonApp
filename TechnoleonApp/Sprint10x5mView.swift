@@ -10,7 +10,7 @@ import SwiftUI
 struct Sprint10x5mView: View {
     @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var sprint10x5Body = Sprint10x5RequestBody()
     var isFormNotValid: Bool {
         if stopwatchManager.timeToSave.isEmpty {
@@ -62,7 +62,7 @@ struct Sprint10x5mView: View {
     
     func setSprint10x5Test(){
         setSprint10x5Body()
-        technoleonAPI.setSprint10x5TestForPlayer(id: loggedInUser.playerId!, Sprint10x5RequestBody: sprint10x5Body) { (result) in
+        technoleonAPI.setSprint10x5TestForPlayer(id: loggedInUser.player_id!, Sprint10x5RequestBody: sprint10x5Body) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")

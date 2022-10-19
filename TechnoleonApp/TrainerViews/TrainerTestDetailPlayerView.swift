@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrainerTestDetailPlayerView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @State var testForData: Test?
     @State var specificTest: SpecificTest?
     @State var dateSet: Bool = false

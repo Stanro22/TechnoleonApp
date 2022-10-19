@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LSPTView: View {
     @ObservedObject var technoleonAPI = TechnoleonAPI.shared
-    @ObservedObject var loggedInUser = LoggedInUser.shared
+    @ObservedObject var loggedInUser = User.shared
     @ObservedObject var lsptBody = LSPTRequestBody()
     @ObservedObject var timerManager = TimerManager()
     @State var missedBench: Int = 0
@@ -284,7 +284,7 @@ struct LSPTView: View {
     
     func setLSPTTest(){
         setFields()
-        technoleonAPI.setLSPTTestForPlayer(id: loggedInUser.playerId!, LSPTRequestBody: lsptBody) { (result) in
+        technoleonAPI.setLSPTTestForPlayer(id: loggedInUser.player_id!, LSPTRequestBody: lsptBody) { (result) in
             switch result {
             case .success(_):
                 print("SUCCES")
