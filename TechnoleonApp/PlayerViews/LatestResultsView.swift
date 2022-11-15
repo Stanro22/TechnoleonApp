@@ -16,18 +16,18 @@ struct LatestResultsView: View {
             Spacer()
             VStack{
                 HStack{
-                    Text("Test")
+                    Text(NSLocalizedString("Test", comment: "Test"))
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 0))
                     Spacer()
-                    Text("Datum")
+                    Text(NSLocalizedString("Date", comment: "Date"))
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10))
                 }
                 
                 ScrollView{
                     if loggedInUser.testList == nil {
-                        ProgressView("Loading tests")
+                        ProgressView(NSLocalizedString("Loading tests", comment: "Loading tests"))
                     }
                     else{
                         ForEach(loggedInUser.testList!, id: \.self) { test in
@@ -60,7 +60,7 @@ struct LatestResultsView: View {
             
             PlayerTabBar(isOverViewActive: false, isTestsActive: false, isProfileActive: false)
         }
-        .navigationTitle("Laatste resultaten")
+        .navigationTitle(NSLocalizedString("Latest Results", comment: "Latest Results"))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     

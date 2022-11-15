@@ -9,7 +9,7 @@ import Foundation
 
 class Sprint10x5MStrategy {
     func setTestFields() -> String{
-        return "Time"
+        return NSLocalizedString("Time", comment: "Time")
     }
     
     func setTestValues(test: Sprint10x5Test) -> String{

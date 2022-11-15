@@ -11,14 +11,14 @@ struct TestCategoriesView: View {
     var body: some View {
             VStack{
                 Spacer()
-                Text("Kies een testcategorie")
+                Text(NSLocalizedString("Choose the testcategory", comment: "Choose the testcategory"))
                     .font(.custom("", size: 24))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                                 
                 VStack{
-                    Text("Fysiek")
+                    Text(NSLocalizedString("Physical", comment: "Physical"))
                         .foregroundColor(Color.black)
-                    NavigationLink(destination: TestListView(chosenCategorie: "Fysiek")){
+                    NavigationLink(destination: TestListView(chosenCategorie: NSLocalizedString("Physical", comment: "Physical"))){
                         Image("heart")
                             .resizable()
                             .renderingMode(.template)
@@ -35,9 +35,9 @@ struct TestCategoriesView: View {
                 HStack{
                     Spacer()
                     VStack{
-                        Text("Cognitief")
+                        Text(NSLocalizedString("Cognitive", comment: "Cognitive"))
                             .foregroundColor(Color.black)
-                        NavigationLink(destination: TestListView(chosenCategorie: "Cognitief")){
+                        NavigationLink(destination: TestListView(chosenCategorie: NSLocalizedString("Cognitive", comment: "Cognitive"))){
                             Image("eye")
                                 .resizable()
                                 .renderingMode(.template)
@@ -51,9 +51,9 @@ struct TestCategoriesView: View {
                     .frame(width: 130, height: 130)
                     Spacer()
                     VStack{
-                        Text("Mentaal")
+                        Text(NSLocalizedString("Mental", comment: "Mental"))
                             .foregroundColor(Color.black)
-                        NavigationLink(destination: TestListView(chosenCategorie: "Mentaal")){
+                        NavigationLink(destination: TestListView(chosenCategorie: NSLocalizedString("Mental", comment: "Mental"))){
                             Image("mental")
                                 .resizable()
                                 .renderingMode(.template)
@@ -72,9 +72,9 @@ struct TestCategoriesView: View {
                 HStack{
                     Spacer()
                     VStack{
-                        Text("Technisch")
+                        Text(NSLocalizedString("Technical", comment: "Technical"))
                             .foregroundColor(Color.black)
-                        NavigationLink(destination: TestListView(chosenCategorie: "Technisch")){
+                        NavigationLink(destination: TestListView(chosenCategorie: NSLocalizedString("Technical", comment: "Technical"))){
                             Image("ball")
                                 .resizable()
                                 .renderingMode(.template)
@@ -89,9 +89,9 @@ struct TestCategoriesView: View {
                     .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
                     Spacer()
                     VStack{
-                        Text("Wedstrijd")
+                        Text(NSLocalizedString("Match", comment: "Match"))
                             .foregroundColor(Color.black)
-                        NavigationLink(destination: TestListView(chosenCategorie: "Wedstrijd")){
+                        NavigationLink(destination: TestListView(chosenCategorie: NSLocalizedString("Match", comment: "Match"))){
                             Image("match")
                                 .resizable()
                                 .renderingMode(.template)
@@ -110,7 +110,7 @@ struct TestCategoriesView: View {
                                 
                 TrainerTabBar(isOverviewActive: false, isTestsActive: true, isProfileActive: false)
             }
-            .navigationTitle("Categorieën")
+            .navigationTitle(NSLocalizedString("Categories", comment: "Categories"))
             .navigationBarBackButtonHidden(true)
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }

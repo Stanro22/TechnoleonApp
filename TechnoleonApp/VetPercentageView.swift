@@ -28,14 +28,14 @@ struct VetPercentageView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Dikte van de huidplooi")
+            Text(NSLocalizedString("Skinfold thickness", comment: "Skinfold thickness"))
                 .font(.title2)
-            Text("in millimeter")
+            Text(NSLocalizedString("in millimeter", comment: "in millimeter"))
                 .font(.custom("", size: 16))
             
             VStack{
                 HStack{
-                    TextField("Dikte borst (mm)", text: $breast)
+                    TextField(NSLocalizedString("Breast thickness", comment: "Breast thickness"), text: $breast)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -43,7 +43,7 @@ struct VetPercentageView: View {
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 HStack{
-                    TextField("Dikte dij (mm)", text: $thigh)
+                    TextField(NSLocalizedString("Thigh thickness", comment: "Thigh thickness"), text: $thigh)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -51,7 +51,7 @@ struct VetPercentageView: View {
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 HStack{
-                    TextField("Dikte buik (mm)", text: $belly)
+                    TextField(NSLocalizedString("Belly thickness", comment: "Belly thickness"), text: $belly)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -59,7 +59,7 @@ struct VetPercentageView: View {
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 HStack{
-                    TextField("Dikte heup (mm)", text: $hip)
+                    TextField(NSLocalizedString("Hip thickness", comment: "Hip thickness"), text: $hip)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -67,7 +67,7 @@ struct VetPercentageView: View {
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 HStack{
-                    TextField("Dikte oksel (mm)", text: $armPit)
+                    TextField(NSLocalizedString("Armpit thickness", comment: "Armpit thickness"), text: $armPit)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -75,7 +75,7 @@ struct VetPercentageView: View {
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 HStack{
-                    TextField("Dikte schouderblad (mm)", text: $shoulderBlade)
+                    TextField(NSLocalizedString("Shoulderblade thickness", comment: "Shoulderblade thickness"), text: $shoulderBlade)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -83,7 +83,7 @@ struct VetPercentageView: View {
                 }
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 HStack{
-                    TextField("Dikte tricep (mm)", text: $tricep)
+                    TextField(NSLocalizedString("Tricep thickness", comment: "Tricep thickness"), text: $tricep)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -94,7 +94,7 @@ struct VetPercentageView: View {
             Spacer()
                                 
             NavigationLink(destination: EndOfTestView().onAppear{setFatPercentageTest()}) {
-                Text("Sla gegevens op")
+                Text(NSLocalizedString("Save the data", comment: "Save the data"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -105,7 +105,7 @@ struct VetPercentageView: View {
                 .disabled(isFormNotValid)
             Spacer()
         }
-        .navigationTitle("Vetpercentage")
+        .navigationTitle(NSLocalizedString("Fatpercentage_title", comment: "Fatpercentage_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

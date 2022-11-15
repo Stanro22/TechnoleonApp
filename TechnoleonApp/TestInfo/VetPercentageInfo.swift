@@ -10,10 +10,10 @@ import Foundation
 class VetPercentageInfo : TestInfo {
     init() {
         super.init(
-            name: "Vetpercentage",
-            skills: "Biometrie",
-            description: "Met de vetpercentage test kan het vetpercentage van een lichaamsdeel getest worden.",
-            itemsNeeded: "Voor deze test is nodig: een meetlint."
+            name: NSLocalizedString("Fatpercentage_title", comment: "Fatpercentage_title"),
+            skills: NSLocalizedString("Fatpercentage_skills", comment: "Fatpercentage_skills"),
+            description: NSLocalizedString("Fatpercentage_description", comment: "Fatpercentage_description"),
+            itemsNeeded: NSLocalizedString("Fatpercentage_items", comment: "Fatpercentage_items")
         )
     }
 }

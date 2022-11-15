@@ -19,9 +19,9 @@ struct TechnicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("FST")
+                            Text(NSLocalizedString("FST_title", comment: "FST_title"))
                                 .foregroundColor(Color.black)
-                            Text("Dribbelen")
+                            Text(NSLocalizedString("FST_skills", comment: "FST_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -50,9 +50,9 @@ struct TechnicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("LSPT")
+                            Text(NSLocalizedString("LSPT_title", comment: "LSPT_title"))
                                 .foregroundColor(Color.black)
-                            Text("Passen")
+                            Text(NSLocalizedString("LSPT_skills", comment: "LSPT_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -81,9 +81,9 @@ struct TechnicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("Insait Joy")
+                            Text(NSLocalizedString("IJBT_title", comment: "IJBT_title"))
                                 .foregroundColor(Color.black)
-                            Text("Balcontrole, passeren")
+                            Text(NSLocalizedString("IJBT_skills", comment: "IJBT_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }

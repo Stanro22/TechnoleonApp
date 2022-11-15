@@ -25,7 +25,7 @@ struct YoYoView: View {
             
             HStack{
                 NavigationLink(destination: EndOfTestView().onAppear{ }) {
-                    Text("Sla gegevens op")
+                    Text(NSLocalizedString("Save the data", comment: "Save the data"))
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
@@ -39,7 +39,7 @@ struct YoYoView: View {
             .background(Color(red: 0.15, green: 0.21, blue: 0.40))
             
         }
-        .navigationTitle("Yo-Yo uithoudingsvermogen")
+        .navigationTitle(NSLocalizedString("YYIRT_title", comment: "YYIRT_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

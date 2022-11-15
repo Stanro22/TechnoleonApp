@@ -1,0 +1,201 @@
+/* 
+  Localizable.strings
+  TechnoleonApp
+
+  Created by user220873 on 11/3/22.
+  
+*/
+
+
+//Navigation bar strings
+"Overview" = "Overzicht"; //also page title
+"Tests" = "Testen"; 
+"Profile" = "Profiel"; //also page title
+
+//Page titles
+"Categories" = "Categorieën";
+"Team selection" = "Team selectie";
+"Player selection" = "Speler selectie";
+"End of Test" = "Einde test";
+"Latest Results" = "Laatste Resultaten";
+"Information" = "Informatie";
+
+//Test titles, skills and values
+//KTK3
+"KTK3_title" = "KTK3+";
+"KTK3_skills" = "Coördinatie, balans";
+"Jumping sideways" = "Zijwaarts springen";
+"Moving sideways" = "Zijwaarts bewegen";
+"Beam 1" = "Balk 1";
+"Beam 2" = "Balk 2";
+"Beam 3" = "Balk 3";
+"Hand-eye" = "Hand-oog";
+"KTK3_description" = "De KTK3+ test meet de totale lichaamscoördinatie van een speler. Het doel van de test is om zo vaak mogelijk een handeling uit te voeren op de volgende vier onderdelen: hand-oog-coördinatie, balans, zijwaarts bewegen en zijwaartst springen.";
+"KTK3_items" = "De testkit van de KTK ligt op de VU en bevat: 1 mat, 2 blokjes, 1 evenwichtsbalk 30mm x 3m, 1 evenwichtsbalk 45 mm x 3m, 1 evenwichtsbalk 60 mm x 3m en 3 tussenstukken voor de evenwichtsbalken (1 voor elke breedte). Daarnaast is nodig: 1 tennisbal en tape.";
+
+//APHV
+"APHV_title" = "APHV";
+"APHV_skills" = "Biologische leeftijd";
+"Sit height" = "Zithoogte";
+"Length" = "Lengte";
+"Weight" = "Gewicht";
+"APHV_description" = "De Peak Height Velocity (PHV) test wordt gebruikt om te bepalen of spelers vroeg, laat of gemiddeld zijn in de ontwikkeling.";
+"APHV_items" = "Voor deze test is niets nodig.";
+
+//SAR
+"Sit_and_reach_title" = "Sit and Reach";
+"Sit_and_reach_skills" = "Mobiliteit";
+"Centimeters" = "Centimeters";
+"SAR_description" = "De sit and reach test wordt gebruikt om de flexibiliteit van de wervelkolom en de hamstrings gemeten.";
+"SAR_items" = "Voor deze test is nodig: een meetlint.";
+
+//Fatpercentage
+"Fatpercentage_title" = "Vetpercentage";
+"Fatpercentage_skills" = "Biometrie";
+"Breast thickness" = "Dikte borst";
+"Thigh thickness" = "Dikte dij";
+"Belly thickness" = "Dikte buik";
+"Hip thickness" = "Dikte heup";
+"Armpit thickness" = "Dikte oksel";
+"Shoulderblade thickness" = "Dikte schouderblad";
+"Tricep thickness" = "Dikte tricep";
+"Fatpercentage_description" = "Met de vetpercentage test kan het vetpercentage van een lichaamsdeel getest worden.";
+"Fatpercentage_items" = "Voor deze test is nodig: een meetlint.";
+
+//T-Test
+"T-Test_title" = "T-Test";
+"T-Test_skills" = "Wendbaarheid";
+"T-Test_description" = "De T-test wordt gebruikt om wendbaarheid en snelheid van de speler te bepalen. De speler gaat zo snel mogelijk langs iedere pion in goede volgorde.";
+"T-Test_items" = "Voor deze test is nodig: een vijftal pionen.";
+
+//Sprint3
+"Sprint3_title" = "Sprint 3";
+"Sprint3_skills" = "Snelheid";
+"Distance" = "Afstand";
+"Sprint3_description" = "Deze test zal de snelheid van de speler meten voor verschillende afstanden.";
+"Sprint3_items" = "Voor deze test is nodig: een pion om de afstand mee te markeren.";
+
+//Sprint 10x5
+"Sprint10x5_title" = "Sprint 10x5m";
+"Sprint10x5_skills" = "Explosiviteit";
+"Time" = "Tijd"; //Used for more tests
+"Sprint10x5_description" = "Deze test zal de snelheid van de speler meten.";
+"Sprint10x5_items" = "Voor deze test is nodig: een pion om de afstand mee te markeren.";
+
+//ISRT
+"ISRT_title" = "ISRT";
+"ISRT_skills" = "Uithoudingsvermogen";
+"LevelISRT" = "Niveau"; //Used for YYIRT
+"ISRT_description" = "De shuttle run test meet het uithoudingsvermogen van de spelers. De spelers moeten telkens voor de piep over de lijn zijn. Mocht dit niet het geval zijn kan een gele en opeenvolgend rode kaart toegekent worden waarna de speler moet stoppen met de test. Deze test voer je uit voor het gehele team.";
+"ISRT_items" = "Voor deze test is nodig: de opname met piepjes.";
+
+//YYIRT
+"YYIRT_title" = "YYIRT";
+"YYIRT_skills" = "Uithoudingsvermogen";
+"YYIRT_description" = "De Yo-Yo uithoudingsvermogen test meet het uithoudingsvermogen van de spelers. De spelers moeten telkens voor de piep over de lijn zijn. Mocht dit niet het geval zijn kan een gele en opeenvolgend rode kaart toegekent worden waarna de speler moet stoppen met de test. Deze test voer je uit voor het gehele team.";
+"YYIRT_items" = "Voor deze test is nodig: de opname met piepjes.";
+
+//GiD
+"GiD_title" = "GiD";
+"GiD_skills" = "Positionering";
+"Zones" = "Zones";
+"GiD_description" = "De Game insight Test (GiT) meet het spelinzicht en positionering van een speler op basis van verschillende spelsituaties. Het doel van de test is om in te schatten waar de bal gaat komen op basis van videobeelden die voor, tijdens of na een balcontact zwart worden. De speler moet zo snel mogelijk kiezen uit een van de 6 vakken om op tijd bij de (virtuele) bal te zijn.";
+"GiD_items" = "Voor deze test is nodig: Projector, Wit scherm met ophangconstructie, Touw om vakken af te zetten, Kinect (XBOX), Laptop met oplader incl. video clips.";
+
+//FST
+"FST_title" = "FST";
+"FST_skills" = "Dribbelen";
+"Slalom" = "Slalom";
+"Backwards" = "Achterwaarts";
+"Dribble" = "Dribbel";
+"8-figure" = "8-figuur";
+"Pass" = "Pass";
+"End time" = "Eindtijd";
+"FST_description" = "De FST meet de bal coördinatie gedurende een dribbelparcours van 5 verschillende onderdelen. De onderdelen zijn als volgt: slalom, dribbel voorwaarts, dribbel achterwaarts, 8-figuur en passing. De speler moet zo snel mogelijk het parcours afleggen en de tijd wordt per onderdeel genoteerd.";
+"FST_items" = "Voor deze test is nodig: 18 pionnen (liefst in twee kleuren, 16 blauw, 4 geel), 6 hoedjes, 1 bal, meetlint (bij voorkeur 9 meter lang)";
+
+//LSPT
+"LSPT_title" = "LSPT";
+"LSPT_skills" = "Passen";
+"Missed bench" = "Bank gemist";
+"Hit wrong target" = "Verkeerde target geraakt";
+"Touched cone" = "Pylon geraakt";
+"Pass outside area" = "Pass buiten gebied";
+"Missed target area" = "Doelgebied gemist";
+"Hit strip" = "Strip geraakt";
+"LSPT_description" = "De LSPT meet de korte pass vaardigheden, beslissingsgedrag en balcontrole. De speler krijgt 16x een kleur te horen van de trainer. Vervolgens moet de speler zo snel mogelijk het target op de bank met de juiste kleur raken met daarbij zo min mogelijk strafpunten te krijgen. Awareness, luisteren, balcontrole, precisie en snel wenden en keren spelen allemaal een rol voor een zo hoog mogelijke performance.";
+"LSPT_items" = "Voor deze test is nodig: Ballen, Meetlint, 2 x 4 hoedjes (2 verschillende kleuren), 4 banken + kleuren erop bevestigd.";
+
+//IJBT
+"IJBT_title" = "IJBT";
+"IJBT_skills" = "Balcontrole";
+"Insait Joy settings" = "Insait Joy instellingen";
+"Insait Joy drill" = "Insait Joy oefening";
+"Level" = "Level";
+"Drill" = "Oefening";
+"Count" = "Aantal";
+"Frequency" = "Frequentie";
+"Fluency" = "Vloeibaarheid";
+"IJBT_description" = "De Insait Joy balcontrole test meet verschillende vaardigheden van beginner tot expert niveau. De slimme bal meet het aantal balcontacten, ritme en de frequentie per seconde. Hierbij worden verschillende voetbalvaardigheden gemeten die bijdragen aan de functionele voetbaltechniek en de uitvoering van passeerbewegingen in een 1v1. Deze test is alleen in te vullen met behulp van de Insait Joy App.";
+"IJBT_items" = "Voor deze test is de Insait Joy app nodig.";
+
+//Test categories
+"Physical" = "Fysiek";
+"Technical" = "Techinisch";
+"Mental" = "Mentaal";
+"Match" = "Wedstrijd";
+"Cognitive" = "Cognitief";
+
+//Other strings
+"Log in" = "Inloggen";
+"Log out" = "Uitloggen";
+"Password" = "Wachtwoord";
+"E-mail" = "E-mail";
+"Date of Birth" = "Geboortedatum";
+"Gender" = "Geslacht";
+"Weight" = "Gewicht (kg)";
+"Length" = "Lengte (cm)";
+"Choose the testcategory" = "Kies de testcategorie";
+"Select the team" = "Kies het team";
+"Select the player" = "Kies de speler";
+"Select another player" = "Selecteer een andere speler";
+"Do the test" = "Doe de test";
+"Or" = "Of";
+"Select another test" = "Selecteer een andere test";
+"Start the test again" = "Start de test opnieuw";
+"Name" = "Naam";
+"Position" = "Positie";
+"Team" = "Team";
+"Team overview" = "Team overzicht";
+"Results" = "Resultaten";
+"Loading tests" = "Testen laden";
+"Loading date" = "Datum laden";
+"Loading data" = "Data laden";
+"Team players" = "Team spelers";
+"Trainingsadvice" = "Trainingsadvies";
+"Development" = "Ontwikkeling";
+"Test date" = "Test datum";
+"Test" = "Test";
+"Date" = "Datum";
+"Jumping sideways" = "Zijwaarts springen";
+"Moving sideways" = "Zijwaarts bewegen";
+"Attempt" = "Poging";
+"Did all the drills?" = "Alle oefeningen gedaan?";
+"Save the data" = "Sla de gegevens op";
+"Fill in the data" = "Voer de gegevens in";
+"Skinfold thickness" = "Dikte van de huidplooi";
+"in millimeter" = "in millimeter";
+"Time to save" = "Tijd om op te slaan";
+"Select the distance" = "Selecteer de afstand";
+"Total duration in seconds" = "Totale duur in seconden";
+"Round" = "Ronde";
+"Rookie" = "Beginner";
+"Advanced" = "Geavanceerd";
+"Expert" = "Expert";
+"seconds" = "seconden";
+"Settings" = "Instellingen";
+"To the drill" = "Naar de oefening";
+"Fill in the Insait Joy data from the App" = "Voer de gegevens in uit de Insait Joy App";
+"Next round" = "Volgende ronde";
+"Introduction" = "Inleiding";
+"Requirements" = "Benodigdheden";

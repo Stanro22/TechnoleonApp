@@ -9,7 +9,7 @@ import Foundation
 
 class IntervalShuttleRunStrategy {
     func setTestFields() -> String{
-        return "Niveau"
+        return NSLocalizedString("LevelISRT", comment: "LevelISRT")
     }
     
     func setTestValues(test: IntervalShuttleRunTest) -> String{

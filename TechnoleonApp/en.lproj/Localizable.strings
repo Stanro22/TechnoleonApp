@@ -1,0 +1,201 @@
+/* 
+  Localizable.strings
+  TechnoleonApp
+
+  Created by user220873 on 10/27/22.
+  
+*/
+
+
+//Navigation bar strings
+"Overview" = "Overview"; // also page title
+"Tests" = "Tests";
+"Profile" = "Profile"; // also page title
+
+//Page titles
+"Categories" = "Categories";
+"Team selection" = "Team selection";
+"Player selection" = "Player selection";
+"End of Test" = "End of Test";
+"Latest Results" = "Latest Results";
+"Information" = "Information";
+
+//Test titles, skills and values
+//KTK3
+"KTK3_title" = "KTK3+";
+"KTK3_skills" = "Coördination, balance";
+"Jumping sideways" = "Jumping sideways";
+"Moving sideways" = "Moving sideways";
+"Beam 1" = "Beam 1";
+"Beam 2" = "Beam 2";
+"Beam 3" = "Beam 3";
+"Hand-eye" = "Hand-eye";
+"KTK3_description" = "The KTK3+ test measures a player's total body coordination. The aim of the test is to perform an action on the following four parts as often as possible: hand-eye coordination, balance, sideways movement and side jump.";
+"KTK3_items" = "The KTK test kit is located at the VU and contains: 1 mat, 2 blocks, 1 balance beam 30mm x 3m, 1 balance beam 45mm x 3m, 1 balance beam 60mm x 3m and 3 balance beams (1 for each width) In addition, you will need: 1 tennis ball and tape.";
+
+//APHV
+"APHV_title" = "APHV";
+"APHV_skills" = "Biological age";
+"Sit height" = "Sit height";
+"Length" = "Length";
+"Weight" = "Weight";
+"APHV_description" = "The Peak Height Velocity (PHV) test is used to determine whether players are early, late, or intermediate in development.";
+"APHV_items" = "Nothing is required for this test.";
+
+//SAR
+"Sit_and_reach_title" = "Sit and Reach";
+"Sit_and_reach_skills" = "Mobility";
+"Centimeters" = "Centimeters";
+"SAR_description" = "The sit and reach test is used to measure the flexibility of the spine and hamstrings.";
+"SAR_items" = "For this test you need: a measuring tape.";
+
+//Fatpercentage
+"Fatpercentage_title" = "Fatpercentage";
+"Fatpercentage_skills" = "Biometrics";
+"Breast thickness" = "Breast thickness";
+"Thigh thickness" = "Thigh thickness";
+"Belly thickness" = "Belly thickness";
+"Hip thickness" = "Hip thickness";
+"Armpit thickness" = "Armpit thickness";
+"Shoulderblade thickness" = "Shoulderblade thickness";
+"Tricep thickness" = "Tricep thickness";
+"Fatpercentage_description" = "With the fat percentage test the fat percentage of a body part can be tested.";
+"Fatpercentage_items" = "For this test you need: a measuring tape.";
+
+//T-Test
+"T-Test_title" = "T-Test";
+"T-Test_skills" = "Agility";
+"T-Test_description" = "The T-test is used to determine the player's agility and speed. The player moves past each pawn in the correct order as quickly as possible.";
+"T-Test_items" = "For this test is needed: five pawns.";
+
+//Sprint3
+"Sprint3_title" = "Sprint 3";
+"Sprint3_skills" = "Pace";
+"Distance" = "Distance";
+"Sprint3_description" = "This test will measure the player's speed for different distances.";
+"Sprint3_items" = "For this test is needed: a pawn to mark the distance.";
+
+//Sprint 10x5
+"Sprint10x5_title" = "Sprint 10x5m";
+"Sprint10x5_skills" = "Explosivness";
+"Time" = "Time"; //Used for more tests
+"Sprint10x5_description" = "This test will measure the speed of the player.";
+"Sprint10x5_items" = "For this test is needed: a pawn to mark the distance.";
+
+//ISRT
+"ISRT_title" = "ISRT";
+"ISRT_skills" = "Stamina";
+"LevelISRT" = "Level"; //Used for YYIRT
+"ISRT_description" = "The shuttle run test measures the endurance of the players. The players must cross the line before the beep. If this is not the case, a yellow and consecutive red card can be awarded after which the player must stop the test. You perform this test for the entire team.";
+"ISRT_items" = "This test requires: the recording with beeps.";
+
+//YYIRT
+"YYIRT_title" = "YYIRT";
+"YYIRT_skills" = "Stamina";
+"YYIRT_description" = "The Yo-Yo stamina test measures the stamina of the players. The players must cross the line before the beep. If this is not the case, a yellow and consecutive red card can be awarded after which the player must stop the test. You perform this test for the entire team.";
+"YYIRT_items" = "This test requires: the recording with beeps.";
+
+//GiD
+"GiD_title" = "GiD";
+"GiD_skills" = "Positioning";
+"Zones" = "Zones";
+"GiD_description" = "The Game Insight Test (GiT) measures a player's game insight and positioning based on different game situations. The purpose of the test is to estimate where the ball will go based on video images that turn black before, during or after a ball contact. The player must choose from one of the 6 boxes as quickly as possible to reach the (virtual) ball in time.";
+"GiD_items" = "This test requires: Projector, White screen with suspension construction, Rope to set off compartments, Kinect (XBOX), Laptop with charger incl. video clips.";
+
+//FST
+"FST_title" = "FST";
+"FST_skills" = "Dribbling";
+"Slalom" = "Slalom";
+"Backwards" = "Backwards";
+"Dribble" = "Dribble";
+"8-figure" = "8-figure";
+"Pass" = "Pass";
+"End time" = "End time";
+"FST_description" = "The FST measures ball coordination during a dribbling course of 5 different parts. The parts are as follows: slalom, dribble forward, dribble backward, figure 8 and passing. The player must complete the course as quickly as possible and the time is recorded for each part.";
+"FST_items" = "This test requires: 18 pawns (preferably in two colors, 16 blue, 4 yellow), 6 hats, 1 ball, measuring tape (preferably 9 meters long)";
+
+//LSPT
+"LSPT_title" = "LSPT";
+"LSPT_skills" = "Passing";
+"Missed bench" = "Missed bench";
+"Hit wrong target" = "Hit wrong target";
+"Touched cone" = "Touched cone";
+"Pass outside area" = "Pass outside area";
+"Missed target area" = "Missed target area";
+"Hit strip" = "Hit strip";
+"LSPT_description" = "The LSPT measures short pass skills, decision making and ball control. The player is told a color 16 times by the trainer. Next, the player must hit the target on the bench with the correct color as quickly as possible while getting as few penalty points as possible. Awareness, listening, ball control, precision and fast turning and turning all play a role for the highest possible performance.";
+"LSPT_items" = "This test requires: Balls, Tape Measure, 2 x 4 hats (2 different colors), 4 benches + colors attached";
+
+//IJBT
+"IJBT_title" = "IJBT";
+"IJBT_skills" = "Balcontrol";
+"Insait Joy settings" = "Insait Joy settings";
+"Insait Joy drill" = "Insait Joy drill";
+"Level" = "Level";
+"Drill" = "Drill";
+"Count" = "Count";
+"Frequency" = "Frequency";
+"Fluency" = "Fluency";
+"IJBT_description" = "The Insait Joy ball control test measures different skills from beginner to expert level. The smart ball measures the number of ball contacts, rhythm and frequency per second. Various football skills are measured that contribute to the functional football technique and the execution of passing movements in a 1v1. This test can only be completed using the Insait Joy App.";
+"IJBT_items" = "The Insait Joy app is required for this test.";
+
+//Test categories
+"Physical" = "Physical";
+"Technical" = "Technical";
+"Mental" = "Mental";
+"Match" = "Match";
+"Cognitive" = "Cognitive";
+
+//Other strings
+"Log in" = "Log in";
+"Log out" = "Log out";
+"Password" = "Password";
+"E-mail" = "E-mail";
+"Date of Birth" = "Date of Birth";
+"Gender" = "Gender";
+"Weight" = "Weight (kg)";
+"Length" = "Length (cm)";
+"Choose the testcategory" = "Choose the testcategory";
+"Select the team" = "Select the team";
+"Select the player" = "Select the player";
+"Select another player" = "Select another player";
+"Do the test" = "Do the test";
+"Or" = "Or";
+"Select another test" = "Select another test";
+"Start the test again" = "Start the test again";
+"Name" = "Name";
+"Position" = "Position";
+"Team" = "Team";
+"Team overview" = "Team overview";
+"Results" = "Results";
+"Loading tests" = "Loading tests";
+"Loading date" = "Loading date";
+"Loading data" = "Loading data";
+"Team players" = "Team players";
+"Trainingsadvice" = "Trainingsadvice";
+"Development" = "Development";
+"Test date" = "Test date";
+"Test" = "Test";
+"Date" = "Date";
+"Jumping sideways" = "Jumping sideways";
+"Moving sideways" = "Moving sideways";
+"Attempt" = "Attempt";
+"Did all the drills?" = "Did all the drills?";
+"Save the data" = "Save the data";
+"Fill in the data" = "Fill in the data";
+"Skinfold thickness" = "Skinfold thickness";
+"in millimeter" = "in millimeter";
+"Time to save" = "Time to save";
+"Select the distance" = "Select the distance";
+"Total duration in seconds" = "Total duration in seconds";
+"Round" = "Round";
+"Rookie" = "Rookie";
+"Advanced" = "Advanced";
+"Expert" = "Expert";
+"seconds" = "seconds";
+"Settings" = "Settings";
+"To the drill" = "To the drill";
+"Fill in the Insait Joy data from the App" = "Fill in the Insait Joy data from the App";
+"Next round" = "Next round";
+"Introduction" = "Introduction";
+"Requirements" = "Requirements";

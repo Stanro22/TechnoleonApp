@@ -33,7 +33,7 @@ struct LSPTView: View {
             
             HStack{
                 VStack{
-                    Text("Bank gemist")
+                    Text(NSLocalizedString("Missed bench", comment: "Missed bench"))
                         .font(.custom("", size: 11))
                     Button(action: {missedBench += 1}){
                         Spacer()
@@ -70,7 +70,7 @@ struct LSPTView: View {
                 }
                 
                 VStack{
-                    Text("Verkeerde bank")
+                    Text(NSLocalizedString("Hit wrong target", comment: "Hit wrong target"))
                         .font(.custom("", size: 11))
                     Button(action: {wrongBench += 1}){
                         Spacer()
@@ -106,7 +106,7 @@ struct LSPTView: View {
                 }
                 
                 VStack{
-                    Text("Doelgebied gemist")
+                    Text(NSLocalizedString("Missed target area", comment: "Missed target area"))
                         .font(.custom("", size: 11))
                     Button(action: {missedZone += 1}){
                         Spacer()
@@ -145,7 +145,7 @@ struct LSPTView: View {
             
             HStack{
                 VStack{
-                    Text("Pylon geraakt")
+                    Text(NSLocalizedString("Touched cone", comment: "Touched cone"))
                         .font(.custom("", size: 11))
                     Button(action: {touchedPylon += 1}){
                         Spacer()
@@ -181,7 +181,7 @@ struct LSPTView: View {
                 }
                 
                 VStack{
-                    Text("Pass buiten doelgebied")
+                    Text(NSLocalizedString("Pass outside area", comment: "Pass outside area"))
                         .font(.custom("", size: 10))
                     Button(action: {outsideZonePass += 1}){
                         Spacer()
@@ -217,7 +217,7 @@ struct LSPTView: View {
                 }
                 
                 VStack{
-                    Text("Tien cm strip geraakt")
+                    Text(NSLocalizedString("Hit strip", comment: "Hit strip"))
                         .font(.custom("", size: 10))
                     Button(action: {touchedCMStrip += 1}){
                         Spacer()
@@ -255,7 +255,7 @@ struct LSPTView: View {
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setLSPTTest()}) {
-                Text("Sla gegevens op")
+                Text(NSLocalizedString("Save the data", comment: "Save the data"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -265,7 +265,7 @@ struct LSPTView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 .disabled(isFormNotValid)
         }
-        .navigationTitle("LSPT")
+        .navigationTitle(NSLocalizedString("LSPT_title", comment: "LSPT_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

@@ -9,8 +9,8 @@ import Foundation
 
 class TenTwentyThirtyFiveStrategy {
     func setTestFields() -> String{
-        return "Afstand \n" +
-        "Tijd"
+        return NSLocalizedString("Distance", comment: "Distance") + " \n" +
+        NSLocalizedString("Time", comment: "Time")
     }
     
     func setTestValues(test: TenTwentyThirtyFiveSprintTest) -> String{

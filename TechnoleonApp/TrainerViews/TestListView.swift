@@ -12,19 +12,19 @@ struct TestListView: View {
     
     var body: some View {
             VStack{
-                if chosenCategorie == "Fysiek" {
+                if chosenCategorie == NSLocalizedString("Physical", comment: "Physical") {
                     PhysicalTestList()
                 }
-                if chosenCategorie == "Wedstrijd" {
+                if chosenCategorie == NSLocalizedString("Match", comment: "Match") {
                     MatchTestList()
                 }
-                if chosenCategorie == "Technisch" {
+                if chosenCategorie == NSLocalizedString("Technical", comment: "Technical") {
                     TechnicalTestList()
                 }
-                if chosenCategorie == "Cognitief" {
+                if chosenCategorie == NSLocalizedString("Cognitive", comment: "Cognitive") {
                     CognitiveTestList()
                 }
-                if chosenCategorie == "Mentaal" {
+                if chosenCategorie == NSLocalizedString("Mental", comment: "Mental") {
                     MentalTestList()
                 }
                 TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)

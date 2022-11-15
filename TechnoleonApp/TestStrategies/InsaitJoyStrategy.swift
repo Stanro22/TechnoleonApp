@@ -9,12 +9,12 @@ import Foundation
 
 class InsaitJoyStrategy {
     func setTestFields() -> String{
-        return "Level \n" +
-        "Oefening \n" +
-        "Tijd \n" +
-        "Aantal \n" +
-        "Frequentie \n" +
-        "Vloeibaarheid"
+        return NSLocalizedString("Level", comment: "Level") + " \n" +
+        NSLocalizedString("Drill", comment: "Drill") + " \n" +
+        NSLocalizedString("Time", comment: "Time") + " \n" +
+        NSLocalizedString("Count", comment: "Count") + " \n" +
+        NSLocalizedString("Frequency", comment: "Frequency") + " \n" +
+        NSLocalizedString("Fluency", comment: "Fluency")
     }
     
     func setTestValues(test: InsaitJoyTest) -> String{

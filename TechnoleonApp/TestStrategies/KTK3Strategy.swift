@@ -9,12 +9,12 @@ import Foundation
 
 class KTK3Strategy {
     func setTestFields() -> String{
-        return "Zijwaarts springen \n" +
-        "Zijwaarts bewegen \n" +
-        "Balk 1 \n" +
-        "Balk 2 \n" +
-        "Balk 3 \n" +
-        "Hand oog"
+        return NSLocalizedString("Jumping sideways", comment: "Jumping sideways") + " \n" +
+        NSLocalizedString("Moving sideways", comment: "Moving sideways") + " \n" +
+        NSLocalizedString("Beam 1", comment: "Beam 1") + " \n" +
+        NSLocalizedString("Beam 2", comment: "Beam 2") + " \n" +
+        NSLocalizedString("Beam 3", comment: "Beam 3") + " \n" +
+        NSLocalizedString("Hand-eye", comment: "Hand-eye")
     }
     
     func setTestValues(test: KTK3Test) -> String{

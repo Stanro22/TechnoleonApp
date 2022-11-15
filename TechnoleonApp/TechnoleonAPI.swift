@@ -119,7 +119,7 @@ final class TechnoleonAPI : ObservableObject{
     }
     
     //URL request: get user by user_id -> user response
-    func getUserByUserId(user_id: String, completion: @escaping(Result<UserResponse,RequestError>) -> Void){
+    func getUserByUserId(user_id: String, completion: @escaping(Result<UserResponse, RequestError>) -> Void){
         let url = URL(string: "\(dashboard_base_url)getUserByUserId/\(user_id)")!
         var urlRequest = URLRequest(url: url)
         

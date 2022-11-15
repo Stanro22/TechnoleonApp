@@ -54,7 +54,7 @@ struct PlayerYoYoView: View {
                     .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                     .cornerRadius(10)
             }
-            TextField("Niveau", text: $niveau)
+            TextField(NSLocalizedString("LevelISRT", comment: "LevelISRT"), text: $niveau)
                 .frame(width: 60, height: 60)
                 .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 0))
                 .background(Color(red: 0.90, green: 0.90, blue: 0.90))

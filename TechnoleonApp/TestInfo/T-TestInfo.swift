@@ -10,10 +10,10 @@ import Foundation
 class T_TestInfo : TestInfo {
     init() {
         super.init(
-            name: "T-Test",
-            skills: "Wendbaarheid",
-            description: "De T-test wordt gebruikt om wendbaarheid en snelheid van de speler te bepalen. De speler gaat zo snel mogelijk langs iedere pion in goede volgorde.",
-            itemsNeeded: "Voor deze test is nodig: een vijftal pionen."
+            name: NSLocalizedString("T-Test_title", comment: "T-Test_title"),
+            skills: NSLocalizedString("T-Test_skills", comment: "T-Test_skills"),
+            description: NSLocalizedString("T-Test_description", comment: "T-Test_description"),
+            itemsNeeded: NSLocalizedString("T-Test_items", comment: "T-Test_items")
         )
     }
 }

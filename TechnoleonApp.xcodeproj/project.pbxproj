@@ -161,6 +161,7 @@
 		94FD93C62791F8E700A4819C /* GiTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD93C52791F8E700A4819C /* GiTRequestBody.swift */; };
 		94FD93C82791FDB800A4819C /* TenTwentyThirtyFiveSprintRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD93C72791FDB800A4819C /* TenTwentyThirtyFiveSprintRequest.swift */; };
 		94FD93CA2791FDF800A4819C /* TenTwentyThirtyFiveSprintRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD93C92791FDF800A4819C /* TenTwentyThirtyFiveSprintRequestBody.swift */; };
+		E6423DFC2913B83500D572E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6423DFE2913B83500D572E6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +337,8 @@
 		94FD93C52791F8E700A4819C /* GiTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiTRequestBody.swift; sourceTree = "<group>"; };
 		94FD93C72791FDB800A4819C /* TenTwentyThirtyFiveSprintRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyThirtyFiveSprintRequest.swift; sourceTree = "<group>"; };
 		94FD93C92791FDF800A4819C /* TenTwentyThirtyFiveSprintRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyThirtyFiveSprintRequestBody.swift; sourceTree = "<group>"; };
+		E6423DFD2913B83500D572E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6423DFF2913B83B00D572E6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +409,7 @@
 				73975784274946A200A17B6E /* ViewExtension.swift */,
 				73EB23382746944E008111AE /* ContentView.swift */,
 				7338BAAA275D009400F42D2F /* LoginView.swift */,
+				E6423DFE2913B83500D572E6 /* Localizable.strings */,
 				734CDD8D275BA30900697CEE /* TechnoleonAPI.swift */,
 				9426D2B9278D8895009B6541 /* OverviewTestItem.swift */,
 				94E2D21F27934D6400330C19 /* OverviewTestItemPlayer.swift */,
@@ -760,6 +764,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 73EB232A2746944E008111AE;
 			packageReferences = (
@@ -783,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CB305227567F3000BF15AD /* Cognitief.json in Resources */,
+				E6423DFC2913B83500D572E6 /* Localizable.strings in Resources */,
 				73CB304E27567EA900BF15AD /* Fysiek.json in Resources */,
 				73EB233E27469450008111AE /* Preview Assets.xcassets in Resources */,
 				73EB233B27469450008111AE /* Assets.xcassets in Resources */,
@@ -989,6 +995,18 @@
 			targetProxy = 73EB234E27469450008111AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6423DFE2913B83500D572E6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6423DFD2913B83500D572E6 /* en */,
+				E6423DFF2913B83B00D572E6 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		73EB235527469450008111AE /* Debug */ = {

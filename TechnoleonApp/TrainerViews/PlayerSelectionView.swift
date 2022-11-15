@@ -21,7 +21,7 @@ struct PlayerSelectionView: View {
                     .frame(width: 30, height: 30)
                     .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                Text("Selecteer een speler")
+                Text(NSLocalizedString("Select the player", comment: "Select the player"))
                 
                 DisclosureGroup("\(selectedPlayer)", isExpanded: $isExpanded){
                     ScrollView {
@@ -52,7 +52,7 @@ struct PlayerSelectionView: View {
                 Spacer()
                                 
                 NavigationLink(destination: getTestView()) {
-                    Text("Doe de test")
+                    Text(NSLocalizedString("Do the test", comment: "Do the test"))
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 20)
                         .padding()
@@ -63,7 +63,7 @@ struct PlayerSelectionView: View {
             
                 TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)
             }
-            .navigationTitle("Speler selectie" )
+            .navigationTitle(NSLocalizedString("Player selection", comment: "Player selection"))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
     

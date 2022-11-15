@@ -15,7 +15,7 @@ struct TestDetailView: View {
             Spacer()
             HStack{
                 NavigationLink(destination: {}) {
-                    Text("Trainingsadvies")
+                    Text(NSLocalizedString("Trainingsadvice", comment: "Trainingsadvice"))
                         .font(.custom("", size: 16))
                         .foregroundColor(Color.white)
                         .frame(width: 120, height: 20)
@@ -25,7 +25,7 @@ struct TestDetailView: View {
                 .disabled(true)
                 Spacer()
                 NavigationLink(destination: {}) {
-                    Text("Ontwikkeling")
+                    Text(NSLocalizedString("Development", comment: "Development"))
                         .font(.custom("", size: 16))
                         .foregroundColor(Color.black)
                         .frame(width: 120, height: 20)

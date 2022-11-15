@@ -19,9 +19,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("KTK3+")
+                            Text(NSLocalizedString("KTK3_title", comment: "KTK3_title"))
                                 .foregroundColor(Color.black)
-                            Text("Coördinatie, balans")
+                            Text(NSLocalizedString("KTK3_skills", comment: "KTK3_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -49,9 +49,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("PHV")
+                            Text(NSLocalizedString("APHV_title", comment: "APHV_title"))
                                 .foregroundColor(Color.black)
-                            Text("Biologische leeftijd")
+                            Text(NSLocalizedString("APHV_skills", comment: "APHV_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -79,9 +79,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("Sit and reach")
+                            Text(NSLocalizedString("Sit_and_reach_title", comment: "Sit_and_reach_title"))
                                 .foregroundColor(Color.black)
-                            Text("Mobiliteit")
+                            Text(NSLocalizedString("Sit_and_reach_skills", comment: "Sit_and_reach_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -109,9 +109,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("Vetpercentage")
+                            Text(NSLocalizedString("Fatpercentage_title", comment: "Fatpercentage_title"))
                                 .foregroundColor(Color.black)
-                            Text("Biometrie")
+                            Text(NSLocalizedString("Fatpercentage_skills", comment: "Fatpercentage_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -200,9 +200,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("10, 20 en 35 meter sprint")
+                            Text(NSLocalizedString("Sprint3_title", comment: "Sprint3_title"))
                                 .foregroundColor(Color.black)
-                            Text("Snelheid")
+                            Text(NSLocalizedString("Sprint3_skills", comment: "Sprint3_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -230,9 +230,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("10x5 meter sprint")
+                            Text(NSLocalizedString("Sprint10x5_title", comment: "Sprint10x5_title"))
                                 .foregroundColor(Color.black)
-                            Text("Explosiviteit")
+                            Text(NSLocalizedString("Sprint10x5_skills", comment: "Sprint10x5_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -260,9 +260,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("Interval shuttle run")
+                            Text(NSLocalizedString("ISRT_title", comment: "ISRT_title"))
                                 .foregroundColor(Color.black)
-                            Text("Uithoudingsvermogen")
+                            Text(NSLocalizedString("ISRT_skills", comment: "ISRT_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }
@@ -290,9 +290,9 @@ struct PhysicalTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("Yo-Yo uithoudingsvermogen test")
+                            Text(NSLocalizedString("YYIRT_title", comment: "YYIRT_title"))
                                 .foregroundColor(Color.black)
-                            Text("Uithoudingsvermogen")
+                            Text(NSLocalizedString("YYIRT_skills", comment: "YYIRT_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }

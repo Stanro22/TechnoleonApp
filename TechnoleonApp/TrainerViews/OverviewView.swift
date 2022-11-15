@@ -30,13 +30,13 @@ struct OverviewView: View {
                 VStack(alignment: .leading){
                     HStack{
                         if loggedInUser.name != nil{
-                            Text("Naam:    ")
+                            Text(NSLocalizedString("Name", comment: "Name") + ":")
                                 .font(.custom("", size: 14))
                             + Text(loggedInUser.name!)
                                 .font(.custom("", size: 14))
                         }
                         else{
-                            Text("Naam:")
+                            Text(NSLocalizedString("Name", comment: "Name") + ":")
                                 .font(.custom("", size: 14))
                         }
                         Spacer()
@@ -45,13 +45,13 @@ struct OverviewView: View {
                     
                     HStack{
                         if loggedInUser.teams![0].team_name != nil {
-                            Text("Team:    ")
+                            Text(NSLocalizedString("Team", comment: "Team") + ":")
                                 .font(.custom("", size: 14))
                             + Text(loggedInUser.teams![0].team_name!)
                                 .font(.custom("", size: 14))
                         }
                         else{
-                            Text("Team:")
+                            Text(NSLocalizedString("Team", comment: "Team") + ":")
                                 .font(.custom("", size: 14))
                         }
                         Spacer()
@@ -68,7 +68,7 @@ struct OverviewView: View {
             HStack{
                     NavigationLink(destination: TeamOverviewView()) {
                         VStack{
-                            Text("Team Overzicht")
+                            Text(NSLocalizedString("Team overview", comment: "Team overview"))
                                 .foregroundColor(Color.white)
                                 .font(.custom("", size: 14))
                         }
@@ -81,7 +81,7 @@ struct OverviewView: View {
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("Resultaten")
+                    Text(NSLocalizedString("Results", comment: "Results"))
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
@@ -95,7 +95,7 @@ struct OverviewView: View {
                             }
                             else{
                                 if testList == nil{
-                                    ProgressView("Loading tests")
+                                    ProgressView(NSLocalizedString("Loading tests", comment: "Loading tests"))
                                         .onAppear(){
                                             setOverview()
                                         }
@@ -135,7 +135,7 @@ struct OverviewView: View {
             
             TrainerTabBar(isOverviewActive: true, isTestsActive: false, isProfileActive: false)
         }
-        .navigationTitle("Overzicht")
+        .navigationTitle(NSLocalizedString("Overview", comment: "Overview"))
         .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
@@ -178,50 +178,45 @@ struct OverviewView: View {
         testList = [OverviewTestItem]()
         if testManager.testListLSPT != nil{
             testManager.testListLSPT!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "LSPT", players: testManager.playerListLSPT! ,tests: testManager.testListLSPT!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("LSPT_title", comment: "LSPT_title"), players: testManager.playerListLSPT! ,tests: testManager.testListLSPT!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListKTK3 != nil{
             testManager.testListKTK3!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "KTK3", players: testManager.playerListKTK3!, tests: testManager.testListKTK3!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("KTK3_title", comment: "KTK3_title"), players: testManager.playerListKTK3!, tests: testManager.testListKTK3!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListGIT != nil{
             testManager.testListGIT!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "GiT", players: testManager.playerListGIT!, tests: testManager.testListGIT!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("GiD_title", comment: "GiD_title"), players: testManager.playerListGIT!, tests: testManager.testListGIT!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListPHV != nil{
             testManager.testListPHV!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "PHV", players: testManager.playerListPHV!, tests: testManager.testListPHV!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("APHV_title", comment: "APHV_title"), players: testManager.playerListPHV!, tests: testManager.testListPHV!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListsitAndReach != nil{
             testManager.testListsitAndReach!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "Sit and Reach", players: testManager.playerListsitAndReach!, tests: testManager.testListsitAndReach!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("Sit_and_reach_title", comment: "Sit_and_reach_title"), players: testManager.playerListsitAndReach!, tests: testManager.testListsitAndReach!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListfatPercentage != nil{
             testManager.testListfatPercentage!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "Fat percentage", players: testManager.playerListfatPercentage!, tests: testManager.testListfatPercentage!)
-            self.testList?.append(overviewTestItem)
-        }
-        if testManager.testListIJT != nil{
-            testManager.testListIJT!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "IJT", players: testManager.playerListIJT!, tests: testManager.testListIJT!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("Fatpercentage_title", comment: "Fatpercentage_title"), players: testManager.playerListfatPercentage!, tests: testManager.testListfatPercentage!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListInsaitJoy != nil{
             testManager.testListInsaitJoy!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "Insait Joy", players: testManager.playerListInsaitJoy!, tests: testManager.testListInsaitJoy!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("IJBT_title", comment: "IJBT_title"), players: testManager.playerListInsaitJoy!, tests: testManager.testListInsaitJoy!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListShuttleRun != nil{
             testManager.testListShuttleRun!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "Shuttle run", players: testManager.playerListShuttleRun!, tests: testManager.testListShuttleRun!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("ISRT_title", comment: "ISRT_title"), players: testManager.playerListShuttleRun!, tests: testManager.testListShuttleRun!)
             self.testList?.append(overviewTestItem)
         }
-        if testManager.testListOneLegStance != nil{
+        /*if testManager.testListOneLegStance != nil{
             testManager.testListOneLegStance!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "One leg stance", players: testManager.playerListOneLegStance!, tests: testManager.testListOneLegStance!)
             self.testList?.append(overviewTestItem)
@@ -230,30 +225,30 @@ struct OverviewView: View {
             testManager.testListTVPS3!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "TVPS3", players: testManager.playerListTVPS3!, tests: testManager.testListTVPS3!)
             self.testList?.append(overviewTestItem)
-        }
+        }*/
         if testManager.testListTTest != nil{
             testManager.testListTTest!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "T-Test", players: testManager.playerListTTest!, tests: testManager.testListTTest!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("T-Test_title", comment: "T-Test_title"), players: testManager.playerListTTest!, tests: testManager.testListTTest!)
             self.testList?.append(overviewTestItem)
         }
-        if testManager.testListVFMT != nil{
+        /*if testManager.testListVFMT != nil{
             testManager.testListVFMT!.sort{$0.created! > $1.created!}
             let overviewTestItem = OverviewTestItem(name: "VFMT", players: testManager.playerListVFMT!, tests: testManager.testListVFMT!)
             self.testList?.append(overviewTestItem)
-        }
+        }*/
         if testManager.testList10x5Sprint != nil{
             testManager.testList10x5Sprint!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "10x5m Sprint", players: testManager.playerList10x5Sprint!, tests: testManager.testList10x5Sprint!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("Sprint10x5_title", comment: "Sprint10x5_title"), players: testManager.playerList10x5Sprint!, tests: testManager.testList10x5Sprint!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListYoYo != nil{
             testManager.testListYoYo!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "Yo-Yo", players: testManager.playerListYoYo!, tests: testManager.testListYoYo!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("YYIRT_title", comment: "YYIRT_title"), players: testManager.playerListYoYo!, tests: testManager.testListYoYo!)
             self.testList?.append(overviewTestItem)
         }
         if testManager.testListTenTwentyThirtyFiveSprint != nil{
             testManager.testListTenTwentyThirtyFiveSprint!.sort{$0.created! > $1.created!}
-            let overviewTestItem = OverviewTestItem(name: "10, 20, 35m Sprint", players: testManager.playerListTenTwentyThirtyFiveSprint!, tests: testManager.testListTenTwentyThirtyFiveSprint!)
+            let overviewTestItem = OverviewTestItem(name: NSLocalizedString("Sprint3_title", comment: "Sprint3_title"), players: testManager.playerListTenTwentyThirtyFiveSprint!, tests: testManager.testListTenTwentyThirtyFiveSprint!)
             self.testList?.append(overviewTestItem)
         }
         loadingTests = true

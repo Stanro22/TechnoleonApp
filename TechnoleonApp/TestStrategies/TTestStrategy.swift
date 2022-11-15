@@ -9,7 +9,7 @@ import Foundation
 
 class TTestStrategy {
     func setTestFields() -> String{
-        return "Tijd"
+        return NSLocalizedString("Time", comment: "Time")
     }
     
     func setTestValues(test: TTestTest) -> String{

@@ -19,7 +19,7 @@ struct TrainerTabBar: View {
                         Image(systemName: "binoculars.fill")
                             .foregroundColor(Color.white)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
-                        Text("Overzicht")
+                        Text(NSLocalizedString("Overview", comment: "Overview"))
                             .foregroundColor(Color.white)
                             .font(.custom("", size: 14))
                     }
@@ -37,7 +37,7 @@ struct TrainerTabBar: View {
                             .renderingMode(.template)
                             .frame(width: 20, height: 20)
                             .foregroundColor(Color.white)
-                        Text("Testen")
+                        Text(NSLocalizedString("Tests", comment: "Tests"))
                             .foregroundColor(Color.white)
                             .font(.custom("", size: 14))
                     }
@@ -53,7 +53,7 @@ struct TrainerTabBar: View {
                         Image(systemName: "person.circle.fill")
                             .foregroundColor(Color.white)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
-                        Text("Profiel")
+                        Text(NSLocalizedString("Profile", comment: "Profile"))
                             .foregroundColor(Color.white)
                             .font(.custom("", size: 14))
                     }

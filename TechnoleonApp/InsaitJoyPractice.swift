@@ -23,10 +23,10 @@ struct InsaitJoyPractice: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Voer de data in ui de Insait Joy App")
+            Text(NSLocalizedString("Fill in the Insait Joy data from the App", comment: "Fill in the Insait Joy data from the App"))
                 .font(.title3)
                 HStack{
-                    TextField("Aantal", text: $count)
+                    TextField(NSLocalizedString("Count", comment: "Count"), text: $count)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -34,7 +34,7 @@ struct InsaitJoyPractice: View {
                 }
                 
                 HStack{
-                    TextField("Vloeiendheid", text: $fluency)
+                    TextField(NSLocalizedString("Fluency", comment: "Fluency"), text: $fluency)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -44,7 +44,7 @@ struct InsaitJoyPractice: View {
                 Spacer()
                 
                 NavigationLink(destination: EndOfTestView().onAppear{setInsaitJoyTest()}) {
-                    Text("Sla gegevens op")
+                    Text(NSLocalizedString("Save the data", comment: "Save the data"))
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
@@ -54,7 +54,7 @@ struct InsaitJoyPractice: View {
                     .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
                     .disabled(isFormNotValid)
             }
-            .navigationTitle("Insait Joy oefening")
+            .navigationTitle(NSLocalizedString("Insait Joy drill", comment: "Insait Joy drill"))
             .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }

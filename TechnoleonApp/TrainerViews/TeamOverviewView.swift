@@ -14,7 +14,7 @@ struct TeamOverviewView: View {
         VStack{
             Spacer()
             VStack{
-                Text("Team players")
+                Text(NSLocalizedString("Team players", comment: "Team players"))
                     .font(.custom("", size: 16))
                 ScrollView{
                     ForEach(loggedInUser.teams![0].players!, id: \.self) { player in
@@ -39,7 +39,7 @@ struct TeamOverviewView: View {
             Spacer()
             TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)
         }
-        .navigationTitle("Team Overzicht")
+        .navigationTitle(NSLocalizedString("Team overview", comment: "Team overview"))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
 }

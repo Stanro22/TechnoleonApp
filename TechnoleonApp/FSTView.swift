@@ -30,7 +30,7 @@ struct FSTView: View {
             Spacer()
             VStack{
                 HStack{
-                    Text("Slalom")
+                    Text(NSLocalizedString("Slalom", comment: "Slalom"))
                     Spacer()
                     Text("\(slalomManager.timeToSave)")
                 }
@@ -38,7 +38,7 @@ struct FSTView: View {
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
                 .overlay(Rectangle().frame(width: 190, height: 2, alignment: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)).foregroundColor(Color(red: 0.38, green: 0.44, blue: 0.64)), alignment: .bottom)
                 HStack{
-                    Text("Dribbel")
+                    Text(NSLocalizedString("Dribble", comment: "Dribble"))
                     Spacer()
                     Text("\(dribbleManager.timeToSave)")
                 }
@@ -46,7 +46,7 @@ struct FSTView: View {
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
                 .overlay(Rectangle().frame(width: 190, height: 2, alignment: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)).foregroundColor(Color(red: 0.38, green: 0.44, blue: 0.64)), alignment: .bottom)
                 HStack{
-                    Text("Achterwaarts")
+                    Text(NSLocalizedString("Backwards", comment: "Backwards"))
                     Spacer()
                     Text("\(backwardsManager.timeToSave)")
                 }
@@ -54,7 +54,7 @@ struct FSTView: View {
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
                 .overlay(Rectangle().frame(width: 190, height: 2, alignment: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)).foregroundColor(Color(red: 0.38, green: 0.44, blue: 0.64)), alignment: .bottom)
                 HStack{
-                    Text("8-figuur")
+                    Text(NSLocalizedString("8-figure", comment: "8-figure"))
                     Spacer()
                     Text("\(figureManager.timeToSave)")
                 }
@@ -62,7 +62,7 @@ struct FSTView: View {
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 0, trailing: 0))
                 .overlay(Rectangle().frame(width: 190, height: 2, alignment: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)).foregroundColor(Color(red: 0.38, green: 0.44, blue: 0.64)), alignment: .bottom)
                 HStack{
-                    Text("Passen")
+                    Text(NSLocalizedString("Pass", comment: "Pass"))
                     Spacer()
                     Text("\(passManager.timeToSave)")
                 }
@@ -70,7 +70,7 @@ struct FSTView: View {
                 .padding(EdgeInsets(top: -5, leading: 0, bottom: 5, trailing: 0))
                 .overlay(Rectangle().frame(width: 230, height: 4, alignment: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)).foregroundColor(Color(red: 0.38, green: 0.44, blue: 0.64)), alignment: .bottom)
                 HStack{
-                    Text("Eindtijd")
+                    Text(NSLocalizedString("End time", comment: "End time"))
                     Spacer()
                     Text("\(timerManager.timeToSave)")
                 }
@@ -119,7 +119,7 @@ struct FSTView: View {
                     })
                 Spacer()
                 Button(action: {setTableTimes()}){
-                    Text("Ronde")
+                    Text(NSLocalizedString("Round", comment: "Round"))
                         .padding()
                         .foregroundColor(Color.white)
                         .background(Color(red: 0.62, green: 0.65, blue: 0.90))
@@ -130,7 +130,7 @@ struct FSTView: View {
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setFSTTest()}) {
-                Text("Sla gegevens op")
+                Text(NSLocalizedString("Save the data", comment: "Save the data"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -140,7 +140,7 @@ struct FSTView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 .disabled(isFormNotValid)
         }
-        .navigationTitle("FST")
+        .navigationTitle(NSLocalizedString("FST_title", comment: "FST_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

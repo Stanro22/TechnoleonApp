@@ -10,10 +10,10 @@ import Foundation
 class YoYoInfo : TestInfo {
     init() {
         super.init(
-            name: "Yo-Yo uithoudingsvermogen test",
-            skills: "Uithoudingsvermogen",
-            description: "De Yo-Yo uithoudingsvermogen test meet het uithoudingsvermogen van de spelers. De spelers moeten telkens voor de piep over de lijn zijn. Mocht dit niet het geval zijn kan een gele en opeenvolgend rode kaart toegekent worden waarna de speler moet stoppen met de test. Deze test voer je uit voor het gehele team.",
-            itemsNeeded: "Voor deze test is nodig: de opname met piepjes."
+            name: NSLocalizedString("YYIRT_title", comment: "YYIRT_title"),
+            skills: NSLocalizedString("YYIRT_skills", comment: "YYIRT_skills"),
+            description: NSLocalizedString("YYIRT_description", comment: "YYIRT_description"),
+            itemsNeeded: NSLocalizedString("YYIRT_items", comment: "YYIRT_items")
         )
     }
 }

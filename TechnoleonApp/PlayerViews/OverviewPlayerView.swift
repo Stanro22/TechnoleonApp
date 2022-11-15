@@ -30,13 +30,13 @@ struct OverviewPlayerView: View {
                 VStack(alignment: .leading){
                     HStack{
                         if loggedInUser.name != nil{
-                            Text("Naam:    ")
+                            Text(NSLocalizedString("Name", comment: "Name") + ":")
                                 .font(.custom("", size: 14))
                             + Text(loggedInUser.name!)
                                 .font(.custom("", size: 14))
                         }
                         else{
-                            Text("Naam:")
+                            Text(NSLocalizedString("Name", comment: "Name") + ":")
                                 .font(.custom("", size: 14))
                         }
                         Spacer()
@@ -45,13 +45,13 @@ struct OverviewPlayerView: View {
                     
                     HStack{
                         if loggedInUser.type != nil{
-                            Text("Positie:    ")
+                            Text(NSLocalizedString("Position", comment: "Position") + ":")
                                 .font(.custom("", size: 14))
                             + Text(loggedInUser.type!)
                                 .font(.custom("", size: 14))
                         }
                         else{
-                            Text("Positie:")
+                            Text(NSLocalizedString("Position", comment: "Position") + ":")
                                 .font(.custom("", size: 14))
                         }
                         Spacer()
@@ -60,13 +60,13 @@ struct OverviewPlayerView: View {
                     
                     HStack{
                         if loggedInUser.teams![0].team_name != nil {
-                            Text("Team:    ")
+                            Text(NSLocalizedString("Team", comment: "Team") + ":")
                                 .font(.custom("", size: 14))
                             + Text(loggedInUser.teams![0].team_name!)
                                 .font(.custom("", size: 14))
                         }
                         else{
-                            Text("Team:")
+                            Text(NSLocalizedString("Team", comment: "Team") + ":")
                                 .font(.custom("", size: 14))
                         }
                         Spacer()
@@ -83,7 +83,7 @@ struct OverviewPlayerView: View {
             HStack{
                 NavigationLink(destination: LatestResultsView()) {
                     VStack{
-                        Text("Laatste Resultaten")
+                        Text(NSLocalizedString("Latest Results", comment: "Latests Results"))
                             .foregroundColor(Color.white)
                             .font(.custom("", size: 14))
                     }
@@ -97,7 +97,7 @@ struct OverviewPlayerView: View {
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("Resultaten")
+                    Text(NSLocalizedString("Results", comment: "Results"))
                         .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 15))
                     ScrollView{
                         LazyVGrid(columns: colums, spacing: 10){
@@ -111,7 +111,7 @@ struct OverviewPlayerView: View {
                             }
                             else{
                                 if testList == nil{
-                                    ProgressView("Loading tests")
+                                    ProgressView(NSLocalizedString("Loading tests", comment: "Loading tests"))
                                         .onAppear(){
                                             setTestListForPlayer()
                                         }
@@ -152,7 +152,7 @@ struct OverviewPlayerView: View {
             
             PlayerTabBar(isOverViewActive: true, isTestsActive: false, isProfileActive: false)
         }
-        .navigationTitle("Overzicht")
+        .navigationTitle(NSLocalizedString("Overview", comment: "Overview"))
         .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

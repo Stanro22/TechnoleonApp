@@ -10,10 +10,10 @@ import Foundation
 class Sprint10x5Info : TestInfo {
     init() {
         super.init(
-            name: "10x5 meter sprint",
-            skills: "Explosiviteit",
-            description: "Deze test zal de snelheid van de speler meten.",
-            itemsNeeded: "Voor deze test is nodig: een pion om de afstand mee te markeren."
+            name: NSLocalizedString("Sprint10x5_title", comment: "Sprint10x5_title"),
+            skills: NSLocalizedString("Sprint10x5_skills", comment: "Sprint10x5_skills"),
+            description: NSLocalizedString("Sprint10x5_description", comment: "Sprint10x5_description"),
+            itemsNeeded: NSLocalizedString("Sprint10x5_items", comment: "Sprint10x5_items")
         )
     }
 }

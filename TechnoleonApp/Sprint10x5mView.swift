@@ -23,14 +23,12 @@ struct Sprint10x5mView: View {
         VStack{
             Spacer()
             VStack{
-                Text("Sprint")
-                    .font(.title)
-                Text("Totale duur in seconden")
+                Text(NSLocalizedString("Total durarion in seconds", comment: "Total duration in seconds"))
                     .italic()
             }
             Spacer()
             VStack{
-                Text("Tijd om op te slaan:")
+                Text(NSLocalizedString("Time to save", comment: "Time to save"))
                     .font(.custom("", size: 16))
                 Text(stopwatchManager.timeToSave)
                     .font(.custom("", size: 16))
@@ -41,7 +39,7 @@ struct Sprint10x5mView: View {
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setSprint10x5Test()}) {
-                Text("Sla gegevens op")
+                Text(NSLocalizedString("Save the data", comment: "Save the data"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -51,7 +49,7 @@ struct Sprint10x5mView: View {
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 5, trailing: 0))
                 .disabled(isFormNotValid)
         }
-        .navigationTitle("10x5 meter sprint")
+        .navigationTitle(NSLocalizedString("Sprint10x5_title", comment: "Sprint10x5_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

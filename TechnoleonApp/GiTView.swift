@@ -109,7 +109,7 @@ struct GiTView: View {
                     currentRound += 1
                     resetButtonColors()
                 }){
-                    Text("Volgende ronde")
+                    Text(NSLocalizedString("Next round", comment: "Next round"))
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
@@ -121,7 +121,7 @@ struct GiTView: View {
             }
             if currentRound == maxRounds {
                 NavigationLink(destination: EndOfTestView().onAppear{setGiTTest()}) {
-                    Text("Sla gegevens op")
+                    Text(NSLocalizedString("Save the data", comment: "Save the data"))
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)

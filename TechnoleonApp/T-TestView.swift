@@ -22,9 +22,7 @@ struct T_TestView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("T-Test")
-                .font(.title)
-            Text("Tijd om op te slaan:")
+            Text(NSLocalizedString("Time to save", comment: "Time to save") + ":")
                 .font(.custom("", size: 16))
             Text(stopwatchManager.timeToSave)
                 .font(.custom("", size: 16))
@@ -34,7 +32,7 @@ struct T_TestView: View {
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setTTestTest()}) {
-                Text("Sla gegevens op")
+                Text(NSLocalizedString("Save the data", comment: "Save the data"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -44,7 +42,7 @@ struct T_TestView: View {
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
                 .disabled(isFormNotValid)
         }
-        .navigationTitle("T-Test")
+        .navigationTitle(NSLocalizedString("T-Test_title", comment: "T-Test_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

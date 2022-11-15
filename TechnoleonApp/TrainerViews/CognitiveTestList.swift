@@ -19,9 +19,9 @@ struct CognitiveTestList: View {
                 }}){
                     HStack{
                         VStack(alignment: .leading){
-                            Text("GiT")
+                            Text(NSLocalizedString("GiD_title", comment: "GiD_title"))
                                 .foregroundColor(Color.black)
-                            Text("Positioneren")
+                            Text(NSLocalizedString("GiD_skills", comment: "GiD_skills"))
                                 .font(.custom("", size: 14))
                                 .foregroundColor(Color.gray)
                         }

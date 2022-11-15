@@ -16,7 +16,7 @@ struct ContentView: View {
             NavigationView{
                 LoginView()
             }
-            .navigationTitle("Inloggen")
+            .navigationTitle(NSLocalizedString("Log in", comment: "Log in"))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }
         else {
@@ -24,21 +24,21 @@ struct ContentView: View {
                 NavigationView{
                     OverviewView()
                 }
-                .navigationTitle("Overview")
+                .navigationTitle(NSLocalizedString("Overview", comment: "Overview"))
                 .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
             }
             else if loggedInUser.type == "player" {
                 NavigationView{
                     OverviewPlayerView()
                 }
-                .navigationTitle("Overview")
+                .navigationTitle(NSLocalizedString("Overview", comment: "Overview"))
                 .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
             }
             else{
                 NavigationView{
                     LoginView()
                 }
-                .navigationTitle("Inloggen")
+                .navigationTitle(NSLocalizedString("Log in", comment: "Log in"))
                 .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
             }
         }

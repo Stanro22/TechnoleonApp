@@ -35,7 +35,7 @@ struct ProfilePlayerView: View {
                 HStack{
                     Image(systemName: "envelope.fill")
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Emailadres")
+                    Text(NSLocalizedString("E-mail", comment: "E-mail"))
                         .font(.custom("", size: 14))
                     Spacer()
                     if loggedInUser.email != nil {
@@ -52,12 +52,12 @@ struct ProfilePlayerView: View {
                 HStack{
                     Image(systemName: "calendar")
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Geboortejaar")
+                    Text(NSLocalizedString("Date of Birth", comment: "Date of Birth"))
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     Spacer()
                     if dateSet == false{
-                        ProgressView("Loading date")
+                        ProgressView(NSLocalizedString("Loading date", comment: "Loading date"))
                             .onAppear(){
                                 setDate()
                             }
@@ -79,7 +79,7 @@ struct ProfilePlayerView: View {
                         .renderingMode(.template)
                         .frame(width: 20, height: 20)
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Gender")
+                    Text(NSLocalizedString("Gender", comment: "Gender"))
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
                     Spacer()
@@ -97,7 +97,7 @@ struct ProfilePlayerView: View {
                 HStack{
                     Image(systemName: "scalemass.fill")
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Gewicht in kg")
+                    Text(NSLocalizedString("Weight", comment: "Weight"))
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     Spacer()
@@ -115,7 +115,7 @@ struct ProfilePlayerView: View {
                 HStack{
                     Image(systemName: "person.fill")
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Lengte in cm")
+                    Text(NSLocalizedString("Length", comment: "Length"))
                         .font(.custom("", size: 14))
                         .padding(EdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 0))
                     Spacer()
@@ -136,7 +136,7 @@ struct ProfilePlayerView: View {
             Spacer()
             
             Button(action: logout){
-                Text("Log out")
+                Text(NSLocalizedString("Log out", comment: "Log out"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -148,7 +148,7 @@ struct ProfilePlayerView: View {
             
             PlayerTabBar(isOverViewActive: false, isTestsActive: false, isProfileActive: true)
         }
-        .navigationTitle("Profiel")
+        .navigationTitle(NSLocalizedString("Profile", comment: "Profile"))
         .navigationBarItems(trailing: Image(systemName: "square.and.pencil").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

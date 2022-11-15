@@ -13,7 +13,7 @@ struct Sprint10m20m35mView: View {
     @ObservedObject var stopwatchManager = StopwatchManager()
     @ObservedObject var tenTwentyThirtyFiveSprintBody = TenTwentyThirtyFiveSprintRequestBody()
     @State private var isExpanded = false
-    @State private var selectedDistance = "Afstand"
+    @State private var selectedDistance = NSLocalizedString("Distance", comment: "Distance")
     private var distances = ["10 meter", "20 meter", "35 meter"]
     @State var IsDistanceSelected: Bool = false
     var isFormNotValid: Bool {
@@ -26,7 +26,7 @@ struct Sprint10m20m35mView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Kies afstand voor de sprint")
+            Text(NSLocalizedString("Select the distance", comment: "Select the distance"))
                 .font(.title3)
                 
             DisclosureGroup("\(selectedDistance)", isExpanded: $isExpanded){
@@ -55,7 +55,7 @@ struct Sprint10m20m35mView: View {
             .background(Color(red: 0.95, green: 0.95, blue: 0.95))
             Spacer()
             
-            Text("Tijd om op te slaan")
+            Text(NSLocalizedString("Time to save", comment: "Time to save"))
                 .font(.custom("", size: 16))
             Text(stopwatchManager.timeToSave)
                 .font(.custom("", size: 16))
@@ -63,7 +63,7 @@ struct Sprint10m20m35mView: View {
             Spacer()
             
             NavigationLink(destination: EndOfTestView().onAppear{setTenTwentyThirtyFiveTest()}) {
-                Text("Sla gegevens op")
+                Text(NSLocalizedString("Save the data", comment: "Save the data"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -74,7 +74,7 @@ struct Sprint10m20m35mView: View {
                 .disabled(isFormNotValid)
             Spacer()
         }
-        .navigationTitle("10, 20 ,35 meter sprint")
+        .navigationTitle(NSLocalizedString("Sprint3_title", comment: "Sprint3_title"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

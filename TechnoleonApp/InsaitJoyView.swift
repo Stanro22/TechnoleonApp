@@ -12,12 +12,12 @@ struct InsaitJoyView: View {
     @State private var isExpanded1 = false
     @State private var isExpanded2 = false
     @State private var isExpanded3 = false
-    @State private var selectedNiveau = "Niveau"
-    private var niveaus = ["Beginner", "Geavanceerd", "Expert"]
-    @State private var selectedPractice = "Oefening"
+    @State private var selectedNiveau = NSLocalizedString("LevelISRT", comment: "LevelISRT")
+    private var niveaus = [NSLocalizedString("Rookie", comment: "Rookie"), NSLocalizedString("Advanced", comment: "Advanced"), NSLocalizedString("Expert", comment: "Expert")]
+    @State private var selectedPractice = NSLocalizedString("Drill", comment: "Drill")
     private var practices = ["Juggle", "Pull a vee", "Back side chop"]
-    @State private var selectedTime = "Tijd"
-    private var times = ["30 seconden", "60 seconden"]
+    @State private var selectedTime = NSLocalizedString("Time", comment: "Time")
+    private var times = ["30 " + NSLocalizedString("seconds", comment: "seconds"), "60 " + NSLocalizedString("seconds", comment: "seconds")]
     @State var isNiveauSelected: Bool = false
     @State var isPracticeSelected: Bool = false
     @State var isTimeSelected: Bool = false
@@ -31,7 +31,7 @@ struct InsaitJoyView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Instellingen")
+            Text(NSLocalizedString("Settings", comment: "Settings"))
                 .font(.title2)
                 
             DisclosureGroup("\(selectedNiveau)", isExpanded: $isExpanded1){
@@ -112,7 +112,7 @@ struct InsaitJoyView: View {
             Spacer()
             
             NavigationLink(destination: InsaitJoyPractice().onAppear{setInsaitJoyBody()}) {
-                Text("Naar oefening")
+                Text(NSLocalizedString("To the drill", comment: "To the drill"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -122,7 +122,7 @@ struct InsaitJoyView: View {
                 .padding(EdgeInsets(top: 180, leading: 0, bottom: 5, trailing: 0))
                 .disabled(isFormNotValid)
         }
-        .navigationTitle("Insait Joy instellingen")
+        .navigationTitle(NSLocalizedString("Insait Joy settings", comment: "Insait Joy settings"))
         .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

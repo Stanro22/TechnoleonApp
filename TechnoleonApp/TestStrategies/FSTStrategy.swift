@@ -9,11 +9,11 @@ import Foundation
 
 class FSTStrategy {
     func setTestFields() -> String{
-        return "Slalom \n" +
-        "Achterwaards  \n" +
-        "Dribbel \n" +
-        "8-Figuur \n" +
-        "Passen"
+        return NSLocalizedString("Slalom", comment: "Slalom") + " \n" +
+        NSLocalizedString("Backwards", comment: "Backwards") + " \n" +
+        NSLocalizedString("Dribble", comment: "Dribble") + " \n" +
+        NSLocalizedString("8-figure", comment: "8-figure") + " \n" +
+        NSLocalizedString("Pass", comment: "Pass")
     }
     
     func setTestValues(test: FSTTest) -> String{

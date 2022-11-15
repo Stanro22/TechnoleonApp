@@ -9,13 +9,13 @@ import Foundation
 
 class FatPercentageStrategy {
     func setTestFields() -> String{
-        return "Dikte borst \n" +
-        "Dikte dij  \n" +
-        "Dikte buik \n" +
-        "Dikte heup  \n" +
-        "Dikte oksel  \n" +
-        "Dikte schouderblad \n" +
-        "Dikte tricep"
+        return NSLocalizedString("Breast thickness", comment: "Breast thickness") + " \n" +
+        NSLocalizedString("Thigh thickness", comment: "Thigh thickness") + " \n" +
+        NSLocalizedString("Belly thickness", comment: "Belly thickness") + " \n" +
+        NSLocalizedString("Hip thickness", comment: "Hip thickness") + " \n" +
+        NSLocalizedString("Armpit thickness", comment: "Armpit thickness") + " \n" +
+        NSLocalizedString("Shoulderblade thickness", comment: "Shoulderblade thickness") + " \n" +
+        NSLocalizedString("Tricep thickness", comment: "Tricep thickness")
     }
     
     func setTestValues(test: FatPercentageTest) -> String{

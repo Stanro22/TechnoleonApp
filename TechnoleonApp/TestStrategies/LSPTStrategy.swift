@@ -9,12 +9,12 @@ import Foundation
 
 class LSPTStrategy {
     func setTestFields() -> String{
-        return "Bank gemist \n" +
-        "Verkeerde target geraakt \n" +
-        "Pylon geraakt \n" +
-        "Pass buiten gebied \n" +
-        "Target area gemist \n" +
-        "Strip geraakt"
+        return NSLocalizedString("Missed bench", comment: "Missed bench") + " \n" +
+        NSLocalizedString("Hit wrong target", comment: "Hit wrong target") + " \n" +
+        NSLocalizedString("Touched cone", comment: "Touched cone") + " \n" +
+        NSLocalizedString("Pass outside area", comment: "Pass outside area") + " \n" +
+        NSLocalizedString("Missed target area", comment: "Missed target area") + " \n" +
+        NSLocalizedString("Hit strip", comment: "Hit strip")
     }
     
     func setTestValues(test: LSPTTest) -> String{

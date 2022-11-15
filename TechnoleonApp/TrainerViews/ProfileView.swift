@@ -39,7 +39,7 @@ struct ProfileView: View {
                 HStack{
                     Image(systemName: "envelope.fill")
                         .foregroundColor(Color(red: 0.15, green: 0.21, blue: 0.40))
-                    Text("Emailadres")
+                    Text(NSLocalizedString("E-mail", comment: "E-mail"))
                         .font(.custom("", size: 14))
                     Spacer()
                     if loggedInUser.email != nil {
@@ -65,7 +65,7 @@ struct ProfileView: View {
             Spacer()
             
             Button(action: logout){
-                Text("Log out")
+                Text(NSLocalizedString("Log out", comment: "Log out"))
                     .font(.custom("", size: 22))
                     .foregroundColor(Color.white)
                     .frame(width: 250, height: 20)
@@ -77,7 +77,7 @@ struct ProfileView: View {
             
            TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: true)
         }
-        .navigationTitle("Profiel")
+        .navigationTitle(NSLocalizedString("Profile", comment: "Profile"))
         .navigationBarItems(trailing: Image(systemName: "square.and.pencil").foregroundColor(Color.white))
         .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))

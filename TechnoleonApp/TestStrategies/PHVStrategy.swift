@@ -9,9 +9,9 @@ import Foundation
 
 class PHVStrategy {
     func setTestFields() -> String{
-        return "Zithoogte  \n" +
-        "Lengte \n" +
-        "Gewicht"
+        return NSLocalizedString("Sit height", comment: "Sit height") + " \n" +
+        NSLocalizedString("Length", comment: "Length") + " \n" +
+        NSLocalizedString("Weight", comment: "Weight")
     }
     
     func setTestValues(test: PHVTest) -> String{

@@ -16,7 +16,7 @@ struct EndOfTestView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Selecteer een speler")
+            Text(NSLocalizedString("Select another player", comment: "Select another player"))
                 .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
             
             DisclosureGroup("\(selectedPlayer)", isExpanded: $isExpanded){
@@ -47,10 +47,10 @@ struct EndOfTestView: View {
             .background(Color(red: 0.93, green: 0.93, blue: 0.93))
             Spacer()
             
-            Text("Of")
+            Text(NSLocalizedString("Or", comment: "Or"))
             
             NavigationLink(destination: TestCategoriesView()) {
-                Text("Kies andere test")
+                Text(NSLocalizedString("Select another test", comment: "Select another test"))
                     .padding()
                     .foregroundColor(Color.white)
             }
@@ -58,7 +58,7 @@ struct EndOfTestView: View {
             .cornerRadius(10)
             
             NavigationLink(destination: getTestView()) {
-                Text("Start test opnieuw")
+                Text(NSLocalizedString("Start the test again", comment: "Start the test again"))
                     .padding()
                     .foregroundColor(Color.white)
             }
@@ -68,7 +68,7 @@ struct EndOfTestView: View {
             
             TrainerTabBar(isOverviewActive: false, isTestsActive: false, isProfileActive: false)
         }
-        .navigationTitle("Einde test")
+        .navigationTitle(NSLocalizedString("End of Test", comment: "End of Test"))
         .navigationBarBackButtonHidden(true)
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }

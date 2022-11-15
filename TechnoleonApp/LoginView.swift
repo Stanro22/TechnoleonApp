@@ -41,7 +41,7 @@ struct LoginView: View {
                 Spacer()
                 
                 HStack{
-                    TextField("E-mail", text: $email)
+                    TextField(NSLocalizedString("E-mail", comment: "E-mail"), text: $email)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 30)
@@ -50,7 +50,7 @@ struct LoginView: View {
                 .padding()
                 
                 HStack{
-                    SecureField("Password", text: $password)
+                    SecureField(NSLocalizedString("Password", comment: "Password"), text: $password)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 30)
@@ -61,7 +61,7 @@ struct LoginView: View {
                 //Button with login action
                 HStack{
                     Button(action: login){
-                        Text("Inloggen")
+                        Text(NSLocalizedString("Log in", comment: "Log in"))
                             .font(.custom("", size: 22))
                     }
                     .foregroundColor(Color.white)
@@ -75,7 +75,7 @@ struct LoginView: View {
             }
         }
         //Page title and color
-        .navigationTitle("Inloggen")
+        .navigationTitle(NSLocalizedString("Log in", comment: "Log in"))
         .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
     }
     

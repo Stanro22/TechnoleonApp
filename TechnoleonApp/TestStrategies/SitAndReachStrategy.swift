@@ -9,7 +9,7 @@ import Foundation
 
 class SitAndReachStrategy {
     func setTestFields() -> String{
-        return "Centimeter"
+        return NSLocalizedString("Centimeters", comment: "Centimeters")
     }
     
     func setTestValues(test: SitAndReachTest) -> String{

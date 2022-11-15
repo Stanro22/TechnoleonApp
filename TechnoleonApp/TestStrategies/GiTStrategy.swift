@@ -9,7 +9,7 @@ import Foundation
 
 class GiTStrategy {
     func setTestFields() -> String{
-        return "Zones"
+        return NSLocalizedString("Zones", comment: "Zones")
     }
     
     func setTestValues(test: GiTTest) -> String{

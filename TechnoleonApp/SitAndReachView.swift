@@ -24,10 +24,10 @@ struct SitAndReachView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("Voer gegevens in")
+            Text(NSLocalizedString("Fill in the data", comment: "Fill in the data"))
                 .font(.title)
                 HStack{
-                    TextField("Poging 1 (cm)", text: $attempt1)
+                    TextField(NSLocalizedString("Attempt", comment: "Attempt") + " 1 (cm)", text: $attempt1)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -35,7 +35,7 @@ struct SitAndReachView: View {
                 }
                 
                 HStack{
-                    TextField("Poging 2 (cm)", text: $attempt2)
+                    TextField(NSLocalizedString("Attempt", comment: "Attempt") + " 2 (cm)", text: $attempt2)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -44,7 +44,7 @@ struct SitAndReachView: View {
                 .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0))
                 
                 HStack{
-                    TextField("Poging 3 (cm)", text: $attempt3)
+                    TextField(NSLocalizedString("Attempt", comment: "Attempt") + " 3 (cm)", text: $attempt3)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 300, height: 40)
@@ -54,7 +54,7 @@ struct SitAndReachView: View {
                 Spacer()
                 
                 NavigationLink(destination: EndOfTestView().onAppear{setSitAndReachTest()}) {
-                    Text("Sla gegevens op")
+                    Text(NSLocalizedString("Save the data", comment: "Save the data"))
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
@@ -66,7 +66,7 @@ struct SitAndReachView: View {
             
             Spacer()
             }
-            .navigationTitle("Sit and reach")
+            .navigationTitle(NSLocalizedString("Sit_and_reach_title", comment: "Sit_and_reach_title"))
             .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }

@@ -10,10 +10,10 @@ import Foundation
 class LSPTInfo : TestInfo {
     init() {
         super.init(
-            name: "LSPT",
-            skills: "Passen",
-            description: "De LSPT meet de korte pass vaardigheden, beslissingsgedrag en balcontrole. De speler krijgt 16x een kleur te horen van de trainer. Vervolgens moet de speler zo snel mogelijk het target op de bank met de juiste kleur raken met daarbij zo min mogelijk strafpunten te krijgen. Awareness, luisteren, balcontrole, precisie en snel wenden en keren spelen allemaal een rol voor een zo hoog mogelijke performance.",
-            itemsNeeded: "Het volgende is nodig voor de test: Ballen, Meetlint, 2 x 4 hoedjes (2 verschillende kleuren), 4 banken + kleuren erop bevestigd"
+            name: NSLocalizedString("LSPT_title", comment: "LSPT_title"),
+            skills: NSLocalizedString("LSPT_skills", comment: "LSPT_skills"),
+            description: NSLocalizedString("LSPT_description", comment: "LSPT_description"),
+            itemsNeeded: NSLocalizedString("LSPT_items", comment: "LSPT_items")
         )
     }
 }

@@ -34,14 +34,11 @@ struct KTK3Balk1View: View {
                     HStack(alignment: .top, spacing: 0){
                         NavigationLink(destination: KTK3View().onAppear{saveFields()}) {
                                 VStack{
-                                    Text("Zijwaarts")
-                                        .foregroundColor(Color.white)
-                                        .font(.custom("", size: 14))
-                                    Text("springen")
+                                    Text(NSLocalizedString("Jumping sideways", comment: "Jumping sideways"))
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
-                                .frame(width: 70, height: 20)
+                                .frame(width: 70, height: 35)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
@@ -49,14 +46,11 @@ struct KTK3Balk1View: View {
                             
                         NavigationLink(destination: KTK3MovingSidewaysView().onAppear{saveFields()}) {
                                 VStack{
-                                    Text("Zijwaarts")
-                                        .foregroundColor(Color.white)
-                                        .font(.custom("", size: 14))
-                                    Text("bewegen")
+                                    Text(NSLocalizedString("Moving sideways", comment: "Moving sideways"))
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
-                                .frame(width: 70, height: 20)
+                                .frame(width: 70, height: 35)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
@@ -64,11 +58,11 @@ struct KTK3Balk1View: View {
                             
                         NavigationLink(destination: KTK3Balk1View().onAppear{saveFields()}) {
                                 VStack{
-                                    Text("Balk 1")
+                                    Text(NSLocalizedString("Beam 1", comment: "Beam 1"))
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
-                                .frame(width: 70, height: 20)
+                                .frame(width: 70, height: 35)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
@@ -77,11 +71,11 @@ struct KTK3Balk1View: View {
                             
                         NavigationLink(destination: KTK3Balk2View().onAppear{saveFields()}) {
                                 VStack{
-                                    Text("Balk 2")
+                                    Text(NSLocalizedString("Beam 2", comment: "Beam 2"))
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
-                                .frame(width: 70, height: 20)
+                                .frame(width: 70, height: 35)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
@@ -89,11 +83,11 @@ struct KTK3Balk1View: View {
                             
                         NavigationLink(destination: KTK3Balk3View().onAppear{saveFields()}) {
                                 VStack{
-                                    Text("Balk 3")
+                                    Text(NSLocalizedString("Beam 3", comment: "Beam 3"))
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
-                                .frame(width: 60, height: 20)
+                                .frame(width: 70, height: 35)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
@@ -101,11 +95,11 @@ struct KTK3Balk1View: View {
                             
                         NavigationLink(destination: KTK3HandEyeView().onAppear{saveFields()}) {
                                 VStack{
-                                    Text("Hand-oog")
+                                    Text(NSLocalizedString("Hand-eye", comment: "Hand-eye"))
                                         .foregroundColor(Color.white)
                                         .font(.custom("", size: 14))
                                 }
-                                .frame(width: 70, height: 20)
+                                .frame(width: 70, height: 35)
                                 .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
                                 .background(Color(red: 0.15, green: 0.21, blue: 0.40))
                         }
@@ -113,9 +107,10 @@ struct KTK3Balk1View: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                 }
+                Spacer()
                 
                 HStack{
-                    TextField("Poging 1", text: $attempt1)
+                    TextField(NSLocalizedString("Attempt", comment: "Attempt") + " 1", text: $attempt1)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
@@ -144,7 +139,7 @@ struct KTK3Balk1View: View {
                 }
                 
                 HStack{
-                    TextField("Poging 2", text: $attempt2)
+                    TextField(NSLocalizedString("Attempt", comment: "Attempt") + " 2", text: $attempt2)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
@@ -174,7 +169,7 @@ struct KTK3Balk1View: View {
                 .padding(EdgeInsets(top: -15, leading: 0, bottom: 0, trailing: 0))
                 
                 HStack{
-                    TextField("Poging 3", text: $attempt3)
+                    TextField(NSLocalizedString("Attempt", comment: "Attempt") + " 3", text: $attempt3)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                         .frame(width: 250, height: 30)
@@ -203,11 +198,11 @@ struct KTK3Balk1View: View {
                 }
                 .padding(EdgeInsets(top: -15, leading: 0, bottom: 0, trailing: 0))
                 
-                Text("Alle oefeningen gedaan?")
+                Text(NSLocalizedString("Did all the drills?", comment: "Did all the drills"))
                     .padding(EdgeInsets(top: 180, leading: 0, bottom: 0, trailing: 0))
                 
                 NavigationLink(destination: EndOfTestView().onAppear{ setKTK3plusTest()}) {
-                    Text("Beëindig de test")
+                    Text(NSLocalizedString("Save the data", comment: "Save the data"))
                         .font(.custom("", size: 22))
                         .foregroundColor(Color.white)
                         .frame(width: 250, height: 20)
@@ -217,7 +212,7 @@ struct KTK3Balk1View: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                     .disabled(isFormNotValid)
             }
-            .navigationTitle("KTK3+")
+            .navigationTitle(NSLocalizedString("KTK3_title", comment: "KTK3_title"))
             .navigationBarItems(trailing: Image(systemName: "info.circle.fill").foregroundColor(Color.white))
             .navigationBarColor(UIColor(red: 0.15, green: 0.21, blue: 0.40, alpha: 1.00))
         }

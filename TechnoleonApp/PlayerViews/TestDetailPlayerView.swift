@@ -23,7 +23,7 @@ struct TestDetailPlayerView: View {
             Spacer()
             VStack{
                 HStack{
-                    Text("Naam:")
+                    Text(NSLocalizedString("Name", comment: "Name") + ":")
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 0))
                         .font(.custom("", size: 20))
                     Spacer()
@@ -38,12 +38,12 @@ struct TestDetailPlayerView: View {
                 .cornerRadius(20)
                 
                 HStack{
-                    Text("Test datum:")
+                    Text(NSLocalizedString("Test date", comment: "Test date") + ":")
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 0))
                         .font(.custom("", size: 20))
                     Spacer()
                         if dateSet == false{
-                            ProgressView("Loading date")
+                            ProgressView(NSLocalizedString("Loading date", comment: "Loading date"))
                                 .onAppear(){
                                     setDate()
                                 }
@@ -64,14 +64,14 @@ struct TestDetailPlayerView: View {
             VStack{
                 HStack{
                     if loadingTest == false{
-                        ProgressView("Loading test")
+                        ProgressView(NSLocalizedString("Loading tests", comment: "Loading tests"))
                             .onAppear(){
                                 getTestById(id: test.id!)
                             }
                     }
                     else{
                         if loadingData == false {
-                            ProgressView("Loading data")
+                            ProgressView(NSLocalizedString("Loading data", comment: "Loading data"))
                                 .onAppear(){
                                     if testForData != nil {
                                         setSpecificTest(test: testForData!)

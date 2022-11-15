@@ -10,10 +10,10 @@ import Foundation
 class SitAndReachInfo : TestInfo {
     init() {
         super.init(
-            name: "Sit and reach",
-            skills: "Mobiliteit",
-            description: "De sit and reach test wordt gebruikt om de flexibiliteit van de wervelkolom en de hamstrings gemeten.",
-            itemsNeeded: "Voor deze test is nodig: een meetlint."
+            name: NSLocalizedString("Sit_and_reach_title", comment: "Sit_and_reach_title"),
+            skills: NSLocalizedString("Sit_and_reach_skills", comment: "Sit_and_reach_skills"),
+            description: NSLocalizedString("SAR_description", comment: "SAR_description"),
+            itemsNeeded: NSLocalizedString("SAR_items", comment: "SAR_items")
         )
     }
 }
