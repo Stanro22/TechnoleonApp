@@ -89,9 +89,6 @@ struct EndOfTestView: View {
         if testManager.isTTestset == true{
             return AnyView(T_TestView())
         }
-        if testManager.isOneLegStanceset == true{
-            return AnyView(OneLegStanceLeft())
-        }
         if testManager.isTenTwentyThirtyFiveset == true{
             return AnyView(Sprint10m20m35mView())
         }

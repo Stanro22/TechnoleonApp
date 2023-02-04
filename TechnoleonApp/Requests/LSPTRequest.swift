@@ -14,7 +14,5 @@ struct LSPTRequest: Encodable{
     let passOutsideArea: Int?
     let missedTargetArea: Int?
     let hitTenCMStrip: Int?
-    let time: String?
     let finalTime: String?
-    let secondsOver: String?
 }

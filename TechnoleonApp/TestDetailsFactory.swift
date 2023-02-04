@@ -58,10 +58,6 @@ class TestDetailsFactory {
             let yoyoStrategy = YoYoStrategy()
             return yoyoStrategy.setTestFields()
         }
-        if test.oneLegStanceTest != nil {
-            let oneLegStanceStrategy = OneLegStanceStrategy()
-            return oneLegStanceStrategy.setTestFields()
-        }
         if test.tTest != nil {
             let tTestStrategy = TTestStrategy()
             return tTestStrategy.setTestFields()
@@ -126,10 +122,6 @@ class TestDetailsFactory {
         if test.yoYoStaminaTest != nil {
             let yoyoStrategy = YoYoStrategy()
             return yoyoStrategy.setTestValues(test: child as! YoYoTest)
-        }
-        if test.oneLegStanceTest != nil {
-            let oneLegStanceStrategy = OneLegStanceStrategy()
-            return oneLegStanceStrategy.setTestValues(test: child as! OneLegStanceTest)
         }
         if test.tTest != nil {
             let tTestStrategy = TTestStrategy()

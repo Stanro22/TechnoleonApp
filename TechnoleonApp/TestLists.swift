@@ -136,15 +136,6 @@ class TestList : ObservableObject {
             }
             TestList.shared.testListYoYo?.append(test)
         }
-        if test.oneLegStanceTestId != nil {
-            if TestList.shared.testListOneLegStance == nil{
-                TestList.shared.testListOneLegStance = [Test]()
-            }
-            if TestList.shared.playerListOneLegStance!.contains(player) == false{
-                TestList.shared.playerListOneLegStance!.append(player)
-            }
-            TestList.shared.testListOneLegStance?.append(test)
-        }
         if test.tTestId != nil {
             if TestList.shared.testListTTest == nil{
                 TestList.shared.testListTTest = [Test]()

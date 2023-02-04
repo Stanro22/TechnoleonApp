@@ -13,6 +13,7 @@
 "Profile" = "Profiel"; //also page title
 
 //Page titles
+"Log in" = "Inloggen";
 "Categories" = "Categorieën";
 "Team selection" = "Team selectie";
 "Player selection" = "Speler selectie";
@@ -139,15 +140,159 @@
 "IJBT_description" = "De Insait Joy balcontrole test meet verschillende vaardigheden van beginner tot expert niveau. De slimme bal meet het aantal balcontacten, ritme en de frequentie per seconde. Hierbij worden verschillende voetbalvaardigheden gemeten die bijdragen aan de functionele voetbaltechniek en de uitvoering van passeerbewegingen in een 1v1. Deze test is alleen in te vullen met behulp van de Insait Joy App.";
 "IJBT_items" = "Voor deze test is de Insait Joy app nodig.";
 
+//VFMT
+"VFMT_title" = "VFMT";
+"Errors" = "Fouten";
+"Trial 1" = "Poging 1";
+"Trial 2" = "Poging 2";
+"Trial 3" = "Poging 3";
+"Next Trial" = "Volgende Poging";
+
+//PUP10
+"PUP10_title" = "PUP10+";
+"Wrong target" = "Verkeerde target";
+"Taken away" = "Afgepakt";
+"Outside cones" = "Buiten kegels";
+"Pass through outside cones" = "Pass door buitenste pionnen";
+"To high" = "Te hoog";
+"Over the line" = "Over de lijn";
+"Wrong area" = "Verkeerde vak";
+"Pass through inside cones" = "Pass door binnenste pionnen";
+
+//Questionnaires
+//AGQ
+"AGQ_title" = "AGQ";
+"AGQ_q1" = "Ik richt me erop de benodigde technieken in mijn sport volledig te beheersen.";
+"AGQ_q2" = "Ik probeer het goed te doen in mijn sport vergeleken met andere sporters.";
+"AGQ_q3" = "Mijn doel is om zoveel mogelijk te leren in mijn sport.";
+"AGQ_q4" = "Ik richt me erop dat ik goed presteer in vergelijking met anderen in mijn sport.";
+"AGQ_q5" = "Ik richt me erop te voorkomen dat ik minder leer in mijn sport dan mogelijk is.";
+"AGQ_q6" = "Mijn doel in mijn sport is te voorkomen dat ik in vergelijking met anderen slecht presteer.";
+"AGQ_q7" = "Ik probeer alles wat mijn sport aangaat zo goed mogelijk te begrijpen.";
+"AGQ_q8" = "Mijn doel is om beter te presteren dan anderen in mijn sport.";
+"AGQ_q9" = "Mijn doel in mijn sport is te voorkomen dat ik minder leer dan ik zou kunnen leren.";
+"AGQ_q10" = "Ik probeer te vermijden dat ik slechter presteer dan andere sporters.";
+"AGQ_q11" = "Ik probeer te vermijden dat ik aspecten in mijn sport onvoldoende beheers.";
+"AGQ_q12" = "Ik richt me erop te voorkomen dat ik het slechter doe in mijn sport dan anderen.";
+
+//MTQ10
+"MTQ10_title" = "MTQ10";
+"MTQ10_q1" = "Zelfs onder aanzienlijke druk, blijf ik rustig.";
+"MTQ10_q2" = "Ik maak me zorgen om dingen ver voordat ze gebeuren.";
+"MTQ10_q3" = "Ik vind het lastig om enthousiasme op te roepen voor taken die ik moet uitvoeren.";
+"MTQ10_q4" = "Ik ga goed om met problemen die zich voordoen.";
+"MTQ10_q5" = "Ik voel mezelf een waardevol persoon.";
+"MTQ10_q6" = "“Ik weet gewoon niet waar ik moet beginnen” is een gevoel dat ik gewoonlijk heb wanneer ik meerdere dingen tegelijk moet doen.";
+"MTQ10_q7" = "Als ik fouten maak, maak ik me er meestal dagen zorgen over.";
+"MTQ10_q8" = "Ik heb over het algemeen het gevoel van controle.";
+"MTQ10_q9" = "Ik kan over het algemeen snel reageren wanneer er iets onverwachts gebeurt.";
+"MTQ10_q10" = "Over het algemeen kijk ik naar de positieve kant van het leven.";
+
+//CNAAQ
+"CNAAQ_title" = "CNAAQ";
+"CNAAQ_q1" = "Je hebt een bepaalde hoeveelheid talent voor sport en je kunt er weinig aan doen om dat te veranderen.";
+"CNAAQ_q2" = "Zelfs als je je best doet kom je niet verder dan je persoonlijke grens in een sport.";
+"CNAAQ_q3" = "Je hebt talent nodig om goed te worden in een sport.";
+"CNAAQ_q4" = "Je moet hard trainen en altijd blijven leren om goed te worden in een sport.";
+"CNAAQ_q5" = "Om goed te worden in een sport moet je bij je geboorte de kwaliteiten hebben meegekregen die belangrijk zijn voor die sport.";
+"CNAAQ_q6" = "Als je goed wil worden in een sport moet je steeds door nieuwe ontwikkelingsfases, waarin je dingen leert en je je lichaam verder traint.";
+"CNAAQ_q7" = "Hoe goed je bent in sport, zal altijd verbeteren als je eraan werkt.";
+"CNAAQ_q8" = "Om goed te worden in een sport moet je talent hebben.";
+"CNAAQ_q9" = "Hoeveel talent je hebt voor een sport ligt vast.";
+"CNAAQ_q10" = "Om goed te worden in een sport moet je alsmaar blijven werken aan je techniek en vaardigheden.";
+"CNAAQ_q11" = "Zelfs de beste sporters kunnen nog beter worden door de juiste training.";
+"CNAAQ_q12" = "Iedereen heeft een maximaal haalbaar niveau in een sport, waarna je niet meer beter wordt.";
+"CNAAQ_q13" = "Om goed te worden in een sport moet je alsmaar blijven oefenen en bijleren.";
+"CNAAQ_q14" = "Je kan jezelf altijd verbeteren in je sport, als je daar maar hard voor wil trainen.";
+"CNAAQ_q15" = "Als je je persoonlijke top bereikt in een sport dan wordt je niet meer beter, ook al blijf je trainen.";
+"CNAAQ_q16" = "Hard werken is het allerbelangrijkste als je goed wil worden in een sport.";
+"CNAAQ_q17" = "Inzet zal altijd zorgen voor vooruitgang in sport.";
+"CNAAQ_q18" = "In sommige sporten ben je wel goed en in andere niet, daar kun je niets aan veranderen.";
+"CNAAQ_q19" = "Aangeboren eigenschappen bepalen of je goed wordt in een sport.";
+"CNAAQ_q20" = "Als je de top wil bereiken in een sport moet je daar genoeg talent voor hebben.";
+"CNAAQ_q21" = "Ook al ben je heel goed, je kunt altijd nog beter worden door hard te trainen.";
+
+//MCSYS
+"MCSYS_title" = "MCSYS";
+"MCSYS_q1" = "Wedstrijden winnen is voor de trainer het belangrijkste.";
+"MCSYS_q2" = "De trainer geeft spelers een goed gevoel als ze ergens beter in zijn geworden.";
+"MCSYS_q3" = "De trainer besteedt minder tijd aan spelers die niet zo goed zijn.";
+"MCSYS_q4" = "De trainer wil graag dat we nieuwe dingen uitproberen.";
+"MCSYS_q5" = "De trainer laat merken wie volgens hem/haar de beste spelers van het team zijn.";
+"MCSYS_q6" = "De trainer wil graag dat spelers elkaar helpen.";
+"MCSYS_q7" = "De trainer zegt dat het belangrijkste is om je best te doen.";
+"MCSYS_q8" = "De trainer geeft de meeste aandacht aan de beste spelers.";
+"MCSYS_q9" = "De trainer vindt dat teamgenoten elkaar moeten helpen om beter te worden.";
+"MCSYS_q10" = "Spelers worden gewisseld als ze een fout maken.";
+"MCSYS_q11" = "De trainer zegt vaak dat we allemaal belangrijk zijn voor het team.";
+"MCSYS_q12" = "De trainer zegt dat het goed is als we proberen om beter te zijn dan anderen uit het team.";
+
+//RPE
+"RPE_title" = "RPE";
+"Trainingstype" = "Trainingstype";
+"Sessiontype" = "Sessietype";
+"Duration" = "Duur";
+"Date of training" = "Datum van de training";
+"Starting time" = "Start tijd";
+"Days before or after the training" = "Dagen voor of na de wedstrijd";
+"RPE score" = "RPE score";
+"Satisfaction of the training" = "Tevredenheid over de training";
+"Comments" = "Opmerkingen (optioneel)";
+//Trainingtypes
+"Football" = "Voetbal";
+"Badminton" = "Badminton";
+"Basketball" = "Basketbal";
+"Boxing" = "Boxen";
+"Dancing" = "Dansen";
+"Fitness" = "Fitness";
+"Golf" = "Golf";
+"Gymnastics" = "Gymnastiek";
+"Handball" = "Handbal";
+"Running" = "Hardlopen";
+"Hiking" = "Hiken";
+"Hockey" = "Hockey";
+"Baseball" = "Honkball";
+"Ice Hockey" = "Ijshockey";
+"Inline Skating" = "Inline Skaten";
+"Judo" = "Judo";
+"Karate" = "Karate";
+"Climbing" = "Klimmen";
+"Korfball" = "Korfbal";
+"Mountain Biking" = "Mountainbiken";
+"Horse Riding" = "Paardrijden";
+"Powerlifting" = "Powerliften";
+"Rowing" = "Roeien";
+"Rugby" = "Rugby";
+"Skating" = "Schaatsen";
+"Shorttrack" = "Shorttrack";
+"Softball" = "Softbal";
+"Squash" = "Squash";
+"Tennis" = "Tennis";
+"Volleyball" = "Volleybal";
+"Cycling" = "Wielrennen";
+"Sailing" = "Zeilen";
+"Swimming" = "Zwemmen";
+//Sessiontypes
+"Expensive fitness training" = "Duur conditietraining";
+"Intensive fitness training" = "Intensieve conditietraining";
+"Recovery" = "Herstel";
+"Power" = "Kracht";
+"Skills" = "Vaardigheden";
+"Sprint" = "Sprint";
+"Tests" = "Testen";
+"Individual technique training" = "Individuele techniek training";
+"Official match" = "Officiële wedstrijd";
+"Pratice match" = "Oefenwedstrijd";
+"Rest" = "Rust";
+
 //Test categories
 "Physical" = "Fysiek";
-"Technical" = "Techinisch";
+"Technical" = "Technisch";
 "Mental" = "Mentaal";
 "Match" = "Wedstrijd";
 "Cognitive" = "Cognitief";
 
 //Other strings
-"Log in" = "Inloggen";
 "Log out" = "Uitloggen";
 "Password" = "Wachtwoord";
 "E-mail" = "E-mail";
@@ -199,3 +344,7 @@
 "Next round" = "Volgende ronde";
 "Introduction" = "Inleiding";
 "Requirements" = "Benodigdheden";
+"Not true at all" = "Helemaal niet waar";
+"Very true" = "Helemaal waar";
+"Totally disagree" = "Helemaal mee oneens";
+"Totally agree" = "Helemaal mee eens";

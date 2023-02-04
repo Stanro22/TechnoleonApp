@@ -80,7 +80,7 @@ struct Sprint10m20m35mView: View {
     }
     
     func setTenTwentyThirtyFiveTest(){
-        setDistance()
+        /*setDistance()
         tenTwentyThirtyFiveSprintBody.seconds = "00:\(stopwatchManager.timeToSave)"
         technoleonAPI.setTenTwentyThirtyFiveSprintTestForPlayer(id: loggedInUser.player_id!, tenTwentyThirtyFiveSprintRequestBody: tenTwentyThirtyFiveSprintBody) { (result) in
             switch result {
@@ -96,7 +96,7 @@ struct Sprint10m20m35mView: View {
                     print("error: \(String(describing: error))")
                 }
             }
-        }
+        }*/
     }
     
     func setDistance(){

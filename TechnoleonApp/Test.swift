@@ -34,8 +34,6 @@ struct Test: Decodable, Hashable{
     //var tvpS3Test: TVPS3Test?
     var yoYoStaminaTestId: String?
     var yoYoStaminaTest: YoYoTest?
-    var oneLegStanceTestId: String?
-    var oneLegStanceTest: OneLegStanceTest?
     var tTestId: String?
     var tTest: TTestTest?
     var vfmtTestId: String?
@@ -78,9 +76,6 @@ struct Test: Decodable, Hashable{
         }
         if test.yoYoStaminaTestId != nil {
             return "Yo-Yo"
-        }
-        if test.oneLegStanceTestId != nil {
-            return "One Leg Stance"
         }
         if test.tTestId != nil {
             return"T-Test"
@@ -133,9 +128,6 @@ struct Test: Decodable, Hashable{
         }
         if test.yoYoStaminaTest != nil {
             return test.yoYoStaminaTest
-        }
-        if test.oneLegStanceTest != nil {
-            return test.oneLegStanceTest
         }
         if test.tTest != nil {
             return test.tTest

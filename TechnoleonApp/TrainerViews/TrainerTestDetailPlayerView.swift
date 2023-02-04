@@ -165,8 +165,6 @@ struct TrainerTestDetailPlayerView: View {
         self.testForData?.insaitJoyTest = response.insaitJoyTest
         self.testForData?.intervalShuttleRunTestId = response.intervalShuttleRunTestId
         self.testForData?.intervalShuttleRunTest = response.intervalShuttleRunTest
-        self.testForData?.oneLegStanceTestId = response.oneLegStanceTestId
-        self.testForData?.oneLegStanceTest = response.oneLegStanceTest
         self.testForData?.tvpS3TestId = response.tvpS3TestId
         self.testForData?.tTestId = response.tTestId
         self.testForData?.tTest = response.tTest

@@ -25,4 +25,4 @@ final class KtK3RequestBody : ObservableObject {
     var beam31: Int? = 0
     var beam32: Int? = 0
     var beam33: Int? = 0
-}
+}		

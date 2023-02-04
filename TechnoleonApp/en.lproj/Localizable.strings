@@ -13,6 +13,7 @@
 "Profile" = "Profile"; // also page title
 
 //Page titles
+"Log in" = "Log in";
 "Categories" = "Categories";
 "Team selection" = "Team selection";
 "Player selection" = "Player selection";
@@ -139,6 +140,151 @@
 "IJBT_description" = "The Insait Joy ball control test measures different skills from beginner to expert level. The smart ball measures the number of ball contacts, rhythm and frequency per second. Various football skills are measured that contribute to the functional football technique and the execution of passing movements in a 1v1. This test can only be completed using the Insait Joy App.";
 "IJBT_items" = "The Insait Joy app is required for this test.";
 
+//VFMT
+"VFMT_title" = "VFMT";
+"Errors" = "Errors";
+"Trial 1" = "Trial 1";
+"Trial 2" = "Trial 2";
+"Trial 3" = "Trial 3";
+"Next Trial" = "Next Trial";
+
+//PUP10
+"PUP10_title" = "PUP10+";
+"Wrong target" = "Wrong target";
+"Taken away" = "Taken away";
+"Outside cones" = "Outside cones";
+"Pass through outside cones" = "Pass through outside cones";
+"To high" = "To high";
+"Over the line" = "Over the line";
+"Wrong area" = "Wrong area";
+"Pass through inside cones" = "Pass through inside cones";
+
+//Questionnaires
+//AGQ
+"AGQ_title" = "AGQ";
+"AGQ_q1" = "I focus on fully mastering the necessary techniques in my sport.";
+"AGQ_q2" = "I try to do well in my sport compared to other athletes.";
+"AGQ_q3" = "My goal is to learn as much as possible in my sport.";
+"AGQ_q4" = "I focus on performing well compared to others in my sport.";
+"AGQ_q5" = "I focus on avoiding learning less in my sport than is possible.";
+"AGQ_q6" = "My goal in my sport is to avoid underperforming in comparison to others.";
+"AGQ_q7" = "I try to understand everything related to my sport as well as possible.";
+"AGQ_q8" = "My goal is to outperform others in my sport.";
+"AGQ_q9" = "My goal in my sport is to avoid learning less than I could learn.";
+"AGQ_q10" = "I try to avoid underperforming in comparison to other athletes.";
+"AGQ_q11" = "I try to avoid that I do not master aspects of my sport sufficiently.";
+"AGQ_q12" = "I focus on avoiding doing worse in my sport than others.";
+
+//MTQ10
+"MTQ10_title" = "MTQ10";
+"MTQ10_q1" = "Even under considerable pressure, I remain calm.";
+"MTQ10_q2" = "I worry about things way before they happen.";
+"MTQ10_q3" = "I find it difficult to evoke enthusiasm for tasks that I have to perform.";
+"MTQ10_q4" = "I deal well with problems that arise.";
+"MTQ10_q5" = "I feel like a valuable person.";
+"MTQ10_q6" = "“I just don't know where to start” is a feeling I usually have when I have to do several things at once.";
+"MTQ10_q7" = "When I make mistakes, I usually worry about them for days.";
+"MTQ10_q8" = "Generally, I feel in control.";
+"MTQ10_q9" = "I can generally react quickly when something unexpected happens.";
+"MTQ10_q10" = "In general, I look at the bright side of life.";
+
+//CNAAQ
+"CNAAQ_title" = "CNAAQ";
+"CNAAQ_q1" = "You have a certain amount of talent for sports and there is little you can do to change that.";
+"CNAAQ_q2" = "Even if you try your best you can't go beyond your personal limit in a sport.";
+"CNAAQ_q3" = "You need talent to become good at a sport.";
+"CNAAQ_q4" = "You have to train hard and always keep learning to become good at a sport.";
+"CNAAQ_q5" = "To become good at a sport, you must have been given the qualities that are important for that sport at birth.";
+"CNAAQ_q6" = "If you want to become good at a sport, you always have to go through new development phases, in which you learn things and train your body further.";
+"CNAAQ_q7" = "How good you are at sports will always improve if you work at it.";
+"CNAAQ_q8" = "To be good at a sport you have to have talent.";
+"CNAAQ_q9" = "How much talent you have for a sport is fixed.";
+"CNAAQ_q10" = "To become good at a sport you have to keep working on your technique and skills.";
+"CNAAQ_q11" = "Even the best athletes can become even better with the right training.";
+"CNAAQ_q12" = "Everyone has a maximum attainable level in a sport, after which you don't get any better.";
+"CNAAQ_q13" = "To become good at a sport you have to keep practicing and learning.";
+"CNAAQ_q14" = "You can always improve yourself in your sport, as long as you train hard for it.";
+"CNAAQ_q15" = "If you reach your personal best in a sport, you will not get better, even if you keep training.";
+"CNAAQ_q16" = "Hard work is the most important thing if you want to become good at a sport.";
+"CNAAQ_q17" = "Effort will always ensure progress in sports.";
+"CNAAQ_q18" = "In some sports you are good and in others you are not, you cannot change that.";
+"CNAAQ_q19" = "Innate characteristics determine whether you become good at a sport.";
+"CNAAQ_q20" = "If you want to reach the top in a sport, you have to have enough talent for it.";
+"CNAAQ_q21" = "Even if you are very good, you can always get better by training hard.";
+
+//MCSYS
+"MCSYS_title" = "MCSYS";
+"MCSYS_q1" = "Winning matches is the most important thing for the coach.";
+"MCSYS_q2" = "The trainer gives players a good feeling when they have become better at something.";
+"MCSYS_q3" = "The coach spends less time on players who are not so good.";
+"MCSYS_q4" = "The trainer likes us to try new things.";
+"MCSYS_q5" = "The trainer shows who he/she thinks are the best players on the team.";
+"MCSYS_q6" = "The coach wants players to help each other.";
+"MCSYS_q7" = "The trainer says that the most important thing is to give your all.";
+"MCSYS_q8" = "The coach gives the most attention to the best players.";
+"MCSYS_q9" = "The trainer believes that teammates should help each other to get better.";
+"MCSYS_q10" = "Players are substituted if they make a mistake.";
+"MCSYS_q11" = "The coach often says that we are all important to the team.";
+"MCSYS_q12" = "The coach says it's good if we try to be better than others in the team.";
+
+//RPE
+"RPE_title" = "RPE";
+"Trainingstype" = "Trainingstype";
+"Sessiontype" = "Sessiontype";
+"Duration" = "Duration";
+"Date of training" = "Date of training";
+"Starting time" = "Starting time";
+"Days before or after the training" = "Days before or after the training";
+"RPE score" = "RPE score";
+"Satisfaction of the training" = "Satisfaction of the training";
+"Comments" = "Comments (optional)";
+//Trainingtypes
+"Football" = "Football";
+"Badminton" = "Badminton";
+"Basketball" = "Basketball";
+"Boxing" = "Boxing";
+"Dancing" = "Dancing";
+"Fitness" = "Fitness";
+"Golf" = "Golf";
+"Gymnastics" = "Gymnastics";
+"Handball" = "Handball";
+"Running" = "Running";
+"Hiking" = "Hiking";
+"Hockey" = "Hockey";
+"Baseball" = "Baseball";
+"Ice Hockey" = "Ice Hockey";
+"Inline Skating" = "Inline Skating";
+"Judo" = "Judo";
+"Karate" = "Karate";
+"Climbing" = "Climbing";
+"Korfball" = "Korfball";
+"Mountain Biking" = "Mountain Biking";
+"Horse Riding" = "Horse Riding";
+"Powerlifting" = "Powerlifting";
+"Rowing" = "Rowing";
+"Rugby" = "Rugby";
+"Skating" = "Skating";
+"Shorttrack" = "Shorttrack";
+"Softball" = "Softball";
+"Squash" = "Squash";
+"Tennis" = "Tennis";
+"Volleyball" = "Volleyball";
+"Cycling" = "Cycling";
+"Sailing" = "Sailing";
+"Swimming" = "Swimming";
+//Sessiontypes
+"Expensive fitness training" = "Expensive fitness training";
+"Intensive fitness training" = "Intensive fitness training";
+"Recovery" = "Recovery";
+"Power" = "Power";
+"Skills" = "Skills";
+"Sprint" = "Sprint";
+"Tests" = "Tests";
+"Individual technique training" = "Individual technique training";
+"Official match" = "Official match";
+"Pratice match" = "Practice match";
+"Rest" = "Rest";
+
 //Test categories
 "Physical" = "Physical";
 "Technical" = "Technical";
@@ -147,7 +293,6 @@
 "Cognitive" = "Cognitive";
 
 //Other strings
-"Log in" = "Log in";
 "Log out" = "Log out";
 "Password" = "Password";
 "E-mail" = "E-mail";
@@ -199,3 +344,7 @@
 "Next round" = "Next round";
 "Introduction" = "Introduction";
 "Requirements" = "Requirements";
+"Not true at all" = "Not true at all";
+"Very true" = "Very true";
+"Totally disagree" = "Totally disagree";
+"Totally agree" = "Totally agree";

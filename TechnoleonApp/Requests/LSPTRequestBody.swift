@@ -14,7 +14,5 @@ final class LSPTRequestBody : ObservableObject {
     var passOutsideArea: Int? = 0
     var missedTargetArea: Int? = 0
     var hitTenCMStrip: Int? = 0
-    var time: String? = "00:00:00.00"
     var finalTime: String? = "00:00:00.00"
-    var secondsOver: String? = "00:00:00.00"
 }

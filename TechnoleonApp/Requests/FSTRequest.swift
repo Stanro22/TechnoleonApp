@@ -9,9 +9,9 @@ import Foundation
 
 struct FSTRequest: Encodable{
     let slalomTime: String?
-    let goalPostMiss: String?
-    let backwardTime: String?
     let dribbleTime: String?
+    let backwardTime: String?
     let eightFigureTime: String?
     let passingTime: String?
+    let goalPostMiss: String?
 }

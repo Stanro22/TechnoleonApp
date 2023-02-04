@@ -13,7 +13,7 @@ struct GiTView: View {
     @ObservedObject var giTBody = GiTRequestBody()
     @State var zones: String = ""
     @State var currentRound: Int = 1
-    @State var maxRounds: Int = 10
+    @State var maxRounds: Int = 20
     @State var isZoneNotSet: Bool = true
     @State var didOneTapped: Bool = false
     @State var didTwoTapped: Bool = false
